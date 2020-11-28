@@ -22,7 +22,7 @@ export function capitalize(text: string): string {
  *
  * @example
  * ```
- * truncate('hello, world', 5, '...')
+ * truncate('hello, world', 5, '...') === 'hello...';
  * ```
  *
  * @param text - Text to truncate
