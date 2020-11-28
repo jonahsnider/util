@@ -13,7 +13,7 @@ npm install @pizzafox/util
 then
 
 ```js
-import { shuffle } from '@pizzafox/util';
+import {shuffle} from '@pizzafox/util';
 // or
-const { shuffle } = require('@pizzafox/util');
+const {shuffle} = require('@pizzafox/util');
 ```
