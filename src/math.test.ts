@@ -1,4 +1,5 @@
 import {median, mode, stddev, variance} from '.';
+import { normaldist, standardNormaldist } from './math';
 
 describe('variance', () => {
 	it('calculates variance', () => {
@@ -13,6 +14,18 @@ describe('stddev', () => {
 		expect(stddev([1, 1, 1])).toBe(0);
 		expect(stddev([1, 2, 3])).toBe(1);
 		expect(stddev([1, 3, 5])).toBe(2);
+	});
+});
+
+describe('normaldist', () => {
+	it('calculates normal distribution', () => {
+		expect(normaldist(0, 1, 0)).toBeCloseTo(0.3989);
+	});
+});
+
+describe('standardNormaldist', () => {
+	it('calculates normal distribution', () => {
+		expect(standardNormaldist(0)).toBe(normaldist(0, 1, 0));
 	});
 });
 

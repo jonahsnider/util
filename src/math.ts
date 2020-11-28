@@ -24,6 +24,32 @@ export function stddev(values: readonly number[]): number {
 	return Math.sqrt(variance(values));
 }
 
+const {PI: π, E: e} = Math;
+
+/**
+ * Calculate the normal distribution.
+ *
+ * @param x - Sample to calculate the normal distribution of
+ * @param σ - Standard deviation
+ * @param μ - Mean
+ *
+ * @returns The normal distribution
+ */
+export function normaldist(x: number, σ: number, μ: number): number {
+	return (1 / (σ * Math.sqrt(2 * π))) * e ** ((-1 / 2) * (x - μ / σ) ** 2);
+}
+
+/**
+ * Calculate the standard normal distribution.
+ *
+ * @param x - Sample to calculate the normal distribution of
+ *
+ * @returns The standard normal distribution
+ */
+export function standardNormaldist(x: number): number {
+  return normaldist(x, 1, 0)
+}
+
 /**
  * Calculate the median of a sequence of numbers.
  *
