@@ -1,0 +1,11 @@
+{
+	"excludeNotExported": true,
+	"excludePrivate": true,
+	"ignoreCompilerErrors": true,
+	"includeVersion": true,
+	"inputFiles": ["./src/index.ts"],
+	"listInvalidSymbolLinks": true,
+	"mode": "file",
+	"name": "@pizzafox/util",
+	"out": "docs_out"
+}

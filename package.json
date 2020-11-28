@@ -1,0 +1,60 @@
+{
+	"author": {
+		"email": "jonah@jonah.pw",
+		"name": "Jonah Snider",
+		"url": "https://jonah.pw"
+	},
+	"description": "A useful collection of optimized utility functions",
+	"devDependencies": {
+		"@size-limit/preset-small-lib": "^4.7.0",
+		"@typescript-eslint/eslint-plugin": "^4.8.2",
+		"@typescript-eslint/parser": "^4.8.2",
+		"eslint-plugin-prettier": "3.1.4",
+		"eslint-plugin-tsdoc": "^0.2.7",
+		"prettier": "2.2.0",
+		"prettier-config-xo": "^1.0.3",
+		"size-limit": "^4.7.0",
+		"tsd": "^0.13.1",
+		"tsdx": "^0.14.1",
+		"tslib": "^2.0.3",
+		"typedoc": "^0.19.2",
+		"typescript": "^4.1.2"
+	},
+	"engines": {
+		"node": ">=10"
+	},
+	"files": [
+		"dist"
+	],
+	"license": "MIT",
+	"main": "dist/index.js",
+	"module": "dist/util.esm.js",
+	"name": "@pizzafox/util",
+	"resolutions": {
+		"**/@typescript-eslint/eslint-plugin": "^4.6.1",
+		"**/@typescript-eslint/parser": "^4.6.1",
+		"**/typescript": "^4.0.5"
+	},
+	"scripts": {
+		"analyze": "size-limit --why",
+		"build": "tsdx build",
+		"docs": "typedoc --options ./typedoc.json",
+		"lint": "tsdx lint src",
+		"size": "size-limit",
+		"start": "tsdx watch",
+		"style": "prettier --ignore-path .gitignore --check .",
+		"test": "tsdx test"
+	},
+	"size-limit": [
+		{
+			"limit": "3 KB",
+			"path": "dist/util.cjs.production.min.js"
+		},
+		{
+			"limit": "5 KB",
+			"path": "dist/util.esm.js"
+		}
+	],
+	"typings": "dist/index.d.ts",
+	"version": "0.0.0-development"
+}
