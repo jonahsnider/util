@@ -7,7 +7,7 @@ Works in Node.js, mostly works in browsers.
 
 [![Build Status](https://github.com/pizzafox/util/workflows/CI/badge.svg)](https://github.com/pizzafox/util/actions)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
-[![codecov](https://codecov.io/gh/pizzafox/util/branch/master/graph/badge.svg)](https://codecov.io/gh/pizzafox/util)
+[![Codecov](https://codecov.io/gh/pizzafox/util/branch/main/graph/badge.svg)](https://codecov.io/gh/pizzafox/util)
 
 ```sh
 yarn add @pizzafox/util
