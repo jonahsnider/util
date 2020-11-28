@@ -1,5 +1,5 @@
 import {median, mode, stddev, variance} from '.';
-import { normaldist, standardNormaldist } from './math';
+import {normaldist, standardNormaldist} from './math';
 
 describe('variance', () => {
 	it('calculates variance', () => {

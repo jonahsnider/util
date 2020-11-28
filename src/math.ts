@@ -47,7 +47,7 @@ export function normaldist(x: number, σ: number, μ: number): number {
  * @returns The standard normal distribution
  */
 export function standardNormaldist(x: number): number {
-  return normaldist(x, 1, 0)
+	return normaldist(x, 1, 0);
 }
 
 /**
