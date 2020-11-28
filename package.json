@@ -27,6 +27,7 @@
 	"files": [
 		"dist"
 	],
+	"homepage": "https://util.jonah.pw/",
 	"license": "MIT",
 	"main": "dist/index.js",
 	"module": "dist/util.esm.js",
