@@ -1,17 +1,6 @@
 import {mean, sum} from './reducers';
 
 /**
- * Calculate the standard deviation of a sequence of numbers.
- *
- * @param values - Values to use in the calculation
- *
- * @returns The standard deviation of `values`
- */
-export function stddev(values: readonly number[]): number {
-	return Math.sqrt(variance(values));
-}
-
-/**
  * Calculate the variance of a sequence of numbers.
  *
  * @param values - Values to use in the calculation
@@ -22,6 +11,17 @@ export function variance(values: readonly number[]): number {
 	const meanValue = values.reduce(mean);
 
 	return values.map(value => (value - meanValue) ** 2).reduce(sum) / (values.length - 1);
+}
+
+/**
+ * Calculate the standard deviation of a sequence of numbers.
+ *
+ * @param values - Values to use in the calculation
+ *
+ * @returns The standard deviation of `values`
+ */
+export function stddev(values: readonly number[]): number {
+	return Math.sqrt(variance(values));
 }
 
 /**
