@@ -92,10 +92,10 @@ export function identicalManual<V, K = never>(
  * const c = [1, 2, 3];
  * const d = [1, 2, 3];
  * const e = [1, 2, 3];
- * 
+ *
  * identical(a, b, c, d, e) === true;
  * ```
- * 
+ *
  * @param firstIterable - The first elements to compare
  * @param secondIterable - The second elements to compare
  * @param otherIterables - Any other elements to compare
