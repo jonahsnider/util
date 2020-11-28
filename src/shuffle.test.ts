@@ -42,10 +42,15 @@ describe('sample', () => {
 		}
 
 		expect(stddev(Object.values(frequencies))).toBeCloseTo(0, -3e6 * iterations);
+
+		expect(shuffle([])).toBe(undefined);
 	});
 
 	it("shuffles doesn't mutate when configured", () => {
-		const empty: [] = [];
-		expect(shuffle(empty, false)).not.toBe(empty);
+		const array = [1];
+		const shuffled = shuffle(array, false);
+
+		expect(shuffled).not.toBe(array);
+		expect(shuffled).toStrictEqual(array);
 	});
 });

@@ -7,7 +7,7 @@ function _shuffle<T>(array: T[], mutate = true): void | T[] {
 		[target[i], target[j]] = [target[j], target[i]];
 	}
 
-	if (mutate) {
+	if (!mutate) {
 		return target;
 	}
 }
