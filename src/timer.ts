@@ -17,12 +17,12 @@ const nsInMs = BigInt(1e6);
  * const elapsed = endTimer();
  * ```
  */
-
 export function startTimer(): () => bigint {
 	const start = process.hrtime.bigint();
 
 	/**
 	 * End the timer and return the duration elapsed.
+   * 
 	 * @returns The amount of time elapsed in milliseconds.
 	 */
 	return () => {

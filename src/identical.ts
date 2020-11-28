@@ -2,6 +2,14 @@
  * Check if two arrays have the same items in the same order.
  * Strict equality (`===`) is used to compare elements.
  *
+ * @example
+ * ```
+ * const a = [1];
+ * const b = [1];
+ *
+ * identicalManual(a, b) === true;
+ * ```
+ *
  * @param a - First array to compare
  * @param b - Second array to compare
  *
@@ -12,6 +20,14 @@ export function identicalManual<V>(a: readonly V[], b: readonly V[]): boolean;
  * Check if two `Set`s have the same items.
  * Strict equality (`===`) is used to compare elements.
  *
+ * @example
+ * ```
+ * const a = new Set([1, 2, 3]);
+ * const b = new Set([3, 2, 1]);
+ *
+ * identicalManual(a, b) === true;
+ * ```
+ *
  * @param a - First `Set` to compare
  * @param b - Second `Set` to compare
  *
@@ -21,6 +37,14 @@ export function identicalManual<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolea
 /**
  * Check if two `Map`s have the same key-value pairs.
  * Strict equality (`===`) is used to compare values.
+ *
+ * @example
+ * ```
+ * const a = new Map([['a', 1]]);
+ * const b = new Map([['a', 1]]);
+ *
+ * identicalManual(a, b) === true;
+ * ```
  *
  * @param a - First `Map` to compare
  * @param b - Second `Map` to compare
@@ -61,11 +85,22 @@ export function identicalManual<V, K = never>(
  * Check if 2 or more iterables are not the same object, but hold the same elements.
  * Strict equality (`===`) is used to compare elements.
  *
- * @param firstIterable - The first item to compare
- * @param secondIterable - The second item to compare
- * @param otherIterables - Any other items to compare
+ * @example
+ * ```
+ * const a = [1, 2, 3];
+ * const b = [1, 2, 3];
+ * const c = [1, 2, 3];
+ * const d = [1, 2, 3];
+ * const e = [1, 2, 3];
+ * 
+ * identical(a, b, c, d, e) === true;
+ * ```
+ * 
+ * @param firstIterable - The first elements to compare
+ * @param secondIterable - The second elements to compare
+ * @param otherIterables - Any other elements to compare
  *
- * @returns `true` if all items are identical, `false` otherwise
+ * @returns `true` if all elements are identical, `false` otherwise
  */
 export function identical<T>(firstIterable: Iterable<T>, secondIterable: typeof firstIterable, ...otherIterables: Array<typeof firstIterable>): boolean {
 	const iterators = [firstIterable, secondIterable, ...otherIterables].map(item => item[Symbol.iterator]());

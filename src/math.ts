@@ -3,6 +3,11 @@ import {mean, sum} from './reducers';
 /**
  * Calculate the variance of a sequence of numbers.
  *
+ * @example
+ * ```
+ * variance([1, 2, 3]) === 1;
+ * ```
+ * 
  * @param values - Values to use in the calculation
  *
  * @returns The variance of `values`
@@ -16,6 +21,11 @@ export function variance(values: readonly number[]): number {
 /**
  * Calculate the standard deviation of a sequence of numbers.
  *
+ * @example
+ * ```
+ * stddev([1, 2, 3]) === 1;
+ * ```
+ * 
  * @param values - Values to use in the calculation
  *
  * @returns The standard deviation of `values`
@@ -29,6 +39,11 @@ const {PI: π, E: e} = Math;
 /**
  * Calculate the normal distribution.
  *
+ * @example
+ * ```
+ * normaldist(0, 1, 0);
+ * ```
+ * 
  * @param x - Sample to calculate the normal distribution of
  * @param σ - Standard deviation
  * @param μ - Mean
@@ -42,6 +57,11 @@ export function normaldist(x: number, σ: number, μ: number): number {
 /**
  * Calculate the standard normal distribution.
  *
+ * @example
+ * ```
+ * standardNormaldist(0) === normaldist(0, 1, 0);
+ * ```
+ * 
  * @param x - Sample to calculate the normal distribution of
  *
  * @returns The standard normal distribution
@@ -53,10 +73,18 @@ export function standardNormaldist(x: number): number {
 /**
  * Calculate the median of a sequence of numbers.
  *
+ * @example
+ * ```
+ * const values = [1, 2, 3];
+ * 
+ * median(values) === 2;
+ * ```
+ * 
  * @param values - Values to use in the calculation
  *
  * @returns The median of `values`
  */
+// TODO: Can this be rewritten as a reducer?
 export function median(values: readonly number[]): number {
 	const {length} = values;
 	const even = length % 2 === 0;
@@ -72,6 +100,13 @@ export function median(values: readonly number[]): number {
  * Calculate the mode of an `Iterable`.
  * Strict equality (`===`) is used to compare elements.
  *
+ * @example
+ * ```
+ * const values = [1, 2, 2, 3, 3];
+ * 
+ * mode(values); // [2, 3]
+ * ```
+ * 
  * @param values - Values to use in the calculation
  *
  * @returns An array of the modes of `values`
