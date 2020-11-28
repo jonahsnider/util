@@ -83,6 +83,9 @@ describe('identicalManual', () => {
 		expect(identicalManual(original, original)).toBe(true);
 		expect(identicalManual(original, copy)).toBe(true);
 		expect(identicalManual(original, reversed)).toBe(true);
+		expect(identicalManual(new Set(), new Set())).toBe(true);
+
+		expect(identicalManual(original, new Set())).toBe(false);
 	});
 
 	it('reports identical Maps', () => {
@@ -101,5 +104,8 @@ describe('identicalManual', () => {
 		expect(identicalManual(original, original)).toBe(true);
 		expect(identicalManual(original, copy)).toBe(true);
 		expect(identicalManual(original, reversed)).toBe(true);
+		expect(identicalManual(new Map(), new Map())).toBe(true);
+
+		expect(identicalManual(original, new Map())).toBe(false);
 	});
 });
