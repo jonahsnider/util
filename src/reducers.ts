@@ -3,7 +3,7 @@
  * 
  * @example
  * ```
- * sum(1, 1);
+ * sum(1, 1) === 2;
  * ```
  * 
  * @param a - First summand
@@ -17,7 +17,7 @@ export function sum(a: number, b: number): number;
  * 
  * @example
  * ```
- * sum(1n, 1n);
+ * sum(1n, 1n) === 2n;
  * ```
  * 
  * @param a - First summand
