@@ -31,6 +31,10 @@
 	"main": "dist/index.js",
 	"module": "dist/util.esm.js",
 	"name": "@pizzafox/util",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
 	"resolutions": {
 		"**/@typescript-eslint/eslint-plugin": "^4.6.1",
 		"**/@typescript-eslint/parser": "^4.6.1",
