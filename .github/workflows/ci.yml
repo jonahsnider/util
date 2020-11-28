@@ -134,6 +134,9 @@ jobs:
 
     needs: [lint, unit-test, style, size]
 
+    # Only run on main branch
+    if: ${{ github.ref  == 'refs/heads/main' }}
+
     steps:
       - name: Checkout git repository
         uses: actions/checkout@v2
