@@ -13,9 +13,12 @@ function _shuffle<T>(array: T[], mutate = true): void | T[] {
 }
 
 /**
- * Shuffles an array's elements uniformly random, in-place.
+ * A uniformly random array shuffle.
+ * 
  * @param array - Array to shuffle
  * @param mutate - `true` if `array` should be mutated in place, `false` if a new array should be created
+ * 
+ * @returns `void` if `mutate` was `true`, the shuffled array if `mutate` was `false`
  */
 // @ts-expect-error
 export const shuffle: (<T>(array: T[]) => void) & (<T>(array: readonly T[], mutate: false) => T[]) = _shuffle;
