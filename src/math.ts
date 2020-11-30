@@ -34,8 +34,6 @@ export function stddev(values: readonly number[]): number {
 	return Math.sqrt(variance(values));
 }
 
-const {PI: π, E: e} = Math;
-
 /**
  * Calculate the normal distribution.
  *
@@ -51,7 +49,7 @@ const {PI: π, E: e} = Math;
  * @returns The normal distribution
  */
 export function normaldist(x: number, σ: number, μ: number): number {
-	return (1 / (σ * Math.sqrt(2 * π))) * e ** ((-1 / 2) * (x - μ / σ) ** 2);
+	return (1 / (σ * Math.sqrt(2 * Math.PI))) * Math.E ** ((-1 / 2) * (x - μ / σ) ** 2);
 }
 
 /**
