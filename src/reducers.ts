@@ -1,11 +1,11 @@
 /**
  * Calculate the sum of 2 `number`s.
- * 
+ *
  * @example
  * ```
  * sum(1, 1) === 2;
  * ```
- * 
+ *
  * @param a - First summand
  * @param b - Second summand
  *
@@ -14,12 +14,12 @@
 export function sum(a: number, b: number): number;
 /**
  * Calculate the sum of 2 `bigint`s.
- * 
+ *
  * @example
  * ```
  * sum(1n, 1n) === 2n;
  * ```
- * 
+ *
  * @param a - First summand
  * @param b - Second summand
  *

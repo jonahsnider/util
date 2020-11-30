@@ -3,7 +3,7 @@ const firstCharacter = /^./;
 
 /**
  * Capitalizes the first letter of a string
- * 
+ *
  * @example
  * ```
  * capitalize('hello') === 'Hello';

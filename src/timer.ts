@@ -22,7 +22,7 @@ export function startTimer(): () => bigint {
 
 	/**
 	 * End the timer and return the duration elapsed.
-   * 
+	 *
 	 * @returns The amount of time elapsed in milliseconds.
 	 */
 	return () => {

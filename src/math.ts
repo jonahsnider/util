@@ -7,7 +7,7 @@ import {mean, sum} from './reducers';
  * ```
  * variance([1, 2, 3]) === 1;
  * ```
- * 
+ *
  * @param values - Values to use in the calculation
  *
  * @returns The variance of `values`
@@ -25,7 +25,7 @@ export function variance(values: readonly number[]): number {
  * ```
  * stddev([1, 2, 3]) === 1;
  * ```
- * 
+ *
  * @param values - Values to use in the calculation
  *
  * @returns The standard deviation of `values`
@@ -43,7 +43,7 @@ const {PI: π, E: e} = Math;
  * ```
  * normaldist(0, 1, 0);
  * ```
- * 
+ *
  * @param x - Sample to calculate the normal distribution of
  * @param σ - Standard deviation
  * @param μ - Mean
@@ -61,7 +61,7 @@ export function normaldist(x: number, σ: number, μ: number): number {
  * ```
  * standardNormaldist(0) === normaldist(0, 1, 0);
  * ```
- * 
+ *
  * @param x - Sample to calculate the normal distribution of
  *
  * @returns The standard normal distribution
@@ -76,10 +76,10 @@ export function standardNormaldist(x: number): number {
  * @example
  * ```
  * const values = [1, 2, 3];
- * 
+ *
  * median(values) === 2;
  * ```
- * 
+ *
  * @param values - Values to use in the calculation
  *
  * @returns The median of `values`
@@ -103,10 +103,10 @@ export function median(values: readonly number[]): number {
  * @example
  * ```
  * const values = [1, 2, 2, 3, 3];
- * 
+ *
  * mode(values); // [2, 3]
  * ```
- * 
+ *
  * @param values - Values to use in the calculation
  *
  * @returns An array of the modes of `values`

@@ -18,17 +18,17 @@ function _shuffle<T>(array: T[], mutate = true): void | T[] {
  * @example
  * ```
  * const array = [1, 2, 3];
- * 
+ *
  * shuffle(array);
  * ```
- * 
+ *
  * @example
  * ```
  * const array = [1, 2, 3];
- * 
+ *
  * const shuffled = shuffle(array, false);
  * ```
- * 
+ *
  * @param array - Array to shuffle
  * @param mutate - `true` if `array` should be mutated in place, `false` if a new array should be created
  *

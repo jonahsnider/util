@@ -1,15 +1,15 @@
 /**
  * Samples a single element at random from an array.
- * 
+ *
  * @example
  * ```
  * const array = [1, 2, 3];
- * 
+ *
  * sample(array); // 1, 2, or 3
  * ```
- * 
+ *
  * @param array - Array to sample element from
- * 
+ *
  * @returns A random element from the array
  */
 // @ts-expect-error
