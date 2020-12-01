@@ -7,8 +7,8 @@
 	"description": "A useful collection of optimized utility functions",
 	"devDependencies": {
 		"@size-limit/preset-small-lib": "4.9.0",
-		"@typescript-eslint/eslint-plugin": "4.8.2",
-		"@typescript-eslint/parser": "4.8.2",
+		"@typescript-eslint/eslint-plugin": "4.9.0",
+		"@typescript-eslint/parser": "4.9.0",
 		"eslint-plugin-prettier": "3.1.4",
 		"eslint-plugin-tsdoc": "0.2.8",
 		"prettier": "2.2.1",
@@ -41,8 +41,8 @@
 		"url": "https://github.com/pizzafox/util.git"
 	},
 	"resolutions": {
-		"**/@typescript-eslint/eslint-plugin": "4.8.2",
-		"**/@typescript-eslint/parser": "4.8.2",
+		"**/@typescript-eslint/eslint-plugin": "4.9.0",
+		"**/@typescript-eslint/parser": "4.9.0",
 		"**/typescript": "4.1.2"
 	},
 	"scripts": {
