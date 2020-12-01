@@ -11,10 +11,10 @@ export type Nullish = null | undefined;
  * nullish(value);
  * ```
  *
- * @param it - Value to check
+ * @param value - Value to check
  *
- * @returns `true` if `it` is nullish, `false` if otherwise
+ * @returns `true` if `value` is nullish, `false` if otherwise
  */
-export function nullish(it: unknown): it is Nullish {
-	return it === null || it === undefined;
+export function nullish(value: unknown): value is Nullish {
+	return value === null || value === undefined;
 }
