@@ -1,7 +1,7 @@
 import {ascending, descending} from '.';
 
 describe('descending', () => {
-	it('shuffles arrays', () => {
+	it('sorts', () => {
 		const array = [2, 1, 3];
 
 		array.sort(descending);
@@ -11,7 +11,7 @@ describe('descending', () => {
 });
 
 describe('ascending', () => {
-	it('shuffles arrays', () => {
+	it('sorts', () => {
 		const array = [2, 1, 3];
 
 		array.sort(ascending);
