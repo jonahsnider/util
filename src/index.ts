@@ -5,5 +5,6 @@ export * from './nullish';
 export * from './reducers';
 export * from './sample';
 export * from './shuffle';
+export * from './sort';
 export * from './timer';
 export * from './toPrecision';
