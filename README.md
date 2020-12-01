@@ -3,7 +3,8 @@
 A useful collection of optimized utility functions.
 Written in TypeScript and designed to have very safe types.
 Works in Node.js, mostly works in browsers.
-[Read docs here](https://util.jonah.pw/).
+
+**[Read docs here](https://util.jonah.pw/)**.
 
 [![Build Status](https://github.com/pizzafox/util/workflows/CI/badge.svg)](https://github.com/pizzafox/util/actions)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
