@@ -6,7 +6,7 @@
 	},
 	"description": "A useful collection of optimized utility functions",
 	"devDependencies": {
-		"@size-limit/preset-small-lib": "4.9.0",
+		"@size-limit/preset-small-lib": "4.9.1",
 		"@typescript-eslint/eslint-plugin": "4.9.0",
 		"@typescript-eslint/parser": "4.9.0",
 		"eslint-plugin-prettier": "3.1.4",
@@ -14,7 +14,7 @@
 		"prettier": "2.2.1",
 		"prettier-config-xo": "1.0.3",
 		"semantic-release": "17.3.0",
-		"size-limit": "4.9.0",
+		"size-limit": "4.9.1",
 		"tsd": "0.13.1",
 		"tsdx": "0.14.1",
 		"tslib": "2.0.3",
