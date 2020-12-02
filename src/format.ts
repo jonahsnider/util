@@ -56,9 +56,10 @@ export function maxColumnLength(table: Table<string>): number[] {
 	for (const row of table) {
 		for (let index = 0; index < row.length; index++) {
 			const length = lengths[index];
+			const {length: columnLength} = row[index];
 
-			if (length < row[index].length) {
-				lengths[index] = row[index].length;
+			if (length < columnLength) {
+				lengths[index] = columnLength;
 			}
 		}
 	}
