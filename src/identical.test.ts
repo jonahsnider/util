@@ -1,10 +1,10 @@
 import {identical, identicalManual} from '.';
 
 // Compilation tests
-// // @ts-expect-error
-// identical([], new Set());
-// // @ts-expect-error
-// identical(new Set(), []);
+// @ts-expect-error
+identicalManual([], new Set());
+// @ts-expect-error
+identicalManual(new Set(), []);
 
 describe('identical', () => {
 	it('reports identical arrays', () => {
@@ -40,9 +40,9 @@ describe('identical', () => {
 		const b = new Set(a);
 		const c = new Set([3, 2, 1]);
 
-		expect(identical(a, a)).toBe(true);
-		expect(identical(a, b)).toBe(true);
-		expect(identical(a, c)).toBe(false);
+		expect(identical(a, a, a)).toBe(true);
+		expect(identical(a, b, a)).toBe(true);
+		expect(identical(a, a, a, c)).toBe(false);
 	});
 });
 
