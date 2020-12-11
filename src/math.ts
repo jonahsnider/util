@@ -136,7 +136,7 @@ export function mode<T>(values: Iterable<T>): T[] {
  *
  * @param start - Starting value of the range to select a random number from
  * @param end - Ending value of the range to select a random number from
- * 
+ *
  * @returns A random number within the given bounds
  */
 export function random(start: number, end: number): number {
