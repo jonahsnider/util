@@ -130,3 +130,15 @@ export function mode<T>(values: Iterable<T>): T[] {
 
 	return modes;
 }
+
+/**
+ * Generate a random number within the give bounds
+ *
+ * @param start - Starting value of the range to select a random number from
+ * @param end - Ending value of the range to select a random number from
+ * 
+ * @returns A random number within the given bounds
+ */
+export function random(start: number, end: number): number {
+	return Math.floor(Math.random() * (end - start + 1)) + start;
+}
