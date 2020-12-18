@@ -3,7 +3,7 @@
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
- * ```
+ * ```ts
  * const a = [1];
  * const b = [1];
  *
@@ -21,7 +21,7 @@ export function identicalManual<V>(a: readonly V[], b: readonly V[]): boolean;
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
- * ```
+ * ```ts
  * const a = new Set([1, 2, 3]);
  * const b = new Set([3, 2, 1]);
  *
@@ -39,7 +39,7 @@ export function identicalManual<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolea
  * Strict equality (`===`) is used to compare values.
  *
  * @example
- * ```
+ * ```ts
  * const a = new Map([['a', 1]]);
  * const b = new Map([['a', 1]]);
  *
@@ -86,7 +86,7 @@ export function identicalManual<V, K = never>(
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
- * ```
+ * ```ts
  * const a = [1, 2, 3];
  * const b = [1, 2, 3];
  * const c = [1, 2, 3];

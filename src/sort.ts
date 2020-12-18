@@ -2,7 +2,7 @@
  * Sort an array in ascending order (least to greatest).
  *
  * @example
- * ```
+ * ```ts
  * const array = [5, 3, 2, 4, 1];
  *
  * array.sort(ascending);
@@ -20,7 +20,7 @@ export function ascending(a: number, b: number): number {
 /**
  * Sort an array in descending order (greatest to least).
  * @example
- * ```
+ * ```ts
  * const array = [5, 3, 2, 4, 1];
  *
  * array.sort(descending);

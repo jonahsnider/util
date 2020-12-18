@@ -16,14 +16,14 @@ function _shuffle<T>(array: T[], mutate = true): void | T[] {
  * A uniformly random array shuffle.
  *
  * @example
- * ```
+ * ```ts
  * const array = [1, 2, 3];
  *
  * shuffle(array);
  * ```
  *
  * @example
- * ```
+ * ```ts
  * const array = [1, 2, 3];
  *
  * const shuffled = shuffle(array, false);

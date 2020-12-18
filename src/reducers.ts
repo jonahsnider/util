@@ -2,7 +2,7 @@
  * Calculate the sum of 2 `number`s.
  *
  * @example
- * ```
+ * ```ts
  * sum(1, 1) === 2;
  * ```
  *
@@ -16,7 +16,7 @@ export function sum(a: number, b: number): number;
  * Calculate the sum of 2 `bigint`s.
  *
  * @example
- * ```
+ * ```ts
  * sum(1n, 1n) === 2n;
  * ```
  *
@@ -34,7 +34,7 @@ export function sum<T extends number>(a: T, b: T): T {
  * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
- * ```
+ * ```ts
  * const array = [1, 2, 3];
  *
  * array.reduce(mean) === 2;
@@ -52,7 +52,7 @@ export function mean(previousValue: number, currentValue: number, currentIndex: 
  * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
- * ```
+ * ```ts
  * const array = [1n, 2n, 3n];
  *
  * array.reduce(mean) === 2n;

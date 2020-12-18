@@ -7,7 +7,7 @@ const nsInMs = BigInt(1e6);
  * @returns A function that returns the difference in milliseconds
  *
  * @example
- * ```
+ * ```ts
  * const endTimer = startTimer();
  *
  * for (let count = 0; count < 1_000_000; count++) {

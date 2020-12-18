@@ -5,7 +5,7 @@ const firstCharacter = /^./;
  * Capitalizes the first letter of a string
  *
  * @example
- * ```
+ * ```ts
  * capitalize('hello') === 'Hello';
  * ```
  *
@@ -21,7 +21,7 @@ export function capitalize(text: string): string {
  * Truncate text to a certain length, optionally appending a suffix when truncated.
  *
  * @example
- * ```
+ * ```ts
  * truncate('hello, world', 5, '...') === 'hello...';
  * ```
  *

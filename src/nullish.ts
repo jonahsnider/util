@@ -5,7 +5,7 @@ export type Nullish = null | undefined;
  * Check if something is `null` or `undefined`.
  *
  * @example
- * ```
+ * ```ts
  * const value = Math.random() > 0.5 ? 'hello' : null;
  *
  * nullish(value);

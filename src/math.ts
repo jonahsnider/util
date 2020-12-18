@@ -4,7 +4,7 @@ import {mean, sum} from '.';
  * Calculate the variance of a sequence of numbers.
  *
  * @example
- * ```
+ * ```ts
  * variance([1, 2, 3]) === 1;
  * ```
  *
@@ -22,7 +22,7 @@ export function variance(values: readonly number[]): number {
  * Calculate the standard deviation of a sequence of numbers.
  *
  * @example
- * ```
+ * ```ts
  * stddev([1, 2, 3]) === 1;
  * ```
  *
@@ -38,7 +38,7 @@ export function stddev(values: readonly number[]): number {
  * Calculate the normal distribution.
  *
  * @example
- * ```
+ * ```ts
  * normaldist(0, 1, 0);
  * ```
  *
@@ -56,7 +56,7 @@ export function normaldist(x: number, σ: number, μ: number): number {
  * Calculate the standard normal distribution.
  *
  * @example
- * ```
+ * ```ts
  * standardNormaldist(0) === normaldist(0, 1, 0);
  * ```
  *
@@ -72,7 +72,7 @@ export function standardNormaldist(x: number): number {
  * Calculate the median of a sequence of numbers.
  *
  * @example
- * ```
+ * ```ts
  * const values = [1, 2, 3];
  *
  * median(values) === 2;
@@ -99,7 +99,7 @@ export function median(values: readonly number[]): number {
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
- * ```
+ * ```ts
  * const values = [1, 2, 2, 3, 3];
  *
  * mode(values); // [2, 3]

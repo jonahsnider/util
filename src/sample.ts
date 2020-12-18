@@ -2,7 +2,7 @@
  * Samples a single element at random from an array.
  *
  * @example
- * ```
+ * ```ts
  * const array = [1, 2, 3];
  *
  * sample(array); // 1, 2, or 3
