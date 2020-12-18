@@ -1,4 +1,4 @@
-import {capitalize, formatTable, maxColumnLength, Table, truncate} from './format';
+import {capitalize, formatTable, maxColumnLength, Table, truncate} from '.';
 
 describe('capitalize', () => {
 	it('capitalizes strings', () => {

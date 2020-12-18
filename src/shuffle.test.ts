@@ -1,5 +1,4 @@
-import {shuffle} from '.';
-import {stddev} from './math';
+import {shuffle, stddev} from '.';
 
 const iterations = 1e5;
 
