@@ -134,6 +134,13 @@ export function mode<T>(values: Iterable<T>): T[] {
 /**
  * Generate a random number within the given bounds.
  *
+ * @example
+ * ```ts
+ * const value = random(0, 10);
+ * 
+ * 0 <= value && value < 10;
+ * ```
+ * 
  * @param min - Lower bound (inclusive) of the output range
  * @param max - Upper bound (exclusive) of the output range
  *
