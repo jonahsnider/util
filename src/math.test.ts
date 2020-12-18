@@ -1,5 +1,4 @@
-import {median, mode, stddev, variance} from '.';
-import {normaldist, standardNormaldist} from './math';
+import {median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from '.';
 
 describe('variance', () => {
 	it('calculates variance', () => {
@@ -45,5 +44,36 @@ describe('mode', () => {
 		expect(mode([1, 3, 6, 6, 6, 6, 7, 7, 12, 12, 17])).toStrictEqual([6]);
 		expect(mode([1, 2, 2, 3, 4, 7, 9])).toStrictEqual([2]);
 		expect(mode([1, 1, 2, 4, 4])).toStrictEqual([1, 4]);
+	});
+});
+
+describe('random', () => {
+	it('generates random numbers', () => {
+		const value = random(0, 1);
+
+		expect(value).toBeGreaterThan(0);
+		expect(value).toBeLessThan(1);
+
+		expect(random(0, 0)).toBe(0);
+		expect(random(1, 1)).toBe(1);
+	});
+
+	it('throws in development when min is greater than max', () => {
+		expect(() => random(1, 0)).toThrow(RangeError);
+	});
+});
+
+describe('randomInt', () => {
+	it('generates random integers', () => {
+		const value = randomInt(0, 1);
+
+		expect([0, 1]).toContain(value);
+
+		expect(randomInt(0, 0)).toBe(0);
+		expect(randomInt(1, 1)).toBe(1);
+	});
+
+	it('throws in development when min is greater than max', () => {
+		expect(() => randomInt(1, 0)).toThrow(RangeError);
 	});
 });
