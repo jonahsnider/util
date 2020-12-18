@@ -157,6 +157,13 @@ export function random(min: number, max: number): number {
 /**
  * Generate a random integer within the given bounds.
  *
+ * @example
+ * ```ts
+ * const value = randomInt(0, 3);
+ * 
+ * value === 0 || value === 1 || value === 2;
+ * ```
+ * 
  * @param min - Lower bound (inclusive) of the output range
  * @param max - Upper bound (exclusive) of the output range
  *
