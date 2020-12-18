@@ -1,4 +1,4 @@
-import {mean, sum} from './reducers';
+import {mean, sum} from '.';
 
 /**
  * Calculate the variance of a sequence of numbers.
