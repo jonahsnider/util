@@ -137,10 +137,10 @@ export function mode<T>(values: Iterable<T>): T[] {
  * @example
  * ```ts
  * const value = random(0, 10);
- * 
+ *
  * 0 <= value && value < 10;
  * ```
- * 
+ *
  * @param min - Lower bound (inclusive) of the output range
  * @param max - Upper bound (exclusive) of the output range
  *
@@ -160,10 +160,10 @@ export function random(min: number, max: number): number {
  * @example
  * ```ts
  * const value = randomInt(0, 3);
- * 
+ *
  * value === 0 || value === 1 || value === 2;
  * ```
- * 
+ *
  * @param min - Lower bound (inclusive) of the output range
  * @param max - Upper bound (exclusive) of the output range
  *
