@@ -130,3 +130,35 @@ export function mode<T>(values: Iterable<T>): T[] {
 
 	return modes;
 }
+
+/**
+ * Generate a random number within the given bounds.
+ *
+ * @param min - Lower bound (inclusive) of the output range
+ * @param max - Upper bound (exclusive) of the output range
+ *
+ * @returns A random number within the given bounds
+ */
+export function random(min: number, max: number): number {
+	if (__DEV__ && min > max) {
+		throw new RangeError('min exceeded max');
+	}
+
+	return Math.random() * (max - min) + min;
+}
+
+/**
+ * Generate a random integer within the given bounds.
+ *
+ * @param min - Lower bound (inclusive) of the output range
+ * @param max - Upper bound (exclusive) of the output range
+ *
+ * @returns A random integer within the given bounds
+ */
+export function randomInt(min: number, max: number): number {
+	if (__DEV__ && min > max) {
+		throw new RangeError('min exceeded max');
+	}
+
+	return Math.floor(random(Math.ceil(min), Math.floor(max)));
+}
