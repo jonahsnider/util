@@ -25,7 +25,7 @@ export class Stopwatch {
 	/**
 	 * If this stopwatch was started at any some point.
 	 * This will return `true` even if the stopwatch is stopped.
-   * 
+	 *
 	 * @example
 	 * ```ts
 	 * const stopwatch = new Stopwatch();
