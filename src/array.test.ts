@@ -1,8 +1,24 @@
-import {shuffle, stddev} from '.';
+import {expectNotType, expectType} from 'tsd';
+import {sample, shuffle, stddev} from '.';
+
+// Compilation tests
+expectType<undefined>(sample([]));
+expectType<undefined>(sample([] as const));
+expectNotType<any>(sample([]));
+expectType<1>(sample([1]));
+
+describe('sample', () => {
+	it('selects items', () => {
+		expect(sample([1])).toBe(1);
+		expect(sample([])).toBe(undefined);
+		const letters = ['a', 'b', 'c'];
+		expect(sample(letters)).toStrictEqual(expect.anything());
+	});
+});
 
 const iterations = 1e5;
 
-describe('sample', () => {
+describe('shuffle', () => {
 	it('shuffles arrays', () => {
 		const array = ['a', 'b', 'c', 'd'];
 		const frequencies = {
@@ -45,7 +61,7 @@ describe('sample', () => {
 		expect(shuffle([])).toBe(undefined);
 	});
 
-	it("shuffles without mutation when configured", () => {
+	it('shuffles without mutation when configured', () => {
 		const array = [1];
 		const shuffled = shuffle(array, false);
 
