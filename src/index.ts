@@ -6,4 +6,4 @@ export * from './reducers';
 export * from './array';
 export * from './sort';
 export * from './stopwatch';
-export * from './toPrecision';
+export * from './toDigits';
