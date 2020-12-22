@@ -22,7 +22,7 @@ describe('Stopwatch', () => {
 			const stopwatch = Stopwatch.start();
 
 			expect(stopwatch.started).toBe(true);
-			expect(stopwatch.end()).toBeGreaterThan(0n);
+			expect(stopwatch.end()).toBeGreaterThan(0);
 		});
 	});
 
@@ -32,7 +32,7 @@ describe('Stopwatch', () => {
 
 			stopwatch.start();
 
-			expect(stopwatch.end()).toBeGreaterThan(0n);
+			expect(stopwatch.end()).toBeGreaterThan(0);
 		});
 	});
 
@@ -44,8 +44,9 @@ describe('Stopwatch', () => {
 
 			stopwatch.start();
 
-			expect(stopwatch.end()).toBeGreaterThan(0n);
-			expect(typeof stopwatch.end()).toBe('bigint');
+			expect(stopwatch.end()).toBeGreaterThan(0);
+			expect(stopwatch.end()).toBeLessThan(3_000);
+			expect(typeof stopwatch.end()).toBe('number');
 		});
 	});
 });

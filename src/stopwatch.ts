@@ -1,6 +1,3 @@
-/** @private */
-const nsInMs = BigInt(1e6);
-
 /**
  * Helper to record the amount of time elapsed between two points during execution.
  *
@@ -93,13 +90,11 @@ export class Stopwatch {
 	 *
 	 * @returns The amount of time elapsed in milliseconds.
 	 */
-	end(): bigint {
+	end(): number {
 		if (__DEV__ && this.startTime === undefined) {
 			throw new Error('This timer was not started');
 		}
 
-		const diff = process.hrtime.bigint() - this.startTime!;
-
-		return diff * nsInMs;
+		return Number(process.hrtime.bigint() - this.startTime!) / 1_000_000;
 	}
 }
