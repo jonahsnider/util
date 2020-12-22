@@ -11,6 +11,6 @@ describe('nullish', () => {
 		expect(nullish('undefined')).toBe(false);
 		expect(nullish(1)).toBe(false);
 		expect(nullish(true)).toBe(false);
-		expect(nullish(BigInt(5))).toBe(false);
+		expect(nullish(5n)).toBe(false);
 	});
 });

@@ -4,12 +4,12 @@ import {mean, sum} from '.';
 // Actually running this code would also cause a runtime error, so using a function definition is a quick way to typecheck it without actually executing the broken code
 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
 () =>
-	[BigInt(1), 1]
+	[1n, 1]
 		// @ts-expect-error
 		.reduce(sum);
 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
 () =>
-	[BigInt(1), 1]
+	[1n, 1]
 		// @ts-expect-error
 		.reduce(mean);
 
@@ -19,7 +19,7 @@ describe('sum', () => {
 	});
 
 	it('adds bigints', () => {
-		expect([BigInt(1), BigInt(1)].reduce(sum)).toBe(BigInt(2));
+		expect([1n, 1n].reduce(sum)).toBe(2n);
 	});
 });
 
@@ -31,7 +31,7 @@ describe('mean', () => {
 	});
 
 	it('calculates the mean of bigints', () => {
-		const bigints = [1, 2, 3].map(number => BigInt(number));
-		expect(bigints.reduce(mean)).toBe(BigInt(2));
+		const bigints = [1n, 2n, 3n];
+		expect(bigints.reduce(mean)).toBe(2n);
 	});
 });
