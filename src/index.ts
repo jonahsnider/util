@@ -5,5 +5,5 @@ export * from './nullish';
 export * from './reducers';
 export * from './array';
 export * from './sort';
-export * from './timer';
+export * from './stopwatch';
 export * from './toPrecision';
