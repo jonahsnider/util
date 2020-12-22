@@ -45,7 +45,7 @@ describe('sample', () => {
 		expect(shuffle([])).toBe(undefined);
 	});
 
-	it("shuffles doesn't mutate when configured", () => {
+	it("shuffles without mutation when configured", () => {
 		const array = [1];
 		const shuffled = shuffle(array, false);
 
