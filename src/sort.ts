@@ -1,3 +1,24 @@
+type CompareFn<T> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
+
+/**
+ * Sort an object's keys by comparing their respective values.
+ *
+ * @example
+ * ```ts
+ * const object = {a: 3, c: 1, b: 2};
+ *
+ * sortObject(object, (a, b) => a - b);
+ * ```
+ *
+ * @param object - Object to sort
+ * @param compareFn - Function used to compare object values
+ *
+ * @returns A new object with the keys in order
+ */
+export function sortObject<K extends string | number | symbol, T>(object: Record<K, T>, compareFn: CompareFn<T>) {
+	return Object.fromEntries(Object.entries<T>(object).sort(([_aKey, aValue], [_bKey, bValue]) => compareFn(aValue, bValue))) as typeof object;
+}
+
 /**
  * Sort an array in ascending order (least to greatest).
  *
