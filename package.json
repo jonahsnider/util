@@ -37,18 +37,12 @@
 	"main": "dist/index.js",
 	"module": "dist/util.esm.js",
 	"name": "@pizzafox/util",
-	"private": false,
 	"publishConfig": {
 		"access": "public"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/pizzafox/util.git"
-	},
-	"resolutions": {
-		"**/@typescript-eslint/eslint-plugin": "4.11.0",
-		"**/@typescript-eslint/parser": "4.11.0",
-		"**/typescript": "4.1.3"
 	},
 	"scripts": {
 		"analyze": "size-limit --why",
@@ -58,7 +52,7 @@
 		"publish": "semantic-release",
 		"size": "size-limit",
 		"start": "tsdx watch",
-		"style": "prettier --ignore-path .gitignore --check .",
+		"style": "prettier --check .",
 		"test": "tsdx test"
 	},
 	"size-limit": [
