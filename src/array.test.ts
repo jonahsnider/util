@@ -1,5 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {sample, shuffle, stddev} from '.';
+import {binarySearch} from '.';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -20,6 +21,11 @@ const iterations = 1e5;
 
 describe('shuffle', () => {
 	it('shuffles arrays', () => {
+		// Testing randomness is always fun
+		// If you get unlucky this test will fail
+		// Try running it again
+		// If you are really unlucky it'll continue to fail
+
 		const array = ['a', 'b', 'c', 'd'];
 		const frequencies = {
 			abcd: 0,
@@ -67,5 +73,26 @@ describe('shuffle', () => {
 
 		expect(shuffled).not.toBe(array);
 		expect(shuffled).toStrictEqual(array);
+	});
+});
+
+describe('binarySearch', () => {
+	it('searches', () => {
+		const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+		function directionFn(value: number) {
+			if (value > 8) {
+				return 1;
+			} else if (value < 8) {
+				return -1;
+			} else {
+				return 0;
+			}
+		}
+
+		expect(binarySearch(array, directionFn)).toBe(8);
+		expect(binarySearch(array.slice(1), directionFn)).toBe(8);
+
+		expect(binarySearch([], () => 1)).toBe(undefined);
 	});
 });
