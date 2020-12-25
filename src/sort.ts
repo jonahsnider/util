@@ -1,3 +1,6 @@
+/**
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort MDN docs on this function
+ */
 type CompareFn<T> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
 
 /**
