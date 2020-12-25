@@ -1,4 +1,4 @@
-import {median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from '.';
+import {clamp, median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from '.';
 
 describe('variance', () => {
 	it('calculates variance', () => {
@@ -75,5 +75,17 @@ describe('randomInt', () => {
 
 	it('throws in development when min is greater than max', () => {
 		expect(() => randomInt(1, 0)).toThrow(RangeError);
+	});
+});
+
+describe('clamp', () => {
+	it('clamps', () => {
+		expect(clamp(0, 1, 2)).toBe(1);
+		expect(clamp(3, 1, 2)).toBe(2);
+		expect(clamp(2, 1, 3)).toBe(2);
+	});
+
+	it('throws in development when min is greater than max', () => {
+		expect(() => clamp(1, 1, 0)).toThrow(RangeError);
 	});
 });
