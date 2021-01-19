@@ -78,3 +78,23 @@ export function mean<T extends number>(previousValue: T, currentValue: T, curren
 		return (previousValue + currentValue) as T;
 	}
 }
+
+/**
+ * Get the largest value of an array of `number`s.
+ * Meant to be used with `Array.prototype.reduce`.
+ *
+ * @example
+ * ```ts
+ * const array = [1, 2, 3];
+ *
+ * array.reduce(max) === 3;
+ * ```
+ *
+ * @param previousValue - Current largest number seen
+ * @param currentValue - The next number to compare
+ *
+ * @returns `previousValue` or `currentValue`, whichever is larger
+ */
+export function max(accumulator: number, currentValue: number): number {
+	return Math.max(accumulator, currentValue);
+}
