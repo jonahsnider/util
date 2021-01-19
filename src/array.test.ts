@@ -1,6 +1,5 @@
 import {expectNotType, expectType} from 'tsd';
-import {sample, shuffle, stddev} from '.';
-import {binarySearch} from '.';
+import {binarySearch, chunk, sample, shuffle, stddev} from '.';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -94,5 +93,18 @@ describe('binarySearch', () => {
 		expect(binarySearch(array.slice(1), directionFn)).toBe(8);
 
 		expect(binarySearch([], () => 1)).toBe(undefined);
+	});
+});
+
+describe('chunk', () => {
+	it('chunks', () => {
+		const array = [1, 1, 2, 2, 3, 3];
+
+		expect(chunk(array, 2)).toEqual([
+			[1, 1],
+			[2, 2],
+			[3, 3]
+		]);
+		expect(chunk(array, 100)).toEqual([array]);
 	});
 });
