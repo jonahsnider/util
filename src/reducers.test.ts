@@ -35,3 +35,9 @@ describe('mean', () => {
 		expect(bigints.reduce(mean)).toBe(2n);
 	});
 });
+
+describe('max', () => {
+	it('selects the largest number', () => {
+		expect([2, 3, 1].reduce(max)).toBe(3);
+	});
+});
