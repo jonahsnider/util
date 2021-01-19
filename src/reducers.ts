@@ -98,3 +98,23 @@ export function mean<T extends number>(previousValue: T, currentValue: T, curren
 export function max(accumulator: number, currentValue: number): number {
 	return Math.max(accumulator, currentValue);
 }
+
+/**
+ * Get the lowest value of an array of `number`s.
+ * Meant to be used with `Array.prototype.reduce`.
+ *
+ * @example
+ * ```ts
+ * const array = [1, 2, 3];
+ *
+ * array.reduce(min) === 1;
+ * ```
+ *
+ * @param previousValue - Current lowest number seen
+ * @param currentValue - The next number to compare
+ *
+ * @returns `previousValue` or `currentValue`, whichever is lower
+ */
+export function min(accumulator: number, currentValue: number): number {
+	return Math.min(accumulator, currentValue);
+}
