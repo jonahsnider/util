@@ -1,3 +1,6 @@
+/** A 2-dimensional table of type `T`. */
+export type Table<T> = T[][];
+
 /**
  * A function used to determine the direction a search algorithm should take when traversing data to find a desired element.
  * @returns `0` when the desired element has been found. A positive number when the desired element appears after the current element. A negative number when

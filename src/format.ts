@@ -1,3 +1,5 @@
+import {Table} from '.';
+
 /** @private */
 const firstCharacter = /^./;
 
@@ -38,9 +40,6 @@ export function truncate(text: string, maxLength: number, suffix?: string): stri
 
 	return text;
 }
-
-/** A 2-dimensional table of type `T`. */
-export type Table<T> = T[][];
 
 /**
  * Get the lengths of each column in a table.
