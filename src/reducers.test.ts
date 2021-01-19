@@ -1,4 +1,4 @@
-import {mean, sum} from '.';
+import {max, mean, min, sum} from '.';
 
 // Compilation tests
 // Actually running this code would also cause a runtime error, so using a function definition is a quick way to typecheck it without actually executing the broken code
@@ -39,5 +39,11 @@ describe('mean', () => {
 describe('max', () => {
 	it('selects the largest number', () => {
 		expect([2, 3, 1].reduce(max)).toBe(3);
+	});
+});
+
+describe('min', () => {
+	it('selects the smallest number', () => {
+		expect([3, 1, 2].reduce(min)).toBe(1);
 	});
 });
