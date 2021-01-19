@@ -1,5 +1,6 @@
 /**
  * Calculate the sum of 2 `number`s.
+ * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
  * ```ts
@@ -14,6 +15,7 @@
 export function sum(a: number, b: number): number;
 /**
  * Calculate the sum of 2 `bigint`s.
+ * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
  * ```ts
@@ -31,6 +33,7 @@ export function sum<T extends number>(a: T, b: T): T {
 }
 
 /**
+ * Get the mean of an array of `number`s.
  * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
@@ -49,6 +52,7 @@ export function sum<T extends number>(a: T, b: T): T {
  */
 export function mean(previousValue: number, currentValue: number, currentIndex: number, array: Readonly<{length: number}>): number;
 /**
+ * Get the mean of an array of `bigint`s.
  * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
