@@ -3,17 +3,17 @@
  *
  * @example
  * ```ts
- * const timer = new Timer();
+ * const stopwatch = new Stopwatch();
  *
- * timer.start();
+ * stopwatch.start();
  *
- * timer.end();
+ * stopwatch.end();
  * ```
  * @example
  * ```ts
- * const timer = Timer.start();
+ * const stopwatch = Stopwatch.start();
  *
- * timer.end();
+ * stopwatch.end();
  * ```
  */
 export class Stopwatch {
