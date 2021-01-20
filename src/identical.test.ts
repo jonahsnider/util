@@ -14,9 +14,11 @@ describe('identical', () => {
 		const originalWithExtra = [...original, undefined];
 
 		// The same array object
-		expect(identicalManual(original, original)).toBe(true);
+		expect(identical(original, original)).toBe(true);
 		// A copy of an array
-		expect(identicalManual(original, copy)).toBe(true);
+		expect(identical(original, copy)).toBe(true);
+		// Arrays with different lengths
+		expect(identical(original, [...original, ...original])).toBe(false);
 
 		// Empty arrays
 		expect(identical([], [])).toBe(true);
@@ -57,6 +59,8 @@ describe('identicalManual', () => {
 		expect(identicalManual(original, original)).toBe(true);
 		// A copy of an array
 		expect(identicalManual(original, copy)).toBe(true);
+		// Arrays with different lengths
+		expect(identicalManual(original, [...original, ...original])).toBe(false);
 
 		// Empty arrays
 		expect(identical([], [])).toBe(true);
@@ -86,6 +90,7 @@ describe('identicalManual', () => {
 		expect(identicalManual(new Set(), new Set())).toBe(true);
 
 		expect(identicalManual(original, new Set())).toBe(false);
+		expect(identicalManual(new Set([1, 2, 3]), new Set([1, 2, 3, 4, 5, 6]))).toBe(false);
 	});
 
 	it('reports identical Maps', () => {
@@ -107,5 +112,14 @@ describe('identicalManual', () => {
 		expect(identicalManual(new Map(), new Map())).toBe(true);
 
 		expect(identicalManual(original, new Map())).toBe(false);
+		expect(
+			identicalManual(
+				new Map([['a', 1]]),
+				new Map([
+					['a', 1],
+					['b', 2]
+				])
+			)
+		).toBe(false);
 	});
 });

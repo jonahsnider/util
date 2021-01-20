@@ -61,12 +61,21 @@ export function identicalManual<V, K = never>(
 	}
 
 	if (Array.isArray(a)) {
+		if (a.length !== (b as typeof a).length) {
+			return false;
+		}
+
 		return a.every((item, i) => item === (b as typeof a)[i]);
+	}
+
+  // Horrible hack to make the tests specifically compile
+	if ((a as {size: number}).size !== (b as Set<V> | Map<K, V>).size) {
+		return false;
 	}
 
 	if (a instanceof Set) {
 		for (const item of a) {
-			if (!(b as Set<unknown>).has(item)) {
+			if (!(b as Set<V>).has(item)) {
 				return false;
 			}
 		}
