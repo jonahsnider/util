@@ -1626,7 +1626,7 @@ __metadata:
   dependencies:
     "@size-limit/preset-small-lib": 4.9.2
     "@typescript-eslint/eslint-plugin": 4.14.2
-    "@typescript-eslint/parser": 4.14.1
+    "@typescript-eslint/parser": 4.14.2
     eslint-plugin-prettier: 3.3.1
     eslint-plugin-tsdoc: 0.2.11
     prettier: 2.2.1
@@ -2198,20 +2198,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:4.14.1":
-  version: 4.14.1
-  resolution: "@typescript-eslint/parser@npm:4.14.1"
+"@typescript-eslint/parser@npm:4.14.2":
+  version: 4.14.2
+  resolution: "@typescript-eslint/parser@npm:4.14.2"
   dependencies:
-    "@typescript-eslint/scope-manager": 4.14.1
-    "@typescript-eslint/types": 4.14.1
-    "@typescript-eslint/typescript-estree": 4.14.1
+    "@typescript-eslint/scope-manager": 4.14.2
+    "@typescript-eslint/types": 4.14.2
+    "@typescript-eslint/typescript-estree": 4.14.2
     debug: ^4.1.1
   peerDependencies:
     eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 069976e6dc4d74b23c556a0597b97088e55e04e2a3ddc1b705655bb95f36b6d74778c552f65dd9b7f4432a3a36254b108ae5ce971d5bea75d12e839e5bc10971
+  checksum: 31f32fb0fe032f5fcedbfe7c81b76717599f1c67a2cf8c3c2eebe9bac450a6eea39124a64841a878136c900de6930096565150e28e295d09c0d35bf1a10f2ad9
   languageName: node
   linkType: hard
 
@@ -2242,16 +2242,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:4.14.1":
-  version: 4.14.1
-  resolution: "@typescript-eslint/scope-manager@npm:4.14.1"
-  dependencies:
-    "@typescript-eslint/types": 4.14.1
-    "@typescript-eslint/visitor-keys": 4.14.1
-  checksum: fa8ae677b9bf03b380c006451aa4b8c158abf99371cc2dfacee82883dbf9f9ffe4784a1724ac2db2976e2d2f892c2c970480296ca629b5ba5d9703034bf38f52
-  languageName: node
-  linkType: hard
-
 "@typescript-eslint/scope-manager@npm:4.14.2":
   version: 4.14.2
   resolution: "@typescript-eslint/scope-manager@npm:4.14.2"
@@ -2266,13 +2256,6 @@ __metadata:
   version: 4.11.0
   resolution: "@typescript-eslint/types@npm:4.11.0"
   checksum: 76b5bbf94b0cce067060ba2fb69b680229260b33bb304a8a0f8ab6149f5474009a0e286ede6390d0a2cff47f641f44b931fa1b18c30bec41c77de5fae565c1b5
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/types@npm:4.14.1":
-  version: 4.14.1
-  resolution: "@typescript-eslint/types@npm:4.14.1"
-  checksum: c994b59f5ef607a133a52ff61b70b934c3932859a3ac1d6886ca4efca6012d819fd21f49ba3170330fc84dff1ccae05063704ca6a1ddd7f80ae24610fe8a9390
   languageName: node
   linkType: hard
 
@@ -2302,25 +2285,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:4.14.1":
-  version: 4.14.1
-  resolution: "@typescript-eslint/typescript-estree@npm:4.14.1"
-  dependencies:
-    "@typescript-eslint/types": 4.14.1
-    "@typescript-eslint/visitor-keys": 4.14.1
-    debug: ^4.1.1
-    globby: ^11.0.1
-    is-glob: ^4.0.1
-    lodash: ^4.17.15
-    semver: ^7.3.2
-    tsutils: ^3.17.1
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 17a3e00fa6cbc12d25705318a3c65a692d58195658444140741fa473814287678ec87e14fc54426bbbe00bc4a8f1f298c0fc4fb4624fc0dfda270b8bd50e9dc6
-  languageName: node
-  linkType: hard
-
 "@typescript-eslint/typescript-estree@npm:4.14.2":
   version: 4.14.2
   resolution: "@typescript-eslint/typescript-estree@npm:4.14.2"
@@ -2347,16 +2311,6 @@ __metadata:
     "@typescript-eslint/types": 4.11.0
     eslint-visitor-keys: ^2.0.0
   checksum: 5c9c83d2209ac9f0d2b2b9fb86565aa90e8daa6946607d7718570a6aae3463132276db979f8528084ccbf970987a3506e0c671959f4e1ae238b89ccddb485dc4
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/visitor-keys@npm:4.14.1":
-  version: 4.14.1
-  resolution: "@typescript-eslint/visitor-keys@npm:4.14.1"
-  dependencies:
-    "@typescript-eslint/types": 4.14.1
-    eslint-visitor-keys: ^2.0.0
-  checksum: 3fad9e451a85a9aa70a22f08fd6e9cfc68f1953dfb14efa8e5815adebd1d337914bed9fbc7b7da1b99e017edb001c7057f03953647e88bd7ba2666deadc44bdd
   languageName: node
   linkType: hard
 
