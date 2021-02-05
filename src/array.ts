@@ -106,38 +106,29 @@ export const shuffle: (<T>(array: T[]) => void) & (<T>(array: readonly T[], muta
  * @returns The value of the first element in the array that satisfies the provided testing function. Otherwise, `undefined` is returned.
  */
 export function binarySearch<T>(array: T[], directionFn: DirectionFn<T>): ReturnType<typeof array['find']> {
-	// Start in the middle of the array
-	let index = Math.trunc(array.length / 2);
+	let left = 0;
+	let right = array.length - 1;
 
-	while (true) {
+	while (left <= right) {
+		let index = Math.trunc((left + right) / 2);
 		const direction = directionFn(array[index]);
 
-		if (direction > 0) {
-			// Desired element appears after the current one
-
-			let nextIndex = Math.trunc(index / 2);
-
-			if (index === nextIndex) {
-				return undefined;
-			}
-
-			index = nextIndex;
-		} else if (direction < 0) {
+		if (direction < 0) {
 			// Desired element appears before the current one
 
-			let nextIndex = index + Math.trunc(index / 2);
+			left = index + 1;
+		} else if (direction > 0) {
+			// Desired element appears after the current one
 
-			if (index === nextIndex) {
-				return undefined;
-			}
-
-			index = nextIndex;
+			right = index - 1;
 		} else {
 			// All other cases have been exhausted
 
 			return array[index];
 		}
 	}
+
+	return undefined;
 }
 
 /**
