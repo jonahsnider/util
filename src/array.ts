@@ -165,14 +165,14 @@ export function chunk<T>(array: readonly T[], size: number): Table<T> {
 
 /**
  * Construct a frequency table from an iterable.
- * 
+ *
  * @example
  * ```ts
  * frequencyTable([1, 2, 2, 3, 3, 3]) // Map(3) { 1 => 1, 2 => 2, 3 => 3 };
  * ```
- * 
+ *
  * @param iterable - The iterable to construct a frequency table for
- * 
+ *
  * @returns A frequency table represented as a `Map` where keys are the elements and values are the frequency
  */
 export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
