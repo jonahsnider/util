@@ -1,5 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {binarySearch, chunk, sample, shuffle, stddev} from '.';
+import {frequencyTable} from './array';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -106,5 +107,19 @@ describe('chunk', () => {
 			[3, 3]
 		]);
 		expect(chunk(array, 100)).toEqual([array]);
+	});
+});
+
+describe('frequencyTable', () => {
+	it('constructs a frequency table', () => {
+		const array = [1, 2, 2, 3, 3, 3];
+
+		expect(frequencyTable(array)).toEqual(
+			new Map([
+				[1, 1],
+				[2, 2],
+				[3, 3]
+			])
+		);
 	});
 });

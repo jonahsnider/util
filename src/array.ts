@@ -162,3 +162,28 @@ export function chunk<T>(array: readonly T[], size: number): Table<T> {
 
 	return Array.from({length: array.length / size + (array.length % size)}, (_, i) => array.slice(i * size, i * size + size));
 }
+
+/**
+ * Construct a frequency table from an iterable.
+ * 
+ * @example
+ * ```ts
+ * frequencyTable([1, 2, 2, 3, 3, 3]) // Map(3) { 1 => 1, 2 => 2, 3 => 3 };
+ * ```
+ * 
+ * @param iterable - The iterable to construct a frequency table for
+ * 
+ * @returns A frequency table represented as a `Map` where keys are the elements and values are the frequency
+ */
+export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
+	const frequencies: Map<T, number> = new Map();
+
+	for (const element of iterable) {
+		const occurrences = frequencies.get(element);
+		const newOccurrences = occurrences ? occurrences + 1 : 1;
+
+		frequencies.set(element, newOccurrences);
+	}
+
+	return frequencies;
+}
