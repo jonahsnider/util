@@ -14,5 +14,7 @@
  * @returns Number rounded to the specified number of digits
  */
 export function toDigits(value: number, precision: number): number {
-	return Number(value.toFixed(precision));
+	const factor = 10 ** precision;
+
+	return Math.round(value * factor * (1 + Number.EPSILON)) / factor;
 }
