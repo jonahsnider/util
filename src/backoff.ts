@@ -35,8 +35,8 @@ export class Backoff
  * An exponential backoff controller.
  */
 export class ExponentialBackoff extends Backoff {
-	jitterAdjusted: {min: number; max: number};
-	timer: NodeJS.Timeout;
+	private jitterAdjusted: {min: number; max: number};
+	private timer: NodeJS.Timeout;
 
 	/**
 	 * Create an exponential backoff controller with a specified base delay.
