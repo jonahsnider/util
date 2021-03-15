@@ -26,9 +26,9 @@ interface BuiltInEvents<T extends EventListeners> {
 interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
 	addListener<E extends keyof T>(event: E, listener: T[E]): this;
 	emit<E extends keyof T>(event: E, ...args: Parameters<T[E]>): ReturnType<EventEmitter['emit']>;
-	eventNames(): Array<Exclude<keyof T, number> | string | symbol>;
+	eventNames(): Array<Exclude<keyof T, number>>;
 	listenerCount(eventName: keyof T): ReturnType<EventEmitter['listenerCount']>;
-	listeners<E extends keyof T>(eventName: E): Array<T[E] | Function>;
+	listeners<E extends keyof T>(eventName: E): Array<T[E]>;
 	off<E extends keyof T>(eventName: E, listener: T[E]): this;
 	on<E extends keyof T>(eventName: E, listener: T[E]): this;
 	once<E extends keyof T>(eventName: E, listener: T[E]): this;
@@ -36,7 +36,7 @@ interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
 	prependOnceListener<E extends keyof T>(eventName: E, listener: T[E]): this;
 	removeAllListeners(eventName?: keyof T): this;
 	removeListener<E extends keyof T>(eventName: E, listener: T[E]): this;
-	rawListeners<E extends keyof T>(eventName: E): Array<T[E] | Function>;
+	rawListeners<E extends keyof T>(eventName: E): Array<T[E]>;
 }
 
 /**
