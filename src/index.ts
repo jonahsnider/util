@@ -1,4 +1,5 @@
 export * from './array';
+export * from './backoff';
 export * from './format';
 export * from './identical';
 export * from './math';
