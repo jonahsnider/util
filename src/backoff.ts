@@ -1,4 +1,4 @@
-import {EventEmitter} from 'events';
+import {EventEmitter, on, once} from 'events';
 import {random} from './math';
 import {TypedEventEmitter} from './typedEventEmitter';
 
@@ -28,6 +28,16 @@ export class Backoff
 		this.emit('finish');
 
 		this.removeAllListeners('attempt');
+	}
+
+	async finished() {
+		return once(this, 'finish');
+	}
+
+	async *[Symbol.asyncIterator]() {
+		for await (const _ of on(this, 'attempt')) {
+			yield _;
+		}
 	}
 }
 
