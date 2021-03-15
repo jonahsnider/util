@@ -1,15 +1,13 @@
-import type {EventEmitter} from 'events';
+import {EventEmitter} from 'events';
 
 /**
  * An object where keys are the names of events and values are the type signature of the listener function.
  *
- * Listener functions should probably have a return type of `any` or `unknown` for best compatibility (`@types/node` uses `any`).
- *
  * @example
  * ```ts
  * interface SafeEvents extends EventListeners {
- *   start: () => unknown;
- *   finish: (error: Error) => unknown;
+ *   start: () => void;
+ *   finish: (error: Error) => void;
  * }
  * ```
  */
@@ -24,8 +22,8 @@ interface BuiltInEvents<T extends EventListeners> {
  * Typed event emitter with no built in events.
  */
 interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
-	addListener<E extends keyof T>(event: E, listener: T[E]): this;
-	emit<E extends keyof T>(event: E, ...args: Parameters<T[E]>): ReturnType<EventEmitter['emit']>;
+	addListener<E extends keyof T>(eventName: E, listener: T[E]): this;
+	emit<E extends keyof T>(eventName: E, ...args: Parameters<T[E]>): ReturnType<EventEmitter['emit']>;
 	eventNames(): Array<Exclude<keyof T, number>>;
 	listenerCount(eventName: keyof T): ReturnType<EventEmitter['listenerCount']>;
 	listeners<E extends keyof T>(eventName: E): Array<T[E]>;
@@ -48,10 +46,12 @@ interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
  * ```ts
  * import { EventEmitter } from 'events';
  *
- * class SafeEmitter extends EventEmitter implements TypedEventEmitter<{
- *   start: () => unknown;
- *   finish: (error: Error) => unknown;
- * }> {}
+ * type Events = {
+ * 	success: () => void;
+ * 	error: (error: Error) => void;
+ * };
+ *
+ * class TypedClass extends (EventEmitter as new () => TypedEventEmitter<Events>) {}
  * ```
  */
 export interface TypedEventEmitter<T extends EventListeners = {}> extends BaseTypedEventEmitter<T & BuiltInEvents<T>> {}
