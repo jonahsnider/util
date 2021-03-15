@@ -50,7 +50,21 @@ export class ExponentialBackoff extends Backoff {
 	 * @param baseDelay - Base delay in milliseconds
 	 * @param jitter - The minimum and maximum jitter percentages.
 	 */
-	constructor(private readonly baseDelay: number, jitter: {min: number; max: number} = {min: 0, max: 0}) {
+	constructor(
+		private readonly baseDelay: number,
+		jitter: {
+			/**
+			 * The lower bound of the jitter percentage.
+			 * @default 0
+			 */
+			min: number;
+			/**
+			 * The upper bound of the jitter percentage.
+			 * @default 0
+			 */
+			max: number;
+		} = {min: 0, max: 0}
+	) {
 		super();
 
 		this.jitterAdjusted = {min: jitter.min + 1, max: jitter.max + 1};
