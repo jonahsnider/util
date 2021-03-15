@@ -7,3 +7,4 @@ export * from './reducers';
 export * from './sort';
 export * from './stopwatch';
 export * from './toDigits';
+export * from './typedEventEmitter';
