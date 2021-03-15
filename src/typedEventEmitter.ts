@@ -54,4 +54,4 @@ interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
  * }> {}
  * ```
  */
-export type TypedEventEmitter<T extends EventListeners = {}> = BaseTypedEventEmitter<T & BuiltInEvents<T>>;
+export interface TypedEventEmitter<T extends EventListeners = {}> extends BaseTypedEventEmitter<T & BuiltInEvents<T>> {}
