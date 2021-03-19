@@ -81,7 +81,7 @@ export class Stopwatch {
 	}
 
 	/**
-	 * End the stopwatch and return the duration elapsed since the start.
+	 * Return the duration elapsed since the start.
 	 *
 	 * @example
 	 * ```ts
