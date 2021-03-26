@@ -35,7 +35,12 @@
 	},
 	"license": "MIT",
 	"main": "dist/index.js",
-	"module": "dist/util.esm.js",
+	"type": "commonjs",
+	"module": "dist/convert.esm.mjs",
+	"exports": {
+		"import": "./dist/convert.esm.mjs",
+		"require": "./dist/index.js"
+	},
 	"name": "@pizzafox/util",
 	"publishConfig": {
 		"access": "public"
@@ -46,12 +51,13 @@
 	},
 	"scripts": {
 		"analyze": "size-limit --why",
-		"build": "tsdx build",
+		"build": "tsdx build --format cjs,esm,umd; yarn rename-esm",
 		"docs": "typedoc --options ./typedoc.json",
 		"lint": "tsdx lint src",
 		"publish": "semantic-release",
+		"rename-esm": "mv ./dist/util.esm.js ./dist/util.esm.mjs; mv ./dist/util.esm.js.map ./dist/util.esm.mjs.map;",
 		"size": "size-limit",
-		"start": "tsdx watch",
+		"start": "tsdx watch --onSuccess \"yarn rename-esm\"",
 		"style": "prettier --check .",
 		"test": "tsdx test"
 	},
@@ -62,7 +68,7 @@
 		},
 		{
 			"limit": "5 KB",
-			"path": "dist/util.esm.js"
+			"path": "dist/util.esm.mjs"
 		}
 	],
 	"typings": "dist/index.d.ts",
