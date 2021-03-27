@@ -104,7 +104,7 @@ describe('chunk', () => {
 		expect(chunk(array, 2)).toEqual([
 			[1, 2],
 			[3, 4],
-			[4, 6]
+			[5, 6]
 		]);
 
 		expect(chunk(array, 5)).toEqual([[1, 2, 3, 4, 5], [6]]);
