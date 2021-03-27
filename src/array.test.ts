@@ -99,14 +99,19 @@ describe('binarySearch', () => {
 
 describe('chunk', () => {
 	it('chunks', () => {
-		const array = [1, 1, 2, 2, 3, 3];
+		const array = [1, 2, 3, 4, 5, 6];
 
 		expect(chunk(array, 2)).toEqual([
-			[1, 1],
-			[2, 2],
-			[3, 3]
+			[1, 2],
+			[3, 4],
+			[4, 6]
 		]);
+
+		expect(chunk(array, 5)).toEqual([[1, 2, 3, 4, 5], [6]]);
+
 		expect(chunk(array, 100)).toEqual([array]);
+
+		expect(chunk([1, 2, 3], 3)).toEqual([[1], [2], [3]]);
 	});
 });
 

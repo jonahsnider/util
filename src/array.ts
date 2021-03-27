@@ -133,21 +133,26 @@ export function binarySearch<T>(array: T[], directionFn: DirectionFn<T>): Return
 
 /**
  * Divides an array into several chunks of `size`.
- * If the array can't be evenly divided into `size` chunks the final chunk will have less than `size` elements.
+ * If `size` is equal to the length of the array each item will be in their own array.
  *
  * @example
  * ```ts
- * chunk([1, 1, 2, 2, 3, 3], 2); // [[1, 1], [2, 2], [3, 3]]
+ * chunk([1, 2, 3, 4, 5, 6], 2); // [[1, 2 ], [ 3, 4 ], [ 5, 6 ] ]
  * ```
  *
  * @example
  * ```ts
- * chunk([1, 1, 2, 2, 3, 3], 5); // [[1, 1, 2, 2, 3], [3]]
+ * chunk([1, 2, 3, 4, 5, 6], 5); // [[1, 2, 3, 4, 5], [6]]
  * ```
  *
  * @example
  * ```ts
- * chunk([1, 1, 2, 2, 3, 3], 100); // [[1, 1, 2, 2, 3, 3]]
+ * chunk([1, 2, 3, 4, 5, 6], 6); // [[1], [2], [3], [4], [5], [6]]
+ * ```
+ *
+ * @example
+ * ```ts
+ * chunk([1, 2, 3, 4, 5, 6], 100); // [[1, 2, 3, 4, 5, 6]]
  * ```
  *
  * @param array - The array to chunk
@@ -156,11 +161,11 @@ export function binarySearch<T>(array: T[], directionFn: DirectionFn<T>): Return
  * @returns The new array containing chunks of the original `array`
  */
 export function chunk<T>(array: readonly T[], size: number): Table<T> {
-	if (array.length <= size) {
-		return [[...array]];
+	if (array.length === size) {
+		return array.map(element => [element]);
 	}
 
-	return Array.from({length: array.length / size + (array.length % size)}, (_, i) => array.slice(i * size, i * size + size));
+	return Array.from({length: Math.ceil(array.length / size)}, (_, i) => array.slice(i * size, i * size + size));
 }
 
 /**
