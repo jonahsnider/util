@@ -192,3 +192,19 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 
 	return frequencies;
 }
+
+/**
+ * A side-effect free reverse operation.
+ * 
+ * @example
+ * ```ts
+ * reverse([1, 2, 3]); // [3, 2, 1]
+ * ```
+ * 
+ * @param array - The array to reverse
+ * 
+ * @returns An array with the elements of `array` in reverse order
+ */
+export function reverse<T>(array: readonly T[]): T[] {
+	return Array.from({length: array.length}, (_, i) => array[array.length - (i + 1)]);
+}

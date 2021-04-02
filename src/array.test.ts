@@ -1,6 +1,5 @@
 import {expectNotType, expectType} from 'tsd';
-import {binarySearch, chunk, sample, shuffle, stddev} from '.';
-import {frequencyTable} from './array';
+import {binarySearch, chunk, frequencyTable, reverse, sample, shuffle, stddev} from '.';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -126,5 +125,17 @@ describe('frequencyTable', () => {
 				[3, 3]
 			])
 		);
+	});
+});
+
+describe('reverse', () => {
+	it('reverses an array', () => {
+		expect(reverse([1, 2, 3])).toEqual([3, 2, 1]);
+		expect(reverse([1, 2])).toEqual([2, 1]);
+		expect(reverse([1])).toEqual([1]);
+		expect(reverse([])).toEqual([]);
+
+		const array = [1];
+		expect(reverse(array)).not.toBe(array);
 	});
 });
