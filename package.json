@@ -47,7 +47,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/pizzafox/util.git"
+		"url": "https://github.com/jonahsnider/util.git"
 	},
 	"scripts": {
 		"analyze": "size-limit --why",
