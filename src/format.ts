@@ -83,7 +83,7 @@ export function formatTable(table: Table<string>, delimiter = ' '): string {
 /**
  * A string replacement function, but specialized for doing multiple replacements in a single pass through the input string.
  *
- * Based off [Nim's `strutils.multiReplace`](https://nim-lang.org/docs/strutils.html#multiReplace%2Cstring%2Cvarargs%5B%5D)
+ * Based off [Nim's `strutils.multiReplace`](https://nim-lang.org/docs/strutils.html#multiReplace%2Cstring%2Cvarargs%5B%5D).
  *
  * @example
  * ```ts
