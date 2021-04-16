@@ -3,6 +3,6 @@
 	"excludePrivate": true,
 	"includeVersion": true,
 	"listInvalidSymbolLinks": true,
-	"name": "@pizzafox/util",
+	"name": "@jonahsnider/util",
 	"out": "docs_out"
 }

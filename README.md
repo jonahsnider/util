@@ -1,4 +1,4 @@
-# [@pizzafox/util](https://util.jonah.pw/)
+# [@jonahsnider/util](https://util.jonah.pw/)
 
 A useful collection of optimized utility functions.
 Written in TypeScript and designed to have very safe types.
@@ -11,15 +11,15 @@ Works in Node.js, mostly works in browsers.
 [![Codecov](https://codecov.io/gh/jonahsnider/util/branch/main/graph/badge.svg)](https://codecov.io/gh/jonahsnider/util)
 
 ```sh
-yarn add @pizzafox/util
+yarn add @jonahsnider/util
 # or
-npm install @pizzafox/util
+npm install @jonahsnider/util
 ```
 
 then
 
 ```js
-import {shuffle} from '@pizzafox/util';
+import {shuffle} from '@jonahsnider/util';
 // or
-const {shuffle} = require('@pizzafox/util');
+const {shuffle} = require('@jonahsnider/util');
 ```

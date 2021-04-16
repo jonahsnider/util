@@ -1451,6 +1451,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jonahsnider/util@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@jonahsnider/util@workspace:."
+  dependencies:
+    "@size-limit/preset-small-lib": 4.10.2
+    "@typescript-eslint/eslint-plugin": 4.22.0
+    "@typescript-eslint/parser": 4.22.0
+    eslint-plugin-prettier: 3.4.0
+    eslint-plugin-tsdoc: 0.2.11
+    prettier: 2.2.1
+    prettier-config-xo: 1.0.3
+    semantic-release: 17.4.2
+    size-limit: 4.10.2
+    tsd: 0.14.0
+    tsdx: 0.14.1
+    tslib: 2.2.0
+    typedoc: 0.20.35
+    typescript: 4.2.4
+  languageName: unknown
+  linkType: soft
+
 "@microsoft/tsdoc-config@npm:0.14.0":
   version: 0.14.0
   resolution: "@microsoft/tsdoc-config@npm:0.14.0"
@@ -1619,27 +1640,6 @@ __metadata:
   checksum: ef5429c90b6d8d4a8816611f39ae469f238f0de76085818081b6185c9a53c9dd8e1e024000c633f935920bdb8075c18cea6475bb2c1fc67aa5d0f50c8e104a12
   languageName: node
   linkType: hard
-
-"@pizzafox/util@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@pizzafox/util@workspace:."
-  dependencies:
-    "@size-limit/preset-small-lib": 4.10.2
-    "@typescript-eslint/eslint-plugin": 4.22.0
-    "@typescript-eslint/parser": 4.22.0
-    eslint-plugin-prettier: 3.4.0
-    eslint-plugin-tsdoc: 0.2.11
-    prettier: 2.2.1
-    prettier-config-xo: 1.0.3
-    semantic-release: 17.4.2
-    size-limit: 4.10.2
-    tsd: 0.14.0
-    tsdx: 0.14.1
-    tslib: 2.2.0
-    typedoc: 0.20.35
-    typescript: 4.2.4
-  languageName: unknown
-  linkType: soft
 
 "@polka/url@npm:^1.0.0-next.9":
   version: 1.0.0-next.11

@@ -41,7 +41,7 @@
 		"import": "./dist/util.esm.mjs",
 		"require": "./dist/index.js"
 	},
-	"name": "@pizzafox/util",
+	"name": "@jonahsnider/util",
 	"publishConfig": {
 		"access": "public"
 	},
