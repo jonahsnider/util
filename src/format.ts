@@ -79,3 +79,40 @@ export function formatTable(table: Table<string>, delimiter = ' '): string {
 
 	return table.map(row => row.map((column, index) => column.padEnd(maxLengths[index])).join(delimiter)).join('\n');
 }
+
+/**
+ * A string replacement function, but specialized for doing multiple replacements in a single pass through the input string.
+ *
+ * Based off [Nim's `strutils.multiReplace`](https://nim-lang.org/docs/strutils.html#multiReplace%2Cstring%2Cvarargs%5B%5D)
+ *
+ * @example
+ * ```ts
+ * multiReplace('a b c', {a: 'c', c: 'a'}) === 'c b a';
+ * ```
+ *
+ * @param string - The string to replace values in
+ * @param replacements - An object of replacements where keys are the search values and values are the replacement values
+ *
+ * @returns A new string with the replacements applied
+ */
+export function multiReplace(string: string, replacements: Record<string, string>): string {
+	const replacementsIterable: Array<[sub: string, by: string]> = Object.entries(replacements);
+	let result = '';
+	let i = 0;
+
+	while (i < string.length) {
+		foundReplace: do {
+			for (const [searchValue, replaceValue] of replacementsIterable) {
+				if (string.slice(i).startsWith(searchValue)) {
+					result += replaceValue;
+					i += searchValue.length;
+					break foundReplace;
+				}
+			}
+
+			result += string[i++];
+		} while (false);
+	}
+
+	return result;
+}
