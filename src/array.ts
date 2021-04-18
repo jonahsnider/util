@@ -235,3 +235,39 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index:
 
 	return result;
 }
+
+/**
+ * Get the first `n` items from an iterable.
+ *
+ * @example
+ * ```ts
+ * first([1, 2, 3]); // [1]
+ * ```
+ *
+ * @example
+ * ```ts
+ * first([1, 2, 3], 2); // [1, 2]
+ * ```
+ *
+ * @param iterable - The iterable to take items from
+ * @param take - The number of items to take from the iterable
+ *
+ * @returns The first `take` items of the iterable
+ */
+export function first<T>(iterable: Iterable<T>, take = 1): Array<T> {
+	const result: T[] = [];
+
+	const iterator: Iterator<T, T | undefined> = iterable[Symbol.iterator]();
+
+	for (let i = 0; i < take; i++) {
+		const element = iterator.next();
+
+		if (element.done) {
+			break;
+		}
+
+		result.push(element.value);
+	}
+
+	return result;
+}

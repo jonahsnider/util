@@ -1,5 +1,5 @@
 import {expectNotType, expectType} from 'tsd';
-import {binarySearch, chunk, frequencyTable, partition, reverse, sample, shuffle} from './array';
+import {binarySearch, chunk, first, frequencyTable, partition, reverse, sample, shuffle} from './array';
 import {stddev} from './math';
 
 // Compilation tests
@@ -147,5 +147,26 @@ describe('partition', () => {
 			[1, 3, 5],
 			[2, 4, 6]
 		]);
+	});
+});
+
+describe('first', () => {
+	it('takes the defeault number of items', () => {
+		expect(first([1, 2, 3])).toStrictEqual([1]);
+	});
+
+	it('takes the specified number of items', () => {
+		expect(first([1, 2, 3], 2)).toStrictEqual([1, 2]);
+	});
+
+	it('allows array destructuring', () => {
+		const [one] = first([1, 2, 3]);
+
+		expect(one).toBe(1);
+	});
+
+	it('allows handles small arrays and big takes', () => {
+		expect(first([1], 3)).toStrictEqual([1]);
+		expect(first([], 3)).toStrictEqual([]);
 	});
 });
