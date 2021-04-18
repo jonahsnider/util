@@ -208,3 +208,30 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 export function reverse<T>(array: readonly T[]): T[] {
 	return Array.from({length: array.length}, (_, i) => array[array.length - (i + 1)]);
 }
+
+/**
+ * Split an iterable into two arrays of elements that passed or failed a provided predicate.
+ *
+ * @example
+ * ```ts
+ * const [odd, even] = partition([1, 2, 3, 4, 5, 6], num => num % 2);
+ * ```
+ *
+ * @param iterable - The iterable to partition
+ * @param predicate - The predicate to apply to each element of `iterable`. If the predicate returns a truthy value the element will be added to the `passed`
+ * array in the result. Otherwise, it will be added to the `failed` array.
+ *
+ * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
+ */
+export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index: number) => unknown): [passed: T[], failed: T[]] {
+	const result: [T[], T[]] = [[], []];
+	let index = 0;
+
+	for (const element of iterable) {
+		const desiredIndex = predicate(element, index++) ? 0 : 1;
+
+		result[desiredIndex].push(element);
+	}
+
+	return result;
+}

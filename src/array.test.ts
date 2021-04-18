@@ -1,5 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {binarySearch, chunk, frequencyTable, reverse, sample, shuffle, stddev} from '.';
+import {partition} from '.';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -137,5 +138,14 @@ describe('reverse', () => {
 
 		const array = [1];
 		expect(reverse(array)).not.toBe(array);
+	});
+});
+
+describe('partition', () => {
+	it('partitions an array', () => {
+		expect(partition([1, 2, 3, 4, 5, 6], num => num % 2)).toStrictEqual([
+			[1, 3, 5],
+			[2, 4, 6]
+		]);
 	});
 });
