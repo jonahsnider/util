@@ -101,17 +101,17 @@ describe('chunk', () => {
 	it('chunks', () => {
 		const array = [1, 2, 3, 4, 5, 6];
 
-		expect(chunk(array, 2)).toEqual([
+		expect(chunk(array, 2)).toStrictEqual([
 			[1, 2],
 			[3, 4],
 			[5, 6]
 		]);
 
-		expect(chunk(array, 5)).toEqual([[1, 2, 3, 4, 5], [6]]);
+		expect(chunk(array, 5)).toStrictEqual([[1, 2, 3, 4, 5], [6]]);
 
-		expect(chunk(array, 100)).toEqual([array]);
+		expect(chunk(array, 100)).toStrictEqual([array]);
 
-		expect(chunk([1, 2, 3], 3)).toEqual([[1], [2], [3]]);
+		expect(chunk([1, 2, 3], 3)).toStrictEqual([[1], [2], [3]]);
 	});
 });
 
@@ -119,7 +119,7 @@ describe('frequencyTable', () => {
 	it('constructs a frequency table', () => {
 		const array = [1, 2, 2, 3, 3, 3];
 
-		expect(frequencyTable(array)).toEqual(
+		expect(frequencyTable(array)).toStrictEqual(
 			new Map([
 				[1, 1],
 				[2, 2],
@@ -131,10 +131,10 @@ describe('frequencyTable', () => {
 
 describe('reverse', () => {
 	it('reverses an array', () => {
-		expect(reverse([1, 2, 3])).toEqual([3, 2, 1]);
-		expect(reverse([1, 2])).toEqual([2, 1]);
-		expect(reverse([1])).toEqual([1]);
-		expect(reverse([])).toEqual([]);
+		expect(reverse([1, 2, 3])).toStrictEqual([3, 2, 1]);
+		expect(reverse([1, 2])).toStrictEqual([2, 1]);
+		expect(reverse([1])).toStrictEqual([1]);
+		expect(reverse([])).toStrictEqual([]);
 
 		const array = [1];
 		expect(reverse(array)).not.toBe(array);
