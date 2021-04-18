@@ -1,4 +1,4 @@
-import {nullish} from '.';
+import {nullish} from './nullish';
 
 describe('nullish', () => {
 	it('returns true for nullish values', () => {

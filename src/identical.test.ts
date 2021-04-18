@@ -1,4 +1,4 @@
-import {identical, identicalManual} from '.';
+import {identical, identicalManual} from './identical';
 
 // Compilation tests
 // @ts-expect-error

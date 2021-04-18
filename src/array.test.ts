@@ -1,6 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
-import {binarySearch, chunk, frequencyTable, reverse, sample, shuffle, stddev} from '.';
-import {partition} from '.';
+import {binarySearch, chunk, frequencyTable, partition, reverse, sample, shuffle} from './array';
+import {stddev} from './math';
 
 // Compilation tests
 expectType<undefined>(sample([]));

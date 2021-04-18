@@ -1,4 +1,4 @@
-import {ascending, descending, sortObject} from '.';
+import {ascending, descending, sortObject} from './sort';
 
 describe('sortObject', () => {
 	it('sorts', () => {
