@@ -91,6 +91,7 @@ describe('identicalManual', () => {
 
 		expect(identicalManual(original, new Set())).toBe(false);
 		expect(identicalManual(new Set([1, 2, 3]), new Set([1, 2, 3, 4, 5, 6]))).toBe(false);
+		expect(identicalManual(new Set([1, 2, 3]), new Set([2, 3, 4]))).toBe(false);
 	});
 
 	it('reports identical Maps', () => {
@@ -114,10 +115,13 @@ describe('identicalManual', () => {
 		expect(identicalManual(original, new Map())).toBe(false);
 		expect(
 			identicalManual(
-				new Map([['a', 1]]),
 				new Map([
 					['a', 1],
 					['b', 2]
+				]),
+				new Map([
+					['b', 2],
+					['c', 3]
 				])
 			)
 		).toBe(false);
