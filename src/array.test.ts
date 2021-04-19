@@ -151,7 +151,7 @@ describe('partition', () => {
 });
 
 describe('first', () => {
-	it('takes the defeault number of items', () => {
+	it('takes the default number of items', () => {
 		expect(first([1, 2, 3])).toStrictEqual([1]);
 	});
 
