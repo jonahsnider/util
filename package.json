@@ -63,11 +63,11 @@
 	},
 	"size-limit": [
 		{
-			"limit": "3 KB",
+			"limit": "4 kB",
 			"path": "dist/util.cjs.production.min.js"
 		},
 		{
-			"limit": "5 KB",
+			"limit": "5 kB",
 			"path": "dist/util.esm.mjs"
 		}
 	],
