@@ -224,16 +224,17 @@ export function reverse<T>(array: readonly T[]): T[] {
  * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
  */
 export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index: number) => unknown): [passed: T[], failed: T[]] {
-	const result: [T[], T[]] = [[], []];
+	const passed: T[] = [];
+	const failed: T[] = [];
 	let index = 0;
 
 	for (const element of iterable) {
-		const desiredIndex = predicate(element, index++) ? 0 : 1;
+		const array = predicate(element, index++) ? passed : failed;
 
-		result[desiredIndex].push(element);
+		array.push(element);
 	}
 
-	return result;
+	return [passed, failed];
 }
 
 /**
