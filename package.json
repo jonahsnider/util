@@ -10,7 +10,7 @@
 		"@typescript-eslint/eslint-plugin": "4.22.0",
 		"@typescript-eslint/parser": "4.22.0",
 		"eslint-plugin-prettier": "3.4.0",
-		"eslint-plugin-tsdoc": "0.2.13",
+		"eslint-plugin-tsdoc": "0.2.14",
 		"prettier": "2.2.1",
 		"prettier-config-xo": "1.0.4",
 		"semantic-release": "17.4.2",
