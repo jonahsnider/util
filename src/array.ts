@@ -36,9 +36,8 @@ export type DirectionFn<T> = (element: T) => number;
  * @returns A random element from the array
  */
 // @ts-expect-error
-export function sample<T>(array: T[]): T;
-export function sample(array: readonly []): undefined;
-export function sample<T>(array: [T]): T {
+export function sample<T>(array: readonly T[]): T;
+export function sample(array: readonly []): undefined {
 	return array[Math.floor(Math.random() * array.length)];
 }
 
@@ -105,7 +104,7 @@ export const shuffle: (<T>(array: T[]) => void) & (<T>(array: readonly T[], muta
  *
  * @returns The value of the first element in the array that satisfies the provided testing function. Otherwise, `undefined` is returned.
  */
-export function binarySearch<T>(array: T[], directionFn: DirectionFn<T>): ReturnType<typeof array['find']> {
+export function binarySearch<T>(array: readonly T[], directionFn: DirectionFn<T>): ReturnType<typeof array['find']> {
 	let left = 0;
 	let right = array.length - 1;
 
