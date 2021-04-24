@@ -33,9 +33,9 @@ export function capitalize(text: string): string {
  *
  * @returns Truncated text
  */
-export function truncate(text: string, maxLength: number, suffix?: string): string {
+export function truncate(text: string, maxLength: number, suffix = ''): string {
 	if (text.length > maxLength) {
-		return `${text.slice(0, maxLength)}${suffix ?? ''}`;
+		return `${text.slice(0, maxLength)}${suffix}`;
 	}
 
 	return text;
