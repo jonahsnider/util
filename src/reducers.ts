@@ -74,9 +74,9 @@ export function mean<T extends number>(previousValue: T, currentValue: T, curren
 	if (array.length - 1 === currentIndex) {
 		// End of the array, calculate the mean
 		return ((previousValue + currentValue) / ((typeof currentValue === 'bigint' ? BigInt(array.length) : array.length) as T)) as T;
-	} else {
-		return (previousValue + currentValue) as T;
 	}
+
+	return (previousValue + currentValue) as T;
 }
 
 /**
