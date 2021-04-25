@@ -81,7 +81,7 @@ export function identicalManual<V, K = never>(
 		}
 	} else if (a instanceof Map) {
 		for (const [key, value] of a.entries()) {
-			if ((b as Map<unknown, unknown>).get(key) !== value) {
+			if ((b as Map<unknown, unknown>).get(key) !== value || !(b as Map<unknown, unknown>).has(key)) {
 				return false;
 			}
 		}
