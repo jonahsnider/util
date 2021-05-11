@@ -1464,7 +1464,7 @@ __metadata:
     prettier-config-xo: 1.0.4
     semantic-release: 17.4.2
     size-limit: 4.10.2
-    tsd: 0.15.0
+    tsd: 0.15.1
     tsdx: 0.14.1
     tslib: 2.2.0
     typedoc: 0.20.36
@@ -14602,9 +14602,9 @@ resolve@1.17.0:
   languageName: node
   linkType: hard
 
-"tsd@npm:0.15.0":
-  version: 0.15.0
-  resolution: "tsd@npm:0.15.0"
+"tsd@npm:0.15.1":
+  version: 0.15.1
+  resolution: "tsd@npm:0.15.1"
   dependencies:
     eslint-formatter-pretty: ^4.0.0
     globby: ^11.0.1
@@ -14614,7 +14614,7 @@ resolve@1.17.0:
     update-notifier: ^4.1.0
   bin:
     tsd: dist/cli.js
-  checksum: 8823bfe0ebf5fb646a5bc941dccc60db89d41137e32a3b0e5d60fb66fc3e8948138b616e5155ee11dbbb5dd83820d6c8c26e26d0795dc83233247ba80c75acbe
+  checksum: 1a0aeccd830773c0aa2269bd99e988cdd1d6cf82a46ee76463513ef5939677d8a3d725b41c774463bbf6dd9dfc4afc4236550e26921aab0705973cd344d81997
   languageName: node
   linkType: hard
 
