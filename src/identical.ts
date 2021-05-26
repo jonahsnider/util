@@ -119,12 +119,14 @@ export function identical<T>(firstIterable: Iterable<T>, secondIterable: typeof 
 
 		const [{done, value}] = nexts;
 
-		if (nexts.some(next => next.done)) {
-			return nexts.every(next => next.done === done);
-		}
+		for (const next of nexts) {
+			if (next.done) {
+				return nexts.every(next => next.done === done);
+			}
 
-		if (nexts.some(next => next.value !== value)) {
-			return false;
+			if (next.value !== value) {
+				return false;
+			}
 		}
 	}
 }
