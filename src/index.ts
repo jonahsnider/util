@@ -1,5 +1,6 @@
 export * from './array';
 export * from './cards';
+export * from './curry';
 export * from './format';
 export * from './identical';
 export * from './math';
