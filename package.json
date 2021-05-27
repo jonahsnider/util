@@ -68,7 +68,7 @@
       "webpack": false
 		},
 		{
-			"limit": "5 kB",
+			"limit": "10 kB",
 			"path": "dist/util.esm.mjs",
       "webpack": false
 		}
