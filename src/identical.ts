@@ -80,7 +80,7 @@ export function identicalManual<V, K = never>(
 			}
 		}
 	} else if (a instanceof Map) {
-		for (const [key, value] of a.entries()) {
+		for (const [key, value] of (a as ReadonlyMap<K, V>).entries()) {
 			if ((b as Map<K, V>).get(key) !== value || !(b as Map<K, V>).has(key)) {
 				return false;
 			}
