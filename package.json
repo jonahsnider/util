@@ -64,11 +64,13 @@
 	"size-limit": [
 		{
 			"limit": "4 kB",
-			"path": "dist/util.cjs.production.min.js"
+			"path": "dist/util.cjs.production.min.js",
+      "webpack": false
 		},
 		{
 			"limit": "5 kB",
-			"path": "dist/util.esm.mjs"
+			"path": "d15st/util.esm.mjs",
+      "webpack": false
 		}
 	],
 	"typings": "dist/index.d.ts",
