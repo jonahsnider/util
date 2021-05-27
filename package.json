@@ -69,7 +69,7 @@
 		},
 		{
 			"limit": "5 kB",
-			"path": "d15st/util.esm.mjs",
+			"path": "dist/util.esm.mjs",
       "webpack": false
 		}
 	],
