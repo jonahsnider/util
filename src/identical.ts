@@ -105,14 +105,12 @@ export function identicalManual<V, K = never>(
  * identical(a, b, c, d, e) === true;
  * ```
  *
- * @param firstIterable - The first elements to compare
- * @param secondIterable - The second elements to compare
- * @param otherIterables - Any other elements to compare
+ * @param iterables - Elements to compare
  *
  * @returns `true` if all elements are identical, `false` otherwise
  */
-export function identical<T>(firstIterable: Iterable<T>, secondIterable: typeof firstIterable, ...otherIterables: Array<typeof firstIterable>): boolean {
-	const iterators = [firstIterable, secondIterable, ...otherIterables].map(item => item[Symbol.iterator]());
+export function identical<T>(...iterables: [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
+	const iterators = iterables.map(item => item[Symbol.iterator]());
 
 	while (true) {
 		const nexts = iterators.map(iterator => iterator.next());
