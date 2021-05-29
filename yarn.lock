@@ -1464,7 +1464,7 @@ __metadata:
     prettier-config-xo: 1.0.4
     semantic-release: 17.4.3
     size-limit: 4.11.0
-    tsd: 0.15.1
+    tsd: 0.16.0
     tsdx: 0.14.1
     tslib: 2.2.0
     typedoc: 0.20.36
@@ -1907,6 +1907,16 @@ __metadata:
   version: 0.1.1
   resolution: "@trysound/sax@npm:0.1.1"
   checksum: 0ffcea622248d234faad26761c6a152856acbf0153bd54178adc0c84607355b769ea7eda096f51590b1897bed7d51e01dc7582dc97ff94a8c0f97ee03d707cd5
+  languageName: node
+  linkType: hard
+
+"@tsd/typescript@npm:^4.2.4":
+  version: 4.3.2
+  resolution: "@tsd/typescript@npm:4.3.2"
+  bin:
+    tsc: typescript/bin/tsc
+    tsserver: typescript/bin/tsserver
+  checksum: 003aefc475cf7a4dd2a349cd4dbb7e0a40b8c31ca56b29b3b9a4515824d85a02e885e6964f9c2478ce016a3c6bc4210c902c78fd517d3607e206fb2a1f2769fd
   languageName: node
   linkType: hard
 
@@ -9757,25 +9767,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"meow@npm:^7.0.1":
-  version: 7.1.1
-  resolution: "meow@npm:7.1.1"
-  dependencies:
-    "@types/minimist": ^1.2.0
-    camelcase-keys: ^6.2.2
-    decamelize-keys: ^1.1.0
-    hard-rejection: ^2.1.0
-    minimist-options: 4.1.0
-    normalize-package-data: ^2.5.0
-    read-pkg-up: ^7.0.1
-    redent: ^3.0.0
-    trim-newlines: ^3.0.0
-    type-fest: ^0.13.1
-    yargs-parser: ^18.1.3
-  checksum: de6d2f15332a18da5e13bb3f935f9718cf7ae697d121009adee7a3410bfc63f6b7896476bb0e1ef101faacea4d4a4dc95108e3c9eab0e336b990a115646b72e8
-  languageName: node
-  linkType: hard
-
 "meow@npm:^8.0.0":
   version: 8.0.0
   resolution: "meow@npm:8.0.0"
@@ -9792,6 +9783,26 @@ fsevents@~2.3.1:
     type-fest: ^0.18.0
     yargs-parser: ^20.2.3
   checksum: 536b8cdff381d619ba4d2647bd15bde3ebbcb289e0c6a5e618d23e6e6d922f6a2febc722a12dee7c6c426f3f37a9a3e7e7b09bf9c217e2eb178e276f9665697d
+  languageName: node
+  linkType: hard
+
+"meow@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "meow@npm:9.0.0"
+  dependencies:
+    "@types/minimist": ^1.2.0
+    camelcase-keys: ^6.2.2
+    decamelize: ^1.2.0
+    decamelize-keys: ^1.1.0
+    hard-rejection: ^2.1.0
+    minimist-options: 4.1.0
+    normalize-package-data: ^3.0.0
+    read-pkg-up: ^7.0.1
+    redent: ^3.0.0
+    trim-newlines: ^3.0.0
+    type-fest: ^0.18.0
+    yargs-parser: ^20.2.3
+  checksum: d1573809d6e3df55ab7b8c49f2ecfb8006664856700b556c794013ef887e47991bf1fef8ba9de60bb4afda9b62136823e4008c7f2cc459a7c036b7b649a42c0d
   languageName: node
   linkType: hard
 
@@ -14457,19 +14468,20 @@ resolve@1.17.0:
   languageName: node
   linkType: hard
 
-"tsd@npm:0.15.1":
-  version: 0.15.1
-  resolution: "tsd@npm:0.15.1"
+"tsd@npm:0.16.0":
+  version: 0.16.0
+  resolution: "tsd@npm:0.16.0"
   dependencies:
+    "@tsd/typescript": ^4.2.4
     eslint-formatter-pretty: ^4.0.0
     globby: ^11.0.1
-    meow: ^7.0.1
+    meow: ^9.0.0
     path-exists: ^4.0.0
     read-pkg-up: ^7.0.0
     update-notifier: ^4.1.0
   bin:
     tsd: dist/cli.js
-  checksum: 1a0aeccd830773c0aa2269bd99e988cdd1d6cf82a46ee76463513ef5939677d8a3d725b41c774463bbf6dd9dfc4afc4236550e26921aab0705973cd344d81997
+  checksum: 603d7c1654e3f3346524cc024422be362463071b8c15b1cec0503633d1d4fae51c5e7fd2a708f958337e56f9ddba49889b55979e3ec2b5f301ccab8d6bd047c7
   languageName: node
   linkType: hard
 
@@ -14614,13 +14626,6 @@ resolve@1.17.0:
   version: 0.11.0
   resolution: "type-fest@npm:0.11.0"
   checksum: 02e5cadf13590a5724cacf8d9133320efd173f6fb1b695fcb29e56551a315bf0f07ca988a780a1999b7b55bb3eaaa7f37223615207236d393af17bba6749dc95
-  languageName: node
-  linkType: hard
-
-"type-fest@npm:^0.13.1":
-  version: 0.13.1
-  resolution: "type-fest@npm:0.13.1"
-  checksum: 11acce4f34c75a838914bdc4a0133d2dd0864e313897471974880df82624159521bae691a6100ff99f93be2d0f8871ecdab18573d2c67e61905cf2f5cbfa52a6
   languageName: node
   linkType: hard
 
@@ -15579,7 +15584,7 @@ typescript@^3.7.3:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:18.x, yargs-parser@npm:^18.1.2, yargs-parser@npm:^18.1.3":
+"yargs-parser@npm:18.x, yargs-parser@npm:^18.1.2":
   version: 18.1.3
   resolution: "yargs-parser@npm:18.1.3"
   dependencies:

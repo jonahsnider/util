@@ -15,7 +15,7 @@
 		"prettier-config-xo": "1.0.4",
 		"semantic-release": "17.4.3",
 		"size-limit": "4.11.0",
-		"tsd": "0.15.1",
+		"tsd": "0.16.0",
 		"tsdx": "0.14.1",
 		"tslib": "2.2.0",
 		"typedoc": "0.20.36",
