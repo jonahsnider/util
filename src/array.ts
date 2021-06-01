@@ -274,3 +274,28 @@ export function first<T>(iterable: Iterable<T>, take = 1): Array<T> {
 
 	return result;
 }
+
+/**
+ * Get an array of all the duplicate elements in an iterable.
+ *
+ * ```ts
+ * duplicates([1, 2, 2, 3]); // [2]
+ * ```
+ *
+ * @param iterable - The iterable to find duplicates in
+ * @returns An array of the duplicated elements
+ */
+export function duplicates<T>(iterable: Iterable<T>): T[] {
+	const seen: Set<T> = new Set();
+	const result: T[] = [];
+
+	for (const element of iterable) {
+		if (seen.has(element)) {
+			result.push(element);
+		}
+
+		seen.add(element);
+	}
+
+	return result;
+}

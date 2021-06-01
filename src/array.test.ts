@@ -1,5 +1,5 @@
 import {expectNotType, expectType} from 'tsd';
-import {binarySearch, chunk, first, frequencyTable, partition, reverse, sample, shuffle} from './array';
+import {binarySearch, chunk, duplicates, first, frequencyTable, partition, reverse, sample, shuffle} from './array';
 import {stddev} from './math';
 
 // Compilation tests
@@ -168,5 +168,16 @@ describe('first', () => {
 	it('allows handles small arrays and big takes', () => {
 		expect(first([1], 3)).toStrictEqual([1]);
 		expect(first([], 3)).toStrictEqual([]);
+	});
+});
+
+describe('duplicates', () => {
+	it('returns duplicate elements', () => {
+		expect(duplicates([1, 2, 2, 3])).toStrictEqual([2]);
+	});
+
+	it('returns empty when there are no duplicates', () => {
+		expect(duplicates([1, 2, 3])).toStrictEqual([]);
+		expect(duplicates([])).toStrictEqual([]);
 	});
 });
