@@ -197,18 +197,29 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 
 /**
  * A side-effect free reverse operation.
+ * For best results `iterable` should be an array so that the returned array doesn't need to be resized as more elements are added.
  *
  * @example
  * ```ts
  * reverse([1, 2, 3]); // [3, 2, 1]
  * ```
  *
- * @param array - The array to reverse
+ * @param iterable - The iterable to reverse
  *
- * @returns An array with the elements of `array` in reverse order
+ * @returns An array with the elements of `iterable` in reverse order
  */
-export function reverse<T>(array: readonly T[]): T[] {
-	return Array.from({length: array.length}, (_, i) => array[array.length - (i + 1)]);
+export function reverse<T>(iterable: readonly T[] | Iterable<T>): T[] {
+	if (Array.isArray(iterable)) {
+		return Array.from({length: iterable.length}, (_, i) => iterable[iterable.length - (i + 1)]);
+	}
+
+	const result: T[] = [];
+
+	for (const element of iterable) {
+		result.unshift(element);
+	}
+
+	return result;
 }
 
 /**

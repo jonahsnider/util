@@ -139,6 +139,16 @@ describe('reverse', () => {
 		const array = [1];
 		expect(reverse(array)).not.toBe(array);
 	});
+
+	it('reverses an iterable', () => {
+		expect(reverse(new Set([1, 2, 3]))).toStrictEqual([3, 2, 1]);
+		expect(reverse(new Set([1, 2]))).toStrictEqual([2, 1]);
+		expect(reverse(new Set([1]))).toStrictEqual([1]);
+		expect(reverse(new Set([]))).toStrictEqual([]);
+
+		const set = new Set([1]);
+		expect(reverse(set)).not.toBe(set);
+	});
 });
 
 describe('partition', () => {
