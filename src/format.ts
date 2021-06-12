@@ -15,8 +15,24 @@ const firstCharacter = /^./;
  *
  * @returns Capitalized string
  */
-export function capitalize(text: string): string {
-	return text.replace(firstCharacter, firstCharacter => firstCharacter.toUpperCase());
+export function capitalize<T extends string>(text: T): Capitalize<T> {
+	return text.replace(firstCharacter, firstCharacter => firstCharacter.toUpperCase()) as Capitalize<T>;
+}
+
+/**
+ * Uncapitalizes the first letter of a string.
+ *
+ * @example
+ * ```ts
+ * capitalize('hello') === 'Hello';
+ * ```
+ *
+ * @param text - Text to uncapitalize
+ *
+ * @returns Uncapitalized string
+ */
+export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
+	return text.replace(firstCharacter, firstCharacter => firstCharacter.toLowerCase()) as Uncapitalize<T>;
 }
 
 /**
