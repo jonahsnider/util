@@ -18,8 +18,8 @@ type CompareFn<T> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
  *
  * @returns A new object with the keys in order
  */
-export function sortObject<K extends string | number | symbol, T>(object: Record<K, T>, compareFn: CompareFn<T>) {
-	return Object.fromEntries(Object.entries<T>(object).sort(([_aKey, aValue], [_bKey, bValue]) => compareFn(aValue, bValue))) as typeof object;
+export function sortObject<K extends PropertyKey, V>(object: Record<K, V>, compareFn: CompareFn<V>) {
+	return Object.fromEntries(Object.entries<V>(object).sort(([_aKey, aValue], [_bKey, bValue]) => compareFn(aValue, bValue))) as typeof object;
 }
 
 /**
