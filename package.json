@@ -28,11 +28,6 @@
 		"dist"
 	],
 	"homepage": "https://util.jonah.pw/",
-	"jest": {
-		"globals": {
-			"__DEV__": true
-		}
-	},
 	"license": "MIT",
 	"main": "dist/index.js",
 	"type": "commonjs",
