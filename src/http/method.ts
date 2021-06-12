@@ -2,7 +2,7 @@
  * Set of HTTP request methods to indicate the desired action to be performed for a given resource.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods MDN docs
  */
-enum Method {
+export enum Method {
 	/**
 	 * The `GET` method requests a representation of the specified resource.
 	 * Requests using GET should only retrieve data.
@@ -50,5 +50,3 @@ enum Method {
 	 */
 	Patch = 'PATCH'
 }
-
-export default Method;

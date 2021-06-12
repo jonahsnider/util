@@ -2,7 +2,7 @@
  * HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
  * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status MDN docs
  */
-enum Status {
+export enum Status {
 	/**
 	 * 100 Continue.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100 MDN docs
@@ -274,5 +274,3 @@ enum Status {
 	 */
 	NetworkAuthenticationRequired
 }
-
-export default Status;
