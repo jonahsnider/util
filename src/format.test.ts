@@ -1,9 +1,15 @@
 import {Table} from './array';
-import {capitalize, formatTable, maxColumnLength, multiReplace, truncate} from './format';
+import {capitalize, formatTable, maxColumnLength, multiReplace, truncate, uncapitalize} from './format';
 
 describe('capitalize', () => {
 	it('capitalizes strings', () => {
 		expect(capitalize('hello')).toBe('Hello');
+	});
+});
+
+describe('uncapitalize', () => {
+	it('uncapitalizes strings', () => {
+		expect(uncapitalize('Hello')).toBe('hello');
 	});
 });
 
