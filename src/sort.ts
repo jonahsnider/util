@@ -1,7 +1,10 @@
 /**
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort MDN docs on this function
  */
-export type CompareFn<T> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
+export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
+
+/** A value that can be compared numerically using `<`, `>`, `<=`, or `>=`. */
+export type Comparable = string | number | bigint | boolean | null | (Record<PropertyKey, unknown> & {[Symbol.toPrimitive]: (hint: 'number') => number});
 
 /**
  * Sort an object's keys by comparing their respective values.
@@ -37,8 +40,17 @@ export function sortObject<K extends PropertyKey, V>(object: Record<K, V>, compa
  *
  * @returns A negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise
  */
-export function ascending(a: number, b: number): number {
-	return a - b;
+export function ascending(a: Comparable, b: Comparable): number {
+	// null is converted to 0 in comparisons
+	if (a! < b!) {
+		return -1;
+	}
+
+	if (a! > b!) {
+		return 1;
+	}
+
+	return 0;
 }
 
 /**
@@ -55,6 +67,15 @@ export function ascending(a: number, b: number): number {
  *
  * @returns A negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise
  */
-export function descending(a: number, b: number): number {
-	return b - a;
+export function descending(a: Comparable, b: Comparable): number {
+	// null is converted to 0 in comparisons
+	if (a! < b!) {
+		return 1;
+	}
+
+	if (a! > b!) {
+		return -1;
+	}
+
+	return 0;
 }

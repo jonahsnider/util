@@ -18,6 +18,14 @@ describe('descending', () => {
 
 		expect(array).toStrictEqual([3, 2, 1]);
 	});
+
+	it('sorts bigints', () => {
+		const array = [2n, 1n, 3n];
+
+		array.sort(descending);
+
+		expect(array).toStrictEqual([3n, 2n, 1n]);
+	});
 });
 
 describe('ascending', () => {
@@ -27,5 +35,13 @@ describe('ascending', () => {
 		array.sort(ascending);
 
 		expect(array).toStrictEqual([1, 2, 3]);
+	});
+
+  it('sorts bigints', () => {
+		const array = [2n, 1n, 3n];
+
+		array.sort(ascending);
+
+		expect(array).toStrictEqual([1n, 2n, 3n]);
 	});
 });
