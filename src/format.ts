@@ -4,7 +4,7 @@ import {Table} from './array';
 const firstCharacter = /^./;
 
 /**
- * Capitalizes the first letter of a string
+ * Capitalizes the first letter of a string.
  *
  * @example
  * ```ts
