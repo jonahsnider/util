@@ -12,7 +12,7 @@ export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0],
  * @example
  * ```ts
  * import { Sort } from '@jonahsnider/util';
- * 
+ *
  * const object = {a: 3, c: 1, b: 2};
  *
  * Object.fromEntries(sortObject(object, Sort.ascending);
