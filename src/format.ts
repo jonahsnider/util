@@ -23,7 +23,7 @@ export function capitalize<T extends string>(text: T): Capitalize<T> {
  *
  * @example
  * ```ts
- * uncapitalize('Hello') === 'hello';
+ * uncapitalize('HELLO') === 'hELLO';
  * ```
  *
  * @param text - Text to uncapitalize
