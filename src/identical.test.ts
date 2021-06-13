@@ -1,4 +1,4 @@
-import {identical, identicalManual} from './identical';
+import {same, identicalManual} from './identical';
 
 // Compilation tests
 // @ts-expect-error
@@ -6,7 +6,7 @@ identicalManual([], new Set());
 // @ts-expect-error
 identicalManual(new Set(), []);
 
-describe(identical.name, () => {
+describe(same.name, () => {
 	it('reports identical arrays', () => {
 		const original = [1, 2, 3];
 		const copy = [...original];
@@ -14,27 +14,27 @@ describe(identical.name, () => {
 		const originalWithExtra = [...original, undefined];
 
 		// The same array object
-		expect(identical(original, original)).toBe(true);
+		expect(same(original, original)).toBe(true);
 		// A copy of an array
-		expect(identical(original, copy)).toBe(true);
+		expect(same(original, copy)).toBe(true);
 		// Arrays with different lengths
-		expect(identical(original, [...original, ...original])).toBe(false);
+		expect(same(original, [...original, ...original])).toBe(false);
 
 		// Empty arrays
-		expect(identical([], [])).toBe(true);
+		expect(same([], [])).toBe(true);
 
 		// Arrays with undefined elements
-		expect(identical([undefined], [undefined])).toBe(true);
+		expect(same([undefined], [undefined])).toBe(true);
 
 		// Same elements, but not the same order
 		expect(identicalManual(original, reversed)).toBe(false);
 
 		// Same elements, but one array has an extra undefined element
-		expect(identical(original, originalWithExtra)).toBe(false);
-		expect(identical(originalWithExtra, original)).toBe(false);
+		expect(same(original, originalWithExtra)).toBe(false);
+		expect(same(originalWithExtra, original)).toBe(false);
 
 		// Arrays with undefined elements, but one array has an extra undefined element
-		expect(identical([undefined, undefined], [undefined])).toBe(false);
+		expect(same([undefined, undefined], [undefined])).toBe(false);
 	});
 
 	it('reports identical Sets', () => {
@@ -42,9 +42,9 @@ describe(identical.name, () => {
 		const b = new Set(a);
 		const c = new Set([3, 2, 1]);
 
-		expect(identical(a, a, a)).toBe(true);
-		expect(identical(a, b, a)).toBe(true);
-		expect(identical(a, a, a, c)).toBe(false);
+		expect(same(a, a, a)).toBe(true);
+		expect(same(a, b, a)).toBe(true);
+		expect(same(a, a, a, c)).toBe(false);
 	});
 });
 
@@ -63,20 +63,20 @@ describe(identicalManual.name, () => {
 		expect(identicalManual(original, [...original, ...original])).toBe(false);
 
 		// Empty arrays
-		expect(identical([], [])).toBe(true);
+		expect(same([], [])).toBe(true);
 
 		// Arrays with undefined elements
-		expect(identical([undefined], [undefined])).toBe(true);
+		expect(same([undefined], [undefined])).toBe(true);
 
 		// Same elements, but not the same order
 		expect(identicalManual(original, reversed)).toBe(false);
 
 		// Same elements, but one array has an extra undefined element
-		expect(identical(original, originalWithExtra)).toBe(false);
-		expect(identical(originalWithExtra, original)).toBe(false);
+		expect(same(original, originalWithExtra)).toBe(false);
+		expect(same(originalWithExtra, original)).toBe(false);
 
 		// Arrays with undefined elements, but one array has an extra undefined element
-		expect(identical([undefined, undefined], [undefined])).toBe(false);
+		expect(same([undefined, undefined], [undefined])).toBe(false);
 	});
 
 	it('reports identical Sets', () => {

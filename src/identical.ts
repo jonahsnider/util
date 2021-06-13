@@ -92,7 +92,7 @@ export function identicalManual<V, K = never>(
 }
 
 /**
- * Check if 2 or more iterables are not the same object, but hold the same elements.
+ * Check if 2 or more iterables hold the same elements.
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
@@ -103,15 +103,14 @@ export function identicalManual<V, K = never>(
  * const d = [1, 2, 3];
  * const e = [1, 2, 3];
  *
- * identical(a, b, c, d, e) === true;
+ * same(a, b, c, d, e) === true;
  * ```
  *
  * @param iterables - Elements to compare
  *
- * @returns `true` if all elements are identical, `false` otherwise
+ * @returns `true` if all elements are strictly equal, `false` otherwise
  */
-// TODO: Rename to same in v3
-export function identical<T>(...iterables: [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
+export function same<T>(...iterables: [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
 	const iterators = iterables.map(item => item[Symbol.iterator]());
 
 	while (true) {
