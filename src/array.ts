@@ -313,7 +313,7 @@ export function duplicates<T>(iterable: Iterable<T>): T[] {
 type ObjectWithLength = {length: number};
 type ObjectWithSize = {size: number};
 
-type ArrangedByLength<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
+type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
 
 /**
  * Arrange two objects in a tuple by their length/size.
@@ -329,9 +329,9 @@ type ArrangedByLength<A, B> = [largest: A, smallest: B] | [largest: B, smallest:
  *
  * @throws If `a` does not have a `length` or `size` property
  */
-export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLength>(a: A, b: B): ArrangedByLength<A, B>;
-export function largeToSmall<A extends ObjectWithSize, B extends ObjectWithSize>(a: A, b: B): ArrangedByLength<A, B>;
-export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B extends ObjectWithSize | ObjectWithLength>(a: A, b: B): ArrangedByLength<A, B> {
+export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLength>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
+export function largeToSmall<A extends ObjectWithSize, B extends ObjectWithSize>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
+export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B extends ObjectWithSize | ObjectWithLength>(a: A, b: B): ArrangedLargestToSmallest<A, B> {
 	let key: 'size' | 'length' | undefined = undefined;
 
 	if ('size' in a) {
