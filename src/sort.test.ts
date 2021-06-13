@@ -1,6 +1,6 @@
 import {ascending, descending, sortObject} from './sort';
 
-describe('sortObject', () => {
+describe(sortObject.name, () => {
 	it('sorts', () => {
 		const object = {a: 3, c: 1, b: 2};
 
@@ -10,7 +10,7 @@ describe('sortObject', () => {
 	});
 });
 
-describe('descending', () => {
+describe(descending.name, () => {
 	it('sorts', () => {
 		const array = [2, 3, 1, 3];
 
@@ -28,7 +28,7 @@ describe('descending', () => {
 	});
 });
 
-describe('ascending', () => {
+describe(ascending.name, () => {
 	it('sorts', () => {
 		const array = [2, 3, 1, 3];
 

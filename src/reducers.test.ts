@@ -13,7 +13,7 @@ import {max, mean, min, sum} from './reducers';
 		// @ts-expect-error
 		.reduce(mean);
 
-describe('sum', () => {
+describe(sum.name, () => {
 	it('adds numbers', () => {
 		expect([1, 1].reduce(sum)).toBe(2);
 	});
@@ -23,7 +23,7 @@ describe('sum', () => {
 	});
 });
 
-describe('mean', () => {
+describe(mean.name, () => {
 	const numbers = [1, 2, 3];
 
 	it('calculates the mean of numbers', () => {
@@ -36,13 +36,13 @@ describe('mean', () => {
 	});
 });
 
-describe('max', () => {
+describe(max.name, () => {
 	it('selects the largest number', () => {
 		expect([2, 3, 1].reduce(max)).toBe(3);
 	});
 });
 
-describe('min', () => {
+describe(min.name, () => {
 	it('selects the smallest number', () => {
 		expect([3, 1, 2].reduce(min)).toBe(1);
 	});

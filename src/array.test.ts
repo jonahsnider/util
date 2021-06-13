@@ -8,7 +8,7 @@ expectType<undefined>(sample([] as const));
 expectNotType<any>(sample([]));
 expectType<1>(sample([1]));
 
-describe('sample', () => {
+describe(sample.name, () => {
 	it('selects items', () => {
 		expect(sample([1])).toBe(1);
 		expect(sample([])).toBe(undefined);
@@ -19,7 +19,7 @@ describe('sample', () => {
 
 const iterations = 1e5;
 
-describe('shuffle', () => {
+describe(shuffle.name, () => {
 	it('shuffles arrays', () => {
 		// Testing randomness is always fun
 		// If you get unlucky this test will fail
@@ -76,7 +76,7 @@ describe('shuffle', () => {
 	});
 });
 
-describe('binarySearch', () => {
+describe(binarySearch.name, () => {
 	it('searches', () => {
 		const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -97,7 +97,7 @@ describe('binarySearch', () => {
 	});
 });
 
-describe('chunk', () => {
+describe(chunk.name, () => {
 	it('chunks', () => {
 		const array = [1, 2, 3, 4, 5, 6];
 
@@ -115,7 +115,7 @@ describe('chunk', () => {
 	});
 });
 
-describe('frequencyTable', () => {
+describe(frequencyTable.name, () => {
 	it('constructs a frequency table', () => {
 		const array = [1, 2, 2, 3, 3, 3];
 
@@ -129,7 +129,7 @@ describe('frequencyTable', () => {
 	});
 });
 
-describe('reverse', () => {
+describe(reverse.name, () => {
 	it('reverses an array', () => {
 		expect(reverse([1, 2, 3])).toStrictEqual([3, 2, 1]);
 		expect(reverse([1, 2])).toStrictEqual([2, 1]);
@@ -151,7 +151,7 @@ describe('reverse', () => {
 	});
 });
 
-describe('partition', () => {
+describe(partition.name, () => {
 	it('partitions an array', () => {
 		expect(partition([1, 2, 3, 4, 5, 6], num => num % 2)).toStrictEqual([
 			[1, 3, 5],
@@ -160,7 +160,7 @@ describe('partition', () => {
 	});
 });
 
-describe('first', () => {
+describe(first.name, () => {
 	it('takes the default number of items', () => {
 		expect(first([1, 2, 3])).toStrictEqual([1]);
 	});
@@ -181,7 +181,7 @@ describe('first', () => {
 	});
 });
 
-describe('duplicates', () => {
+describe(duplicates.name, () => {
 	it('returns duplicate elements', () => {
 		expect(duplicates([1, 2, 2, 3])).toStrictEqual([2]);
 	});
@@ -192,7 +192,7 @@ describe('duplicates', () => {
 	});
 });
 
-describe('largeToSmall', () => {
+describe(largeToSmall.name, () => {
 	it('arranges by length', () => {
 		expect(largeToSmall({id: 0, length: 0}, {id: 1, length: 0})).toStrictEqual([
 			{id: 0, length: 0},

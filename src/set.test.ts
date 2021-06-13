@@ -1,6 +1,6 @@
 import {difference, intersection, isDisjoint, isSubset, isSuperset, symmetricDifference, union} from './set';
 
-describe('isSuperset', () => {
+describe(isSuperset.name, () => {
 	it('returns true for supersets', () => {
 		expect(isSuperset(new Set(), [])).toBe(true);
 
@@ -12,7 +12,7 @@ describe('isSuperset', () => {
 	});
 });
 
-describe('isSubset', () => {
+describe(isSubset.name, () => {
 	it('returns true for subsets', () => {
 		expect(isSubset([], new Set([]))).toBe(true);
 
@@ -24,7 +24,7 @@ describe('isSubset', () => {
 	});
 });
 
-describe('union', () => {
+describe(union.name, () => {
 	it('creates a union Set', () => {
 		expect(union([], [])).toStrictEqual(new Set());
 
@@ -35,7 +35,7 @@ describe('union', () => {
 	});
 });
 
-describe('isDisjoint', () => {
+describe(isDisjoint.name, () => {
 	it('returns true for disjoint iterables', () => {
 		expect(isDisjoint([], [])).toBe(true);
 
@@ -48,7 +48,7 @@ describe('isDisjoint', () => {
 	});
 });
 
-describe('intersection', () => {
+describe(intersection.name, () => {
 	it('creates an intersection Set', () => {
 		expect(intersection(new Set(), new Set())).toStrictEqual(new Set());
 
@@ -56,7 +56,7 @@ describe('intersection', () => {
 	});
 });
 
-describe('symmetricDifference', () => {
+describe(symmetricDifference.name, () => {
 	it('creates a Set of the symmetric difference', () => {
 		expect(symmetricDifference([], [])).toStrictEqual(new Set());
 
@@ -68,7 +68,7 @@ describe('symmetricDifference', () => {
 	});
 });
 
-describe('difference', () => {
+describe(difference.name, () => {
 	expect(difference([], [])).toStrictEqual(new Set());
 
 	expect(difference([], [1])).toStrictEqual(new Set());

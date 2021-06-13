@@ -1,6 +1,6 @@
 import {Stopwatch} from './stopwatch';
 
-describe('Stopwatch', () => {
+describe(Stopwatch.name, () => {
 	describe('Stopwatch#started', () => {
 		it('reports when a stopwatch is started', () => {
 			const stopwatch = new Stopwatch();

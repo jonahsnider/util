@@ -6,7 +6,7 @@ identicalManual([], new Set());
 // @ts-expect-error
 identicalManual(new Set(), []);
 
-describe('identical', () => {
+describe(identical.name, () => {
 	it('reports identical arrays', () => {
 		const original = [1, 2, 3];
 		const copy = [...original];
@@ -48,7 +48,7 @@ describe('identical', () => {
 	});
 });
 
-describe('identicalManual', () => {
+describe(identicalManual.name, () => {
 	it('reports identical arrays', () => {
 		const original = [1, 2, 3];
 		const copy = [...original];

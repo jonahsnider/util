@@ -1,6 +1,6 @@
 import {clamp, median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from './math';
 
-describe('variance', () => {
+describe(variance.name, () => {
 	it('calculates variance', () => {
 		expect(variance([1, 1, 1])).toBe(0);
 		expect(variance([1, 2, 3])).toBe(1);
@@ -8,7 +8,7 @@ describe('variance', () => {
 	});
 });
 
-describe('stddev', () => {
+describe(stddev.name, () => {
 	it('calculates standard deviation', () => {
 		expect(stddev([1, 1, 1])).toBe(0);
 		expect(stddev([1, 2, 3])).toBe(1);
@@ -16,19 +16,19 @@ describe('stddev', () => {
 	});
 });
 
-describe('normaldist', () => {
+describe(normaldist.name, () => {
 	it('calculates normal distribution', () => {
 		expect(normaldist(0, 1, 0)).toBeCloseTo(0.3989);
 	});
 });
 
-describe('standardNormaldist', () => {
+describe(standardNormaldist.name, () => {
 	it('calculates normal distribution', () => {
 		expect(standardNormaldist(0)).toBe(normaldist(0, 1, 0));
 	});
 });
 
-describe('median', () => {
+describe(median.name, () => {
 	it('calculates the median', () => {
 		expect(median([1])).toBe(1);
 		expect(median([1, 2, 3])).toBe(2);
@@ -37,7 +37,7 @@ describe('median', () => {
 	});
 });
 
-describe('mode', () => {
+describe(mode.name, () => {
 	it('calculates the mode', () => {
 		expect(mode([])).toStrictEqual([]);
 		expect(mode([1])).toStrictEqual([1]);
@@ -47,7 +47,7 @@ describe('mode', () => {
 	});
 });
 
-describe('random', () => {
+describe(random.name, () => {
 	it('generates random numbers', () => {
 		const value = random(0, 1);
 
@@ -63,7 +63,7 @@ describe('random', () => {
 	});
 });
 
-describe('randomInt', () => {
+describe(randomInt.name, () => {
 	it('generates random integers', () => {
 		const value = randomInt(0, 1);
 
@@ -78,7 +78,7 @@ describe('randomInt', () => {
 	});
 });
 
-describe('clamp', () => {
+describe(clamp.name, () => {
 	it('clamps', () => {
 		expect(clamp(0, 1, 2)).toBe(1);
 		expect(clamp(3, 1, 2)).toBe(2);

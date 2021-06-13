@@ -1,19 +1,19 @@
 import {Table} from './array';
 import {capitalize, formatTable, maxColumnLength, multiReplace, truncate, uncapitalize} from './format';
 
-describe('capitalize', () => {
+describe(capitalize.name, () => {
 	it('capitalizes strings', () => {
 		expect(capitalize('hello')).toBe('Hello');
 	});
 });
 
-describe('uncapitalize', () => {
+describe(uncapitalize.name, () => {
 	it('uncapitalizes strings', () => {
 		expect(uncapitalize('Hello')).toBe('hello');
 	});
 });
 
-describe('truncate', () => {
+describe(truncate.name, () => {
 	it('truncates long strings', () => {
 		expect(truncate('hello', 3)).toBe('hel');
 	});
@@ -34,13 +34,13 @@ const table: Table<string> = [
   ['22',    '4444', '333'],
 ];
 
-describe('maxColumnLength', () => {
+describe(maxColumnLength.name, () => {
 	it('finds the longest columns', () => {
 		expect(maxColumnLength(table)).toStrictEqual([5, 4, 3]);
 	});
 });
 
-describe('formatTable', () => {
+describe(formatTable.name, () => {
 	it('formats tables', () => {
 		// prettier-ignore
 		const formatted = [
@@ -53,7 +53,7 @@ describe('formatTable', () => {
 	});
 });
 
-describe('multiReplace', () => {
+describe(multiReplace.name, () => {
 	it('replaces strings', () => {
 		expect(multiReplace('a b c', {a: 'c', c: 'a'})).toBe('c b a');
 	});

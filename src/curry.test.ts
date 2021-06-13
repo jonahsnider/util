@@ -1,7 +1,7 @@
 import {not} from './curry';
 import {nullish} from './nullish';
 
-describe('not', () => {
+describe(not.name, () => {
 	it('inverts conditions', () => {
 		expect(not(() => true)()).toBe(false);
 		expect(not(() => false)()).toBe(true);
