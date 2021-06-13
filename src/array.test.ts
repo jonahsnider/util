@@ -6,7 +6,7 @@ import {stddev} from './math';
 expectType<undefined>(sample([]));
 expectType<undefined>(sample([] as const));
 expectNotType<any>(sample([]));
-expectType<1>(sample([1]));
+expectType<1 | undefined>(sample([1]));
 
 describe(sample.name, () => {
 	it('selects items', () => {
