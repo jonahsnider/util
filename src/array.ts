@@ -310,3 +310,45 @@ export function duplicates<T>(iterable: Iterable<T>): T[] {
 
 	return result;
 }
+
+type ObjectWithLength = {length: number};
+type ObjectWithSize = {size: number};
+
+type ArrangedByLength<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
+
+/**
+ * Arrange two objects in a tuple by their length/size.
+ * Useful for situations where you are iterating `a` or `b` depending on which is larger.
+ *
+ * @example
+ * ```ts
+ * const [largest, smallest] = arrangeByLength(a, b);
+ * ```
+ *
+ * @param a - First object
+ * @param b - Second object
+ *
+ * @throws If `a` does not have a `length` or `size` property
+ */
+export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLength>(a: A, b: B): ArrangedByLength<A, B>;
+export function largeToSmall<A extends ObjectWithSize, B extends ObjectWithSize>(a: A, b: B): ArrangedByLength<A, B>;
+export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B extends ObjectWithSize | ObjectWithLength>(a: A, b: B): ArrangedByLength<A, B> {
+	let key: 'size' | 'length' | undefined = undefined;
+
+	if ('size' in a) {
+		key = 'size';
+	} else if ('length' in a) {
+		key = 'length';
+	}
+
+	if (!key) {
+		throw new RangeError('Expected a to have a size property or a length property');
+	}
+
+	// @ts-expect-error
+	if (a[key] < b[key]) {
+		return [b, a];
+	}
+
+	return [a, b];
+}
