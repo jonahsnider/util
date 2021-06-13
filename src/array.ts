@@ -36,10 +36,10 @@ export type DirectionFn<T> = (element: T) => number;
  *
  * @param array - Array to sample element from
  *
- * @returns A random element from the array
+ * @returns A random element from the array or `undefined` if the array was empty
  */
-export function sample<T>(array: readonly T[]): T {
-	return array[Math.floor(Math.random() * array.length)];
+export function sample<T>(array: readonly T[]): T | undefined {
+	return array[Math.floor(Math.random() * array.length)] as T | undefined;
 }
 
 /** @private */
