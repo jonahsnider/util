@@ -7,7 +7,7 @@
  * const a = [1];
  * const b = [1];
  *
- * identicalManual(a, b) === true;
+ * identical(a, b) === true;
  * ```
  *
  * @param a - First array to compare
@@ -15,7 +15,7 @@
  *
  * @returns `true` if `a` and `b` have the same items in the same order, `false` otherwise
  */
-export function identicalManual<V>(a: readonly V[], b: readonly V[]): boolean;
+export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
 /**
  * Check if two `Set`s have the same items.
  * Strict equality (`===`) is used to compare elements.
@@ -25,7 +25,7 @@ export function identicalManual<V>(a: readonly V[], b: readonly V[]): boolean;
  * const a = new Set([1, 2, 3]);
  * const b = new Set([3, 2, 1]);
  *
- * identicalManual(a, b) === true;
+ * identical(a, b) === true;
  * ```
  *
  * @param a - First `Set` to compare
@@ -33,7 +33,7 @@ export function identicalManual<V>(a: readonly V[], b: readonly V[]): boolean;
  *
  * @returns `true` if `a` and `b` have the same items, `false` otherwise
  */
-export function identicalManual<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
+export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
 /**
  * Check if two `Map`s have the same key-value pairs.
  * Strict equality (`===`) is used to compare values.
@@ -43,7 +43,7 @@ export function identicalManual<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolea
  * const a = new Map([['a', 1]]);
  * const b = new Map([['a', 1]]);
  *
- * identicalManual(a, b) === true;
+ * identical(a, b) === true;
  * ```
  *
  * @param a - First `Map` to compare
@@ -51,9 +51,8 @@ export function identicalManual<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolea
  *
  * @returns `true` if `a` and `b` have the key-value pairs, `false` otherwise
  */
-// TODO: Rename to identical in v3
-export function identicalManual<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean;
-export function identicalManual<V, K = never>(
+export function identical<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean;
+export function identical<V, K = never>(
 	a: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>,
 	b: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>
 ): boolean {

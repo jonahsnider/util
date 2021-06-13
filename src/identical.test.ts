@@ -1,10 +1,10 @@
-import {same, identicalManual} from './identical';
+import {same, identical} from './identical';
 
 // Compilation tests
 // @ts-expect-error
-identicalManual([], new Set());
+identical([], new Set());
 // @ts-expect-error
-identicalManual(new Set(), []);
+identical(new Set(), []);
 
 describe(same.name, () => {
 	it('reports identical arrays', () => {
@@ -27,7 +27,7 @@ describe(same.name, () => {
 		expect(same([undefined], [undefined])).toBe(true);
 
 		// Same elements, but not the same order
-		expect(identicalManual(original, reversed)).toBe(false);
+		expect(identical(original, reversed)).toBe(false);
 
 		// Same elements, but one array has an extra undefined element
 		expect(same(original, originalWithExtra)).toBe(false);
@@ -48,7 +48,7 @@ describe(same.name, () => {
 	});
 });
 
-describe(identicalManual.name, () => {
+describe(identical.name, () => {
 	it('reports identical arrays', () => {
 		const original = [1, 2, 3];
 		const copy = [...original];
@@ -56,11 +56,11 @@ describe(identicalManual.name, () => {
 		const originalWithExtra = [...original, undefined];
 
 		// The same array object
-		expect(identicalManual(original, original)).toBe(true);
+		expect(identical(original, original)).toBe(true);
 		// A copy of an array
-		expect(identicalManual(original, copy)).toBe(true);
+		expect(identical(original, copy)).toBe(true);
 		// Arrays with different lengths
-		expect(identicalManual(original, [...original, ...original])).toBe(false);
+		expect(identical(original, [...original, ...original])).toBe(false);
 
 		// Empty arrays
 		expect(same([], [])).toBe(true);
@@ -69,7 +69,7 @@ describe(identicalManual.name, () => {
 		expect(same([undefined], [undefined])).toBe(true);
 
 		// Same elements, but not the same order
-		expect(identicalManual(original, reversed)).toBe(false);
+		expect(identical(original, reversed)).toBe(false);
 
 		// Same elements, but one array has an extra undefined element
 		expect(same(original, originalWithExtra)).toBe(false);
@@ -84,14 +84,14 @@ describe(identicalManual.name, () => {
 		const copy = new Set(original);
 		const reversed = new Set([3, 2, 1]);
 
-		expect(identicalManual(original, original)).toBe(true);
-		expect(identicalManual(original, copy)).toBe(true);
-		expect(identicalManual(original, reversed)).toBe(true);
-		expect(identicalManual(new Set(), new Set())).toBe(true);
+		expect(identical(original, original)).toBe(true);
+		expect(identical(original, copy)).toBe(true);
+		expect(identical(original, reversed)).toBe(true);
+		expect(identical(new Set(), new Set())).toBe(true);
 
-		expect(identicalManual(original, new Set())).toBe(false);
-		expect(identicalManual(new Set([1, 2, 3]), new Set([1, 2, 3, 4, 5, 6]))).toBe(false);
-		expect(identicalManual(new Set([1, 2, 3]), new Set([2, 3, 4]))).toBe(false);
+		expect(identical(original, new Set())).toBe(false);
+		expect(identical(new Set([1, 2, 3]), new Set([1, 2, 3, 4, 5, 6]))).toBe(false);
+		expect(identical(new Set([1, 2, 3]), new Set([2, 3, 4]))).toBe(false);
 	});
 
 	it('reports identical Maps', () => {
@@ -107,14 +107,14 @@ describe(identicalManual.name, () => {
 			['a', 1]
 		]);
 
-		expect(identicalManual(original, original)).toBe(true);
-		expect(identicalManual(original, copy)).toBe(true);
-		expect(identicalManual(original, reversed)).toBe(true);
-		expect(identicalManual(new Map(), new Map())).toBe(true);
+		expect(identical(original, original)).toBe(true);
+		expect(identical(original, copy)).toBe(true);
+		expect(identical(original, reversed)).toBe(true);
+		expect(identical(new Map(), new Map())).toBe(true);
 
-		expect(identicalManual(original, new Map())).toBe(false);
+		expect(identical(original, new Map())).toBe(false);
 		expect(
-			identicalManual(
+			identical(
 				new Map([
 					['a', 1],
 					['b', 2]
