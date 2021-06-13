@@ -58,12 +58,12 @@
 	},
 	"size-limit": [
 		{
-			"limit": "4 kB",
+			"limit": "5 kB",
 			"path": "dist/util.cjs.production.min.js",
 			"webpack": false
 		},
 		{
-			"limit": "10 kB",
+			"limit": "12 kB",
 			"path": "dist/util.esm.mjs",
 			"webpack": false
 		}
