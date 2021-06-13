@@ -7,6 +7,7 @@ export * from './identical';
 export * from './math';
 export * from './nullish';
 export * from './reducers';
+export * from './regExp';
 export * from './set';
 export * from './stopwatch';
 export * from './toDigits';
