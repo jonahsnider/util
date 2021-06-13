@@ -40,6 +40,11 @@ describe('Stopwatch', () => {
 		it('ends the stopwatch', () => {
 			const stopwatch = new Stopwatch();
 
+			// @ts-expect-error
+			global.__DEV__ = false;
+			expect(stopwatch.end).toThrow();
+			// @ts-expect-error
+			global.__DEV__ = true;
 			expect(stopwatch.end).toThrow();
 
 			stopwatch.start();
