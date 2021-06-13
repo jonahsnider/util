@@ -38,9 +38,7 @@ export type DirectionFn<T> = (element: T) => number;
  *
  * @returns A random element from the array
  */
-// @ts-expect-error
-export function sample<T>(array: readonly T[]): T;
-export function sample(array: readonly []): undefined {
+export function sample<T>(array: readonly T[]): T {
 	return array[Math.floor(Math.random() * array.length)];
 }
 
