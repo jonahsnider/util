@@ -82,7 +82,6 @@ export function standardNormaldist(x: number): number {
  *
  * @returns The median of `values`
  */
-// TODO: Can this be rewritten as a reducer?
 export function median(values: readonly number[]): number {
 	const {length} = values;
 	const even = length % 2 === 0;
