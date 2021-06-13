@@ -98,7 +98,7 @@ export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T> {
 }
 
 /**
- * Get the symmetric difference of 2 iterables` (`a Δ b`).
+ * Get the symmetric difference of 2 iterables (`a Δ b`).
  * For best performance `a` should have more elements than `b`.
  *
  * @param a - First iterable
