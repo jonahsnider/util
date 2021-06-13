@@ -28,20 +28,11 @@ export class Stopwatch {
 	 * const stopwatch = new Stopwatch();
 	 *
 	 * stopwatch.started === false;
-	 * ```
-	 * @example
-	 * ```ts
-	 * const stopwatch = new Stopwatch();
 	 *
 	 * stopwatch.start();
 	 *
 	 * stopwatch.started === true;
-	 * ```
-	 * @example
-	 * ```ts
-	 * const stopwatch = new Stopwatch();
 	 *
-	 * stopwatch.start();
 	 * stopwatch.end();
 	 *
 	 * stopwatch.started === true;
