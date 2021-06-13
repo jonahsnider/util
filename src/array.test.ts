@@ -81,17 +81,17 @@ describe('binarySearch', () => {
 		const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 		function directionFn(value: number) {
-			if (value > 8) {
+			if (value > 5) {
 				return 1;
-			} else if (value < 8) {
+			} else if (value < 5) {
 				return -1;
 			} else {
 				return 0;
 			}
 		}
 
-		expect(binarySearch(array, directionFn)).toBe(8);
-		expect(binarySearch(array.slice(1), directionFn)).toBe(8);
+		expect(binarySearch(array, directionFn)).toBe(5);
+		expect(binarySearch(array.slice(1), directionFn)).toBe(5);
 
 		expect(binarySearch([], () => 1)).toBe(undefined);
 	});
