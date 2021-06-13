@@ -1,8 +1,5 @@
 import {Table} from './array';
 
-/** @private */
-const firstCharacter = /^./;
-
 /**
  * Capitalizes the first letter of a string.
  *
@@ -16,7 +13,9 @@ const firstCharacter = /^./;
  * @returns Capitalized string
  */
 export function capitalize<T extends string>(text: T): Capitalize<T> {
-	return text.replace(firstCharacter, firstCharacter => firstCharacter.toUpperCase()) as Capitalize<T>;
+	const firstCharacter = text.charAt(0).toUpperCase();
+
+	return `${firstCharacter}${text.slice(firstCharacter.length)}` as Capitalize<T>;
 }
 
 /**
@@ -32,7 +31,9 @@ export function capitalize<T extends string>(text: T): Capitalize<T> {
  * @returns Uncapitalized string
  */
 export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
-	return text.replace(firstCharacter, firstCharacter => firstCharacter.toLowerCase()) as Uncapitalize<T>;
+	const firstCharacter = text.charAt(0).toLowerCase();
+
+	return `${firstCharacter}${text.slice(firstCharacter.length)}` as Uncapitalize<T>;
 }
 
 /**
