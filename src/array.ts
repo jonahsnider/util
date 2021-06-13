@@ -255,13 +255,13 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index:
  * first([1, 2, 3]); // 1
  * ```
  *
- * @param iterable - The iterable to take items from
+ * @param iterable - The iterable to take elements from
  *
  * @returns The first element of the iterable
  */
 export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined;
 /**
- * Get the first `n` items from an iterable.
+ * Get the first `n` elements from an iterable.
  *
  * @example
  * ```ts
@@ -273,10 +273,10 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
  * first([1, 2, 3], 2); // [1, 2]
  * ```
  *
- * @param iterable - The iterable to take items from
- * @param take - The number of items to take from the iterable
+ * @param iterable - The iterable to take elements from
+ * @param take - The number of elements to take from the iterable
  *
- * @returns The first `take` items of the iterable
+ * @returns The first `take` elements of the iterable
  */
 export function first<T>(iterable: Iterable<T>, take?: number): T[];
 export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | T[] {

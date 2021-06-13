@@ -1,5 +1,5 @@
 /**
- * Check if two arrays have the same items in the same order.
+ * Check if two arrays have the same elements in the same order.
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
@@ -13,11 +13,11 @@
  * @param a - First array to compare
  * @param b - Second array to compare
  *
- * @returns `true` if `a` and `b` have the same items in the same order, `false` otherwise
+ * @returns `true` if `a` and `b` have the same elements in the same order, `false` otherwise
  */
 export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
 /**
- * Check if two `Set`s have the same items.
+ * Check if two `Set`s have the same elements.
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
@@ -31,7 +31,7 @@ export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
  * @param a - First `Set` to compare
  * @param b - Second `Set` to compare
  *
- * @returns `true` if `a` and `b` have the same items, `false` otherwise
+ * @returns `true` if `a` and `b` have the same elements, `false` otherwise
  */
 export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
 /**
