@@ -7,7 +7,7 @@ import {Comparable} from './sort';
  * ```ts
  * const array = [5, 3, 2, 4, 1];
  *
- * array.sort(ascending);
+ * array.sort(Sort.ascending);
  * ```
  *
  * @param a - Element
@@ -34,7 +34,7 @@ export function ascending(a: Comparable, b: Comparable): number {
  * ```ts
  * const array = [5, 3, 2, 4, 1];
  *
- * array.sort(descending);
+ * array.sort(Sort.descending);
  * ```
  *
  * @param a - Element
