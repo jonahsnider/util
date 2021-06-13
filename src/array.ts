@@ -289,6 +289,7 @@ export function first<T>(iterable: Iterable<T>, take = 1): Array<T> {
 /**
  * Get an array of all the duplicate elements in an iterable.
  *
+ * @example
  * ```ts
  * duplicates([1, 2, 2, 3]); // [2]
  * ```
