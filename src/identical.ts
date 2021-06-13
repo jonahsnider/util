@@ -51,6 +51,7 @@ export function identicalManual<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolea
  *
  * @returns `true` if `a` and `b` have the key-value pairs, `false` otherwise
  */
+// TODO: Rename to identical in v3
 export function identicalManual<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean;
 export function identicalManual<V, K = never>(
 	a: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>,
@@ -109,6 +110,7 @@ export function identicalManual<V, K = never>(
  *
  * @returns `true` if all elements are identical, `false` otherwise
  */
+// TODO: Rename to same in v3
 export function identical<T>(...iterables: [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
 	const iterators = iterables.map(item => item[Symbol.iterator]());
 

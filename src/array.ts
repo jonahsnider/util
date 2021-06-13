@@ -266,6 +266,7 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index:
  *
  * @returns The first `take` items of the iterable
  */
+// TODO: If take is undefined return T directly instead of T[]
 export function first<T>(iterable: Iterable<T>, take = 1): T[] {
 	const result: T[] = [];
 
