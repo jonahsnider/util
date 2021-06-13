@@ -15,7 +15,7 @@ export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0],
  *
  * const object = {a: 3, c: 1, b: 2};
  *
- * Object.fromEntries(sortObject(object, Sort.ascending);
+ * Object.fromEntries(sortObject(object, Sort.ascending));
  * ```
  *
  * @param object - Object to sort
