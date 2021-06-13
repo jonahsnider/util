@@ -129,11 +129,11 @@ export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A
  *
  * @returns A new set which is the difference of `a` and `b`
  */
-export function difference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
-	const result: Set<A | B> = new Set(a);
+export function difference<A, B>(a: Iterable<A>, b: Iterable<A | B>): Set<A> {
+	const result = new Set(a);
 
 	for (const element of b) {
-		result.delete(element);
+		result.delete(element as A);
 	}
 
 	return result;
