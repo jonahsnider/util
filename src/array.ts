@@ -248,11 +248,24 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index:
 }
 
 /**
+ * Get the first element from an iterable.
+ *
+ * @example
+ * ```ts
+ * first([1, 2, 3]); // 1
+ * ```
+ *
+ * @param iterable - The iterable to take items from
+ *
+ * @returns The first element of the iterable
+ */
+export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined;
+/**
  * Get the first `n` items from an iterable.
  *
  * @example
  * ```ts
- * first([1, 2, 3]); // [1]
+ * first([1, 2, 3], 1); // [1]
  * ```
  *
  * @example
@@ -265,11 +278,15 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index:
  *
  * @returns The first `take` items of the iterable
  */
-// TODO: If take is undefined return T directly instead of T[]
-export function first<T>(iterable: Iterable<T>, take = 1): T[] {
-	const result: T[] = [];
-
+export function first<T>(iterable: Iterable<T>, take?: number): T[];
+export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | T[] {
 	const iterator: Iterator<T, T | undefined> = iterable[Symbol.iterator]();
+
+	if (take === undefined) {
+		return iterator.next().value;
+	}
+
+	const result: T[] = [];
 
 	for (let i = 0; i < take; i++) {
 		const element = iterator.next();

@@ -161,8 +161,8 @@ describe(partition.name, () => {
 });
 
 describe(first.name, () => {
-	it('takes the default number of items', () => {
-		expect(first([1, 2, 3])).toStrictEqual([1]);
+	it('returns first element if take is undefined', () => {
+		expect(first([1, 2, 3])).toStrictEqual(1);
 	});
 
 	it('takes the specified number of items', () => {
@@ -170,9 +170,10 @@ describe(first.name, () => {
 	});
 
 	it('allows array destructuring', () => {
-		const [one] = first([1, 2, 3]);
+		const [one, two] = first([1, 2, 3], 2);
 
 		expect(one).toBe(1);
+		expect(two).toBe(2);
 	});
 
 	it('allows handles small arrays and big takes', () => {
