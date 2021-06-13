@@ -78,8 +78,7 @@ function _shuffle<T>(array: T[], mutate = true): void | T[] {
  *
  * @returns `void` if `mutate` was `true`, the shuffled array if `mutate` was `false`
  */
-// @ts-expect-error
-export const shuffle: (<T>(array: T[]) => void) & (<T>(array: readonly T[], mutate: false) => T[]) = _shuffle;
+export const shuffle = _shuffle as (<T>(array: T[]) => void) & (<T>(array: readonly T[], mutate: false) => T[]);
 
 /**
  * Perform a binary search to find an element in a sorted array.
