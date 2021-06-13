@@ -11,9 +11,11 @@ export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0],
  *
  * @example
  * ```ts
+ * import { Sort } from '@jonahsnider/util';
+ * 
  * const object = {a: 3, c: 1, b: 2};
  *
- * sortObject(object, (a, b) => a - b);
+ * Object.fromEntries(sortObject(object, Sort.ascending);
  * ```
  *
  * @param object - Object to sort
@@ -21,7 +23,6 @@ export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0],
  *
  * @returns A new object with the keys in order
  */
-
-export function sortObject<K extends PropertyKey, V>(object: Record<K, V>, compareFn: CompareFn<V>) {
-	return Object.fromEntries(Object.entries<V>(object).sort(([_aKey, aValue], [_bKey, bValue]) => compareFn(aValue, bValue))) as typeof object;
+export function sortObject<K extends PropertyKey, V>(object: Record<K, V>, compareFn: CompareFn<V>): Array<[K, V]> {
+	return Object.entries<V>(object).sort(([, aValue], [, bValue]) => compareFn(aValue, bValue)) as Array<[K, V]>;
 }

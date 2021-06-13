@@ -6,6 +6,6 @@ describe(sortObject.name, () => {
 
 		const sorted = sortObject(object, (a, b) => a - b);
 
-		expect(Object.entries(sorted)).toStrictEqual(Object.entries({c: 1, b: 2, a: 3}));
+		expect(sorted).toStrictEqual(Object.entries({c: 1, b: 2, a: 3}));
 	});
 });
