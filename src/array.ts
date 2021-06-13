@@ -268,7 +268,7 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index:
  *
  * @returns The first `take` items of the iterable
  */
-export function first<T>(iterable: Iterable<T>, take = 1): Array<T> {
+export function first<T>(iterable: Iterable<T>, take = 1): T[] {
 	const result: T[] = [];
 
 	const iterator: Iterator<T, T | undefined> = iterable[Symbol.iterator]();
