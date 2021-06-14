@@ -361,7 +361,11 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
 	}
 
 	if (!key) {
-		throw new RangeError('Expected a to have a size property or a length property');
+		if (__DEV__) {
+			throw new RangeError('Expected a to have a size property or a length property');
+		}
+
+		throw new RangeError();
 	}
 
 	// @ts-expect-error
