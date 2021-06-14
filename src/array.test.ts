@@ -213,4 +213,20 @@ describe(largeToSmall.name, () => {
 		expect(largeToSmall({size: 1}, {size: 0})).toStrictEqual([{size: 1}, {size: 0}]);
 		expect(largeToSmall({size: 0}, {size: 1})).toStrictEqual([{size: 1}, {size: 0}]);
 	});
+
+	it('throws on bad input', () => {
+		// @ts-expect-error
+		global.__DEV__ = false;
+		expect(() =>
+			// @ts-expect-error
+			largeToSmall({}, {})
+		).toThrow();
+
+		// @ts-expect-error
+		global.__DEV__ = true;
+		expect(() =>
+			// @ts-expect-error
+			largeToSmall({}, {})
+		).toThrow();
+	});
 });
