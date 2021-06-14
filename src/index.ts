@@ -6,6 +6,7 @@ export * as Http from './http/index';
 export * from './identical';
 export * from './math';
 export * from './nullish';
+export * from './object';
 export * from './reducers';
 export * from './regExp';
 export * from './set';
