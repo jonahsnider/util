@@ -1,4 +1,4 @@
-import {regExpUnion} from './regExp';
+import {regExpUnion} from './';
 
 describe(regExpUnion.name, () => {
 	it('creates a working regular expression', () => {

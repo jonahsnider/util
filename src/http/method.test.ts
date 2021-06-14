@@ -1,5 +1,5 @@
 import http from 'http';
-import {Method} from './method';
+import {Method} from './';
 
 describe('Method', () => {
 	it('has no invalid methods', () => {

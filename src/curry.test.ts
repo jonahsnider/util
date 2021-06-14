@@ -1,5 +1,4 @@
-import {not} from './curry';
-import {nullish} from './nullish';
+import {not, nullish} from './';
 
 describe(not.name, () => {
 	it('inverts conditions', () => {

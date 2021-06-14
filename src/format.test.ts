@@ -1,5 +1,4 @@
-import {Table} from './array';
-import {capitalize, formatTable, maxColumnLength, multiReplace, truncate, uncapitalize} from './format';
+import {capitalize, formatTable, maxColumnLength, multiReplace, Table, truncate, uncapitalize} from './';
 
 describe(capitalize.name, () => {
 	it('capitalizes strings', () => {

@@ -1,4 +1,4 @@
-import {newDeck} from './cards';
+import {newDeck} from './';
 
 describe(newDeck.name, () => {
 	it('creates a new deck of cards', () => {

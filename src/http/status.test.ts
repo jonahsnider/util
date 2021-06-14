@@ -1,5 +1,5 @@
 import http from 'http';
-import {Status} from './status';
+import {Status} from './';
 
 describe('Status', () => {
 	it('has no invalid status codes', () => {
