@@ -16,6 +16,10 @@ describe(Sort.descending.name, () => {
 
 		expect(array).toStrictEqual([3n, 3n, 2n, 1n]);
 	});
+
+	it('sorts Dates', () => {
+		Sort.descending(new Date(), new Date());
+	});
 });
 
 describe(Sort.ascending.name, () => {
@@ -33,5 +37,9 @@ describe(Sort.ascending.name, () => {
 		array.sort(Sort.ascending);
 
 		expect(array).toStrictEqual([1n, 2n, 3n, 3n]);
+	});
+
+	it('sorts Dates', () => {
+		Sort.ascending(new Date(), new Date());
 	});
 });

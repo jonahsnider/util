@@ -1,5 +1,5 @@
 /** A value that can be compared numerically using `<`, `>`, `<=`, or `>=`. */
-export type Comparable = string | number | bigint | boolean | null | (Record<PropertyKey, unknown> & {[Symbol.toPrimitive]: (hint: 'number') => number});
+export type Comparable = string | number | bigint | boolean | null | {[Symbol.toPrimitive](hint: 'number'): number};
 
 /**
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort MDN docs on this function
