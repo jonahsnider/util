@@ -183,7 +183,7 @@ describe(first.name, () => {
 
 describe(allDuplicates.name, () => {
 	it('returns duplicate elements', () => {
-		expect(allDuplicates([1, 2, 2, 3])).toStrictEqual([2]);
+		expect(allDuplicates([1, 2, 2, 2, 3])).toStrictEqual([2, 2]);
 	});
 
 	it('returns empty when there are no duplicates', () => {
