@@ -4,7 +4,9 @@
  *
  * @example
  * ```ts
- * sum(1, 1) === 2;
+ * const array = [1, 2, 3];
+ *
+ * array.reduce(sum) === 6;
  * ```
  *
  * @param a - First summand
@@ -19,7 +21,9 @@ export function sum(a: number, b: number): number;
  *
  * @example
  * ```ts
- * sum(1n, 1n) === 2n;
+ * const array = [1n, 2n, 3n];
+ *
+ * array.reduce(sum) === 6n;
  * ```
  *
  * @param a - First summand
