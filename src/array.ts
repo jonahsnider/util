@@ -312,6 +312,8 @@ export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) 
  * allDuplicates([1, 2, 2, 2, 3]); // [2, 2]
  * ```
  *
+ * @see {@link duplicates} to receive a `Set` of duplicate elements instead of an array (which can include the same element more than once)
+ *
  * @param iterable - The iterable to find duplicates in
  * @returns An array of the duplicated elements
  */
@@ -322,6 +324,34 @@ export function allDuplicates<T>(iterable: Iterable<T>): T[] {
 	for (const element of iterable) {
 		if (seen.has(element)) {
 			result.push(element);
+		}
+
+		seen.add(element);
+	}
+
+	return result;
+}
+
+/**
+ * Get a Set of the duplicate elements in an iterable.
+ *
+ * @example
+ * ```ts
+ * duplicates([1, 2, 2, 2, 3]); // Set(1) { 2 }
+ * ```
+ *
+ * @see {@link allDuplicates} to receive a array of duplicate elements instead of a `Set` (which doesn't include the same element more than once)
+ *
+ * @param iterable - The iterable to find duplicates in
+ * @returns A `Set` of the duplicated elements
+ */
+export function duplicates<T>(iterable: Iterable<T>): Set<T> {
+	const seen: Set<T> = new Set();
+	const result: Set<T> = new Set();
+
+	for (const element of iterable) {
+		if (seen.has(element)) {
+			result.add(element);
 		}
 
 		seen.add(element);
