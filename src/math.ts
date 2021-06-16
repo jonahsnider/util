@@ -46,6 +46,8 @@ export function stddev(values: readonly number[]): number {
  * @param σ - Standard deviation
  * @param μ - Mean
  *
+ * @see {@link standardNormaldist} For calculating the standard normal distribution
+ *
  * @returns The normal distribution
  */
 export function normaldist(x: number, σ: number, μ: number): number {
@@ -61,6 +63,8 @@ export function normaldist(x: number, σ: number, μ: number): number {
  * ```
  *
  * @param x - Sample to calculate the normal distribution of
+ *
+ * @see {@link normaldist} For calculating the normal distribution
  *
  * @returns The standard normal distribution
  */
@@ -106,7 +110,10 @@ export function median(values: readonly number[]): number {
  *
  * @param values - Values to use in the calculation
  *
- * @returns An array of the modes of `values`
+ * @see {@link mean} to calculate the mean of an array
+ * @see {@link median} to calculate the median of an array
+ *
+ *  @returns An array of the modes of `values`
  */
 export function mode<T>(values: Iterable<T>): T[] {
 	const frequencyTable: Map<T, number> = new Map();

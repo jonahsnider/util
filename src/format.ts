@@ -10,6 +10,8 @@ import {Table} from './array';
  *
  * @param text - Text to capitalize
  *
+ * @see {@link uncapitalize} for the inverse operation
+ *
  * @returns Capitalized string
  */
 export function capitalize<T extends string>(text: T): Capitalize<T> {
@@ -27,6 +29,8 @@ export function capitalize<T extends string>(text: T): Capitalize<T> {
  * ```
  *
  * @param text - Text to uncapitalize
+ *
+ * @see {@link capitalize} for the inverse operation
  *
  * @returns Uncapitalized string
  */

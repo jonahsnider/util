@@ -6,6 +6,8 @@ import {largeToSmall} from './array';
  * @param a - First set
  * @param b - Second set/iterable
  *
+ * @see {@link isSubset} for checking if one set is a subset of another
+ * 
  * @returns `true` if `a` is a superset of `b`, `false` otherwise
  */
 export function isSuperset<A, B>(a: ReadonlySet<A | B>, b: Iterable<B>): boolean {
@@ -23,6 +25,8 @@ export function isSuperset<A, B>(a: ReadonlySet<A | B>, b: Iterable<B>): boolean
  *
  * @param a - First set/iterable
  * @param b - Second set
+ * 
+ * @see {@link isSuperset} for checking if one set is a superset of another
  *
  * @returns `true` if `a` is a subset of `b`, `false` otherwise
  */

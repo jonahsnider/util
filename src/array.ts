@@ -36,6 +36,8 @@ export type DirectionFn<T> = (element: T) => number;
  *
  * @param array - Array to sample element from
  *
+ * @see {@link shuffle} if you want to implement a random selection without replacement
+ *
  * @returns A random element from the array or `undefined` if the array was empty
  */
 export function sample<T>(array: readonly T[]): T | undefined {
@@ -75,6 +77,8 @@ function shuffle<T>(array: T[], mutate = true): void | T[] {
  *
  * @param array - Array to shuffle
  * @param mutate - `true` if `array` should be mutated in place, `false` if a new array should be created
+ *
+ * @see {@link sample} if you only want to select one element at random
  *
  * @returns `void` if `mutate` was `true`, the shuffled array if `mutate` was `false`
  */
@@ -310,6 +314,12 @@ export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) 
  * @example
  * ```ts
  * allDuplicates([1, 2, 2, 2, 3]); // [2, 2]
+ * ```
+ *
+ * @example
+ * Using {@link frequencyTable} to get the number of times each element was duplicated
+ * ```ts
+ * frequencyTable(allDuplicates([1, 2, 2, 2, 3, 3])); // Map(2) { 2 => 2, 3 => 1 }
  * ```
  *
  * @see {@link duplicates} to receive a `Set` of duplicate elements instead of an array (which can include the same element more than once)
