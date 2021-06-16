@@ -27,7 +27,7 @@ describe(same.name, () => {
 		expect(same([undefined], [undefined])).toBe(true);
 
 		// Same elements, but not the same order
-		expect(identical(original, reversed)).toBe(false);
+		expect(same(original, reversed)).toBe(false);
 
 		// Same elements, but one array has an extra undefined element
 		expect(same(original, originalWithExtra)).toBe(false);
@@ -46,6 +46,10 @@ describe(same.name, () => {
 		expect(same(a, b, a)).toBe(true);
 		expect(same(a, a, a, c)).toBe(false);
 	});
+
+	it('handles empty iterables', () => {
+		expect(same([], [])).toBe(true);
+	});
 });
 
 describe(identical.name, () => {
@@ -63,20 +67,20 @@ describe(identical.name, () => {
 		expect(identical(original, [...original, ...original])).toBe(false);
 
 		// Empty arrays
-		expect(same([], [])).toBe(true);
+		expect(identical([], [])).toBe(true);
 
 		// Arrays with undefined elements
-		expect(same([undefined], [undefined])).toBe(true);
+		expect(identical([undefined], [undefined])).toBe(true);
 
 		// Same elements, but not the same order
 		expect(identical(original, reversed)).toBe(false);
 
 		// Same elements, but one array has an extra undefined element
-		expect(same(original, originalWithExtra)).toBe(false);
-		expect(same(originalWithExtra, original)).toBe(false);
+		expect(identical(original, originalWithExtra)).toBe(false);
+		expect(identical(originalWithExtra, original)).toBe(false);
 
 		// Arrays with undefined elements, but one array has an extra undefined element
-		expect(same([undefined, undefined], [undefined])).toBe(false);
+		expect(identical([undefined, undefined], [undefined])).toBe(false);
 	});
 
 	it('reports identical Sets', () => {
