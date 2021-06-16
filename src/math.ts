@@ -82,19 +82,26 @@ export function standardNormaldist(x: number): number {
  * median(values) === 2;
  * ```
  *
- * @param values - Values to use in the calculation
+ * @param array - Values to use in the calculation
+ *
+ * @see {@link mean} to calculate the mean of an array
+ * @see {@link mode} to calculate the mode of an array
  *
  * @returns The median of `values`
  */
-export function median(values: readonly number[]): number {
-	const {length} = values;
-	const even = length % 2 === 0;
+export function median(array: readonly number[]): number;
+export function median(array: readonly bigint[]): bigint;
+export function median<T extends number>(array: readonly T[]): T {
+	const even = array.length % 2 === 0;
+	const middleIndex = array.length / 2;
 
 	if (even) {
-		return (values[length / 2 - 1] + values[length / 2]) / 2;
+		const divisor = (typeof array[0] === 'bigint' ? 2n : 2) as T;
+
+		return ((array[middleIndex - 1] + array[middleIndex]) / divisor) as T;
 	}
 
-	return values[Math.floor(length / 2)];
+	return array[Math.floor(middleIndex)];
 }
 
 /**
