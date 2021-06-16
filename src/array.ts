@@ -43,7 +43,7 @@ export function sample<T>(array: readonly T[]): T | undefined {
 }
 
 /** @private */
-function _shuffle<T>(array: T[], mutate = true): void | T[] {
+function shuffle<T>(array: T[], mutate = true): void | T[] {
 	const target: typeof array = mutate ? array : [...array];
 
 	for (let i = target.length - 1; i > 0; i--) {
@@ -78,7 +78,9 @@ function _shuffle<T>(array: T[], mutate = true): void | T[] {
  *
  * @returns `void` if `mutate` was `true`, the shuffled array if `mutate` was `false`
  */
-export const shuffle = _shuffle as (<T>(array: T[]) => void) & (<T>(array: readonly T[], mutate: false) => T[]);
+const typedShuffle = shuffle as (<T>(array: T[]) => void) & (<T>(array: readonly T[], mutate: false) => T[]);
+
+export {typedShuffle as shuffle};
 
 /**
  * Perform a binary search to find an element in a sorted array.
