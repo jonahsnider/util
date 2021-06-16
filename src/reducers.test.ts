@@ -23,19 +23,6 @@ describe(sum.name, () => {
 	});
 });
 
-describe(mean.name, () => {
-	const numbers = [1, 2, 3];
-
-	it('calculates the mean of numbers', () => {
-		expect(numbers.reduce(mean)).toBe(2);
-	});
-
-	it('calculates the mean of bigints', () => {
-		const bigints = [1n, 2n, 3n];
-		expect(bigints.reduce(mean)).toBe(2n);
-	});
-});
-
 describe(max.name, () => {
 	it('selects the largest number', () => {
 		expect([2, 3, 1].reduce(max)).toBe(3);

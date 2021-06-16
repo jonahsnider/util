@@ -33,53 +33,6 @@ export function sum<T extends number>(a: T, b: T): T {
 }
 
 /**
- * Get the mean of an array of `number`s.
- * Meant to be used with `Array.prototype.reduce`.
- *
- * @example
- * ```ts
- * const array = [1, 2, 3];
- *
- * array.reduce(mean) === 2;
- * ```
- *
- * @param previousValue - Rolling sum of the array
- * @param currentValue - The next value to add to the sum
- * @param currentIndex - The current index of `currentValue` in the array
- * @param array - The source array. Only used for array length.
- *
- * @returns The mean of the array
- */
-export function mean(previousValue: number, currentValue: number, currentIndex: number, array: readonly number[]): number;
-/**
- * Get the mean of an array of `bigint`s.
- * Meant to be used with `Array.prototype.reduce`.
- *
- * @example
- * ```ts
- * const array = [1n, 2n, 3n];
- *
- * array.reduce(mean) === 2n;
- * ```
- *
- * @param previousValue - Rolling sum of the array
- * @param currentValue - The next value to add to the sum
- * @param currentIndex - The current index of `currentValue` in the array
- * @param array - The source array. Only used for array length.
- *
- * @returns The mean of the array
- */
-export function mean(previousValue: bigint, currentValue: bigint, currentIndex: number, array: readonly bigint[]): bigint;
-export function mean<T extends number>(previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]): T {
-	if (array.length - 1 === currentIndex) {
-		// End of the array, calculate the mean
-		return ((previousValue + currentValue) / ((typeof currentValue === 'bigint' ? BigInt(array.length) : array.length) as T)) as T;
-	}
-
-	return (previousValue + currentValue) as T;
-}
-
-/**
  * Get the largest value of an array of `number`s.
  * Meant to be used with `Array.prototype.reduce`.
  *

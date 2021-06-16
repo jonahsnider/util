@@ -1,4 +1,4 @@
-import {clamp, median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from './';
+import {clamp, mean, median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from './';
 
 describe(variance.name, () => {
 	it('calculates variance', () => {
@@ -25,6 +25,19 @@ describe(normaldist.name, () => {
 describe(standardNormaldist.name, () => {
 	it('calculates normal distribution', () => {
 		expect(standardNormaldist(0)).toBe(normaldist(0, 1, 0));
+	});
+});
+
+describe(mean.name, () => {
+	const numbers = [1, 2, 3];
+
+	it('calculates the mean of numbers', () => {
+		expect(mean(numbers)).toBe(2);
+	});
+
+	it('calculates the mean of bigints', () => {
+		const bigints = [1n, 2n, 3n];
+		expect(mean(bigints)).toBe(2n);
 	});
 });
 

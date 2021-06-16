@@ -1,4 +1,4 @@
-import {mean, sum} from './reducers';
+import {sum} from './reducers';
 
 /**
  * Calculate the variance of a sequence of numbers.
@@ -13,7 +13,7 @@ import {mean, sum} from './reducers';
  * @returns The variance of `values`
  */
 export function variance(values: readonly number[]): number {
-	const meanValue = values.reduce(mean);
+	const meanValue = mean(values);
 
 	return values.map(value => (value - meanValue) ** 2).reduce(sum) / (values.length - 1);
 }
@@ -73,7 +73,51 @@ export function standardNormaldist(x: number): number {
 }
 
 /**
- * Calculate the median of a sequence of numbers.
+ * Get the mean of an array of `number`s.
+ *
+ * @example
+ * ```ts
+ * const array = [1, 2, 3];
+ *
+ * mean(array) === 2;
+ * ```
+ *
+ * @param array - The array to calculate the mean of
+ *
+ * @see {@link median} to calculate the median of an array
+ * @see {@link mode} to calculate the mode of an array
+ *
+ * @returns The mean of the array
+ */
+export function mean(array: readonly number[]): number;
+/**
+ * Get the mean of an array of `bigint`s.
+ *
+ * @example
+ * ```ts
+ * const array = [1n, 2n, 3n];
+ *
+ * mean(array) === 2n;
+ * ```
+ *
+ * @param array - The array to calculate the mean of
+ *
+ * @see {@link median} to calculate the median of an array
+ * @see {@link mode} to calculate the mode of an array
+ *
+ * @returns The mean of the array
+ */
+export function mean(array: readonly bigint[]): bigint;
+export function mean<T extends number>(array: readonly T[]): T {
+	const summed = (array as readonly number[]).reduce(sum) as unknown as T;
+
+	const length = (typeof summed === 'bigint' ? BigInt(array.length) : array.length) as T;
+
+	return (summed / length) as T;
+}
+
+/**
+ * Calculate the median of an array of numbers.
  *
  * @example
  * ```ts
