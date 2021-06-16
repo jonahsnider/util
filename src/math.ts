@@ -105,7 +105,7 @@ export function median<T extends number>(array: readonly T[]): T {
 }
 
 /**
- * Calculate the mode of an `Iterable`.
+ * Calculate the mode of an iterable.
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
