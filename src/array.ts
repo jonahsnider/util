@@ -86,7 +86,8 @@ export const shuffle = _shuffle as (<T>(array: T[]) => void) & (<T>(array: reado
  * @example
  * ```ts
  * const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
- * function directionFn(value: number) {
+ *
+ * function directionFn(value) {
  * 	const squared = value ** 2;
  *
  * 	if (squared === 64) {
