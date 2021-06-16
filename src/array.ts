@@ -309,7 +309,7 @@ export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) 
  *
  * @example
  * ```ts
- * allDuplicates([1, 2, 2, 3]); // [2]
+ * allDuplicates([1, 2, 2, 2, 3]); // [2, 2]
  * ```
  *
  * @param iterable - The iterable to find duplicates in
