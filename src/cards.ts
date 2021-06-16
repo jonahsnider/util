@@ -92,6 +92,14 @@ const deck = [
 
 /**
  * Get a sorted deck of cards.
+ *
+ * @example
+ * ```ts
+ * import { shuffle } from '@jonahsnider/util';
+ *
+ * const deck = newDeck();
+ * ```
+ *
  * @returns A sorted deck of cards
  */
 export function newDeck(): typeof deck {
