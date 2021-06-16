@@ -1,7 +1,7 @@
 import {not, nullish} from './';
 
 describe(not.name, () => {
-	it('inverts conditions', () => {
+	it('negates booleans', () => {
 		expect(not(() => true)()).toBe(false);
 		expect(not(() => false)()).toBe(true);
 

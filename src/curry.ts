@@ -1,5 +1,5 @@
 /**
- * Create a new function that calls the provided `fn` and inverts the result.
+ * Create a new function that calls the provided `fn` and negates the result.
  *
  * @example
  * ```ts
@@ -8,7 +8,7 @@
  * [0, null, '', undefined, false].filter(not(nullish)); // [0, '', false]
  * ```
  *
- * @param fn - Function to invert return value of
+ * @param fn - Function to negate the return value of
  *
  * @returns The inverted return value of `fn`
  */
