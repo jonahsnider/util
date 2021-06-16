@@ -108,19 +108,19 @@ export function median(values: readonly number[]): number {
  * mode(values); // [2, 3]
  * ```
  *
- * @param values - Values to use in the calculation
+ * @param iterable - Values to use in the calculation
  *
  * @see {@link mean} to calculate the mean of an array
  * @see {@link median} to calculate the median of an array
  *
  *  @returns An array of the modes of `values`
  */
-export function mode<T>(values: Iterable<T>): T[] {
+export function mode<T>(iterable: Iterable<T>): T[] {
 	const frequencyTable: Map<T, number> = new Map();
 	let maxOccurrences = 0;
 	let modes: T[] = [];
 
-	for (const element of values) {
+	for (const element of iterable) {
 		const occurrences = frequencyTable.get(element);
 		const newOccurrences = occurrences === undefined ? 1 : occurrences + 1;
 
