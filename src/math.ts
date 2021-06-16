@@ -186,13 +186,20 @@ export function randomInt(min: number, max: number): number {
 /**
  * Returns the value nearest to value which is within the closed range [`min`, `max`].
  *
+ * @example
+ * ```ts
+ * const value = clamp(Math.random() * 100, 25, 75n);
+ *
+ * 25 <= value && value <= 75n;
+ * ```
+ *
  * @param value - The value to clamp
  * @param min - The lower end (inclusive) of the range of numbers
  * @param max - The upper end (inclusive) of the range of numbers
  *
  * @returns the value nearest to value which is within the provided range.
  */
-export function clamp(value: number, min: number, max: number): number {
+export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(value: T, min: M1, max: M2): T | M1 | M2 {
 	if (__DEV__ && min > max) {
 		throw new RangeError('min exceeded max');
 	}
