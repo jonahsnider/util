@@ -309,13 +309,13 @@ export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) 
  *
  * @example
  * ```ts
- * duplicates([1, 2, 2, 3]); // [2]
+ * allDuplicates([1, 2, 2, 3]); // [2]
  * ```
  *
  * @param iterable - The iterable to find duplicates in
  * @returns An array of the duplicated elements
  */
-export function duplicates<T>(iterable: Iterable<T>): T[] {
+export function allDuplicates<T>(iterable: Iterable<T>): T[] {
 	const seen: Set<T> = new Set();
 	const result: T[] = [];
 

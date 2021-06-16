@@ -1,5 +1,5 @@
 import {expectNotType, expectType} from 'tsd';
-import {binarySearch, chunk, duplicates, first, frequencyTable, largeToSmall, partition, reverse, sample, shuffle, stddev} from './';
+import {binarySearch, chunk, allDuplicates, first, frequencyTable, largeToSmall, partition, reverse, sample, shuffle, stddev} from './';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -181,14 +181,14 @@ describe(first.name, () => {
 	});
 });
 
-describe(duplicates.name, () => {
+describe(allDuplicates.name, () => {
 	it('returns duplicate elements', () => {
-		expect(duplicates([1, 2, 2, 3])).toStrictEqual([2]);
+		expect(allDuplicates([1, 2, 2, 3])).toStrictEqual([2]);
 	});
 
 	it('returns empty when there are no duplicates', () => {
-		expect(duplicates([1, 2, 3])).toStrictEqual([]);
-		expect(duplicates([])).toStrictEqual([]);
+		expect(allDuplicates([1, 2, 3])).toStrictEqual([]);
+		expect(allDuplicates([])).toStrictEqual([]);
 	});
 });
 
