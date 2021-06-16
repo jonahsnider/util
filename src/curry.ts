@@ -3,7 +3,7 @@
  *
  * @example
  * ```ts
- * import {nullish} from '@jonahsnider/util';
+ * import { nullish } from '@jonahsnider/util';
  *
  * [0, null, '', undefined, false].filter(not(nullish)); // [0, '', false]
  * ```
