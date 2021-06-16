@@ -102,6 +102,6 @@ const deck = [
  *
  * @returns A sorted deck of cards
  */
-export function newDeck(): typeof deck {
+export function newDeck(): Card[] {
 	return [...deck];
 }
