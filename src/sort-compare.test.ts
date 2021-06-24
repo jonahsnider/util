@@ -20,6 +20,14 @@ describe(Sort.descending.name, () => {
 	it('sorts Dates', () => {
 		Sort.descending(new Date(), new Date());
 	});
+
+	it('sorts with predicate', () => {
+		const array = [{value: 2}, {value: 3}, {value: 1}, {value: 3}];
+
+		array.sort(Sort.descending(x => x.value));
+
+		expect(array).toStrictEqual([{value: 3}, {value: 3}, {value: 2}, {value: 1}]);
+	});
 });
 
 describe(Sort.ascending.name, () => {
@@ -41,5 +49,13 @@ describe(Sort.ascending.name, () => {
 
 	it('sorts Dates', () => {
 		Sort.ascending(new Date(), new Date());
+	});
+
+	it('sorts with predicate', () => {
+		const array = [{value: 2}, {value: 3}, {value: 1}, {value: 3}];
+
+		array.sort(Sort.ascending(x => x.value));
+
+		expect(array).toStrictEqual([{value: 1}, {value: 2}, {value: 3}, {value: 3}]);
 	});
 });
