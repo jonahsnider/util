@@ -102,13 +102,13 @@ describe(identical.name, () => {
 		const original = new Map([
 			['a', 1],
 			['b', 2],
-			['c', 3]
+			['c', 3],
 		]);
 		const copy = new Map(original);
 		const reversed = new Map([
 			['c', 3],
 			['b', 2],
-			['a', 1]
+			['a', 1],
 		]);
 
 		expect(identical(original, original)).toBe(true);
@@ -121,13 +121,13 @@ describe(identical.name, () => {
 			identical(
 				new Map([
 					['a', 1],
-					['b', 2]
+					['b', 2],
 				]),
 				new Map([
 					['b', 2],
-					['c', 3]
-				])
-			)
+					['c', 3],
+				]),
+			),
 		).toBe(false);
 	});
 });

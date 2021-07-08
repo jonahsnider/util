@@ -14,7 +14,7 @@ export enum Rank {
 	Ten,
 	Jack,
 	Queen,
-	King
+	King,
 }
 
 /**
@@ -24,7 +24,7 @@ export enum Suit {
 	Clubs,
 	Diamonds,
 	Hearts,
-	Spades
+	Spades,
 }
 
 /**
@@ -87,7 +87,7 @@ const deck = [
 	{rank: Rank.Ten, suit: Suit.Spades},
 	{rank: Rank.Jack, suit: Suit.Spades},
 	{rank: Rank.Queen, suit: Suit.Spades},
-	{rank: Rank.King, suit: Suit.Spades}
+	{rank: Rank.King, suit: Suit.Spades},
 ] as const;
 
 /**

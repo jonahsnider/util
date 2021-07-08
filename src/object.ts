@@ -20,7 +20,7 @@ type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) 
 export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(
 	target: T,
 	oldKey: NonUnion<K1>,
-	newKey: NonUnion<K2>
+	newKey: NonUnion<K2>,
 ): Omit<T, K1 | K2> & Record<K2, T[K1]>;
 export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(object: T, oldKey: K1, newKey: K1 | K2): Omit<T, K1 | K2> & Record<string, T[K1]> {
 	if (oldKey === newKey) {
