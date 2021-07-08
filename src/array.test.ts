@@ -51,7 +51,7 @@ describe(shuffle.name, () => {
 			dbac: 0,
 			dbca: 0,
 			dcab: 0,
-			dcba: 0
+			dcba: 0,
 		};
 
 		for (let i = 0; i < iterations; i++) {
@@ -104,7 +104,7 @@ describe(chunk.name, () => {
 		expect(chunk(array, 2)).toStrictEqual([
 			[1, 2],
 			[3, 4],
-			[5, 6]
+			[5, 6],
 		]);
 
 		expect(chunk(array, 5)).toStrictEqual([[1, 2, 3, 4, 5], [6]]);
@@ -123,8 +123,8 @@ describe(frequencyTable.name, () => {
 			new Map([
 				[1, 1],
 				[2, 2],
-				[3, 3]
-			])
+				[3, 3],
+			]),
 		);
 	});
 });
@@ -155,7 +155,7 @@ describe(partition.name, () => {
 	it('partitions an array', () => {
 		expect(partition([1, 2, 3, 4, 5, 6], num => num % 2)).toStrictEqual([
 			[1, 3, 5],
-			[2, 4, 6]
+			[2, 4, 6],
 		]);
 	});
 });
@@ -208,7 +208,7 @@ describe(largeToSmall.name, () => {
 	it('arranges by length', () => {
 		expect(largeToSmall({id: 0, length: 0}, {id: 1, length: 0})).toStrictEqual([
 			{id: 0, length: 0},
-			{id: 1, length: 0}
+			{id: 1, length: 0},
 		]);
 
 		expect(largeToSmall({length: 1}, {length: 0})).toStrictEqual([{length: 1}, {length: 0}]);
@@ -218,7 +218,7 @@ describe(largeToSmall.name, () => {
 	it('arranges by size', () => {
 		expect(largeToSmall({id: 0, size: 0}, {id: 1, size: 0})).toStrictEqual([
 			{id: 0, size: 0},
-			{id: 1, size: 0}
+			{id: 1, size: 0},
 		]);
 
 		expect(largeToSmall({size: 1}, {size: 0})).toStrictEqual([{size: 1}, {size: 0}]);
@@ -230,14 +230,14 @@ describe(largeToSmall.name, () => {
 		global.__DEV__ = false;
 		expect(() =>
 			// @ts-expect-error
-			largeToSmall({}, {})
+			largeToSmall({}, {}),
 		).toThrow();
 
 		// @ts-expect-error
 		global.__DEV__ = true;
 		expect(() =>
 			// @ts-expect-error
-			largeToSmall({}, {})
+			largeToSmall({}, {}),
 		).toThrow();
 	});
 });

@@ -48,5 +48,5 @@ export enum Method {
 	 * The `PATCH` method is used to apply partial modifications to a resource.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATC MDN docs
 	 */
-	Patch = 'PATCH'
+	Patch = 'PATCH',
 }

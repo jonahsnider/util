@@ -8,6 +8,6 @@ module.exports = {
 		/**
 		 * @see https://github.com/jaredpalmer/tsdx#__dev__
 		 */
-		__DEV__: true
-	}
+		__DEV__: true,
+	},
 };

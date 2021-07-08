@@ -272,5 +272,5 @@ export enum Status {
 	 * 511 Network Authentication Required.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/51 MDN docs
 	 */
-	NetworkAuthenticationRequired
+	NetworkAuthenticationRequired,
 }

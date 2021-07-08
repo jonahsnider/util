@@ -15,14 +15,14 @@ describe(rename.name, () => {
 			{a: 1, c: 2},
 			'a',
 			// @ts-expect-error
-			key
+			key,
 		);
 
 		rename(
 			{a: 1, b: 2},
 			// @ts-expect-error
 			key,
-			'c'
+			'c',
 		);
 	});
 });

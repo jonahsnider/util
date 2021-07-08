@@ -393,7 +393,7 @@ export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLen
 export function largeToSmall<A extends ObjectWithSize, B extends ObjectWithSize>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
 export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B extends ObjectWithSize | ObjectWithLength>(
 	a: A,
-	b: B
+	b: B,
 ): ArrangedLargestToSmallest<A, B> {
 	let key: 'size' | 'length' | undefined = undefined;
 
