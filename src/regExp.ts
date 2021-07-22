@@ -2,7 +2,7 @@
  * Combines several regular expressions into a new one that matches any of them.
  *
  * @example
- * ```ts
+ * ```js
  * regExpUnion(/[a-z]/, /\d/); // /([a-z])|(\d)/
  * ```
  *

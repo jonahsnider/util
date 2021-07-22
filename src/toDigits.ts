@@ -2,10 +2,10 @@
  * Round a number to n digits of precision after the decimal point.
  *
  * @example
- * ```ts
+ * ```js
  * const value = 12.345;
  *
- * toDigits(value, 2) === 12.35;
+ * toDigits(value, 2); // 12.35
  * ```
  *
  * @param value - Value to format

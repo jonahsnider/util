@@ -28,7 +28,7 @@ export type DirectionFn<T> = (element: T) => number;
  * Samples a single element at random from an array.
  *
  * @example
- * ```ts
+ * ```js
  * const array = [1, 2, 3];
  *
  * sample(array); // 1, 2, or 3
@@ -62,14 +62,14 @@ function shuffle<T>(array: T[], mutate = true): void | T[] {
  * A uniformly random array shuffle.
  *
  * @example
- * ```ts
+ * ```js
  * const array = [1, 2, 3];
  *
  * shuffle(array);
  * ```
  *
  * @example
- * ```ts
+ * ```js
  * const array = [1, 2, 3];
  *
  * const shuffled = shuffle(array, false);
@@ -90,10 +90,10 @@ export {typedShuffle as shuffle};
  * Perform a binary search to find an element in a sorted array.
  *
  * @example
- * ```ts
+ * ```js
  * const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
  *
- * function directionFn(value) {
+ * function directionFn(value: number) {
  * 	const squared = value ** 2;
  *
  * 	if (squared === 64) {
@@ -142,22 +142,22 @@ export function binarySearch<T>(array: readonly T[], directionFn: DirectionFn<T>
  * If `size` is equal to the length of the array each item will be in their own array.
  *
  * @example
- * ```ts
+ * ```js
  * chunk([1, 2, 3, 4, 5, 6], 2); // [[1, 2 ], [ 3, 4 ], [ 5, 6 ] ]
  * ```
  *
  * @example
- * ```ts
+ * ```js
  * chunk([1, 2, 3, 4, 5, 6], 5); // [[1, 2, 3, 4, 5], [6]]
  * ```
  *
  * @example
- * ```ts
+ * ```js
  * chunk([1, 2, 3, 4, 5, 6], 6); // [[1], [2], [3], [4], [5], [6]]
  * ```
  *
  * @example
- * ```ts
+ * ```js
  * chunk([1, 2, 3, 4, 5, 6], 100); // [[1, 2, 3, 4, 5, 6]]
  * ```
  *
@@ -178,7 +178,7 @@ export function chunk<T>(array: readonly T[], size: number): Table<T> {
  * Construct a frequency table from an iterable.
  *
  * @example
- * ```ts
+ * ```js
  * frequencyTable([1, 2, 2, 3, 3, 3]) // Map(3) { 1 => 1, 2 => 2, 3 => 3 };
  * ```
  *
@@ -204,7 +204,7 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
  * For best results `iterable` should be an array so that the returned array doesn't need to be resized as more elements are added.
  *
  * @example
- * ```ts
+ * ```js
  * reverse([1, 2, 3]); // [3, 2, 1]
  * ```
  *
@@ -230,8 +230,11 @@ export function reverse<T>(iterable: readonly T[] | Iterable<T>): T[] {
  * Split an iterable into two arrays of elements that passed or failed a provided predicate.
  *
  * @example
- * ```ts
+ * ```js
  * const [odd, even] = partition([1, 2, 3, 4, 5, 6], num => num % 2);
+ *
+ * console.log(odd); // [1, 3, 5]
+ * console.log(even); // [2, 4, 6]
  * ```
  *
  * @param iterable - The iterable to partition
@@ -248,7 +251,7 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index:
 	for (const element of iterable) {
 		const array = predicate(element, index++) ? passed : failed;
 
-		array.push(element);
+		array.push(element as any);
 	}
 
 	return [passed, failed];
@@ -258,7 +261,7 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, index:
  * Get the first element from an iterable.
  *
  * @example
- * ```ts
+ * ```js
  * first([1, 2, 3]); // 1
  * ```
  *
@@ -271,12 +274,12 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
  * Get the first `n` elements from an iterable.
  *
  * @example
- * ```ts
+ * ```js
  * first([1, 2, 3], 1); // [1]
  * ```
  *
  * @example
- * ```ts
+ * ```js
  * first([1, 2, 3], 2); // [1, 2]
  * ```
  *
@@ -312,13 +315,13 @@ export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) 
  * Get an array of all the duplicate elements in an iterable.
  *
  * @example
- * ```ts
+ * ```js
  * allDuplicates([1, 2, 2, 2, 3]); // [2, 2]
  * ```
  *
  * @example
  * Using {@link frequencyTable} to get the number of times each element was duplicated
- * ```ts
+ * ```js
  * frequencyTable(allDuplicates([1, 2, 2, 2, 3, 3])); // Map(2) { 2 => 2, 3 => 1 }
  * ```
  *
@@ -346,7 +349,7 @@ export function allDuplicates<T>(iterable: Iterable<T>): T[] {
  * Get a Set of the duplicate elements in an iterable.
  *
  * @example
- * ```ts
+ * ```js
  * duplicates([1, 2, 2, 2, 3]); // Set(1) { 2 }
  * ```
  *
@@ -380,8 +383,14 @@ type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, 
  * Useful for situations where you are iterating `a` or `b` depending on which is larger.
  *
  * @example
- * ```ts
+ * ```js
+ * const a = [1, 2];
+ * const b = [1, 2, 3];
+ *
  * const [largest, smallest] = arrangeByLength(a, b);
+ *
+ * console.log(largest); // [1, 2, 3]
+ * console.log(smallest); // [1, 2]
  * ```
  *
  * @param a - First object

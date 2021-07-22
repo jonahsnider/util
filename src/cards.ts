@@ -94,7 +94,7 @@ const deck = [
  * Get a sorted deck of cards.
  *
  * @example
- * ```ts
+ * ```js
  * import { shuffle } from '@jonahsnider/util';
  *
  * const deck = newDeck();

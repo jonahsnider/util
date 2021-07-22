@@ -4,8 +4,8 @@ import {Table} from './array';
  * Capitalizes the first letter of a string.
  *
  * @example
- * ```ts
- * capitalize('hello') === 'Hello';
+ * ```js
+ * capitalize('hello'); // 'Hello'
  * ```
  *
  * @param text - Text to capitalize
@@ -24,8 +24,8 @@ export function capitalize<T extends string>(text: T): Capitalize<T> {
  * Uncapitalizes the first letter of a string.
  *
  * @example
- * ```ts
- * uncapitalize('HELLO') === 'hELLO';
+ * ```js
+ * uncapitalize('HELLO'); // hELLO
  * ```
  *
  * @param text - Text to uncapitalize
@@ -44,8 +44,8 @@ export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
  * Truncate text to a certain length, optionally appending a suffix when truncated.
  *
  * @example
- * ```ts
- * truncate('hello, world', 5, '...') === 'hello...';
+ * ```js
+ * truncate('hello, world', 5, '...'); // 'hello...'
  * ```
  *
  * @param text - Text to truncate
@@ -107,8 +107,8 @@ export function formatTable(table: Table<string>, delimiter = ' '): string {
  * Based off [Nim's `strutils.multiReplace`](https://nim-lang.org/docs/strutils.html#multiReplace%2Cstring%2Cvarargs%5B%5D).
  *
  * @example
- * ```ts
- * multiReplace('a b c', {a: 'c', c: 'a'}) === 'c b a';
+ * ```js
+ * multiReplace('a b c', {a: 'c', c: 'a'}); // 'c b a'
  * ```
  *
  * @param string - The string to replace values in

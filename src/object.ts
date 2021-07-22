@@ -5,7 +5,7 @@ type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) 
  * Create a copy of an object with a key renamed.
  *
  * @example
- * ```ts
+ * ```js
  * const object = { a: 1 };
  *
  * rename(object, 'a', 'b'); // { b: 1 }

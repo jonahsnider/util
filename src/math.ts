@@ -4,8 +4,8 @@ import {sum} from './reducers';
  * Calculate the variance of a sequence of numbers.
  *
  * @example
- * ```ts
- * variance([1, 2, 3]) === 1;
+ * ```js
+ * variance([1, 2, 3]); // 1
  * ```
  *
  * @param values - Values to use in the calculation
@@ -22,8 +22,8 @@ export function variance(values: readonly number[]): number {
  * Calculate the standard deviation of a sequence of numbers.
  *
  * @example
- * ```ts
- * stddev([1, 2, 3]) === 1;
+ * ```js
+ * stddev([1, 2, 3]); // 1
  * ```
  *
  * @param values - Values to use in the calculation
@@ -38,7 +38,7 @@ export function stddev(values: readonly number[]): number {
  * Calculate the normal distribution.
  *
  * @example
- * ```ts
+ * ```js
  * normaldist(0, 1, 0);
  * ```
  *
@@ -58,8 +58,8 @@ export function normaldist(x: number, σ: number, μ: number): number {
  * Calculate the standard normal distribution.
  *
  * @example
- * ```ts
- * standardNormaldist(0) === normaldist(0, 1, 0);
+ * ```js
+ * standardNormaldist(0) === normaldist(0, 1, 0); // true
  * ```
  *
  * @param x - Sample to calculate the normal distribution of
@@ -76,10 +76,10 @@ export function standardNormaldist(x: number): number {
  * Get the mean of an array of `number`s.
  *
  * @example
- * ```ts
+ * ```js
  * const array = [1, 2, 3];
  *
- * mean(array) === 2;
+ * mean(array); // 2
  * ```
  *
  * @param array - The array to calculate the mean of
@@ -94,10 +94,10 @@ export function mean(array: readonly number[]): number;
  * Get the mean of an array of `bigint`s.
  *
  * @example
- * ```ts
+ * ```js
  * const array = [1n, 2n, 3n];
  *
- * mean(array) === 2n;
+ * mean(array); // 2n
  * ```
  *
  * @param array - The array to calculate the mean of
@@ -120,10 +120,10 @@ export function mean<T extends number>(array: readonly T[]): T {
  * Calculate the median of an array of numbers.
  *
  * @example
- * ```ts
+ * ```js
  * const values = [1, 2, 3];
  *
- * median(values) === 2;
+ * median(values); // 2
  * ```
  *
  * @param array - Values to use in the calculation
@@ -153,7 +153,7 @@ export function median<T extends number>(array: readonly T[]): T {
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
- * ```ts
+ * ```js
  * const values = [1, 2, 2, 3, 3];
  *
  * mode(values); // [2, 3]
@@ -192,7 +192,7 @@ export function mode<T>(iterable: Iterable<T>): T[] {
  * Generate a random number within the given bounds.
  *
  * @example
- * ```ts
+ * ```js
  * const value = random(0, 10);
  *
  * 0 <= value && value < 10;
@@ -215,10 +215,8 @@ export function random(min: number, max: number): number {
  * Generate a random integer within the given bounds.
  *
  * @example
- * ```ts
- * const value = randomInt(0, 3);
- *
- * value === 0 || value === 1 || value === 2;
+ * ```js
+ * randomInt(0, 3); // 0, 1, or 2
  * ```
  *
  * @param min - Lower bound (inclusive) of the output range
@@ -238,7 +236,7 @@ export function randomInt(min: number, max: number): number {
  * Returns the value nearest to value which is within the closed range [`min`, `max`].
  *
  * @example
- * ```ts
+ * ```js
  * const value = clamp(Math.random() * 100, 25, 75n);
  *
  * 25 <= value && value <= 75n;

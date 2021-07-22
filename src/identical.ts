@@ -3,11 +3,11 @@
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
- * ```ts
+ * ```js
  * const a = [1];
  * const b = [1];
  *
- * identical(a, b) === true;
+ * identical(a, b); // true
  * ```
  *
  * @param a - First array to compare
@@ -21,11 +21,11 @@ export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
- * ```ts
+ * ```js
  * const a = new Set([1, 2, 3]);
  * const b = new Set([3, 2, 1]);
  *
- * identical(a, b) === true;
+ * identical(a, b); // true
  * ```
  *
  * @param a - First `Set` to compare
@@ -39,11 +39,11 @@ export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
  * Strict equality (`===`) is used to compare values.
  *
  * @example
- * ```ts
+ * ```js
  * const a = new Map([['a', 1]]);
  * const b = new Map([['a', 1]]);
  *
- * identical(a, b) === true;
+ * identical(a, b); // true
  * ```
  *
  * @param a - First `Map` to compare
@@ -92,14 +92,14 @@ export function identical<V, K = never>(a: readonly V[] | ReadonlySet<V> | Reado
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
- * ```ts
+ * ```js
  * const a = [1, 2, 3];
  * const b = [1, 2, 3];
  * const c = [1, 2, 3];
  * const d = [1, 2, 3];
  * const e = [1, 2, 3];
  *
- * same(a, b, c, d, e) === true;
+ * same(a, b, c, d, e); // true
  * ```
  *
  * @param iterables - Elements to compare

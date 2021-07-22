@@ -10,10 +10,10 @@ export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0],
  * Sort an object's keys by comparing their respective values.
  *
  * @example
- * ```ts
+ * ```js
  * import { Sort } from '@jonahsnider/util';
  *
- * const object = {a: 3, c: 1, b: 2};
+ * const object = { a: 3, c: 1, b: 2 };
  *
  * Object.fromEntries(sortObject(object, Sort.ascending));
  * ```

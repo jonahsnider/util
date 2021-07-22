@@ -2,7 +2,7 @@
  * Helper to record the amount of time elapsed between two points during execution.
  *
  * @example
- * ```ts
+ * ```js
  * const stopwatch = new Stopwatch();
  *
  * stopwatch.start();
@@ -10,7 +10,7 @@
  * stopwatch.end();
  * ```
  * @example
- * ```ts
+ * ```js
  * const stopwatch = Stopwatch.start();
  *
  * stopwatch.end();
@@ -24,7 +24,7 @@ export class Stopwatch {
 	 * This will return `true` even if the stopwatch is stopped.
 	 *
 	 * @example
-	 * ```ts
+	 * ```js
 	 * const stopwatch = new Stopwatch();
 	 *
 	 * stopwatch.started === false;
@@ -46,7 +46,7 @@ export class Stopwatch {
 	 * Create a new stopwatch and start timing it.
 	 *
 	 * @example
-	 * ```ts
+	 * ```js
 	 * const stopwatch = Stopwatch.start();
 	 * ```
 	 */
@@ -61,7 +61,7 @@ export class Stopwatch {
 	/**
 	 * Start recording the duration of this stopwatch.
 	 * @example
-	 * ```ts
+	 * ```js
 	 * const stopwatch = new Stopwatch();
 	 *
 	 * stopwatch.start();
@@ -75,7 +75,7 @@ export class Stopwatch {
 	 * Return the duration elapsed since the start.
 	 *
 	 * @example
-	 * ```ts
+	 * ```js
 	 * stopwatch.end();
 	 * ```
 	 *

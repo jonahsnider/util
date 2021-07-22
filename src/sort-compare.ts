@@ -30,7 +30,7 @@ function descendingRaw(a: Comparable, b: Comparable): number {
  * Sort an array in ascending order (least to greatest), while applying a function to each element to map the value before comparing..
  *
  * @example
- * ```ts
+ * ```js
  * const array = [{ value: 2 }, { value: 3 }, { value: 1 }, { value: 3 }];
  *
  * array.sort(Sort.ascending(x => x.value));
@@ -45,7 +45,7 @@ export function ascending<T>(predicate: (element: T) => Comparable): CompareFn<T
  * Sort an array in ascending order (least to greatest).
  *
  * @example
- * ```ts
+ * ```js
  * const array = [5, 3, 2, 4, 1];
  *
  * array.sort(Sort.ascending);
@@ -69,7 +69,7 @@ export function ascending<T>(aOrPredicate: Comparable | ((element: T) => Compara
  * Sort an array in descending order (greatest to least), while applying a function to each element to map the value before comparing.
  *
  * @example
- * ```ts
+ * ```js
  * const array = [{ value: 2 }, { value: 3 }, { value: 1 }, { value: 3 }];
  *
  * array.sort(Sort.descending(x => x.value));
@@ -83,7 +83,7 @@ export function descending<T>(predicate: (element: T) => Comparable): CompareFn<
 /**
  * Sort an array in descending order (greatest to least).
  * @example
- * ```ts
+ * ```js
  * const array = [5, 3, 2, 4, 1];
  *
  * array.sort(Sort.descending);

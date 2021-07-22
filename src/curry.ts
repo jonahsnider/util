@@ -2,10 +2,12 @@
  * Create a new function that calls the provided `fn` and negates the result.
  *
  * @example
- * ```ts
+ * ```js
  * import { nullish } from '@jonahsnider/util';
  *
- * [0, null, '', undefined, false].filter(not(nullish)); // [0, '', false]
+ * const array = [0, null, '', undefined, false];
+ *
+ * array.filter(not(nullish)); // [0, '', false]
  * ```
  *
  * @param fn - Function to negate the return value of
@@ -20,7 +22,7 @@ export function not<T extends (...params: any[]) => boolean>(fn: T): T {
  * Create a new function taht calls the provided `fn` and then inverts the sign of the result.
  *
  * @example
- * ```ts
+ * ```js
  * function sort(a, b) {
  *   return a - b;
  * }
