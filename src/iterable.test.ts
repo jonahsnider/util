@@ -1,4 +1,4 @@
-import {combineIterables, every, includes, join, some} from './iterable';
+import {combineIterables, every, find, includes, join, some} from './iterable';
 
 describe(join.name, () => {
 	it('joins elements', () => {
@@ -44,5 +44,15 @@ describe(includes.name, () => {
 
 	it('returns false when relevant', () => {
 		expect(includes([1, 2, 3], 4)).toBe(false);
+	});
+});
+
+describe(find.name, () => {
+	it('finds elements', () => {
+		expect(find([1, 2, 3], x => x === 2)).toBe(2);
+	});
+
+	it('returns undefined when no element is found', () => {
+		expect(find([1, 2, 3], x => x === 4)).toBe(undefined);
 	});
 });

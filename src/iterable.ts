@@ -147,3 +147,26 @@ export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean {
 
 	return false;
 }
+
+/**
+ * Returns the value of the first element in the iterable where `predicate` is truthy, and `undefined` otherwise.
+ *
+ * @example
+ * ```js
+ * find([1, 2, 3], x => x % 2 === 0); // 2
+ * ```
+ *
+ * @param iterable - The iterable to take elements from
+ * @param predicate - The function to call on each element in the iterable to determine if it passes the test
+ *
+ * @returns The value of the first element in the iterable where `predicate` is truthy, and `undefined` otherwise
+ */
+export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolean): T | undefined {
+	for (const element of iterable) {
+		if (predicate(element)) {
+			return element;
+		}
+	}
+
+	return undefined;
+}
