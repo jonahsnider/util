@@ -60,15 +60,15 @@ export function join<T>(iterable: Iterable<T>, separator = ','): string {
  *
  * @example
  * ```js
- * every([false]); // false
+ * every([false], x => x); // false
  * ```
  * @example
  * ```js
- * every([false, true]); // false
+ * every([false, true], x => x); // false
  * ```
  * @example
  * ```js
- * every([true]); // true
+ * every([true], x => x); // true
  * ```
  *
  * @param iterable - The iterable to take elements from
@@ -93,15 +93,15 @@ export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unkno
  *
  * @example
  * ```js
- * some([false]); // false
+ * some([false], x => x); // false
  * ```
  * @example
  * ```js
- * some([false, true]); // true
+ * some([false, true], x => x); // true
  * ```
  * @example
  * ```js
- * some([true]); // true
+ * some([true], x => x); // true
  * ```
  *
  * @param iterable - The iterable to take elements from
@@ -130,7 +130,7 @@ export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknow
  *
  * @example
  * ```js
- * includes([1, 2, 3], 5); // false
+ * includes([1, 2, 3], 4); // false
  * ```
  *
  * @param iterable - The iterable to take elements from
@@ -153,7 +153,7 @@ export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean {
  *
  * @example
  * ```js
- * find([1, 2, 3], x => x % 2 === 0); // 2
+ * find([1, 2, 3], x => Number.isInteger(x)); // 2
  * ```
  *
  * @param iterable - The iterable to take elements from
