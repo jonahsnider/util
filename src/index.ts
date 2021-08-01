@@ -8,6 +8,7 @@ export * from './iterable';
 export * from './math';
 export * from './nullish';
 export * from './object';
+export * from './promise';
 export * from './reducers';
 export * from './regExp';
 export * from './set';
