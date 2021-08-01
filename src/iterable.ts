@@ -87,3 +87,34 @@ export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unkno
 
 	return true;
 }
+
+/**
+ * Determines whether any of the elements of an iterable are truthy.
+ *
+ * @example
+ * ```js
+ * some([false]); // false
+ * ```
+ * @example
+ * ```js
+ * some([false, true]); // true
+ * ```
+ * @example
+ * ```js
+ * some([true]); // true
+ * ```
+ *
+ * @param iterable - The iterable to take elements from
+ * @param predicate - The function to call on each element in the iterable to determine if it passes the test
+ *
+ * @returns `true` if any element passes the predicate, `false` otherwise
+ */
+export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean {
+	for (const element of iterable) {
+		if (predicate(element)) {
+			return true;
+		}
+	}
+
+	return false;
+}

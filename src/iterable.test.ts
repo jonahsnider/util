@@ -1,4 +1,4 @@
-import {combineIterables, every, join} from './iterable';
+import {combineIterables, every, join, some} from './iterable';
 
 describe(join.name, () => {
 	it('joins elements', () => {
@@ -24,5 +24,15 @@ describe(every.name, () => {
 	it('returns false if some elements fail the predicate', () => {
 		expect(every([1, '2', 3], (x): x is number => typeof x === 'number')).toBe(false);
 		expect(every([1, 2, 3], () => false)).toBe(false);
+	});
+});
+
+describe(some.name, () => {
+	it('returns true if any element passes the predicate', () => {
+		expect(some([1, 2, 3], x => x === 2)).toBe(true);
+	});
+
+	it('returns true if any element passes the predicate', () => {
+		expect(some([1, 2, 3], x => x === 2)).toBe(true);
 	});
 });
