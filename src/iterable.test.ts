@@ -1,4 +1,4 @@
-import {allDuplicates, combineIterables, duplicates, every, find, first, frequencyTable, includes, join, partition, some} from './iterable';
+import {allDuplicates, combineIterables, duplicates, every, find, first, frequencyTable, includes, join, partition, reduce, some} from './iterable';
 
 describe(combineIterables.name, () => {
 	it('combines iterables', () => {
@@ -121,5 +121,28 @@ describe(frequencyTable.name, () => {
 				[3, 3],
 			]),
 		);
+	});
+});
+
+describe(reduce.name, () => {
+	it('reduces an iterable', () => {
+		const predicate = (a: number, b: number): number => a + b;
+
+		const skipInitialValue = Symbol();
+
+		const testArrays = [[], [1], [1, 2], [1, 2, 3], [1, 2, 3, 4]];
+		const testInitialValues = [skipInitialValue, 0, 1] as const;
+
+		for (const initialValue of testInitialValues) {
+			for (const array of testArrays) {
+				if (initialValue === skipInitialValue) {
+					if (array.length > 0) {
+						expect(reduce(array, predicate)).toBe(array.reduce(predicate));
+					}
+				} else {
+					expect(reduce(array, predicate, initialValue)).toBe(array.reduce(predicate, initialValue));
+				}
+			}
+		}
 	});
 });

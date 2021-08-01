@@ -342,3 +342,56 @@ export function duplicates<T>(iterable: Iterable<T>): Set<T> {
 
 	return result;
 }
+
+/**
+ * Calls the specified predicate function for all the elements in an iterable.
+ * The return value of `predicate` is the accumulated result, and is provided as an argument in the next call to `predicate`.
+ *
+ * @example
+ * ```js
+ * reduce([1, 2, 3], (a, b) => a + b); // 6
+ * ```
+ *
+ * @param iterable - The iterable to reduce
+ * @param predicate - The function to call on each element of the iterable
+ *
+ * @returns The accumulated result of the predicate function
+ */
+export function reduce<T>(iterable: Iterable<T>, predicate: (previousValue: T, currentValue: T, currentIndex: number) => T, initialValue?: T): T {
+	let index = 0;
+
+	if (arguments.length > 2) {
+		let result: T = initialValue!;
+
+		for (const element of iterable) {
+			result = predicate(result, element, index++);
+		}
+
+		return result;
+	} else {
+		let result: T;
+
+		const iterator = iterable[Symbol.iterator]();
+
+		let next = iterator.next();
+
+		if (next.done) {
+			// Copy behavior of Array.prototype.reduce
+			throw new TypeError('Reduce of empty iterable with no initial value');
+		}
+
+		let firstRun = true;
+
+		while (true) {
+			const prev = next;
+			next = iterator.next();
+
+			if (next.done) {
+				return result!;
+			}
+
+			result = predicate(firstRun ? prev.value : result!, next.value, index++);
+			firstRun = false;
+		}
+	}
+}
