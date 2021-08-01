@@ -9,6 +9,7 @@ export * from './math';
 export * from './nullish';
 export * from './object';
 export * from './promise';
+export * from './range';
 export * from './reducers';
 export * from './regExp';
 export * from './set';
