@@ -33,7 +33,7 @@ describe(some.name, () => {
 	});
 
 	it('returns false if every element fails the predicate', () => {
-  expect(some([1, 2, 3], x => x === 4)).toBe(false);
+		expect(some([1, 2, 3], x => x === 4)).toBe(false);
 	});
 });
 
