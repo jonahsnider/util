@@ -427,3 +427,27 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
 
 	return [a, b];
 }
+
+/**
+ * Get an array of indexes of holes in an array.
+ *
+ * @example
+ * ```js
+ * holes([0, , 2]); // [1]
+ * ```
+ *
+ * @param array - The array to find holes in
+ *
+ * @returns An array of indexes of holes in the array
+ */
+export function holes<T>(array: readonly T[]): number[] {
+	const result: number[] = [];
+
+	for (let i = 0; i < array.length; i++) {
+		if (!(i in array)) {
+			result.push(i);
+		}
+	}
+
+	return result;
+}

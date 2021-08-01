@@ -1,6 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {binarySearch, chunk, allDuplicates, first, frequencyTable, largeToSmall, partition, reverse, sample, shuffle, stddev} from './';
-import {duplicates} from './array';
+import {duplicates, holes} from './array';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -239,5 +239,18 @@ describe(largeToSmall.name, () => {
 			// @ts-expect-error
 			largeToSmall({}, {}),
 		).toThrow();
+	});
+});
+
+describe(holes.name, () => {
+	it('finds holes', () => {
+		expect(holes([, ,])).toStrictEqual([0, 1]);
+		expect(holes([0, , 2])).toStrictEqual([1]);
+	});
+
+	it('returns empty array when there are no holes', () => {
+		expect(holes([])).toStrictEqual([]);
+		expect(holes([0, 1, 2])).toStrictEqual([]);
+		expect(holes([0, undefined, 2])).toStrictEqual([]);
 	});
 });
