@@ -1,4 +1,22 @@
 /**
+ * Combines multiple iterables into a single iterable.
+ *
+ * @example
+ * ```js
+ * [...combineIterables([1, 2, 3], [4, 5, 6])]; // [1, 2, 3, 4, 5, 6]
+ * ```
+ *
+ * @params iterables - The iterables to combine
+ *
+ * @returns A single iterable containing all the elements of all the iterables
+ */
+export function* combineIterables<T>(...iterables: Iterable<T>[]): Iterable<T> {
+	for (const iterable of iterables) {
+		yield* iterable;
+	}
+}
+
+/**
  * Adds all the elements of an iterable into a string, separated by the specified separator string.
  *
  * @example
