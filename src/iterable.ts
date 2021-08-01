@@ -153,7 +153,7 @@ export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean {
  *
  * @example
  * ```js
- * find([1, 2, 3], x => Number.isInteger(x)); // 2
+ * find([1, 2, 3], x => x === 2); // 2
  * ```
  *
  * @param iterable - The iterable to take elements from
