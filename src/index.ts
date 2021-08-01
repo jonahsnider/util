@@ -4,6 +4,7 @@ export * from './curry';
 export * from './format';
 export * as Http from './http/index';
 export * from './identical';
+export * from './iterable';
 export * from './math';
 export * from './nullish';
 export * from './object';
