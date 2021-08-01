@@ -56,7 +56,7 @@ export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
  */
  export function truncate<T extends string>(text: T, maxLength: number, suffix = ''): T | `${string}${typeof suffix}` {
 	if (text.length > maxLength) {
-		return `${text.slice(0, maxLength)}${suffix}`;
+		return `${text.slice(0, maxLength)}${suffix}` as `${string}${typeof suffix}`;
 	}
 
 	return text;
