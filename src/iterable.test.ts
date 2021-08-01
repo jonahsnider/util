@@ -1,4 +1,4 @@
-import {combineIterables, every, find, includes, join, some} from './iterable';
+import {allDuplicates, combineIterables, duplicates, every, find, first, frequencyTable, includes, join, partition, some} from './iterable';
 
 describe(combineIterables.name, () => {
 	it('combines iterables', () => {
@@ -54,5 +54,72 @@ describe(find.name, () => {
 
 	it('returns undefined when no element is found', () => {
 		expect(find([1, 2, 3], x => x === 4)).toBe(undefined);
+	});
+});
+
+describe(partition.name, () => {
+	it('partitions an array', () => {
+		expect(partition([1, 2, 3, 4, 5, 6], num => num % 2)).toStrictEqual([
+			[1, 3, 5],
+			[2, 4, 6],
+		]);
+	});
+});
+
+describe(first.name, () => {
+	it('returns first element if take is undefined', () => {
+		expect(first([1, 2, 3])).toStrictEqual(1);
+	});
+
+	it('takes the specified number of items', () => {
+		expect(first([1, 2, 3], 2)).toStrictEqual([1, 2]);
+	});
+
+	it('allows array destructuring', () => {
+		const [one, two] = first([1, 2, 3], 2);
+
+		expect(one).toBe(1);
+		expect(two).toBe(2);
+	});
+
+	it('allows handles small arrays and big takes', () => {
+		expect(first([1], 3)).toStrictEqual([1]);
+		expect(first([], 3)).toStrictEqual([]);
+	});
+});
+
+describe(allDuplicates.name, () => {
+	it('returns duplicate elements', () => {
+		expect(allDuplicates([1, 2, 2, 2, 3])).toStrictEqual([2, 2]);
+	});
+
+	it('returns empty when there are no duplicates', () => {
+		expect(allDuplicates([1, 2, 3])).toStrictEqual([]);
+		expect(allDuplicates([])).toStrictEqual([]);
+	});
+});
+
+describe(duplicates.name, () => {
+	it('returns duplicate elements', () => {
+		expect(duplicates([1, 2, 2, 2, 3])).toStrictEqual(new Set([2]));
+	});
+
+	it('returns empty when there are no duplicates', () => {
+		expect(duplicates([1, 2, 3])).toStrictEqual(new Set([]));
+		expect(duplicates([])).toStrictEqual(new Set([]));
+	});
+});
+
+describe(frequencyTable.name, () => {
+	it('constructs a frequency table', () => {
+		const array = [1, 2, 2, 3, 3, 3];
+
+		expect(frequencyTable(array)).toStrictEqual(
+			new Map([
+				[1, 1],
+				[2, 2],
+				[3, 3],
+			]),
+		);
 	});
 });
