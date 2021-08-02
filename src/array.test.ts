@@ -1,6 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {stddev} from './';
-import {binarySearch, chunk, holes, largeToSmall, reverse, sample, shuffle} from './array';
+import {binarySearch, chunk, holes, largeToSmall, pull, reverse, sample, shuffle} from './array';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -185,5 +185,31 @@ describe(holes.name, () => {
 		expect(holes([])).toStrictEqual([]);
 		expect(holes([0, 1, 2])).toStrictEqual([]);
 		expect(holes([0, undefined, 2])).toStrictEqual([]);
+	});
+});
+
+describe(pull.name, () => {
+	it('pulls from an array', () => {
+		const array = [1, 2, 3];
+
+		expect(pull(array, 2)).toStrictEqual([2]);
+		expect(array).toStrictEqual([1, 3]);
+
+		expect(pull(array, 2)).toStrictEqual([]);
+		expect(array).toStrictEqual([1, 3]);
+	});
+
+	it('works with empty arrays', () => {
+		const array: never[] = [];
+
+		expect(pull(array, 2)).toStrictEqual([]);
+		expect(array).toStrictEqual([]);
+	});
+
+	it("works when element isn't found", () => {
+		const array = [1, 2, 3];
+
+		expect(pull(array, 4)).toStrictEqual([]);
+		expect(array).toStrictEqual([1, 2, 3]);
 	});
 });
