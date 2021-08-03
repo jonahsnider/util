@@ -8,7 +8,7 @@ export type Result<T, E> = ResolvedResult<T> | RejectedResult<E>;
  *
  * @example
  * ```js
- * const [value, error] = settle(promise);
+ * const [value, error] = await settled(promise);
  * ```
  *
  * @param promise - The promise to settle
