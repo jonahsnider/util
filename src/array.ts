@@ -295,3 +295,20 @@ export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice
 
 	return array.splice(index, 1);
 }
+
+/**
+ * Create a new array of a specified length and fill it with a given value.
+ *
+ * @example
+ * ```js
+ * fill(3, 'a'); // ['a', 'a', 'a']
+ * ```
+ *
+ * @param length - The length of the array
+ * @param value - Value to fill the array with
+ *
+ * @returns The filled array
+ */
+export function fill<T>(length: number, value: T): T[] {
+	return Array.from({length}, () => value);
+}
