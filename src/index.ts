@@ -18,3 +18,4 @@ export * as Sort from './sort-compare';
 export * from './stopwatch';
 export * from './to-digits';
 export * from './typed-event-emitter';
+export * from './types';
