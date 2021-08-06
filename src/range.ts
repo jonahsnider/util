@@ -1,4 +1,4 @@
-import {Comparable} from './sort';
+import {Comparable} from './types';
 
 /**
  * A range between two values.

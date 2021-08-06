@@ -1,28 +1,10 @@
+import {DirectionFn} from './types';
+
 /** A 2-dimensional table of type `T`. */
 export type Table<T> = T[][];
 
 /** An array with at least one element. */
 export type NonEmptyArray<T> = [T, ...T[]];
-
-/**
- * A function used to determine the direction a search algorithm should take when traversing data to find a desired element.
- * @returns `0` when the desired element has been found. A positive number when the desired element appears after the current element. A negative number when
- * the desired element appears before the current element.
- *
- * @example
- * ```ts
- * function directionFn(value: number) {
- *   const squared = value ** 2;
- *
- *   if (squared === 64) {
- *   	return 0;
- *   }
- *
- *   return squared - 64;
- * }
- * ```
- */
-export type DirectionFn<T> = (element: T) => number;
 
 /**
  * Samples a single element at random from an array.

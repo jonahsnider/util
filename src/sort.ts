@@ -1,10 +1,4 @@
-/** A value that can be compared numerically using `<`, `>`, `<=`, or `>=`. */
-export type Comparable = string | number | bigint | boolean | null | {[Symbol.toPrimitive](hint: 'number'): number};
-
-/**
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort MDN docs on this function
- */
-export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
+import {CompareFn} from './types';
 
 /**
  * Sort an object's keys by comparing their respective values.
@@ -23,6 +17,6 @@ export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0],
  *
  * @returns A new object with the keys in order
  */
-export function sortObject<K extends PropertyKey, V>(object: Record<K, V>, compareFn: CompareFn<V>): Array<[K, V]> {
+export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, V>>, compareFn: CompareFn<V>): Array<[K, V]> {
 	return Object.entries<V>(object).sort(([, aValue], [, bValue]) => compareFn(aValue, bValue)) as Array<[K, V]>;
 }
