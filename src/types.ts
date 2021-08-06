@@ -4,7 +4,7 @@
  * @typeParam P - Parameters type
  * @typeParam R - Return type
  */
-export type AnyFunction<P = any, R = any> = (...args: P) => R;
+export type AnyFunction<P extends any[] = any[], R = any> = (...args: P) => R;
 
 /** A value that can be compared numerically using `<`, `>`, `<=`, or `>=`. */
 export type Comparable = string | number | bigint | boolean | null | {[Symbol.toPrimitive](hint: 'number'): number};
