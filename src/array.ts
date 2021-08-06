@@ -44,22 +44,8 @@ export function sample<T>(array: readonly T[]): T | undefined {
 	return array[Math.floor(Math.random() * array.length)] as T | undefined;
 }
 
-/** @private */
-function shuffle<T>(array: T[], mutate = true): void | T[] {
-	const target: typeof array = mutate ? array : [...array];
-
-	for (let i = target.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[target[i], target[j]] = [target[j], target[i]];
-	}
-
-	if (!mutate) {
-		return target;
-	}
-}
-
 /**
- * A uniformly random array shuffle.
+ * A mutating (in-place) uniformly random array shuffle.
  *
  * @example
  * ```js
@@ -67,6 +53,15 @@ function shuffle<T>(array: T[], mutate = true): void | T[] {
  *
  * shuffle(array);
  * ```
+ *
+ * @param array - Array to shuffle
+ * @param mutate - Optional, `true` if specified
+ *
+ * @see {@link sample} if you only want to select one element at random
+ */
+export function shuffle<T>(array: T[], mutate?: true): void;
+/**
+ * A non-mutating uniformly random array shuffle.
  *
  * @example
  * ```js
@@ -76,15 +71,25 @@ function shuffle<T>(array: T[], mutate = true): void | T[] {
  * ```
  *
  * @param array - Array to shuffle
- * @param mutate - `true` if `array` should be mutated in place, `false` if a new array should be created
+ * @param mutate - `false`
  *
  * @see {@link sample} if you only want to select one element at random
  *
- * @returns `void` if `mutate` was `true`, the shuffled array if `mutate` was `false`
+ * @returns The shuffled array
  */
-const typedShuffle = shuffle as (<T>(array: T[]) => void) & (<T>(array: readonly T[], mutate: false) => T[]);
+export function shuffle<T>(array: readonly T[], mutate: false): T[];
+export function shuffle<T>(array: T[] | readonly T[], mutate = true): void | T[] {
+	const target: typeof array = mutate ? array : [...array];
 
-export {typedShuffle as shuffle};
+	for (let i = target.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[(target as T[])[i], (target as T[])[j]] = [target[j], target[i]];
+	}
+
+	if (!mutate) {
+		return target as T[];
+	}
+}
 
 /**
  * Perform a binary search to find an element in a sorted array.
