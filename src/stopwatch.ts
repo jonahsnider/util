@@ -7,13 +7,14 @@
  *
  * stopwatch.start();
  *
- * stopwatch.end();
+ * const elapsed = stopwatch.end();
  * ```
+ *
  * @example
  * ```js
  * const stopwatch = Stopwatch.start();
  *
- * stopwatch.end();
+ * const elapsed = stopwatch.end();
  * ```
  */
 export class Stopwatch {
@@ -26,16 +27,10 @@ export class Stopwatch {
 	 * @example
 	 * ```js
 	 * const stopwatch = new Stopwatch();
-	 *
-	 * stopwatch.started === false;
+	 * console.log(stopwatch.started); // false
 	 *
 	 * stopwatch.start();
-	 *
-	 * stopwatch.started === true;
-	 *
-	 * stopwatch.end();
-	 *
-	 * stopwatch.started === true;
+	 * console.log(stopwatch.started); // true
 	 * ```
 	 */
 	get started(): boolean {
@@ -43,7 +38,7 @@ export class Stopwatch {
 	}
 
 	/**
-	 * Create a new stopwatch and start timing it.
+	 * Create a new stopwatch and start it.
 	 *
 	 * @example
 	 * ```js
@@ -62,8 +57,6 @@ export class Stopwatch {
 	 * Start recording the duration of this stopwatch.
 	 * @example
 	 * ```js
-	 * const stopwatch = new Stopwatch();
-	 *
 	 * stopwatch.start();
 	 * ```
 	 */
@@ -76,7 +69,7 @@ export class Stopwatch {
 	 *
 	 * @example
 	 * ```js
-	 * stopwatch.end();
+	 * const elapsed = stopwatch.end();
 	 * ```
 	 *
 	 * @returns The amount of time elapsed in milliseconds.
