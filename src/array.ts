@@ -158,7 +158,7 @@ export function chunk<T>(array: readonly T[], size: number): Table<T> {
 		return array.map(element => [element]);
 	}
 
-	return Array.from({length: Math.ceil(array.length / size)}, (_, i) => array.slice(i * size, i * size + size));
+	return mapFill(Math.ceil(array.length / size), i => array.slice(i * size, i * size + size));
 }
 
 /**
@@ -176,7 +176,7 @@ export function chunk<T>(array: readonly T[], size: number): Table<T> {
  */
 export function reverse<T>(iterable: readonly T[] | Iterable<T>): T[] {
 	if (Array.isArray(iterable)) {
-		return Array.from({length: iterable.length}, (_, i) => iterable[iterable.length - (i + 1)]);
+		return mapFill(iterable.length, i => iterable[iterable.length - (i + 1)]);
 	}
 
 	const result: T[] = [];
@@ -311,4 +311,21 @@ export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice
  */
 export function fill<T>(length: number, value: T): T[] {
 	return Array.from({length}, () => value);
+}
+
+/**
+ * Create a new array of a specified length and fill it using the given function.
+ *
+ * @example
+ * ```js
+ * PLACEHOLDER_FUNCTION_NAME_DO_NOT_COMMIT_THIS(3, i => i + 1); // [1, 2, 3]
+ * ```
+ *
+ * @param length - The length of the array
+ * @param valueFn - A function that returns each value to fill the array with
+ *
+ * @returns The filled array
+ */
+export function mapFill<T>(length: number, valueFn: (index: number) => T): T[] {
+	return Array.from({length}, (_, i) => valueFn(i));
 }

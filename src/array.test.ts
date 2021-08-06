@@ -1,6 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {stddev} from './';
-import {binarySearch, chunk, fill, holes, largeToSmall, pull, reverse, sample, shuffle} from './array';
+import {binarySearch, chunk, fill, holes, largeToSmall, mapFill, pull, reverse, sample, shuffle} from './array';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -217,5 +217,11 @@ describe(pull.name, () => {
 describe(fill.name, () => {
 	it('fills arrays', () => {
 		expect(fill(3, 'a')).toStrictEqual(['a', 'a', 'a']);
+	});
+});
+
+describe(mapFill.name, () => {
+	it('fills arrays', () => {
+		expect(mapFill(3, i => i)).toStrictEqual([0, 1, 2]);
 	});
 });
