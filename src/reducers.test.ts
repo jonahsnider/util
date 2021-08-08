@@ -1,4 +1,4 @@
-import {max, mean, min, sum} from './';
+import {max, min, product, sum} from './reducers';
 
 // Compilation tests
 // Actually running this code would also cause a runtime error, so using a function definition is a quick way to typecheck it without actually executing the broken code
@@ -7,11 +7,6 @@ import {max, mean, min, sum} from './';
 	[1n, 1]
 		// @ts-expect-error
 		.reduce(sum);
-// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-() =>
-	[1n, 1]
-		// @ts-expect-error
-		.reduce(mean);
 
 describe(sum.name, () => {
 	it('adds numbers', () => {
@@ -20,6 +15,16 @@ describe(sum.name, () => {
 
 	it('adds bigints', () => {
 		expect([1n, 1n].reduce(sum)).toBe(2n);
+	});
+});
+
+describe(product.name, () => {
+	it('multiplies numbers', () => {
+		expect([2, 3].reduce(product)).toBe(6);
+	});
+
+	it('multiplies bigints', () => {
+		expect([2n, 3n].reduce(product)).toBe(6n);
 	});
 });
 
