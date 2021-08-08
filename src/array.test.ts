@@ -1,6 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {stddev} from './';
-import {binarySearch, chunk, fill, holes, largeToSmall, mapFill, padEnd, padStart, pull, reverse, sample, shuffle} from './array';
+import {binarySearch, chunk, fill, holes, largeToSmall, mapFill, padEnd, padStart, pull, sample, shuffle} from './array';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -112,28 +112,6 @@ describe(chunk.name, () => {
 		expect(chunk(array, 100)).toStrictEqual([array]);
 
 		expect(chunk([1, 2, 3], 3)).toStrictEqual([[1], [2], [3]]);
-	});
-});
-
-describe(reverse.name, () => {
-	it('reverses an array', () => {
-		expect(reverse([1, 2, 3])).toStrictEqual([3, 2, 1]);
-		expect(reverse([1, 2])).toStrictEqual([2, 1]);
-		expect(reverse([1])).toStrictEqual([1]);
-		expect(reverse([])).toStrictEqual([]);
-
-		const array = [1];
-		expect(reverse(array)).not.toBe(array);
-	});
-
-	it('reverses an iterable', () => {
-		expect(reverse(new Set([1, 2, 3]))).toStrictEqual([3, 2, 1]);
-		expect(reverse(new Set([1, 2]))).toStrictEqual([2, 1]);
-		expect(reverse(new Set([1]))).toStrictEqual([1]);
-		expect(reverse(new Set([]))).toStrictEqual([]);
-
-		const set = new Set([1]);
-		expect(reverse(set)).not.toBe(set);
 	});
 });
 
