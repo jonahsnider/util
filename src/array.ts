@@ -345,6 +345,6 @@ export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
  *
  * @see {@link padStart} to pad the start of an array
  */
-export function padEnd<T>(array: T[], maxLength: number, value: T): void {
-	array.push(...fill(maxLength - array.length, value));
+export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
+	array.push(...fill(maxLength - array.length, fillValue));
 }
