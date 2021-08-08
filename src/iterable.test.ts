@@ -1,4 +1,4 @@
-import {allDuplicates, combineIterables, count, duplicates, every, find, first, frequencyTable, includes, join, partition, some} from './iterable';
+import {allDuplicates, combineIterables, count, cycle, duplicates, every, find, first, frequencyTable, includes, join, partition, some} from './iterable';
 
 describe(combineIterables.name, () => {
 	it('combines iterables', () => {
@@ -131,5 +131,15 @@ describe(count.name, () => {
 
 	it('counts empty arrays', () => {
 		expect(count([], 0)).toBe(0);
+	});
+});
+
+describe(cycle.name, () => {
+	it('cycles an array', () => {
+		expect(cycle(['a', 'b'], 2)).toStrictEqual(['a', 'b', 'a', 'b']);
+	});
+
+	it('cycles an empty array', () => {
+		expect(cycle([], 2)).toStrictEqual([]);
 	});
 });
