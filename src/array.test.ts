@@ -1,6 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {stddev} from './';
-import {binarySearch, chunk, fill, holes, largeToSmall, mapFill, padStart, pull, reverse, sample, shuffle} from './array';
+import {binarySearch, chunk, fill, holes, largeToSmall, mapFill, padEnd, padStart, pull, reverse, sample, shuffle} from './array';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -239,6 +239,24 @@ describe(padStart.name, () => {
 		const array = [1, 2, 3];
 
 		padStart(array, 3, 0);
+
+		expect(array).toStrictEqual([1, 2, 3]);
+	});
+});
+
+describe(padEnd.name, () => {
+	it('pads an array', () => {
+		const array = [1, 2, 3];
+
+		padEnd(array, 4, 0);
+
+		expect(array).toStrictEqual([1, 2, 3, 0]);
+	});
+
+	it('does nothing when array is long enough', () => {
+		const array = [1, 2, 3];
+
+		padEnd(array, 3, 0);
 
 		expect(array).toStrictEqual([1, 2, 3]);
 	});
