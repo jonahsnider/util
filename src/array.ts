@@ -161,33 +161,6 @@ export function chunk<T>(array: readonly T[], size: number): Table<T> {
 	return mapFill(Math.ceil(array.length / size), i => array.slice(i * size, i * size + size));
 }
 
-/**
- * A side-effect free reverse operation.
- * For best results `iterable` should be an array so that the returned array doesn't need to be resized as more elements are added.
- *
- * @example
- * ```js
- * reverse([1, 2, 3]); // [3, 2, 1]
- * ```
- *
- * @param iterable - The iterable to reverse
- *
- * @returns An array with the elements of `iterable` in reverse order
- */
-export function reverse<T>(iterable: readonly T[] | Iterable<T>): T[] {
-	if (Array.isArray(iterable)) {
-		return mapFill(iterable.length, i => iterable[iterable.length - (i + 1)]);
-	}
-
-	const result: T[] = [];
-
-	for (const element of iterable) {
-		result.unshift(element);
-	}
-
-	return result;
-}
-
 type ObjectWithLength = {length: number};
 type ObjectWithSize = {size: number};
 
