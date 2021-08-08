@@ -329,3 +329,26 @@ export function fill<T>(length: number, value: T): T[] {
 export function mapFill<T>(length: number, valueFn: (index: number) => T): T[] {
 	return Array.from({length}, (_, i) => valueFn(i));
 }
+
+/**
+ * Pads an array with a given value so that the array reaches a given length.
+ * The padding is applied from the start (left) of the array.
+ *
+ * @example
+ * ```js
+ * const array = [1, 2, 3];
+ *
+ * padStart(array, 4, 0);
+ *
+ * console.log(array); // [0, 1, 2, 3]
+ * ```
+ *
+ * @param array - The array to pad
+ * @param maxLength - The length of `array` once it has been padded. If this parameter is smaller than the current string's length, `array` will not be modified
+ * @param fillValue - The value to pad the array with
+ *
+ * @see {@link padEnd} to pad the end of an array
+ */
+export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
+	array.unshift(...fill(maxLength - array.length, fillValue));
+}
