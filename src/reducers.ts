@@ -92,8 +92,8 @@ export function product<T extends number>(a: T, b: T): T {
  *
  * @returns `previousValue` or `currentValue`, whichever is larger
  */
-export function max<T extends Comparable>(accumulator: T, currentValue: T): T {
-	return currentValue! > accumulator! ? currentValue : accumulator;
+export function max<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B {
+	return (currentValue as unknown as A)! > accumulator! ? currentValue : accumulator;
 }
 
 /**
@@ -112,6 +112,6 @@ export function max<T extends Comparable>(accumulator: T, currentValue: T): T {
  *
  * @returns `previousValue` or `currentValue`, whichever is lower
  */
-export function min<T extends Comparable>(accumulator: T, currentValue: T): T {
-  return currentValue! < accumulator! ? currentValue : accumulator;
+export function min<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B {
+	return (currentValue as unknown as A)! < accumulator! ? currentValue : accumulator;
 }
