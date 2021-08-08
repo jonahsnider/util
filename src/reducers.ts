@@ -97,7 +97,7 @@ export function max<T extends Comparable>(accumulator: T, currentValue: T): T {
 }
 
 /**
- * Get the lowest value of an array of `number`s.
+ * Get the lowest value of the two parameters.
  * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
@@ -107,11 +107,11 @@ export function max<T extends Comparable>(accumulator: T, currentValue: T): T {
  * array.reduce(min); // 1
  * ```
  *
- * @param previousValue - Current lowest number seen
- * @param currentValue - The next number to compare
+ * @param previousValue - Current lowest value seen
+ * @param currentValue - The next value to compare
  *
  * @returns `previousValue` or `currentValue`, whichever is lower
  */
-export function min(accumulator: number, currentValue: number): number {
-	return Math.min(accumulator, currentValue);
+export function min<T extends Comparable>(accumulator: T, currentValue: T): T {
+  return currentValue! < accumulator! ? currentValue : accumulator;
 }
