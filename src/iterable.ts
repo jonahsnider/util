@@ -6,7 +6,7 @@
  * [...combineIterables([1, 2, 3], [4, 5, 6])]; // [1, 2, 3, 4, 5, 6]
  * ```
  *
- * @params iterables - The iterables to combine
+ * @param iterables - The iterables to combine
  *
  * @returns A single iterable containing all the elements of all the iterables
  */
