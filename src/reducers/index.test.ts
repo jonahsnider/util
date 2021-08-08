@@ -1,4 +1,4 @@
-import {max, min, product, sum} from './reducers';
+import {max, min, product, sum} from './';
 
 // Compilation tests
 // Actually running this code would also cause a runtime error, so using a function definition is a quick way to typecheck it without actually executing the broken code

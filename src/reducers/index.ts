@@ -1,4 +1,6 @@
-import {Comparable} from './types';
+import {Comparable} from '../types';
+
+export * as Bitwise from './bitwise';
 
 /**
  * Calculate the sum of 2 `number`s.
