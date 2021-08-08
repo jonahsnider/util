@@ -1,4 +1,4 @@
-import {sortObject} from './sort';
+import {sortObject} from '.';
 
 describe(sortObject.name, () => {
 	it('sorts', () => {

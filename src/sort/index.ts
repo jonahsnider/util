@@ -1,4 +1,6 @@
-import {CompareFn} from './types';
+import {CompareFn} from '../types';
+
+export * as Sort from './compare';
 
 /**
  * Sort an object's keys by comparing their respective values.

@@ -15,7 +15,6 @@ export * from './reducers';
 export * from './reg-exp';
 export * from './set';
 export * from './sort';
-export * as Sort from './sort-compare';
 export * from './stopwatch';
 export * from './to-digits';
 export * from './typed-event-emitter';

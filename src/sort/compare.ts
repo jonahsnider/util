@@ -1,4 +1,4 @@
-import {Comparable, CompareFn} from './types';
+import {Comparable, CompareFn} from '../types';
 
 function ascendingRaw(a: Comparable, b: Comparable): number {
 	// null is converted to 0 in comparisons
