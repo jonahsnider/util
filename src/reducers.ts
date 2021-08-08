@@ -1,3 +1,5 @@
+import {Comparable} from './types';
+
 /**
  * Calculate the sum of 2 `number`s.
  * Meant to be used with `Array.prototype.reduce`.
@@ -75,7 +77,7 @@ export function product<T extends number>(a: T, b: T): T {
 }
 
 /**
- * Get the largest value of an array of `number`s.
+ * Get the largest value of the two parameters.
  * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
@@ -85,13 +87,13 @@ export function product<T extends number>(a: T, b: T): T {
  * array.reduce(max); // 3
  * ```
  *
- * @param previousValue - Current largest number seen
- * @param currentValue - The next number to compare
+ * @param previousValue - Current largest value seen
+ * @param currentValue - The next value to compare
  *
  * @returns `previousValue` or `currentValue`, whichever is larger
  */
-export function max(accumulator: number, currentValue: number): number {
-	return Math.max(accumulator, currentValue);
+export function max<T extends Comparable>(accumulator: T, currentValue: T): T {
+	return currentValue! > accumulator! ? currentValue : accumulator;
 }
 
 /**
