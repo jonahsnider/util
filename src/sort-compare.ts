@@ -51,8 +51,8 @@ export function ascending<T>(predicate: (element: T) => Comparable): CompareFn<T
  * array.sort(Sort.ascending);
  * ```
  *
- * @param a - Element
- * @param b - Element
+ * @param a - Element to compare
+ * @param b - Element to compare
  *
  * @returns A negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise
  */
@@ -89,8 +89,8 @@ export function descending<T>(predicate: (element: T) => Comparable): CompareFn<
  * array.sort(Sort.descending);
  * ```
  *
- * @param a - Element
- * @param b - Element
+ * @param a - Element to compare
+ * @param b - Element to compare
  *
  * @returns A positive value if first argument is less than second argument, zero if they're equal and a negative value otherwise
  */
