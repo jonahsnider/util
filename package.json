@@ -1,10 +1,41 @@
 {
+	"name": "@jonahsnider/util",
+	"version": "0.0.0-development",
+	"description": "A useful collection of optimized utility functions",
+	"homepage": "https://util.jonah.pw/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jonahsnider/util.git"
+	},
+	"license": "MIT",
 	"author": {
-		"email": "jonah@jonah.pw",
 		"name": "Jonah Snider",
+		"email": "jonah@jonah.pw",
 		"url": "https://jonah.pw"
 	},
-	"description": "A useful collection of optimized utility functions",
+	"type": "commonjs",
+	"exports": {
+		"import": "./dist/util.esm.mjs",
+		"require": "./dist/index.js"
+	},
+	"main": "dist/index.js",
+	"module": "dist/util.esm.mjs",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"analyze": "size-limit --why",
+		"build": "tsdx build --format cjs,esm,umd; yarn rename-esm",
+		"docs": "typedoc --options ./typedoc.json",
+		"lint": "tsdx lint src",
+		"publish": "semantic-release",
+		"rename-esm": "mv ./dist/util.esm.js ./dist/util.esm.mjs; mv ./dist/util.esm.js.map ./dist/util.esm.mjs.map;",
+		"size": "size-limit",
+		"start": "tsdx watch --onSuccess \"yarn rename-esm\"",
+		"style": "prettier --check .",
+		"test": "tsdx test"
+	},
 	"devDependencies": {
 		"@size-limit/preset-small-lib": "5.0.2",
 		"@typescript-eslint/eslint-plugin": "4.29.0",
@@ -24,38 +55,10 @@
 	"engines": {
 		"node": ">=10"
 	},
-	"files": [
-		"dist"
-	],
-	"homepage": "https://util.jonah.pw/",
-	"license": "MIT",
-	"main": "dist/index.js",
-	"type": "commonjs",
-	"module": "dist/util.esm.mjs",
-	"exports": {
-		"import": "./dist/util.esm.mjs",
-		"require": "./dist/index.js"
-	},
-	"name": "@jonahsnider/util",
 	"publishConfig": {
 		"access": "public"
 	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/jonahsnider/util.git"
-	},
-	"scripts": {
-		"analyze": "size-limit --why",
-		"build": "tsdx build --format cjs,esm,umd; yarn rename-esm",
-		"docs": "typedoc --options ./typedoc.json",
-		"lint": "tsdx lint src",
-		"publish": "semantic-release",
-		"rename-esm": "mv ./dist/util.esm.js ./dist/util.esm.mjs; mv ./dist/util.esm.js.map ./dist/util.esm.mjs.map;",
-		"size": "size-limit",
-		"start": "tsdx watch --onSuccess \"yarn rename-esm\"",
-		"style": "prettier --check .",
-		"test": "tsdx test"
-	},
+	"packageManager": "yarn@3.0.0",
 	"size-limit": [
 		{
 			"limit": "9 kB",
@@ -67,8 +70,5 @@
 			"path": "dist/util.esm.mjs",
 			"webpack": false
 		}
-	],
-	"typings": "dist/index.d.ts",
-	"version": "0.0.0-development",
-	"packageManager": "yarn@3.0.0"
+	]
 }
