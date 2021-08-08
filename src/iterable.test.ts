@@ -1,4 +1,4 @@
-import {allDuplicates, combineIterables, duplicates, every, find, first, frequencyTable, includes, join, partition, some} from './iterable';
+import {allDuplicates, combineIterables, count, duplicates, every, find, first, frequencyTable, includes, join, partition, some} from './iterable';
 
 describe(combineIterables.name, () => {
 	it('combines iterables', () => {
@@ -121,5 +121,15 @@ describe(frequencyTable.name, () => {
 				[3, 3],
 			]),
 		);
+	});
+});
+
+describe(count.name, () => {
+	it('counts elements', () => {
+		expect(count([1, 2, 2, 3], 2)).toBe(2);
+	});
+
+	it('counts empty arrays', () => {
+		expect(count([], 0)).toBe(0);
 	});
 });

@@ -182,6 +182,8 @@ export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolea
  * @param iterable - The iterable to construct a frequency table for
  *
  * @returns A frequency table represented as a `Map` where keys are the elements and values are the frequency
+ *
+ * @see {@link count} to count the occurrences of one value in an iterable
  */
 export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 	const frequencies: Map<T, number> = new Map();
@@ -341,4 +343,31 @@ export function duplicates<T>(iterable: Iterable<T>): Set<T> {
 	}
 
 	return result;
+}
+
+/**
+ * Count the number of occurrences of a value in an iterable.
+ *
+ * @example
+ * ```js
+ * count([1, 2, 2, 2, 3], 2); // 2
+ * ```
+ *
+ * @param iterable - The iterable to count occurrences from
+ * @param value - The value to count occurrences of
+ *
+ * @returns The number of occurrences of `value` in `iterable`
+ *
+ * @see {@link frequencyTable} to count the occurrences of all elements in an iterable
+ */
+export function count<T>(iterable: Iterable<T>, value: T): number {
+	let count = 0;
+
+	for (const element of iterable) {
+		if (element === value) {
+			count++;
+		}
+	}
+
+	return count;
 }
