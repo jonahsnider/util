@@ -1,4 +1,4 @@
-import {toDigits} from './';
+import {toDigits} from './to-digits';
 
 describe(toDigits.name, () => {
 	it('formats numbers', () => {

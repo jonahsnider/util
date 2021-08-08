@@ -1,4 +1,4 @@
-import {difference, intersection, isDisjoint, isSubset, isSuperset, symmetricDifference, union} from './';
+import {difference, intersection, isDisjoint, isSubset, isSuperset, symmetricDifference, union} from './set';
 
 describe(isSuperset.name, () => {
 	it('returns true for supersets', () => {

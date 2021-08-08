@@ -1,4 +1,4 @@
-import {same, identical} from './';
+import {same, identical} from './identical';
 
 // Compilation tests
 // @ts-expect-error

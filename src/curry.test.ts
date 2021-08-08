@@ -1,4 +1,5 @@
-import {not, nullish, invert} from './';
+import {nullish} from './';
+import {invert, not} from './curry';
 
 describe(not.name, () => {
 	it('negates booleans', () => {

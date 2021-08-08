@@ -1,4 +1,4 @@
-import {clamp, mean, median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from './';
+import {clamp, mean, median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from './math';
 
 describe(variance.name, () => {
 	it('calculates variance', () => {

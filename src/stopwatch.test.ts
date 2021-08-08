@@ -1,4 +1,4 @@
-import {Stopwatch} from './';
+import {Stopwatch} from './stopwatch';
 
 describe(Stopwatch.name, () => {
 	describe('Stopwatch#started', () => {
