@@ -27,7 +27,7 @@ function descendingRaw(a: Comparable, b: Comparable): number {
 }
 
 /**
- * Sort an array in ascending order (least to greatest), while applying a function to each element to map the value before comparing..
+ * Sort an array in ascending order (least to greatest), while applying a function to each element to map the value before comparing.
  *
  * @example
  * ```js
