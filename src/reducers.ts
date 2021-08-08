@@ -46,7 +46,7 @@ export function sum<T extends number>(a: T, b: T): T {
  * ```js
  * const array = [1, 2, 3];
  *
- * array.reduce(sum); // 6
+ * array.reduce(product); // 6
  * ```
  *
  * @param a - First factor
@@ -63,7 +63,7 @@ export function product(a: number, b: number): number;
  * ```js
  * const array = [1n, 2n, 3n];
  *
- * array.reduce(sum); // 6n
+ * array.reduce(product); // 6n
  * ```
  *
  * @param a - First factor
