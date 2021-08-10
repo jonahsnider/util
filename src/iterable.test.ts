@@ -10,6 +10,7 @@ import {
 	frequencyTable,
 	includes,
 	join,
+	mapRepeat,
 	partition,
 	repeat,
 	some,
