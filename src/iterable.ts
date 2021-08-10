@@ -350,7 +350,7 @@ export function duplicates<T>(iterable: Iterable<T>): Set<T> {
  *
  * @example
  * ```js
- * count([1, 2, 2, 2, 3], 2); // 2
+ * count([1, 1, 1, 2, 2, 3], 1); // 3
  * ```
  *
  * @param iterable - The iterable to count occurrences from

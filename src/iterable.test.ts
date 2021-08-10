@@ -142,7 +142,7 @@ describe(frequencyTable.name, () => {
 
 describe(count.name, () => {
 	it('counts elements', () => {
-		expect(count([1, 2, 2, 3], 2)).toBe(2);
+		expect(count([1, 1, 1, 2, 2, 3], 1)).toBe(3);
 	});
 
 	it('counts empty arrays', () => {
