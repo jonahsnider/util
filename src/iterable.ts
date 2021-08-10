@@ -309,9 +309,9 @@ export function allDuplicates<T>(iterable: Iterable<T>): T[] {
 	for (const element of iterable) {
 		if (seen.has(element)) {
 			result.push(element);
+		} else {
+			seen.add(element);
 		}
-
-		seen.add(element);
 	}
 
 	return result;
@@ -337,9 +337,9 @@ export function duplicates<T>(iterable: Iterable<T>): Set<T> {
 	for (const element of iterable) {
 		if (seen.has(element)) {
 			result.add(element);
+		} else {
+			seen.add(element);
 		}
-
-		seen.add(element);
 	}
 
 	return result;
