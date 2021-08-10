@@ -116,4 +116,3 @@ export function lines(string: string): string[] {
 		.map(line => line.trim())
 		.filter(line => line.length > 0);
 }
-

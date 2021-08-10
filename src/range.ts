@@ -53,14 +53,14 @@ export class Range {
 		return value! >= this.lower! && value! <= this.upper!;
 	}
 
-  /**
-   * An iterable that contains `this.lower` and `this.upper`.
-   * 
-   * @example
-   * ```js
-   * const [lower, upper] = range; 
-   * ```
-   */
+	/**
+	 * An iterable that contains `this.lower` and `this.upper`.
+	 *
+	 * @example
+	 * ```js
+	 * const [lower, upper] = range;
+	 * ```
+	 */
 	*[Symbol.iterator](): IterableIterator<Comparable> {
 		yield this.lower;
 		yield this.upper;
