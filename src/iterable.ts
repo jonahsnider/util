@@ -407,7 +407,7 @@ export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
  *
  * @returns An iterable that repeats `value` `times` number of times
  */
-export function* repeat<T>(value: T, times: number): IterableIterator<T> {
+export function* repeat<T>(value: T, times: number): Iterable<T> {
 	for (let i = 0; i < times; i++) {
 		yield value;
 	}
@@ -429,7 +429,7 @@ export function* repeat<T>(value: T, times: number): IterableIterator<T> {
  *
  * @returns An iterable that repeats `value` `times` number of times
  */
-export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number): IterableIterator<T> {
+export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number): Iterable<T> {
 	for (let i = 0; i < times; i++) {
 		yield valueFn(i);
 	}
