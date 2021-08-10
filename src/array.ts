@@ -283,7 +283,7 @@ export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice
  *
  * @returns The filled array
  */
-export function fill<T>(length: number, value: T): T[] {
+export function fill<T>(value: T, length: number): T[] {
 	return Array.from({length}, () => value);
 }
 

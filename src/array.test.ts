@@ -194,7 +194,7 @@ describe(pull.name, () => {
 
 describe(fill.name, () => {
 	it('fills arrays', () => {
-		expect(fill(3, 'a')).toStrictEqual(['a', 'a', 'a']);
+		expect(fill('a', 3)).toStrictEqual(['a', 'a', 'a']);
 	});
 });
 
