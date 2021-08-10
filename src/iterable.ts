@@ -377,7 +377,7 @@ export function count<T>(iterable: Iterable<T>, value: T): number {
  *
  * @example
  * ```js
- * cycle(['a', 'b'], 2); // ['a', 'b', 'a', 'b']
+ * [...cycle(['a', 'b'], 2)]; // ['a', 'b', 'a', 'b']
  * ```
  *
  * @param iterable - The iterable to cycle
@@ -385,14 +385,10 @@ export function count<T>(iterable: Iterable<T>, value: T): number {
  *
  * @returns An array with the elements of `iterable` repeated `times` number of times
  */
-export function cycle<T>(array: Iterable<T>, times: number): T[] {
-	const result: T[] = [];
-
+export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
 	for (let i = 0; i < times; i++) {
-		result.push(...array);
+		yield* iterable;
 	}
-
-	return result;
 }
 
 /**

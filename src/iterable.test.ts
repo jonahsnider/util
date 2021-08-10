@@ -152,11 +152,11 @@ describe(count.name, () => {
 
 describe(cycle.name, () => {
 	it('cycles an array', () => {
-		expect(cycle(['a', 'b'], 2)).toStrictEqual(['a', 'b', 'a', 'b']);
+		expect([...cycle(['a', 'b'], 2)]).toStrictEqual(['a', 'b', 'a', 'b']);
 	});
 
 	it('cycles an empty array', () => {
-		expect(cycle([], 2)).toStrictEqual([]);
+		expect([...cycle([], 2)]).toStrictEqual([]);
 	});
 });
 
