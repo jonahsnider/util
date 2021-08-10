@@ -1,3 +1,4 @@
+import {repeat} from './iterable';
 import {DirectionFn} from './types';
 
 /** A 2-dimensional table of type `T`. */
@@ -323,7 +324,7 @@ export function mapFill<T>(length: number, valueFn: (index: number) => T): T[] {
  * @see {@link padEnd} to pad the end of an array
  */
 export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
-	array.unshift(...fill(maxLength - array.length, fillValue));
+	array.unshift(...repeat(fillValue, maxLength - array.length));
 }
 
 /**
@@ -346,5 +347,5 @@ export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
  * @see {@link padStart} to pad the start of an array
  */
 export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
-	array.push(...fill(maxLength - array.length, fillValue));
+	array.push(...repeat(fillValue, maxLength - array.length));
 }
