@@ -394,3 +394,24 @@ export function cycle<T>(array: Iterable<T>, times: number): T[] {
 
 	return result;
 }
+
+/**
+ * Returns an iterable that repeats a given value a given number of times.
+ *
+ * @example
+ * ```js
+ * [...repeat('a', 3)]; // ['a', 'a', 'a']
+ * ```
+ *
+ * @param value - The value to repeat
+ * @param times - The number of times to repeat the value
+ *
+ * @see {@link fill} - To get an array of a given length filled with a given value
+ *
+ * @returns An iterable that repeats `value` `times` number of times
+ */
+export function* repeat<T>(value: T, times: number): IterableIterator<T> {
+	for (let i = 0; i < times; i++) {
+		yield value;
+	}
+}
