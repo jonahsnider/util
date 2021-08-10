@@ -406,12 +406,35 @@ export function cycle<T>(array: Iterable<T>, times: number): T[] {
  * @param value - The value to repeat
  * @param times - The number of times to repeat the value
  *
- * @see {@link fill} - To get an array of a given length filled with a given value
+ * @see {@link fill} - To do the same thing but return an array
+ * @see {@link mapRepeat} - To do the same thing but with a function that generates values
  *
  * @returns An iterable that repeats `value` `times` number of times
  */
 export function* repeat<T>(value: T, times: number): IterableIterator<T> {
 	for (let i = 0; i < times; i++) {
 		yield value;
+	}
+}
+
+/**
+ * Returns an iterable that repeats a given value a given number of times.
+ *
+ * @example
+ * ```js
+ * [...repeat('a', 3)]; // ['a', 'a', 'a']
+ * ```
+ *
+ * @param valueFn - A function that returns each value to fill the array with
+ * @param times - The number of times to repeat the value
+ *
+ * @see {@link mapFill} - To do the same thing but return an array
+ * @see {@link repeat} - To do the same thing but with a given value
+ *
+ * @returns An iterable that repeats `value` `times` number of times
+ */
+export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number): IterableIterator<T> {
+	for (let i = 0; i < times; i++) {
+		yield valueFn(i);
 	}
 }

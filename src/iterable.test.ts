@@ -165,3 +165,10 @@ describe(repeat.name, () => {
 		expect([...repeat('a', 0)]).toStrictEqual([]);
 	});
 });
+
+describe(mapRepeat.name, () => {
+	it('repeats', () => {
+		expect([...mapRepeat(i => i, 3)]).toStrictEqual([0, 1, 2]);
+		expect([...mapRepeat(i => i, 0)]).toStrictEqual([]);
+	});
+});
