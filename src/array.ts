@@ -159,7 +159,7 @@ export function chunk<T>(array: readonly T[], size: number): Table<T> {
 		return array.map(element => [element]);
 	}
 
-	return mapFill(Math.ceil(array.length / size), i => array.slice(i * size, i * size + size));
+	return mapFill(i => array.slice(i * size, i * size + size), Math.ceil(array.length / size));
 }
 
 type ObjectWithLength = {length: number};
@@ -300,7 +300,7 @@ export function fill<T>(value: T, length: number): T[] {
  *
  * @returns The filled array
  */
-export function mapFill<T>(length: number, valueFn: (index: number) => T): T[] {
+export function mapFill<T>(valueFn: (index: number) => T, length: number): T[] {
 	return Array.from({length}, (_, i) => valueFn(i));
 }
 

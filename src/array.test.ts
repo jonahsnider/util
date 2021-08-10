@@ -200,7 +200,7 @@ describe(fill.name, () => {
 
 describe(mapFill.name, () => {
 	it('fills arrays', () => {
-		expect(mapFill(3, i => i)).toStrictEqual([0, 1, 2]);
+		expect(mapFill(i => i, 3)).toStrictEqual([0, 1, 2]);
 	});
 });
 
