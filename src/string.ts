@@ -96,3 +96,24 @@ export function multiReplace(string: string, replacements: Record<string, string
 
 	return result;
 }
+
+/**
+ * Get each line in a string with leading and trailing whitespace removed.
+ * Works with LF and CRLF line endings.
+ *
+ * @example
+ * ```js
+ * lines('a\nb\nc'); // ['a', 'b', 'c']
+ * ```
+ *
+ * @param string - String to get the lines of
+ *
+ * @returns An array of lines with leading and trailing whitespace removed
+ */
+export function lines(string: string): string[] {
+	return string
+		.split('\n')
+		.map(line => line.trim())
+		.filter(line => line.length > 0);
+}
+
