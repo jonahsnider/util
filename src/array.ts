@@ -302,7 +302,7 @@ export function fill<T>(value: T, length: number): T[] {
  * @param valueFn - A function that returns each value to fill the array with
  *
  * @returns The filled array
- * 
+ *
  * @see {@link mapRepeat} to do the same thing but return an iterable
  * @see {@link fill} to do the same thing but with a given value
  */
