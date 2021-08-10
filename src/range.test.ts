@@ -22,4 +22,10 @@ describe(Range.name, () => {
 			expect(new Range(1, 2n).has(3)).toBe(false);
 		});
 	});
+
+	describe(`${Range.name}#${Range.prototype[Symbol.iterator].name}`, () => {
+		it('yields start and end value', () => {
+			expect([...new Range(1, 3)]).toStrictEqual([1, 3]);
+		});
+	});
 });
