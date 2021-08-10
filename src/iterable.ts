@@ -402,8 +402,8 @@ export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
  * @param value - The value to repeat
  * @param times - The number of times to repeat the value
  *
- * @see {@link fill} - To do the same thing but return an array
- * @see {@link mapRepeat} - To do the same thing but with a function that generates values
+ * @see {@link fill} to do the same thing but return an array
+ * @see {@link mapRepeat} to do the same thing but with a function that generates values
  *
  * @returns An iterable that repeats `value` `times` number of times
  */
@@ -424,8 +424,8 @@ export function* repeat<T>(value: T, times: number): Iterable<T> {
  * @param valueFn - A function that returns each value to fill the array with
  * @param times - The number of times to repeat the value
  *
- * @see {@link mapFill} - To do the same thing but return an array
- * @see {@link repeat} - To do the same thing but with a given value
+ * @see {@link mapFill} to do the same thing but return an array
+ * @see {@link repeat} to do the same thing but with a given value
  *
  * @returns An iterable that repeats `value` `times` number of times
  */

@@ -282,6 +282,9 @@ export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice
  * @param value - Value to fill the array with
  *
  * @returns The filled array
+ *
+ * @see {@link mapFill} to do the same thing but with a function that generates values
+ * @see {@link repeat} to do the same thing but return an iterable
  */
 export function fill<T>(value: T, length: number): T[] {
 	return Array.from({length}, () => value);
@@ -299,6 +302,9 @@ export function fill<T>(value: T, length: number): T[] {
  * @param valueFn - A function that returns each value to fill the array with
  *
  * @returns The filled array
+ * 
+ * @see {@link mapRepeat} to do the same thing but return an iterable
+ * @see {@link fill} to do the same thing but with a given value
  */
 export function mapFill<T>(valueFn: (index: number) => T, length: number): T[] {
 	return Array.from({length}, (_, i) => valueFn(i));
