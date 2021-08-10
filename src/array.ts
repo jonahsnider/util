@@ -291,7 +291,7 @@ export function fill<T>(length: number, value: T): T[] {
  *
  * @example
  * ```js
- * PLACEHOLDER_FUNCTION_NAME_DO_NOT_COMMIT_THIS(3, i => i + 1); // [1, 2, 3]
+ * mapFill(3, i => i + 1); // [1, 2, 3]
  * ```
  *
  * @param length - The length of the array
