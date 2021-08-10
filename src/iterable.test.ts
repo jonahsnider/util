@@ -85,9 +85,11 @@ describe(partition.name, () => {
 describe(first.name, () => {
 	it('returns first element if take is undefined', () => {
 		expect(first([1, 2, 3])).toStrictEqual(1);
+		expect(first([1, 2, 3], undefined)).toStrictEqual(1);
 	});
 
 	it('takes the specified number of items', () => {
+		expect(first([1, 2, 3], 0)).toStrictEqual([]);
 		expect(first([1, 2, 3], 2)).toStrictEqual([1, 2]);
 	});
 
@@ -101,6 +103,10 @@ describe(first.name, () => {
 	it('allows handles small arrays and big takes', () => {
 		expect(first([1], 3)).toStrictEqual([1]);
 		expect(first([], 3)).toStrictEqual([]);
+	});
+
+	it('works with empty iterables', () => {
+		expect(first([])).toBe(undefined);
 	});
 });
 
