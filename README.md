@@ -63,7 +63,7 @@ There's 3 main benefits this library offers:
 
    This library works perfectly with existing idiomatic JavaScript and doesn't force you to change the way you write code.
 
-   (also - fun fact: the first snippet doesn't work with `bigint`s, [the second snippet does](https://util.jonah.pw/modules#comparable))
+   (also - fun fact: the first snippet doesn't work with `bigint`s, [the second snippet does](https://util.jonah.pw/modules#Comparable))
 
 2. **Safety**
 
@@ -75,11 +75,11 @@ There's 3 main benefits this library offers:
 
    This library isn't just 1-liners you could copy-paste yourself.
 
-   Want to do a binary search on an array? [We've got you covered](https://util.jonah.pw/modules#binarysearch).
+   Want to do a binary search on an array? [We've got you covered](https://util.jonah.pw/modules#binarySearch).
 
-   Combine a bunch of regular expressions into one? [No problem](https://util.jonah.pw/modules#regexpunion).
+   Combine a bunch of regular expressions into one? [No problem](https://util.jonah.pw/modules#regExpUnion).
 
-   Need a deck of cards? [Only one import away](https://util.jonah.pw/modules#newdeck).
+   Need a deck of cards? [Only one import away](https://util.jonah.pw/modules#newDeck).
 
 ### TypeScript
 
@@ -89,6 +89,6 @@ In addition to all the useful functions this library provides, a major effort ha
 - `Iterable`s are used instead of `Array`s whenever possible, broader types ensure compatibility with your projects
 - When an array is needed, it's always `readonly T[]` unless mutation is required
 
-There's also a few types exported that can be handy in certain situations (ex. [`NonEmptyArray`](https://util.jonah.pw/modules#nonemptyarray) or [`Nullish`](https://util.jonah.pw/modules#nullish)).
+There's also a few types exported that can be handy in certain situations (ex. [`NonEmptyArray`](https://util.jonah.pw/modules#NonEmptyArray) or [`Nullish`](https://util.jonah.pw/modules#Nullish)).
 
 My personal favorite is the [`TypedEventEmitter`](https://util.jonah.pw/interfaces/typedeventemitter) which lets you ensure typesafety in event listeners.
