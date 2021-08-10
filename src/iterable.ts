@@ -260,12 +260,12 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
  *
  * @returns The first `take` elements of the iterable
  */
-export function first<T>(iterable: Iterable<T>, take?: number): T[];
+export function first<T>(iterable: Iterable<T>, take: number): T[];
 export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | T[] {
-	const iterator: Iterator<T, T | undefined> = iterable[Symbol.iterator]();
+	const iterator = iterable[Symbol.iterator]();
 
 	if (take === undefined) {
-		return iterator.next().value;
+		return iterator.next().value as T | undefined;
 	}
 
 	const result: T[] = [];
