@@ -69,7 +69,7 @@ export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
  * @returns `true` if `a` and `b` are disjoint
  */
 export function isDisjoint<A, B>(a: Iterable<A>, b: Iterable<B>): boolean {
-	const set: Set<A | B> = new Set(a);
+	const set: ReadonlySet<A | B> = a instanceof Set ? a : new Set(a);
 
 	for (const element of b) {
 		if (set.has(element)) {
