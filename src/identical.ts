@@ -66,19 +66,19 @@ export function identical<V, K = never>(a: readonly V[] | ReadonlySet<V> | Reado
 	}
 
 	// Horrible hack to make the tests specifically compile
-	if ((a as {size: number}).size !== (b as Set<V> | Map<K, V>).size) {
+	if ((a as {size: number}).size !== (b as ReadonlySet<V> | ReadonlyMap<K, V>).size) {
 		return false;
 	}
 
 	if (a instanceof Set) {
 		for (const item of a) {
-			if (!(b as Set<V>).has(item)) {
+			if (!(b as ReadonlySet<V>).has(item)) {
 				return false;
 			}
 		}
 	} else if (a instanceof Map) {
 		for (const [key, value] of (a as ReadonlyMap<K, V>).entries()) {
-			if ((b as Map<K, V>).get(key) !== value || !(b as Map<K, V>).has(key)) {
+			if ((b as ReadonlyMap<K, V>).get(key) !== value || !(b as ReadonlyMap<K, V>).has(key)) {
 				return false;
 			}
 		}
