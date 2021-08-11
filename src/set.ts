@@ -1,4 +1,5 @@
 import {largeToSmall} from './array';
+import {combineIterables} from './iterable';
 
 /**
  * Check if `a` is a superset of `b`.
@@ -50,13 +51,7 @@ export function isSubset<A, B>(a: Iterable<A>, b: ReadonlySet<A | B>): boolean {
  * @returns A new set which is the union of `a` and `b`
  */
 export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
-	const result: Set<A | B> = new Set(a);
-
-	for (const element of b) {
-		result.add(element);
-	}
-
-	return result;
+	return new Set(combineIterables<A | B>(a, b));
 }
 
 /**
