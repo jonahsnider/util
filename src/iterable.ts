@@ -257,12 +257,12 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
  *
  * @example
  * ```js
- * first([1, 2, 3], 1); // [1]
+ * [...first([1, 2, 3], 1)]; // [1]
  * ```
  *
  * @example
  * ```js
- * first([1, 2, 3], 2); // [1, 2]
+ * [...first([1, 2, 3], 2)]; // [1, 2]
  * ```
  *
  * @param iterable - The iterable to take elements from
