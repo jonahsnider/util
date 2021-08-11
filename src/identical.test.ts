@@ -1,11 +1,5 @@
 import {same, identical} from './identical';
 
-// Compilation tests
-// @ts-expect-error
-identical([], new Set());
-// @ts-expect-error
-identical(new Set(), []);
-
 describe(same.name, () => {
 	it('reports identical arrays', () => {
 		const original = [1, 2, 3];
@@ -53,6 +47,17 @@ describe(same.name, () => {
 });
 
 describe(identical.name, () => {
+	it('throws on bad input', () => {
+		expect(
+			// @ts-expect-error
+			() => identical([], new Set()),
+		).toThrow(RangeError);
+		expect(
+			// @ts-expect-error
+			() => identical(new Set(), []),
+		).toThrow(RangeError);
+	});
+
 	it('reports identical arrays', () => {
 		const original = [1, 2, 3];
 		const copy = [...original];

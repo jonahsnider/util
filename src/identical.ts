@@ -1,3 +1,51 @@
+function identicalArray<T>(a: T[], b: T[]): boolean {
+	if (a === b) {
+		return true;
+	}
+
+	if (a.length !== b.length) {
+		return false;
+	}
+
+	return a.every((element, index) => element === b[index]);
+}
+
+function identicalSet<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): boolean {
+	if (a === b) {
+		return true;
+	}
+
+	if (a.size !== b.size) {
+		return false;
+	}
+
+	for (const element of a) {
+		if (!b.has(element)) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function identicalMap<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean {
+	if (a === b) {
+		return true;
+	}
+
+	if (a.size !== b.size) {
+		return false;
+	}
+
+	for (const [key, value] of a.entries()) {
+		if (!b.has(key) || b.get(key) !== value) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
 /**
  * Check if two arrays have the same elements in the same order.
  * Strict equality (`===`) is used to compare elements.
@@ -53,38 +101,19 @@ export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
  */
 export function identical<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean;
 export function identical<V, K = never>(a: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>, b: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>): boolean {
-	if (a === b) {
-		return true;
+	if (Array.isArray(a) && Array.isArray(b)) {
+		return identicalArray(a, b);
 	}
 
-	if (Array.isArray(a)) {
-		if (a.length !== (b as typeof a).length) {
-			return false;
-		}
-
-		return a.every((item, i) => item === (b as typeof a)[i]);
+	if (a instanceof Set && b instanceof Set) {
+		return identicalSet(a, b);
 	}
 
-	// Horrible hack to make the tests specifically compile
-	if ((a as {size: number}).size !== (b as ReadonlySet<V> | ReadonlyMap<K, V>).size) {
-		return false;
+	if (a instanceof Map && b instanceof Map) {
+		return identicalMap(a, b);
 	}
 
-	if (a instanceof Set) {
-		for (const item of a) {
-			if (!(b as ReadonlySet<V>).has(item)) {
-				return false;
-			}
-		}
-	} else if (a instanceof Map) {
-		for (const [key, value] of (a as ReadonlyMap<K, V>).entries()) {
-			if ((b as ReadonlyMap<K, V>).get(key) !== value || !(b as ReadonlyMap<K, V>).has(key)) {
-				return false;
-			}
-		}
-	}
-
-	return true;
+	throw new RangeError('Expected both parameters to be an array, Set, or Map');
 }
 
 /**
