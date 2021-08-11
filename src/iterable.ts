@@ -229,6 +229,16 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increm
 	return [passed, failed];
 }
 
+function* firstIterable<T>(iterable: Iterable<T>, take: number): Iterable<T> {
+	for (const element of iterable) {
+		if (take--) {
+			yield element;
+		} else {
+			break;
+		}
+	}
+}
+
 /**
  * Get the first element from an iterable.
  *
@@ -260,27 +270,17 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
  *
  * @returns The first `take` elements of the iterable
  */
-export function first<T>(iterable: Iterable<T>, take: number): T[];
-export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | T[] {
-	const iterator = iterable[Symbol.iterator]();
-
+export function first<T>(iterable: Iterable<T>, take: number): Iterable<T>;
+export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | Iterable<T> {
 	if (take === undefined) {
-		return iterator.next().value as T | undefined;
-	}
-
-	const result: T[] = [];
-
-	for (let i = 0; i < take; i++) {
-		const element = iterator.next();
-
-		if (element.done) {
-			break;
+		for (const element of iterable) {
+			return element;
 		}
 
-		result.push(element.value);
+		return undefined;
 	}
 
-	return result;
+	return firstIterable(iterable, take);
 }
 
 /**
