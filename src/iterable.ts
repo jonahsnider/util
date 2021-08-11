@@ -190,7 +190,7 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 
 	for (const element of iterable) {
 		const occurrences = frequencies.get(element);
-		const newOccurrences = occurrences ? occurrences + 1 : 1;
+		const newOccurrences = (occurrences ?? 0) + 1;
 
 		frequencies.set(element, newOccurrences);
 	}
