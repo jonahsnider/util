@@ -4,8 +4,8 @@
  *
  * @example
  * ```js
- * const a = [1];
- * const b = [1];
+ * const a = [1, 2, 3];
+ * const b = [1, 2, 3];
  *
  * identical(a, b); // true
  * ```
