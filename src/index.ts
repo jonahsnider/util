@@ -16,6 +16,7 @@ export * from './reg-exp';
 export * from './set';
 export * from './sort';
 export * from './stopwatch';
+export * from './string';
 export * from './to-digits';
 export * from './typed-event-emitter';
 export * from './types';
