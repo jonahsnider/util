@@ -1,3 +1,5 @@
+import {DefaultMap} from './default-map';
+
 /**
  * Combines multiple iterables into a single iterable.
  *
@@ -200,6 +202,24 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 }
 
 /**
+ * Split an iterable into two arrays of elements that passed or failed a provided type guard.
+ *
+ * @example
+ * ```js
+ * const [numbers, strings] = partition(['a', 1, 'b', 2, 'c', 3], (element): element is number => typeof element === 'number');
+ *
+ * console.log(numbers); // [1, 2, 3]
+ * console.log(strings); // ['a', 'b', 'c']
+ * ```
+ *
+ * @param iterable - The iterable to partition
+ * @param typeGuard - The type guard to apply to each element of `iterable`. If the type guard returns a truthy value the element will be added to the `passed`
+ * array in the result. Otherwise, it will be added to the `failed` array.
+ *
+ * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
+ */
+export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (element: T) => element is S): [passed: S[], failed: Array<Exclude<T, S>>];
+/**
  * Split an iterable into two arrays of elements that passed or failed a provided predicate.
  *
  * @example
@@ -216,6 +236,7 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
  *
  * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
  */
+export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increment: number) => unknown): [passed: T[], failed: T[]];
 export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increment: number) => unknown): [passed: T[], failed: T[]] {
 	const passed: T[] = [];
 	const failed: T[] = [];

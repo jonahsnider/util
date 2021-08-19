@@ -1,3 +1,4 @@
+import {expectType} from 'tsd';
 import {
 	allDuplicates,
 	combineIterables,
@@ -79,6 +80,11 @@ describe(partition.name, () => {
 			[1, 3, 5],
 			[2, 4, 6],
 		]);
+
+		const [numbers, strings] = partition(['a', 2, 'b', 3, 'c'], (element): element is number => typeof element === 'number');
+
+		expectType<number[]>(numbers);
+		expectType<string[]>(strings);
 	});
 });
 
