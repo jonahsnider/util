@@ -173,6 +173,7 @@ export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolea
 
 /**
  * Construct a frequency table from an iterable.
+ * Similar to [Python's `Counter` class](https://docs.python.org/3/library/collections.html#collections.Counter).
  *
  * @example
  * ```js
