@@ -189,8 +189,8 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 	const frequencies: Map<T, number> = new Map();
 
 	for (const element of iterable) {
-		const occurrences = frequencies.get(element);
-		const newOccurrences = (occurrences ?? 0) + 1;
+		// This is a perfect candidate for a DefaultMap but that means the return value wouldn't be a pure Map
+		const newOccurrences = (frequencies.get(element) ?? 0) + 1;
 
 		frequencies.set(element, newOccurrences);
 	}
