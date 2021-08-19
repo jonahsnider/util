@@ -1,3 +1,6 @@
+import {identical} from './identical';
+import {frequencyTable} from './iterable';
+
 /**
  * Capitalizes the first letter of a string.
  *
@@ -115,4 +118,38 @@ export function lines(string: string): string[] {
 		.split('\n')
 		.map(line => line.trim())
 		.filter(line => line.length > 0);
+}
+
+/**
+ * Check if two strings are anagrams of each other.
+ * Case-sensitive.
+ *
+ * @example
+ * ```js
+ * isAnagram('abc', 'cba'); // true
+ * ```
+ *
+ * @example
+ * ```js
+ * isAnagram('abc', 'Cba'); // false
+ * ```
+ *
+ * @param a - First string to compare
+ * @param b - Second string to compare
+ *
+ * @returns Whether the strings are anagrams of each other
+ */
+export function isAnagram(a: string, b: string): boolean {
+	if (a === b) {
+		return true;
+	}
+
+	if (a.length !== b.length) {
+		return false;
+	}
+
+	const aFreqTable = frequencyTable(a);
+	const bFreqTable = frequencyTable(b);
+
+	return identical(aFreqTable, bFreqTable);
 }

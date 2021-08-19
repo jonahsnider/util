@@ -1,4 +1,4 @@
-import {capitalize, lines, multiReplace, truncate, uncapitalize} from './string';
+import {isAnagram, capitalize, lines, multiReplace, truncate, uncapitalize} from './string';
 
 describe(capitalize.name, () => {
 	it('capitalizes strings', () => {
@@ -59,5 +59,17 @@ describe(lines.name, () => {
 
 		expect(lines('a\r\nb\nc')).toStrictEqual(['a', 'b', 'c']);
 		expect(lines('\ra\r\nb\nc\n')).toStrictEqual(['a', 'b', 'c']);
+	});
+});
+
+describe(isAnagram.name, () => {
+	it('returns true for anagrams', () => {
+		expect(isAnagram('abc', 'cba')).toBe(true);
+		expect(isAnagram('', '')).toBe(true);
+	});
+
+	it('returns false for non-anagrams', () => {
+		expect(isAnagram('abc', 'aa')).toBe(false);
+		expect(isAnagram('abc', 'abcc')).toBe(false);
 	});
 });
