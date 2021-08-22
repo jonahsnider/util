@@ -1,5 +1,3 @@
-import {DefaultMap} from './default-map';
-
 /**
  * Combines multiple iterables into a single iterable.
  *
