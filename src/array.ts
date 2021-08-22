@@ -4,7 +4,7 @@ import {DirectionFn} from './types';
 /** A 2-dimensional table of type `T`. */
 export type Table<T> = T[][];
 
-/** An array with at least one element. */
+/** An array with at least 1 element. */
 export type NonEmptyArray<T> = [T, ...T[]];
 
 /**
@@ -168,7 +168,7 @@ type ObjectWithSize = {size: number};
 type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
 
 /**
- * Arrange two objects in a tuple by their length/size.
+ * Arrange 2 objects in a tuple by their length/size.
  * Useful for situations where you are iterating `a` or `b` depending on which is larger.
  *
  * @example
