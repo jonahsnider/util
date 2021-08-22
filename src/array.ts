@@ -417,3 +417,30 @@ export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
 export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
 	array.push(...repeat(fillValue, maxLength - array.length));
 }
+
+/**
+ * Get an array of indexes of `searchElement` in an array.
+ * 
+ * @example
+ * ```js
+ * indexOfAll([1, 2, 1, 3, 1], 1); // [0, 2, 4]
+ * ```
+ * 
+ * @param array - The array to search in
+ * @param searchElement - The element to search for
+ * 
+ * @returns An array of indexes of `searchElement` in `array`
+ */
+export function indexOfAll<T>(array: readonly T[], searchElement: T): number[] {
+	const indexes: number[] = [];
+
+	for (let index = 0; index < array.length; index++) {
+		const element = array[index];
+
+		if (element === searchElement) {
+			indexes.push(index);
+		}
+	}
+
+	return indexes;
+}

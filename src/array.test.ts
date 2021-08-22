@@ -1,6 +1,6 @@
 import {expectNotType, expectType} from 'tsd';
 import {stddev} from './';
-import {binarySearch, chunk, fill, holes, largeToSmall, mapFill, padEnd, padStart, pull, replace, replaceAll, sample, shuffle} from './array';
+import {binarySearch, chunk, fill, holes, indexOfAll, largeToSmall, mapFill, padEnd, padStart, pull, replace, replaceAll, sample, shuffle} from './array';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -289,5 +289,19 @@ describe(padEnd.name, () => {
 		padEnd(array, 3, 0);
 
 		expect(array).toStrictEqual([1, 2, 3]);
+	});
+});
+
+describe(indexOfAll.name, () => {
+	it('finds all indexes', () => {
+		expect(indexOfAll([1, 2, 1, 3, 1], 1)).toStrictEqual([0, 2, 4]);
+	});
+
+	it('works with empty arrays', () => {
+		expect(indexOfAll([], 1)).toStrictEqual([]);
+	});
+
+	it("works when element isn't found", () => {
+		expect(indexOfAll([1, 2, 3], 4)).toStrictEqual([]);
 	});
 });
