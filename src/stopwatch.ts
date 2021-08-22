@@ -1,5 +1,5 @@
 /**
- * Helper to record the amount of time elapsed between two points during execution.
+ * Helper to record the amount of time elapsed between 2 points during execution.
  *
  * @example
  * ```js

@@ -79,7 +79,7 @@ export function product<T extends number>(a: T, b: T): T {
 }
 
 /**
- * Get the largest value of the two parameters.
+ * Get the largest value of the 2 parameters.
  * Meant to be used with `Array.prototype.reduce`.
  *
  * @example
@@ -99,7 +99,7 @@ export function max<A extends Comparable, B extends Comparable>(accumulator: A, 
 }
 
 /**
- * Get the lowest value of the two parameters.
+ * Get the lowest value of the 2 parameters.
  * Meant to be used with `Array.prototype.reduce`.
  *
  * @example

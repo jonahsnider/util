@@ -54,7 +54,7 @@ describe(shuffle.name, () => {
 			dcba: 0,
 		};
 
-		for (let i = 0; i < iterations; i++) {
+		for (let count = 0; count < iterations; count++) {
 			shuffle(array);
 
 			const result = array.join('') as keyof typeof frequencies;

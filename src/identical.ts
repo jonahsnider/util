@@ -47,7 +47,7 @@ function identicalMap<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean
 }
 
 /**
- * Check if two arrays have the same elements in the same order.
+ * Check if 2 arrays have the same elements in the same order.
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
@@ -65,7 +65,7 @@ function identicalMap<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean
  */
 export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
 /**
- * Check if two `Set`s have the same elements.
+ * Check if 2 `Set`s have the same elements.
  * Strict equality (`===`) is used to compare elements.
  *
  * @example
@@ -83,7 +83,7 @@ export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
  */
 export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
 /**
- * Check if two `Map`s have the same key-value pairs.
+ * Check if 2 `Map`s have the same key-value pairs.
  * Strict equality (`===`) is used to compare values.
  *
  * @example

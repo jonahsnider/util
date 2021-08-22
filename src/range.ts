@@ -1,7 +1,7 @@
 import {Comparable} from './types';
 
 /**
- * A range between two values.
+ * A range between 2 values.
  */
 export class Range {
 	/**

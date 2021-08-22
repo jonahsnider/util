@@ -202,7 +202,7 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 }
 
 /**
- * Split an iterable into two arrays of elements that passed or failed a provided type guard.
+ * Split an iterable into 2 arrays of elements that passed or failed a provided type guard.
  *
  * @example
  * ```js
@@ -220,7 +220,7 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
  */
 export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (element: T) => element is S): [passed: S[], failed: Array<Exclude<T, S>>];
 /**
- * Split an iterable into two arrays of elements that passed or failed a provided predicate.
+ * Split an iterable into 2 arrays of elements that passed or failed a provided predicate.
  *
  * @example
  * ```js
@@ -408,7 +408,7 @@ export function count<T>(iterable: Iterable<T>, value: T): number {
  * @returns An array with the elements of `iterable` repeated `times` number of times
  */
 export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
-	for (let i = 0; i < times; i++) {
+	for (let index = 0; index < times; index++) {
 		yield* iterable;
 	}
 }
@@ -430,7 +430,7 @@ export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
  * @returns An iterable that repeats `value` `times` number of times
  */
 export function* repeat<T>(value: T, times: number): Iterable<T> {
-	for (let i = 0; i < times; i++) {
+	for (let index = 0; index < times; index++) {
 		yield value;
 	}
 }
@@ -452,7 +452,7 @@ export function* repeat<T>(value: T, times: number): Iterable<T> {
  * @returns An iterable that repeats `value` `times` number of times
  */
 export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number): Iterable<T> {
-	for (let i = 0; i < times; i++) {
-		yield valueFn(i);
+	for (let index = 0; index < times; index++) {
+		yield valueFn(index);
 	}
 }

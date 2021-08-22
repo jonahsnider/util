@@ -64,9 +64,9 @@ export function shuffle<T>(array: readonly T[], mutate: false): T[];
 export function shuffle<T>(array: T[] | readonly T[], mutate = true): void | T[] {
 	const target: typeof array = mutate ? array : [...array];
 
-	for (let i = target.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[(target as T[])[i], (target as T[])[j]] = [target[j], target[i]];
+	for (let index1 = target.length - 1; index1 > 0; index1--) {
+		const index2 = Math.floor(Math.random() * (index1 + 1));
+		[(target as T[])[index1], (target as T[])[index2]] = [target[index2], target[index1]];
 	}
 
 	if (!mutate) {
@@ -232,9 +232,9 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
 export function holes<T>(array: readonly T[]): number[] {
 	const result: number[] = [];
 
-	for (let i = 0; i < array.length; i++) {
-		if (!(i in array)) {
-			result.push(i);
+	for (let index = 0; index < array.length; index++) {
+		if (!(index in array)) {
+			result.push(index);
 		}
 	}
 
@@ -420,15 +420,15 @@ export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
 
 /**
  * Get an array of indexes of `searchElement` in an array.
- * 
+ *
  * @example
  * ```js
  * indexOfAll([1, 2, 1, 3, 1], 1); // [0, 2, 4]
  * ```
- * 
+ *
  * @param array - The array to search in
  * @param searchElement - The element to search for
- * 
+ *
  * @returns An array of indexes of `searchElement` in `array`
  */
 export function indexOfAll<T>(array: readonly T[], searchElement: T): number[] {

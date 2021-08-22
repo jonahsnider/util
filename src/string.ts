@@ -81,19 +81,19 @@ export function truncate<T extends string>(text: T, maxLength: number, suffix = 
 export function multiReplace(string: string, replacements: Record<string, string>): string {
 	const replacementsIterable: Array<[sub: string, by: string]> = Object.entries(replacements);
 	let result = '';
-	let i = 0;
+	let index = 0;
 
-	while (i < string.length) {
+	while (index < string.length) {
 		foundReplace: do {
 			for (const [searchValue, replaceValue] of replacementsIterable) {
-				if (string.slice(i).startsWith(searchValue)) {
+				if (string.slice(index).startsWith(searchValue)) {
 					result += replaceValue;
-					i += searchValue.length;
+					index += searchValue.length;
 					break foundReplace;
 				}
 			}
 
-			result += string[i++];
+			result += string[index++];
 		} while (false);
 	}
 
@@ -121,7 +121,7 @@ export function lines(string: string): string[] {
 }
 
 /**
- * Check if two strings are anagrams of each other.
+ * Check if 2 strings are anagrams of each other.
  * Case-sensitive.
  *
  * @example
