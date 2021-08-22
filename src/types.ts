@@ -27,6 +27,6 @@ export type Comparable = string | number | bigint | boolean | null | {[Symbol.to
 export type DirectionFn<T> = (element: T) => number;
 
 /**
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort MDN docs on this function
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort | MDN docs on this function}
  */
 export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
