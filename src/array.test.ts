@@ -1,5 +1,5 @@
 import {expectNotType, expectType} from 'tsd';
-import {stddev} from './';
+import {relativeStddev} from './';
 import {binarySearch, chunk, fill, holes, indexOfAll, largeToSmall, mapFill, padEnd, padStart, pull, replace, replaceAll, sample, shuffle} from './array';
 
 // Compilation tests
@@ -62,7 +62,8 @@ describe(shuffle.name, () => {
 			frequencies[result]++;
 		}
 
-		expect(stddev(Object.values(frequencies))).toBeCloseTo(0, -3e6 * iterations);
+		const values = Object.values(frequencies);
+		expect(relativeStddev(values)).toBeCloseTo(0, 1);
 
 		expect(shuffle([])).toBe(undefined);
 	});
