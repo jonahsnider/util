@@ -479,4 +479,3 @@ export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never
 
 	return true;
 }
-
