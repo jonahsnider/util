@@ -10,6 +10,7 @@ import {
 	first,
 	frequencyTable,
 	includes,
+	isEmpty,
 	join,
 	mapRepeat,
 	partition,
@@ -183,5 +184,22 @@ describe(mapRepeat.name, () => {
 	it('repeats', () => {
 		expect([...mapRepeat(i => i, 3)]).toStrictEqual([0, 1, 2]);
 		expect([...mapRepeat(i => i, 0)]).toStrictEqual([]);
+	});
+});
+
+describe(isEmpty.name, () => {
+	it('returns true for empty iterables', () => {
+		expect(isEmpty([])).toBe(true);
+
+		const array: unknown[] = [];
+		if (isEmpty(array)) {
+			for (const element of array) {
+				expectType<never>(element);
+			}
+		}
+	});
+
+	it('returns false for non-empty iterables', () => {
+		expect(isEmpty([1, 2, 3])).toBe(false);
 	});
 });

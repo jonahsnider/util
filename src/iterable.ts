@@ -454,3 +454,29 @@ export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number):
 		yield valueFn(index);
 	}
 }
+
+/**
+ * Check if an iterable is empty.
+ *
+ * @example
+ * ```js
+ * isEmpty([1, 2, 3]); // false
+ * ```
+ *
+ * @example
+ * ```js
+ * isEmpty([]); // true
+ * ```
+ *
+ * @param iterable - The iterable to check
+ *
+ * @returns `true` if `iterable` is empty, `false` otherwise
+ */
+export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never> {
+	for (const _ of iterable) {
+		return false;
+	}
+
+	return true;
+}
+
