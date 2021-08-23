@@ -1,4 +1,4 @@
-import {clamp, mean, median, mode, normaldist, random, randomInt, standardNormaldist, stddev, variance} from './math';
+import {clamp, mean, median, mode, normaldist, random, randomInt, relativeStddev, standardNormaldist, stddev, variance} from './math';
 
 describe(variance.name, () => {
 	it('calculates variance', () => {
@@ -13,6 +13,14 @@ describe(stddev.name, () => {
 		expect(stddev([1, 1, 1])).toBe(0);
 		expect(stddev([1, 2, 3])).toBe(1);
 		expect(stddev([1, 3, 5])).toBe(2);
+	});
+});
+
+describe(relativeStddev.name, () => {
+	it('calculates relative standard deviation', () => {
+		expect(relativeStddev([1, 1, 1])).toBe(0);
+		expect(relativeStddev([1, 2, 3])).toBe(0.5);
+		expect(relativeStddev([1, 3, 5])).toBe(2 / 3);
 	});
 });
 

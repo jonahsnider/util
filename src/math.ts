@@ -9,12 +9,11 @@ import {sum} from './reducers';
  * ```
  *
  * @param values - Values to use in the calculation
+ * @param meanValue - The mean of `values`, will be calculated if not provided
  *
  * @returns The variance of `values`
  */
-export function variance(values: readonly number[]): number {
-	const meanValue = mean(values);
-
+export function variance(values: readonly number[], meanValue = mean(values)): number {
 	return values.map(value => (value - meanValue) ** 2).reduce(sum) / (values.length - 1);
 }
 
@@ -27,11 +26,29 @@ export function variance(values: readonly number[]): number {
  * ```
  *
  * @param values - Values to use in the calculation
+ * @param meanValue - The mean of `values`, will be calculated if not provided
  *
  * @returns The standard deviation of `values`
  */
-export function stddev(values: readonly number[]): number {
-	return Math.sqrt(variance(values));
+export function stddev(values: readonly number[], meanValue = mean(values)): number {
+	return Math.sqrt(variance(values, meanValue));
+}
+
+/**
+ * Calculate the relative standard deviation (coefficient of variation) of a sequence of numbers.
+ *
+ * @example
+ * ```js
+ * relativeStddev([1, 2, 3]); // 0.5
+ * ```
+ *
+ * @param values - Values to use in the calculation
+ * @param meanValue - The mean of `values`, will be calculated if not provided
+ *
+ * @returns The standard deviation of `values`
+ */
+export function relativeStddev(values: readonly number[], meanValue = mean(values)): number {
+	return stddev(values, meanValue) / meanValue;
 }
 
 /**
