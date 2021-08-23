@@ -11,7 +11,7 @@ import {combineIterables} from './iterable';
  *
  * @returns `true` if `a` is a superset of `b`, `false` otherwise
  */
-export function isSuperset<A, B>(a: ReadonlySet<A | B>, b: Iterable<B>): boolean {
+export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean {
 	for (const element of b) {
 		if (!a.has(element)) {
 			return false;
@@ -31,7 +31,7 @@ export function isSuperset<A, B>(a: ReadonlySet<A | B>, b: Iterable<B>): boolean
  *
  * @returns `true` if `a` is a subset of `b`, `false` otherwise
  */
-export function isSubset<A, B>(a: Iterable<A>, b: ReadonlySet<A | B>): boolean {
+export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean {
 	for (const element of a) {
 		if (!b.has(element)) {
 			return false;
@@ -63,8 +63,8 @@ export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
  *
  * @returns `true` if `a` and `b` are disjoint
  */
-export function isDisjoint<A, B>(a: Iterable<A>, b: Iterable<B>): boolean {
-	const set: ReadonlySet<A | B> = a instanceof Set ? a : new Set(a);
+export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean {
+	const set: ReadonlySet<T> = a instanceof Set ? a : new Set(a);
 
 	for (const element of b) {
 		if (set.has(element)) {
@@ -128,11 +128,11 @@ export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A
  *
  * @returns A new set which is the difference of `a` and `b`
  */
-export function difference<A, B>(a: Iterable<A>, b: Iterable<A | B>): Set<A> {
+export function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T> {
 	const result = new Set(a);
 
 	for (const element of b) {
-		result.delete(element as A);
+		result.delete(element);
 	}
 
 	return result;

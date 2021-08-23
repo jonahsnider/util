@@ -34,7 +34,7 @@ export function* combineIterables<T>(...iterables: Iterable<T>[]): Iterable<T> {
  *
  * @returns A string containing the elements in iterable joined by separator
  */
-export function join<T>(iterable: Iterable<T>, separator = ','): string {
+export function join(iterable: Iterable<unknown>, separator = ','): string {
 	let result = '';
 
 	const iterator = iterable[Symbol.iterator]();

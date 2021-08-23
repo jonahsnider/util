@@ -229,7 +229,7 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
  *
  * @returns An array of indexes of holes in the array
  */
-export function holes<T>(array: readonly T[]): number[] {
+export function holes(array: readonly unknown[]): number[] {
 	const result: number[] = [];
 
 	for (let index = 0; index < array.length; index++) {
