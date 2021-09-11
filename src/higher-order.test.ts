@@ -1,5 +1,5 @@
-import {nullish} from './';
-import {invert, not} from './curry';
+import {nullish} from '.';
+import {invert, not} from './higher-order';
 
 describe(not.name, () => {
 	it('negates booleans', () => {

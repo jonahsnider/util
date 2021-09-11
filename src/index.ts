@@ -1,6 +1,6 @@
 export * from './array';
 export * from './cards';
-export * from './curry';
+export * from './higher-order';
 export * from './default-map';
 export * from './format';
 export * as Http from './http/index';
