@@ -1,6 +1,22 @@
 import {expectNotType, expectType} from 'tsd';
 import {relativeStddev} from './';
-import {binarySearch, chunk, fill, holes, indexOfAll, largeToSmall, mapFill, padEnd, padStart, pull, replace, replaceAll, sample, shuffle} from './array';
+import {
+	binarySearch,
+	chunk,
+	fill,
+	findIndexAll,
+	holes,
+	indexOfAll,
+	largeToSmall,
+	mapFill,
+	padEnd,
+	padStart,
+	pull,
+	replace,
+	replaceAll,
+	sample,
+	shuffle,
+} from './array';
 
 // Compilation tests
 expectType<undefined>(sample([]));
@@ -304,5 +320,11 @@ describe(indexOfAll.name, () => {
 
 	it("works when element isn't found", () => {
 		expect(indexOfAll([1, 2, 3], 4)).toStrictEqual([]);
+	});
+});
+
+describe(findIndexAll.name, () => {
+	it('finds all indexes', () => {
+		expect(findIndexAll([1, 2, 1, 3, 1], element => element === 1)).toStrictEqual([0, 2, 4]);
 	});
 });

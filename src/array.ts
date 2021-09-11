@@ -444,3 +444,30 @@ export function indexOfAll<T>(array: readonly T[], searchElement: T): number[] {
 
 	return indexes;
 }
+
+/**
+ * Get an array of all indexes of elements that passed a given predicate.
+ *
+ * @example
+ * ```js
+ * findIndexAll([1, 2, 1, 3, 1], (element) => element === 1); // [0, 2, 4]
+ * ```
+ *
+ * @param array - The array to search in
+ * @param predicate - The function to call for each element to decide whether it should be included in the result
+ *
+ * @returns An array of indexes of elements that passed `predicate` in `array`
+ */
+export function findIndexAll<T>(array: readonly T[], predicate: (element: T, index: number) => boolean): number[] {
+	const indexes: number[] = [];
+
+	for (let index = 0; index < array.length; index++) {
+		const element = array[index];
+
+		if (predicate(element, index)) {
+			indexes.push(index);
+		}
+	}
+
+	return indexes;
+}
