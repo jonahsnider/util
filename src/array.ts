@@ -420,6 +420,7 @@ export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
 
 /**
  * Get an array of indexes of `searchElement` in an array.
+ * Strict equality (`===`) is used to compare elements.
  *
  * @example
  * ```js
