@@ -1,3 +1,5 @@
+import {AnyFunction, NumberLike} from './types';
+
 /**
  * Create a new function that calls the provided `fn` and negates the result.
  *
@@ -36,8 +38,8 @@ export function not<T extends (...params: any[]) => boolean>(fn: T): T {
  *
  * @returns The inverted return value of `fn`
  */
-export function invert<T extends (...params: any[]) => number | bigint>(fn: T): T {
-	return ((...params) => -fn(...params)) as T;
+export function invert<T extends (...params: any[]) => NumberLike>(fn: T): T {
+	return ((...params) => -fn(...params)!) as T;
 }
 
 /**
