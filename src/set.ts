@@ -12,6 +12,10 @@ import {combineIterables} from './iterable';
  * @returns `true` if `a` is a superset of `b`, `false` otherwise
  */
 export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean {
+	if (a === b) {
+		return true;
+	}
+
 	for (const element of b) {
 		if (!a.has(element)) {
 			return false;
@@ -32,6 +36,10 @@ export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean {
  * @returns `true` if `a` is a subset of `b`, `false` otherwise
  */
 export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean {
+	if (a === b) {
+		return true;
+	}
+
 	for (const element of a) {
 		if (!b.has(element)) {
 			return false;
@@ -51,6 +59,10 @@ export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean {
  * @returns A new set which is the union of `a` and `b`
  */
 export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
+	if (a === (b as unknown as typeof a)) {
+		return new Set(a);
+	}
+
 	return new Set(combineIterables<A | B>(a, b));
 }
 
@@ -64,6 +76,10 @@ export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
  * @returns `true` if `a` and `b` are disjoint
  */
 export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean {
+	if (a === b) {
+		return false;
+	}
+
 	const set: ReadonlySet<T> = a instanceof Set ? a : new Set(a);
 
 	for (const element of b) {
@@ -84,6 +100,10 @@ export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean {
  * @returns A new set which is the intersection of `a` and `b`
  */
 export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T> {
+	if (a === b) {
+		return new Set(a);
+	}
+
 	const result: Set<T> = new Set();
 	const [largest, smallest] = largeToSmall(a, b);
 
@@ -106,6 +126,10 @@ export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T> {
  * @returns A new set which is the symmetric difference of `a` and `b`
  */
 export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
+	if (a === (b as unknown as typeof a)) {
+		return new Set();
+	}
+
 	const result: Set<A | B> = new Set(a);
 
 	for (const element of b) {
@@ -129,6 +153,10 @@ export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A
  * @returns A new set which is the difference of `a` and `b`
  */
 export function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T> {
+	if (a === b) {
+		return new Set();
+	}
+
 	const result = new Set(a);
 
 	for (const element of b) {
