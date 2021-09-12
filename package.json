@@ -13,6 +13,7 @@
 		"email": "jonah@jonahsnider.com",
 		"url": "https://jonahsnider.com"
 	},
+	"sideEffects": false,
 	"type": "commonjs",
 	"exports": {
 		".": {
