@@ -72,4 +72,19 @@ describe(Range.name, () => {
 			expect(new Range(1, 4).equals(new Range(2, 3))).toBe(false);
 		});
 	});
+
+	describe(`${Range.name}#${Range.prototype.intersects.name}`, () => {
+		it('returns true for intersecting ranges', () => {
+			const range = new Range(1, 4);
+
+			expect(range.intersects(range)).toBe(true);
+			expect(new Range(1, 4).intersects(new Range(1, 4))).toBe(true);
+			expect(new Range(1, 3).intersects(new Range(2, 4))).toBe(true);
+			expect(new Range(2, 4).intersects(new Range(1, 3))).toBe(true);
+		});
+
+		it('returns false for non-intersecting ranges', () => {
+			expect(new Range(1, 4).intersects(new Range(5, 8))).toBe(false);
+		});
+	});
 });

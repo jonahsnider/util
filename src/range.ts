@@ -137,4 +137,31 @@ export class Range {
 	equals(range: Range): boolean {
 		return range === this || (this.lower === range.lower && this.upper === range.upper);
 	}
+
+	/**
+	 * Check if this range and a given range have any intersection.
+	 *
+	 * @example
+	 * ```js
+	 * const a = new Range(100, 200);
+	 * const b = new Range(150, 250);
+	 *
+	 * a.intersects(b); // true
+	 * ```
+	 *
+	 * @example
+	 * ```js
+	 * const a = new Range(100, 200);
+	 * const b = new Range(300, 400);
+	 *
+	 * a.intersects(b); // false
+	 * ```
+	 *
+	 * @param range - Range to compare
+	 *
+	 * @returns Whether the ranges intersect
+	 */
+	intersects(range: Range): boolean {
+		return range === this || (this.lower! <= range.upper! && this.upper! >= range.lower!);
+	}
 }
