@@ -10,64 +10,97 @@
 	"license": "MIT",
 	"author": {
 		"name": "Jonah Snider",
-		"email": "jonah@jonah.pw",
-		"url": "https://jonah.pw"
+		"email": "jonah@jonahsnider.com",
+		"url": "https://jonahsnider.com"
 	},
 	"type": "commonjs",
 	"exports": {
-		"import": "./dist/util.esm.mjs",
-		"require": "./dist/index.js"
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.prod.mjs"
+		},
+		"./prod": {
+			"require": "./dist/index.prod.js",
+			"import": "./dist/index.prod.mjs"
+		},
+		"./dev": {
+			"require": "./dist/index.dev.js",
+			"import": "./dist/index.dev.mjs"
+		}
 	},
-	"main": "dist/index.js",
-	"module": "dist/util.esm.mjs",
-	"typings": "dist/index.d.ts",
+	"main": "./dist/index.js",
+	"jsdelivr": "./dist/index.prod.mjs",
+	"unpkg": "./dist/index.prod.mjs",
+	"module": "./dist/index.prod.mjs",
+	"browser": "./dist/index.prod.mjs",
+	"typings": "./dist/index.d.ts",
 	"files": [
 		"dist"
 	],
 	"scripts": {
 		"analyze": "size-limit --why",
-		"build": "tsdx build --format cjs,esm,umd; yarn rename-esm",
 		"docs": "typedoc --options ./typedoc.json",
-		"lint": "tsdx lint src",
 		"publish": "semantic-release",
-		"rename-esm": "mv ./dist/util.esm.js ./dist/util.esm.mjs; mv ./dist/util.esm.js.map ./dist/util.esm.mjs.map;",
+		"build": "rollup --config rollup.config.js",
 		"size": "size-limit",
-		"start": "tsdx watch --onSuccess \"yarn rename-esm\"",
-		"style": "prettier --check .",
-		"test": "tsdx test"
+		"test": "jest",
+		"style": "prettier --check ."
+	},
+	"resolutions": {
+		"terser": "5.7.2"
 	},
 	"devDependencies": {
+		"@babel/core": "7.15.5",
+		"@babel/preset-env": "7.15.6",
+		"@rollup/plugin-babel": "5.3.0",
+		"@rollup/plugin-replace": "3.0.0",
+		"@rollup/plugin-typescript": "8.2.5",
 		"@size-limit/preset-small-lib": "5.0.3",
-		"@typescript-eslint/eslint-plugin": "4.31.0",
-		"@typescript-eslint/parser": "4.31.0",
-		"eslint-plugin-prettier": "4.0.0",
-		"eslint-plugin-tsdoc": "0.2.14",
+		"@tsconfig/node16": "1.0.2",
+		"@types/jest": "27.0.1",
+		"jest": "27.1.1",
 		"prettier": "2.3.2",
 		"prettier-config-xo": "2.0.0",
+		"rollup": "2.56.3",
+		"rollup-plugin-terser": "7.0.2",
 		"semantic-release": "17.4.7",
 		"size-limit": "5.0.3",
+		"terser": "5.7.2",
+		"ts-jest": "27.0.5",
 		"tsd": "0.17.0",
-		"tsdx": "0.14.1",
-		"tslib": "2.3.1",
 		"typedoc": "0.22.2",
-		"typescript": "4.2.4"
+		"typescript": "4.4.3"
 	},
 	"engines": {
-		"node": ">=10"
+		"node": ">=16"
 	},
 	"publishConfig": {
 		"access": "public"
 	},
-	"packageManager": "yarn@3.0.1",
+	"packageManager": "yarn@3.0.2",
 	"size-limit": [
 		{
-			"limit": "9 kB",
-			"path": "dist/util.cjs.production.min.js",
+			"brotli": true,
+			"limit": "4.5 KiB",
+			"path": "./dist/index.prod.js",
 			"webpack": false
 		},
 		{
-			"limit": "25 kB",
-			"path": "dist/util.esm.mjs",
+			"gzip": true,
+			"limit": "5.5 KiB",
+			"path": "./dist/index.prod.js",
+			"webpack": false
+		},
+		{
+			"brotli": true,
+			"limit": "4.5 KiB",
+			"path": "./dist/index.prod.mjs",
+			"webpack": false
+		},
+		{
+			"gzip": true,
+			"limit": "5.5 KiB",
+			"path": "./dist/index.prod.mjs",
 			"webpack": false
 		}
 	]

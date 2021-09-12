@@ -1,35 +1,35 @@
 import {settled, timeout} from './promise';
 
 describe(settled.name, () => {
-	it('returns the resolved value', () => {
+	it('returns the resolved value', async () => {
 		const promise = Promise.resolve(1);
 
-		expect(settled(promise)).resolves.toStrictEqual([1, undefined]);
+		return expect(settled(promise)).resolves.toStrictEqual([1, undefined]);
 	});
 
-	it('returns the rejected value', () => {
+	it('returns the rejected value', async () => {
 		const promise = Promise.reject(1);
 
-		expect(settled(promise)).resolves.toStrictEqual([undefined, 1]);
+		return expect(settled(promise)).resolves.toStrictEqual([undefined, 1]);
 	});
 });
 
 describe(timeout.name, () => {
-	it('returns the resolved value', () => {
+	it('returns the resolved value', async () => {
 		const promise = Promise.resolve(1);
 
-		expect(timeout(promise, Infinity)).resolves.toBe(1);
+		return expect(timeout(promise, Infinity)).resolves.toBe(1);
 	});
 
-	it('rejects if the given promise rejects', () => {
+	it('rejects if the given promise rejects', async () => {
 		const promise = Promise.reject(1);
 
-		expect(timeout(promise, Infinity)).rejects.toBe(1);
+		return expect(timeout(promise, Infinity)).rejects.toBe(1);
 	});
 
-	it('times out if the given promise never resolves', () => {
+	it('times out if the given promise never resolves', async () => {
 		const promise = new Promise(() => {});
 
-		expect(timeout(promise, 1)).rejects.toBe('Promise timed out');
+		return expect(timeout(promise, 1)).rejects.toThrow(new Error('Timed out'));
 	});
 });

@@ -20,7 +20,7 @@ import {AnyFunction} from './types';
  */
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	/** If the default value is a function. */
-	private readonly defaultValueIsFunction = typeof this.defaultValueOrDefaultValueFn === 'function';
+	private readonly defaultValueIsFunction: boolean;
 
 	/**
 	 * Create a new `DefaultMap` with a specified default value.
@@ -46,6 +46,8 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	constructor(defaultValueFn: (key: K) => D, entries?: readonly (readonly [K, V])[] | null);
 	constructor(private defaultValueOrDefaultValueFn: Exclude<D, AnyFunction> | ((key: K) => D), entries?: readonly (readonly [K, V])[] | null) {
 		super(entries);
+
+		this.defaultValueIsFunction = typeof defaultValueOrDefaultValueFn === 'function';
 	}
 
 	/**

@@ -18,5 +18,23 @@ describe(DefaultMap.name, () => {
 			expect(map.get('b')).toBe(undefined);
 			expect(map.get('c')).toBe(1);
 		});
+
+		it('gets default values with a function', () => {
+			const map = new DefaultMap<string, unknown, number>(
+				key => {
+					expect(key).toBe('c');
+
+					return 1;
+				},
+				[
+					['a', null],
+					['b', undefined],
+				],
+			);
+
+			expect(map.get('a')).toBe(null);
+			expect(map.get('b')).toBe(undefined);
+			expect(map.get('c')).toBe(1);
+		});
 	});
 });

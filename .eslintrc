@@ -1,7 +1,0 @@
-{
-	"plugins": ["eslint-plugin-tsdoc"],
-	"rules": {
-		"prettier/prettier": "off",
-		"tsdoc/syntax": "warn"
-	}
-}
