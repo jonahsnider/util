@@ -366,33 +366,6 @@ export function duplicates<T>(iterable: Iterable<T>): Set<T> {
 }
 
 /**
- * Count the number of occurrences of a value in an iterable.
- *
- * @example
- * ```js
- * count([1, 1, 1, 2, 2, 3], 1); // 3
- * ```
- *
- * @param iterable - The iterable to count occurrences from
- * @param value - The value to count occurrences of
- *
- * @returns The number of occurrences of `value` in `iterable`
- *
- * @see {@link frequencyTable} to count the occurrences of all elements in an iterable
- */
-export function count<T>(iterable: Iterable<T>, value: T): number {
-	let count = 0;
-
-	for (const element of iterable) {
-		if (element === value) {
-			count++;
-		}
-	}
-
-	return count;
-}
-
-/**
  * Returns an array with the elements of the iterable repeated a provided number of times.
  *
  * @example
@@ -478,4 +451,28 @@ export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never
 	}
 
 	return true;
+}
+
+/**
+ * Count the number of elements in an iterable.
+ *
+ * @example
+ * ```js
+ * count([1, 2, 3]); // 3
+ * ```
+ *
+ * @param iterable - The iterable to count the elements of
+ *
+ * @returns The number of elements in `iterable`
+ *
+ * @see {@link frequencyTable} to count the occurrences of all elements in an iterable
+ */
+export function count(iterable: Iterable<unknown>): number {
+	let count = 0;
+
+	for (const _ of iterable) {
+		count++;
+	}
+
+	return count;
 }

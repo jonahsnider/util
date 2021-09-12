@@ -155,11 +155,11 @@ describe(frequencyTable.name, () => {
 
 describe(count.name, () => {
 	it('counts elements', () => {
-		expect(count([1, 1, 1, 2, 2, 3], 1)).toBe(3);
+		expect(count([1, 2, 3])).toBe(3);
 	});
 
-	it('counts empty arrays', () => {
-		expect(count([], 0)).toBe(0);
+	it('counts empty iterables', () => {
+		expect(count([])).toBe(0);
 	});
 });
 
