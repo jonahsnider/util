@@ -86,7 +86,7 @@ There's 3 main benefits this library offers:
 In addition to all the useful functions this library provides, a major effort has been made to ensure the best possible experience for TypeScript users.
 
 - Functions accept many types of arguments, either as a generic `T` or a union of related types like `number | bigint` (mostly useful in the math functions)
-- `Iterable`s are used instead of `Array`s whenever possible, broader types ensure compatibility with your projects
+- `Iterable`s and `ArrayLike`s are used instead of `Array`s whenever possible, broader types ensure compatibility with your projects and let you avoid ugly type assertions
 - When an array is needed, it's always `readonly T[]` unless mutation is required
 
 There's also a few types exported that can be handy in certain situations (ex. [`NonEmptyArray`](https://util.jonah.pw/modules#NonEmptyArray) or [`Nullish`](https://util.jonah.pw/modules#Nullish)).

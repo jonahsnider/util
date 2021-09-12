@@ -23,7 +23,7 @@ export type NonEmptyArray<T> = [T, ...T[]];
  *
  * @returns A random element from the array or `undefined` if the array was empty
  */
-export function sample<T>(array: readonly T[]): T | undefined {
+export function sample<T>(array: ArrayLike<T>): T | undefined {
 	return array[Math.floor(Math.random() * array.length)] as T | undefined;
 }
 
@@ -60,8 +60,8 @@ export function shuffle<T>(array: T[], mutate?: true): void;
  *
  * @returns The shuffled array
  */
-export function shuffle<T>(array: readonly T[], mutate: false): T[];
-export function shuffle<T>(array: T[] | readonly T[], mutate = true): void | T[] {
+export function shuffle<T>(array: ArrayLike<T> & Iterable<T>, mutate: false): T[];
+export function shuffle<T>(array: T[] | (ArrayLike<T> & Iterable<T>), mutate = true): void | T[] {
 	const target: typeof array = mutate ? array : [...array];
 
 	for (let index1 = target.length - 1; index1 > 0; index1--) {
@@ -99,7 +99,7 @@ export function shuffle<T>(array: T[] | readonly T[], mutate = true): void | T[]
  *
  * @returns The value of the first element in the array that satisfies the provided testing function. Otherwise, `undefined` is returned.
  */
-export function binarySearch<T>(array: readonly T[], directionFn: DirectionFn<T>): ReturnType<typeof array['find']> {
+export function binarySearch<T>(array: ArrayLike<T>, directionFn: DirectionFn<T>): ReturnType<T[]['find']> {
 	let left = 0;
 	let right = array.length - 1;
 
@@ -229,7 +229,7 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
  *
  * @returns An array of indexes of holes in the array
  */
-export function holes(array: readonly unknown[]): number[] {
+export function holes(array: ArrayLike<unknown>): number[] {
 	const result: number[] = [];
 
 	for (let index = 0; index < array.length; index++) {
@@ -294,8 +294,8 @@ export function pullAll<T>(array: T[], element: T): ReturnType<typeof array['spl
 	const indexes = indexOfAll(array, element);
 
 	// Reversing the indexes means we modify from end to start which has 2 benefits:
-  // - We don't have to worry about shifting indexes as we splice elements
-  // - We can avoid re-allocating the array as often
+	// - We don't have to worry about shifting indexes as we splice elements
+	// - We can avoid re-allocating the array as often
 	indexes.reverse();
 
 	const pulled: T[] = [];
@@ -469,7 +469,7 @@ export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
  *
  * @returns An array of indexes of `searchElement` in `array`
  */
-export function indexOfAll<T>(array: readonly T[], searchElement: T): number[] {
+export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
 	const indexes: number[] = [];
 
 	for (let index = 0; index < array.length; index++) {
@@ -484,7 +484,7 @@ export function indexOfAll<T>(array: readonly T[], searchElement: T): number[] {
 }
 
 /**
- * Get an array of all indexes of elements that passed a given predicate.
+ * Get an array of all indexes of elements in an array that passed a given predicate.
  *
  * @example
  * ```js
@@ -496,7 +496,7 @@ export function indexOfAll<T>(array: readonly T[], searchElement: T): number[] {
  *
  * @returns An array of indexes of elements that passed `predicate` in `array`
  */
-export function findIndexAll<T>(array: readonly T[], predicate: (element: T, index: number) => boolean): number[] {
+export function findIndexAll<T>(array: ArrayLike<T>, predicate: (element: T, index: number) => boolean): number[] {
 	const indexes: number[] = [];
 
 	for (let index = 0; index < array.length; index++) {

@@ -79,7 +79,7 @@ export function truncate<T extends string>(text: T, maxLength: number, suffix = 
  * @returns A new string with the replacements applied
  */
 export function multiReplace(string: string, replacements: Record<string, string>): string {
-	const replacementsIterable: Array<[sub: string, by: string]> = Object.entries(replacements);
+	const replacementsIterable: Iterable<[sub: string, by: string]> = Object.entries(replacements);
 	let result = '';
 	let index = 0;
 
@@ -139,7 +139,7 @@ export function lines(string: string): string[] {
  *
  * @returns Whether the strings are anagrams of each other
  */
-export function isAnagram(a: string, b: string): boolean {
+export function isAnagram<T>(a: ArrayLike<T> & Iterable<T>, b: ArrayLike<T> & Iterable<T>): boolean {
 	if (a === b) {
 		return true;
 	}
