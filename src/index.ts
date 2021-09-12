@@ -1,15 +1,15 @@
 export * from './array';
+export * from './auto-percentage';
 export * from './cards';
-export * from './higher-order';
 export * from './default-map';
 export * from './format';
+export * from './higher-order';
 export * as Http from './http/index';
 export * from './identical';
 export * from './iterable';
 export * from './math';
 export * from './nullish';
 export * from './object';
-export * from './auto-percentage';
 export * from './promise';
 export * from './range';
 export * from './reducers/index';
