@@ -468,6 +468,8 @@ export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
  * @param searchElement - The element to search for
  *
  * @returns An array of indexes of `searchElement` in `array`
+ * 
+ * @see {@link findIndexAll} if you want to use a predicate instead of strict equality
  */
 export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
 	const indexes: number[] = [];
@@ -495,6 +497,8 @@ export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
  * @param predicate - The function to call for each element to decide whether it should be included in the result
  *
  * @returns An array of indexes of elements that passed `predicate` in `array`
+ * 
+ * @see {@link indexOfAll} if you want to find all elements equal to a given value
  */
 export function findIndexAll<T>(array: ArrayLike<T>, predicate: (element: T, index: number) => boolean): number[] {
 	const indexes: number[] = [];
