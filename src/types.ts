@@ -6,8 +6,27 @@
  */
 export type AnyFunction<P extends any[] = any[], R = any> = (...args: P) => R;
 
+type Sign = '-' | '+';
+
+/**
+ * A value that can be converted to a Number.
+ * @see https://262.ecma-international.org/12.0/#sec-tonumber-applied-to-the-string-type ECMAScript definition of this behavior
+ */
+export type NumberLike =
+	// Totally normal
+	| {[Symbol.toPrimitive](hint: 'number'): number}
+	| number
+	| bigint
+	| Number
+	// Reasonable
+	| boolean
+	| `${number | bigint}`
+	| `${Sign | ''}${'Infinity'}`
+	// Strange
+	| null;
+
 /** A value that can be compared numerically using `<`, `>`, `<=`, or `>=`. */
-export type Comparable = string | number | bigint | boolean | null | {[Symbol.toPrimitive](hint: 'number'): number};
+export type Comparable = string | NumberLike;
 
 /**
  * A function used to determine the direction a search algorithm should take when traversing data to find a desired element.
