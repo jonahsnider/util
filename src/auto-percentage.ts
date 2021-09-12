@@ -60,8 +60,14 @@ export class AutoPercentage {
 	 * ```js
 	 * const autoPercentage = new AutoPercentage();
 	 *
-	 * Number(autoPercentage.count()); // 1
-	 * Number(autoPercentage.count()); // 2
+	 * const a = autoPercentage.count();
+	 *
+	 * Number(a); // 1
+	 *
+	 * const b = autoPercentage.count();
+	 *
+	 * Number(a); // 2
+	 * Number(b); // 2
 	 * ```
 	 *
 	 * @returns The number of times this percentage has been incremented
