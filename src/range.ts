@@ -89,4 +89,24 @@ export class Range {
 	isSuperrange(range: Range): boolean {
 		return range === this || (this.lower! >= range.lower! && this.upper! <= range.upper!);
 	}
+
+	/**
+	 * Check whether this range contains the given range
+	 *
+	 * @example
+	 * ```js
+	 * const a = new Range(0, 100);
+	 * const b = new Range(25, 75);
+	 *
+	 * a.isSubRange(b); // true
+	 * b.isSubRange(a); // false
+	 * ```
+	 *
+	 * @param range - Range to compare
+	 *
+	 * @returns Whether this range contains the given range
+	 */
+	isSubrange(range: Range): boolean {
+		return range === this || (this.lower! <= range.lower! && this.upper! >= range.upper!);
+	}
 }

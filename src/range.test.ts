@@ -43,4 +43,20 @@ describe(Range.name, () => {
 			expect(new Range(1, 4).isSuperrange(new Range(5, 8))).toBe(false);
 		});
 	});
+
+	describe(`${Range.name}#${Range.prototype.isSubrange.name}`, () => {
+		it('returns true for subrange', () => {
+			const range = new Range(1, 4);
+			expect(range.isSubrange(range)).toBe(true);
+
+			expect(new Range(1, 4).isSubrange(new Range(1, 4))).toBe(true);
+			expect(new Range(1, 4).isSubrange(new Range(2, 3))).toBe(true);
+		});
+
+		it('returns false for non-subrange', () => {
+			expect(new Range(2, 3).isSubrange(new Range(1, 4))).toBe(false);
+
+			expect(new Range(1, 4).isSubrange(new Range(5, 8))).toBe(false);
+		});
+	});
 });
