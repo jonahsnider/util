@@ -28,4 +28,19 @@ describe(Range.name, () => {
 			expect([...new Range(1, 3)]).toStrictEqual([1, 3]);
 		});
 	});
+
+	describe(`${Range.name}#${Range.prototype.isSuperrange.name}`, () => {
+		it('returns true for superrange', () => {
+			const range = new Range(1, 4);
+			expect(range.isSuperrange(range)).toBe(true);
+
+			expect(new Range(1, 4).isSuperrange(new Range(1, 4))).toBe(true);
+			expect(new Range(2, 3).isSuperrange(new Range(1, 4))).toBe(true);
+		});
+
+		it('returns false for non-superrange', () => {
+			expect(new Range(1, 4).isSuperrange(new Range(2, 3))).toBe(false);
+			expect(new Range(1, 4).isSuperrange(new Range(5, 8))).toBe(false);
+		});
+	});
 });

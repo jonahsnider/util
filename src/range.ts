@@ -69,4 +69,24 @@ export class Range {
 		yield this.lower;
 		yield this.upper;
 	}
+
+	/**
+	 * Check whether a given range contains this range.
+	 *
+	 * @example
+	 * ```js
+	 * const a = new Range(0, 100);
+	 * const b = new Range(25, 75);
+	 *
+	 * a.isSuperrange(b); // false
+	 * b.isSuperrange(a); // true
+	 * ```
+	 *
+	 * @param range - Range to compare
+	 *
+	 * @returns Whether this range is contained within the other one
+	 */
+	isSuperrange(range: Range): boolean {
+		return range === this || (this.lower! >= range.lower! && this.upper! <= range.upper!);
+	}
 }
