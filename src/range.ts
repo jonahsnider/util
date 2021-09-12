@@ -30,6 +30,10 @@ export class Range {
 	 * ```js
 	 * const range = Range.from([100, 200]);
 	 * ```
+	 *
+	 * @param iterable - The iterable to create a range from
+	 *
+	 * @returns A new range
 	 */
 	static from(iterable: Iterable<Comparable>): Range {
 		const [lower, upper] = iterable;
