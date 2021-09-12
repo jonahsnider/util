@@ -109,4 +109,32 @@ export class Range {
 	isSubrange(range: Range): boolean {
 		return range === this || (this.lower! <= range.lower! && this.upper! >= range.upper!);
 	}
+
+	/**
+	 * Check whether a given range has the same lower and upper bounds as this one.
+	 *
+	 * @example
+	 * ```js
+	 * const a = new Range(0, 100);
+	 * const b = new Range(0, 100);
+	 *
+	 * a.equals(a); // true
+	 * a.equals(b); // true
+	 * ```
+	 *
+	 * @example
+	 * ```js
+	 * const a = new Range(0, 100);
+	 * const b = new Range(150, 150);
+	 *
+	 * a.equals(b); // true
+	 * ```
+	 *
+	 * @param range - Range to compare
+	 *
+	 * @returns Whether the other range has the same lower and upper bounds as this one
+	 */
+	equals(range: Range): boolean {
+		return range === this || (this.lower === range.lower && this.upper === range.upper);
+	}
 }

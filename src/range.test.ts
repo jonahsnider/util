@@ -59,4 +59,17 @@ describe(Range.name, () => {
 			expect(new Range(1, 4).isSubrange(new Range(5, 8))).toBe(false);
 		});
 	});
+
+	describe(`${Range.name}#${Range.prototype.equals.name}`, () => {
+		it('returns true for equal ranges', () => {
+			const range = new Range(1, 4);
+
+			expect(range.equals(range)).toBe(true);
+			expect(new Range(1, 4).equals(new Range(1, 4))).toBe(true);
+		});
+
+		it('returns false for inequal ranges', () => {
+			expect(new Range(1, 4).equals(new Range(2, 3))).toBe(false);
+		});
+	});
 });
