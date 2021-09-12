@@ -39,3 +39,38 @@ export function not<T extends (...params: any[]) => boolean>(fn: T): T {
 export function invert<T extends (...params: any[]) => number | bigint>(fn: T): T {
 	return ((...params) => -fn(...params)) as T;
 }
+
+/**
+ * Create a new function that calls the provided `fn` with the given arguments.
+ * After the first call the return value will be cached and returned again, meaning you technically only need to pass the arguments the first time.
+ *
+ * @example
+ * ```js
+ * function add(a, b) {
+ *  return a + b;
+ * }
+ *
+ * const thunk = thunkify(add);
+ *
+ * thunk(1, 2); // 3
+ * thunk(3, 4); // 3
+ * ```
+ *
+ * @param fn - The function to thunkify
+ *
+ * @returns A function that returns whatever the first call of `fn` returns for the given arguments
+ */
+export function thunkify<T extends AnyFunction>(fn: T): (...params: Parameters<T>) => ReturnType<T> {
+	let called = false;
+	let result: ReturnType<T>;
+
+	return (...params: Parameters<T>): ReturnType<T> => {
+		if (!called) {
+			called = true;
+
+			result = fn(...params);
+		}
+
+		return result;
+	};
+}

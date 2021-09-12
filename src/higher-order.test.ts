@@ -1,5 +1,5 @@
 import {nullish} from '.';
-import {invert, not} from './higher-order';
+import {invert, not, thunkify} from './higher-order';
 
 describe(not.name, () => {
 	it('negates booleans', () => {
@@ -29,5 +29,34 @@ describe(invert.name, () => {
 		expect(invert(() => -1n)()).toBe(1n);
 		expect(invert(() => 0n)()).toBe(-0n);
 		expect(invert(() => -0n)()).toBe(0n);
+	});
+});
+
+describe(thunkify.name, () => {
+	it('thunks', () => {
+		const f = jest.fn(() => 123);
+		const g = thunkify(f);
+
+		expect(g()).toBe(123);
+		expect(g()).toBe(123);
+		expect(f).toHaveBeenCalledTimes(1);
+	});
+
+	it('works with promises that resolve', () => {
+		const f = jest.fn(() => Promise.resolve(123));
+		const g = thunkify(f);
+
+		expect(g()).resolves.toBe(123);
+		expect(g()).resolves.toBe(123);
+		expect(f).toHaveBeenCalledTimes(1);
+	});
+
+	it('works with promises that reject', () => {
+		const f = jest.fn(() => Promise.reject(new Error('abc')));
+		const g = thunkify(f);
+
+		expect(g()).rejects.toThrow('abc');
+		expect(g()).rejects.toThrow('abc');
+		expect(f).toHaveBeenCalledTimes(1);
 	});
 });
