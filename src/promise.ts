@@ -15,7 +15,7 @@ export type Result<T, E> = ResolvedResult<T> | RejectedResult<E>;
  *
  * @returns A tuple of the resolved value or rejected error
  */
-export async function settled<E, T>(promise: Promise<T>): Promise<Result<T, E>> {
+export async function settled<E, T>(promise: PromiseLike<T>): Promise<Result<T, E>> {
 	try {
 		return [await promise, undefined];
 	} catch (error: unknown) {
@@ -25,7 +25,7 @@ export async function settled<E, T>(promise: Promise<T>): Promise<Result<T, E>> 
 
 const DELAY_RESOLVED_VALUE = Symbol('delayResolvedValue');
 
-function delay(ms: number): [timer: NodeJS.Timeout, delay: Promise<typeof DELAY_RESOLVED_VALUE>] {
+function delay(ms: number): [timer: NodeJS.Timeout, delay: PromiseLike<typeof DELAY_RESOLVED_VALUE>] {
 	let timer: NodeJS.Timeout;
 
 	const promise = new Promise<typeof DELAY_RESOLVED_VALUE>(resolve => {
@@ -43,7 +43,7 @@ function delay(ms: number): [timer: NodeJS.Timeout, delay: Promise<typeof DELAY_
  *
  * @returns The resolved value of the promise
  */
-export async function timeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
+export async function timeout<T>(promise: PromiseLike<T>, timeoutMs: number): Promise<T> {
 	const [timer, timeoutPromise] = delay(timeoutMs);
 	const resolvedValue = await Promise.race([promise, timeoutPromise]);
 
