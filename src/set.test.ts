@@ -52,6 +52,7 @@ describe(isDisjoint.name, () => {
 	it('returns true for disjoint iterables', () => {
 		expect(isDisjoint([], [])).toBe(true);
 
+		expect(isDisjoint(new Set([1]), [2])).toBe(true);
 		expect(isDisjoint([1], [2])).toBe(true);
 	});
 
