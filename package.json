@@ -40,12 +40,12 @@
 	],
 	"scripts": {
 		"analyze": "size-limit --why",
+		"build": "rollup --config rollup.config.js",
 		"docs": "typedoc --options ./typedoc.json",
 		"publish": "semantic-release",
-		"build": "rollup --config rollup.config.js",
 		"size": "size-limit",
-		"test": "jest",
-		"style": "prettier --check ."
+		"style": "prettier --check .",
+		"test": "jest"
 	},
 	"resolutions": {
 		"terser": "5.9.0"
