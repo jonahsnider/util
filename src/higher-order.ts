@@ -15,6 +15,8 @@ import {AnyFunction, NumberLike} from './types';
  * @param fn - Function to negate the return value of
  *
  * @returns The inverted return value of `fn`
+ *
+ * @public
  */
 export function not<T extends (...params: any[]) => boolean>(fn: T): T {
 	return ((...params) => !fn(...params)) as T;
@@ -37,6 +39,8 @@ export function not<T extends (...params: any[]) => boolean>(fn: T): T {
  * @param fn - Function to invert return value of
  *
  * @returns The inverted return value of `fn`
+ *
+ * @public
  */
 export function invert<T extends (...params: any[]) => NumberLike>(fn: T): T {
 	return ((...params) => -fn(...params)!) as T;
@@ -61,6 +65,8 @@ export function invert<T extends (...params: any[]) => NumberLike>(fn: T): T {
  * @param fn - The function to thunkify
  *
  * @returns A function that returns whatever the first call of `fn` returns for the given arguments
+ *
+ * @public
  */
 export function thunkify<T extends AnyFunction>(fn: T): (...params: Parameters<T>) => ReturnType<T> {
 	let called = false;

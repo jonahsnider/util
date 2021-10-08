@@ -62,6 +62,8 @@ function identicalMap<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean
  * @param b - Second array to compare
  *
  * @returns `true` if `a` and `b` have the same elements in the same order, `false` otherwise
+ *
+ * @public
  */
 export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
 /**
@@ -80,6 +82,8 @@ export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
  * @param b - Second `Set` to compare
  *
  * @returns `true` if `a` and `b` have the same elements, `false` otherwise
+ *
+ * @public
  */
 export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
 /**
@@ -98,6 +102,8 @@ export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
  * @param b - Second `Map` to compare
  *
  * @returns `true` if `a` and `b` have the key-value pairs, `false` otherwise
+ *
+ * @public
  */
 export function identical<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean;
 export function identical<V, K = never>(a: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>, b: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>): boolean {
@@ -134,6 +140,8 @@ export function identical<V, K = never>(a: readonly V[] | ReadonlySet<V> | Reado
  * @param iterables - Elements to compare
  *
  * @returns `true` if all elements are strictly equal, `false` otherwise
+ *
+ * @public
  */
 export function same<T>(...iterables: [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
 	const iterators = iterables.map(item => item[Symbol.iterator]());

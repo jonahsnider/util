@@ -1,5 +1,19 @@
+/**
+ * A result type for a `Promise` that resolved.
+ *
+ * @public
+ */
 export type ResolvedResult<T> = [value: T, error: undefined];
+/**
+ * A result type for a `Promise` that rejected.
+ *
+ * @public
+ */
 export type RejectedResult<T> = [value: undefined, error: T];
+/**
+ * A result type to represent a resolved or rejected `Promise`.
+ * @public
+ */
 export type Result<T, E> = ResolvedResult<T> | RejectedResult<E>;
 
 /**
@@ -14,6 +28,8 @@ export type Result<T, E> = ResolvedResult<T> | RejectedResult<E>;
  * @param promise - The promise to settle
  *
  * @returns A tuple of the resolved value or rejected error
+ *
+ * @public
  */
 export async function settled<E, T>(promise: PromiseLike<T>): Promise<Result<T, E>> {
 	try {
@@ -42,6 +58,8 @@ function delay(ms: number): [timer: NodeJS.Timeout, delay: PromiseLike<typeof DE
  * @param timeoutMs - The timeout in milliseconds
  *
  * @returns The resolved value of the promise
+ *
+ * @public
  */
 export async function timeout<T>(promise: PromiseLike<T>, timeoutMs: number): Promise<T> {
 	const [timer, timeoutPromise] = delay(timeoutMs);

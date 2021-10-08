@@ -1,10 +1,18 @@
 import {repeat} from './iterable';
 import {DirectionFn} from './types';
 
-/** A 2-dimensional table of type `T`. */
+/**
+ * A 2-dimensional table of type `T`.
+ *
+ * @public
+ */
 export type Table<T> = T[][];
 
-/** An array with at least 1 element. */
+/**
+ * An array with at least 1 element.
+ *
+ * @public
+ */
 export type NonEmptyArray<T> = [T, ...T[]];
 
 /**
@@ -22,6 +30,8 @@ export type NonEmptyArray<T> = [T, ...T[]];
  * @see {@link shuffle} if you want to implement a random selection without replacement
  *
  * @returns A random element from the array or `undefined` if the array was empty
+ *
+ * @public
  */
 export function sample<T>(array: ArrayLike<T>): T | undefined {
 	return array[Math.floor(Math.random() * array.length)] as T | undefined;
@@ -41,6 +51,8 @@ export function sample<T>(array: ArrayLike<T>): T | undefined {
  * @param mutate - Optional, `true` if specified
  *
  * @see {@link sample} if you only want to select one element at random
+ *
+ * @public
  */
 export function shuffle<T>(array: T[], mutate?: true): void;
 /**
@@ -59,6 +71,8 @@ export function shuffle<T>(array: T[], mutate?: true): void;
  * @see {@link sample} if you only want to select one element at random
  *
  * @returns The shuffled array
+ *
+ * @public
  */
 export function shuffle<T>(array: ArrayLike<T> & Iterable<T>, mutate: false): T[];
 export function shuffle<T>(array: T[] | (ArrayLike<T> & Iterable<T>), mutate = true): void | T[] {
@@ -98,6 +112,8 @@ export function shuffle<T>(array: T[] | (ArrayLike<T> & Iterable<T>), mutate = t
  * @param directionFn - The function used to determine what direction to continue searching
  *
  * @returns The value of the first element in the array that satisfies the provided testing function. Otherwise, `undefined` is returned.
+ *
+ * @public
  */
 export function binarySearch<T>(array: ArrayLike<T>, directionFn: DirectionFn<T>): ReturnType<T[]['find']> {
 	let left = 0;
@@ -153,6 +169,8 @@ export function binarySearch<T>(array: ArrayLike<T>, directionFn: DirectionFn<T>
  * @param size - The size of each chunk
  *
  * @returns The new array containing chunks of the original `array`
+ *
+ * @public
  */
 export function chunk<T>(array: readonly T[], size: number): Table<T> {
 	if (array.length === size) {
@@ -162,13 +180,26 @@ export function chunk<T>(array: readonly T[], size: number): Table<T> {
 	return mapFill(i => array.slice(i * size, i * size + size), Math.ceil(array.length / size));
 }
 
-type ObjectWithLength = {length: number};
-type ObjectWithSize = {size: number};
-
-type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
+/**
+ * An object with a `length` property.
+ * @internal
+ */
+export type ObjectWithLength = {length: number};
+/**
+ * An object with a `size` property.
+ * @internal
+ */
+export type ObjectWithSize = {size: number};
 
 /**
- * Arrange 2 objects in a tuple by their length/size.
+ * A tuple of two elements arranged so the largest element is first and the smallest is last.
+ *
+ * @internal
+ */
+export type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
+
+/**
+ * Arrange 2 objects in a tuple by their length.
  * Useful for situations where you are iterating `a` or `b` depending on which is larger.
  *
  * @example
@@ -176,7 +207,7 @@ type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, 
  * const a = [1, 2];
  * const b = [1, 2, 3];
  *
- * const [largest, smallest] = arrangeByLength(a, b);
+ * const [largest, smallest] = largeToSmall(a, b);
  *
  * console.log(largest); // [1, 2, 3]
  * console.log(smallest); // [1, 2]
@@ -186,8 +217,32 @@ type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, 
  * @param b - Second object
  *
  * @throws If `a` does not have a `length` or `size` property
+ *
+ * @public
  */
 export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLength>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
+/**
+ * Arrange 2 objects in a tuple by their size.
+ * Useful for situations where you are iterating `a` or `b` depending on which is larger.
+ *
+ * @example
+ * ```js
+ * const a = new Set([1, 2]);
+ * const b = new Set([1, 2, 3]);
+ *
+ * const [largest, smallest] = largeToSmall(a, b);
+ *
+ * console.log(largest); // Set(3) { 1, 2, 3 }
+ * console.log(smallest); // Set(2) { 1, 2 }
+ * ```
+ *
+ * @param a - First object
+ * @param b - Second object
+ *
+ * @throws If `a` does not have a `length` or `size` property
+ *
+ * @public
+ */
 export function largeToSmall<A extends ObjectWithSize, B extends ObjectWithSize>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
 export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B extends ObjectWithSize | ObjectWithLength>(
 	a: A,
@@ -228,6 +283,8 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
  * @param array - The array to find holes in
  *
  * @returns An array of indexes of holes in the array
+ *
+ * @public
  */
 export function holes(array: ArrayLike<unknown>): number[] {
 	const result: number[] = [];
@@ -259,6 +316,8 @@ export function holes(array: ArrayLike<unknown>): number[] {
  * @param element - The element to remove
  *
  * @returns The return value of `Array.prototype.splice`
+ *
+ * @public
  */
 export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice']> {
 	const index = array.indexOf(element);
@@ -289,6 +348,8 @@ export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice
  * @param element - The element to remove
  *
  * @returns The return value of `Array.prototype.splice`
+ *
+ * @public
  */
 export function pullAll<T>(array: T[], element: T): ReturnType<typeof array['splice']> {
 	const indexes = indexOfAll(array, element);
@@ -325,6 +386,8 @@ export function pullAll<T>(array: T[], element: T): ReturnType<typeof array['spl
  * @param replacement - The element to replace `searchElement` with
  *
  * @returns The index of the replaced element, or `-1` if it is not present.
+ *
+ * @public
  */
 export function replace<T>(array: T[], searchElement: T, replacement: T): number {
 	const index = array.indexOf(searchElement);
@@ -354,6 +417,8 @@ export function replace<T>(array: T[], searchElement: T, replacement: T): number
  * @param replacement - The element to replace `searchElement` with
  *
  * @returns The number of elements replaced
+ *
+ * @public
  */
 export function replaceAll<T>(array: T[], searchElement: T, replacement: T): number {
 	let timesReplaced = 0;
@@ -384,6 +449,8 @@ export function replaceAll<T>(array: T[], searchElement: T, replacement: T): num
  *
  * @see {@link mapFill} to do the same thing but with a function that generates values
  * @see {@link repeat} to do the same thing but return an iterable
+ *
+ * @public
  */
 export function fill<T>(value: T, length: number): T[] {
 	return Array.from({length}, () => value);
@@ -404,6 +471,8 @@ export function fill<T>(value: T, length: number): T[] {
  *
  * @see {@link mapRepeat} to do the same thing but return an iterable
  * @see {@link fill} to do the same thing but with a given value
+ *
+ * @public
  */
 export function mapFill<T>(valueFn: (index: number) => T, length: number): T[] {
 	return Array.from({length}, (_, i) => valueFn(i));
@@ -427,6 +496,8 @@ export function mapFill<T>(valueFn: (index: number) => T, length: number): T[] {
  * @param fillValue - The value to pad the array with
  *
  * @see {@link padEnd} to pad the end of an array
+ *
+ * @public
  */
 export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
 	array.unshift(...repeat(fillValue, maxLength - array.length));
@@ -450,6 +521,8 @@ export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
  * @param fillValue - The value to pad the array with
  *
  * @see {@link padStart} to pad the start of an array
+ *
+ * @public
  */
 export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
 	array.push(...repeat(fillValue, maxLength - array.length));
@@ -470,6 +543,8 @@ export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
  * @returns An array of indexes of `searchElement` in `array`
  *
  * @see {@link findIndexAll} if you want to use a predicate instead of strict equality
+ *
+ * @public
  */
 export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
 	const indexes: number[] = [];
@@ -499,6 +574,8 @@ export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
  * @returns An array of indexes of elements that passed `predicate` in `array`
  *
  * @see {@link indexOfAll} if you want to find all elements equal to a given value
+ *
+ * @public
  */
 export function findIndexAll<T>(array: ArrayLike<T>, predicate: (element: T, index: number) => boolean): number[] {
 	const indexes: number[] = [];

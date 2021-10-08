@@ -195,3 +195,9 @@ $RECYCLE.BIN/
 
 # Generated documentation
 docs_out
+
+# API Extractor
+api.md
+
+# TypeScript compiler output
+tsc_*

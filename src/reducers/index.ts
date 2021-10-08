@@ -1,6 +1,7 @@
 import {Comparable} from '../types';
 
-export * as Bitwise from './bitwise';
+import * as Bitwise from './bitwise';
+export {Bitwise};
 
 /**
  * Calculate the sum of 2 `number`s.
@@ -17,6 +18,8 @@ export * as Bitwise from './bitwise';
  * @param b - Second summand
  *
  * @returns The sum of `a` and `b`
+ *
+ * @public
  */
 export function sum(a: number, b: number): number;
 /**
@@ -34,6 +37,8 @@ export function sum(a: number, b: number): number;
  * @param b - Second summand
  *
  * @returns The sum of `a` and `b`
+ *
+ * @public
  */
 export function sum(a: bigint, b: bigint): bigint;
 export function sum<T extends number>(a: T, b: T): T {
@@ -55,6 +60,8 @@ export function sum<T extends number>(a: T, b: T): T {
  * @param b - Second factor
  *
  * @returns The product of `a` and `b`
+ *
+ * @public
  */
 export function product(a: number, b: number): number;
 /**
@@ -72,6 +79,8 @@ export function product(a: number, b: number): number;
  * @param b - Second factor
  *
  * @returns The product of `a` and `b`
+ *
+ * @public
  */
 export function product(a: bigint, b: bigint): bigint;
 export function product<T extends number>(a: T, b: T): T {
@@ -93,6 +102,8 @@ export function product<T extends number>(a: T, b: T): T {
  * @param currentValue - The next value to compare
  *
  * @returns `previousValue` or `currentValue`, whichever is larger
+ *
+ * @public
  */
 export function max<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B {
 	return (currentValue as unknown as A)! > accumulator! ? currentValue : accumulator;
@@ -113,6 +124,8 @@ export function max<A extends Comparable, B extends Comparable>(accumulator: A, 
  * @param currentValue - The next value to compare
  *
  * @returns `previousValue` or `currentValue`, whichever is lower
+ *
+ * @public
  */
 export function min<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B {
 	return (currentValue as unknown as A)! < accumulator! ? currentValue : accumulator;

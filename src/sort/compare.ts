@@ -39,6 +39,8 @@ function descendingRaw(a: Comparable, b: Comparable): number {
  * @param predicate - A function that maps elements from type `T` to a {@link Comparable | `Comparable`}
  *
  * @returns A compare function that returns a negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise
+ *
+ * @public
  */
 export function ascending<T>(predicate: (element: T) => Comparable): CompareFn<T>;
 /**
@@ -55,6 +57,8 @@ export function ascending<T>(predicate: (element: T) => Comparable): CompareFn<T
  * @param b - Element to compare
  *
  * @returns A negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise
+ *
+ * @public
  */
 export function ascending(a: Comparable, b: Comparable): number;
 export function ascending<T>(aOrPredicate: Comparable | ((element: T) => Comparable), b: Comparable | void): number | CompareFn<T> {
@@ -78,6 +82,8 @@ export function ascending<T>(aOrPredicate: Comparable | ((element: T) => Compara
  * @param predicate - A function that maps elements from type `T` to a {@link Comparable | `Comparable`}
  *
  * @returns A compare function that returns a positive value if first argument is less than second argument, zero if they're equal and a negative value otherwise
+ *
+ * @public
  */
 export function descending<T>(predicate: (element: T) => Comparable): CompareFn<T>;
 /**
@@ -93,6 +99,8 @@ export function descending<T>(predicate: (element: T) => Comparable): CompareFn<
  * @param b - Element to compare
  *
  * @returns A positive value if first argument is less than second argument, zero if they're equal and a negative value otherwise
+ *
+ * @public
  */
 export function descending(a: Comparable, b: Comparable): number;
 export function descending<T>(aOrPredicate: Comparable | ((element: T) => Comparable), b: Comparable | void): number | CompareFn<T> {

@@ -9,6 +9,8 @@
  * @param iterables - The iterables to combine
  *
  * @returns A single iterable containing all the elements of all the iterables
+ *
+ * @public
  */
 export function* combineIterables<T>(...iterables: Iterable<T>[]): Iterable<T> {
 	for (const iterable of iterables) {
@@ -33,6 +35,8 @@ export function* combineIterables<T>(...iterables: Iterable<T>[]): Iterable<T> {
  * @param separator - A string used to separate one element of the iterable from the next in the resulting string
  *
  * @returns A string containing the elements in iterable joined by separator
+ *
+ * @public
  */
 export function join(iterable: Iterable<unknown>, separator = ','): string {
 	let result = '';
@@ -75,8 +79,33 @@ export function join(iterable: Iterable<unknown>, separator = ','): string {
  * @param predicate - The function to call on each element in the iterable to determine if it passes the test
  *
  * @returns `true` if every element is truthy, `false` otherwise
+ *
+ * @public
  */
 export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element: T) => element is S): iterable is Iterable<S>;
+/**
+ * Determines whether all the elements of an iterable are truthy.
+ *
+ * @example
+ * ```js
+ * every([false], x => x); // false
+ * ```
+ * @example
+ * ```js
+ * every([false, true], x => x); // false
+ * ```
+ * @example
+ * ```js
+ * every([true], x => x); // true
+ * ```
+ *
+ * @param iterable - The iterable to take elements from
+ * @param predicate - The function to call on each element in the iterable to determine if it passes the test
+ *
+ * @returns `true` if every element is truthy, `false` otherwise
+ *
+ * @public
+ */
 export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean;
 export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean {
 	for (const element of iterable) {
@@ -108,6 +137,8 @@ export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unkno
  * @param predicate - The function to call on each element in the iterable to determine if it passes the test
  *
  * @returns `true` if any element passes the predicate, `false` otherwise
+ *
+ * @public
  */
 export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean {
 	for (const element of iterable) {
@@ -137,6 +168,8 @@ export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknow
  * @param searchElement - The element to search for
  *
  * @returns `true` if any element is truthy, `false` otherwise
+ *
+ * @public
  */
 export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean {
 	for (const element of iterable) {
@@ -160,6 +193,8 @@ export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean {
  * @param predicate - The function to call on each element in the iterable to determine if it passes the test
  *
  * @returns The value of the first element in the iterable where `predicate` is truthy, and `undefined` otherwise
+ *
+ * @public
  */
 export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolean): T | undefined {
 	for (const element of iterable) {
@@ -185,6 +220,8 @@ export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolea
  * @returns A frequency table represented as a `Map` where keys are the elements and values are the frequency
  *
  * @see {@link count} to count the occurrences of one value in an iterable
+ *
+ * @public
  */
 export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 	const frequencies: Map<T, number> = new Map();
@@ -215,6 +252,8 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
  * array in the result. Otherwise, it will be added to the `failed` array.
  *
  * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
+ *
+ * @public
  */
 export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (element: T) => element is S): [passed: S[], failed: Array<Exclude<T, S>>];
 /**
@@ -233,6 +272,8 @@ export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (ele
  * array in the result. Otherwise, it will be added to the `failed` array.
  *
  * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
+ *
+ * @public
  */
 export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increment: number) => unknown): [passed: T[], failed: T[]];
 export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increment: number) => unknown): [passed: T[], failed: T[]] {
@@ -270,6 +311,8 @@ function* firstIterable<T>(iterable: Iterable<T>, take: number): Iterable<T> {
  * @param iterable - The iterable to take elements from
  *
  * @returns The first element of the iterable
+ *
+ * @public
  */
 export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined;
 /**
@@ -289,6 +332,8 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
  * @param take - The number of elements to take from the iterable
  *
  * @returns The first `take` elements of the iterable
+ *
+ * @public
  */
 export function first<T>(iterable: Iterable<T>, take: number): Iterable<T>;
 export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | Iterable<T> {
@@ -321,6 +366,8 @@ export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) 
  *
  * @param iterable - The iterable to find duplicates in
  * @returns An array of the duplicated elements
+ *
+ * @public
  */
 export function allDuplicates<T>(iterable: Iterable<T>): T[] {
 	const seen: Set<T> = new Set();
@@ -349,6 +396,8 @@ export function allDuplicates<T>(iterable: Iterable<T>): T[] {
  *
  * @param iterable - The iterable to find duplicates in
  * @returns A `Set` of the duplicated elements
+ *
+ * @public
  */
 export function duplicates<T>(iterable: Iterable<T>): Set<T> {
 	const seen: Set<T> = new Set();
@@ -377,6 +426,8 @@ export function duplicates<T>(iterable: Iterable<T>): Set<T> {
  * @param times - The number of times to repeat the elements of `iterable`
  *
  * @returns An array with the elements of `iterable` repeated `times` number of times
+ *
+ * @public
  */
 export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
 	for (let index = 0; index < times; index++) {
@@ -399,6 +450,8 @@ export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
  * @see {@link mapRepeat} to do the same thing but with a function that generates values
  *
  * @returns An iterable that repeats `value` `times` number of times
+ *
+ * @public
  */
 export function* repeat<T>(value: T, times: number): Iterable<T> {
 	for (let index = 0; index < times; index++) {
@@ -421,6 +474,8 @@ export function* repeat<T>(value: T, times: number): Iterable<T> {
  * @see {@link repeat} to do the same thing but with a given value
  *
  * @returns An iterable that repeats `value` `times` number of times
+ *
+ * @public
  */
 export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number): Iterable<T> {
 	for (let index = 0; index < times; index++) {
@@ -444,6 +499,8 @@ export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number):
  * @param iterable - The iterable to check
  *
  * @returns `true` if `iterable` is empty, `false` otherwise
+ *
+ * @public
  */
 export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never> {
 	for (const _ of iterable) {
@@ -466,6 +523,8 @@ export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never
  * @returns The number of elements in `iterable`
  *
  * @see {@link frequencyTable} to count the occurrences of all elements in an iterable
+ *
+ * @public
  */
 export function count(iterable: Iterable<unknown>): number {
 	let count = 0;

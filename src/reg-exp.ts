@@ -9,6 +9,8 @@
  * @param regExps - Regular expressions to get the union of
  *
  * @returns A new regular expression
+ *
+ * @public
  */
 export function regExpUnion(...regExps: RegExp[]): RegExp {
 	return new RegExp(regExps.map(regExp => `(${regExp.source})`).join('|'));

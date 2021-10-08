@@ -1,5 +1,9 @@
-/** @returns `T` if `T` is not a union type, `never` otherwise. */
-type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) : never) extends false ? T : never;
+/**
+ * @returns `T` if `T` is not a union type, `never` otherwise.
+ *
+ * @internal
+ */
+export type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) : never) extends false ? T : never;
 
 /**
  * Create a copy of an object with a key renamed.
@@ -16,6 +20,8 @@ type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) 
  * @param newKey - The new name for the key
  *
  * @returns A shallow-copied object with the key name updated
+ *
+ * @public
  */
 export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(
 	target: T,

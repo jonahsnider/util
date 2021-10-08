@@ -199,3 +199,6 @@ $RECYCLE.BIN/
 
 # Generated documentation
 docs_out
+
+# TypeScript compiler output
+tsc_*

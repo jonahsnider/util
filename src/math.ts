@@ -12,6 +12,8 @@ import {sum} from './reducers/index';
  * @param meanValue - The mean of `values`, will be calculated if not provided
  *
  * @returns The variance of `values`
+ *
+ * @public
  */
 export function variance(values: readonly number[], meanValue = mean(values)): number {
 	return values.map(value => (value - meanValue) ** 2).reduce(sum) / (values.length - 1);
@@ -29,6 +31,8 @@ export function variance(values: readonly number[], meanValue = mean(values)): n
  * @param meanValue - The mean of `values`, will be calculated if not provided
  *
  * @returns The standard deviation of `values`
+ *
+ * @public
  */
 export function stddev(values: readonly number[], meanValue = mean(values)): number {
 	return Math.sqrt(variance(values, meanValue));
@@ -46,6 +50,8 @@ export function stddev(values: readonly number[], meanValue = mean(values)): num
  * @param meanValue - The mean of `values`, will be calculated if not provided
  *
  * @returns The standard deviation of `values`
+ *
+ * @public
  */
 export function relativeStddev(values: readonly number[], meanValue = mean(values)): number {
 	return stddev(values, meanValue) / meanValue;
@@ -60,15 +66,17 @@ export function relativeStddev(values: readonly number[], meanValue = mean(value
  * ```
  *
  * @param x - Sample to calculate the normal distribution of
- * @param σ - Standard deviation
- * @param μ - Mean
+ * @param standardDeviation - Standard deviation
+ * @param mean - Mean
  *
  * @see {@link standardNormaldist} For calculating the standard normal distribution
  *
  * @returns The normal distribution
+ *
+ * @public
  */
-export function normaldist(x: number, σ: number, μ: number): number {
-	return (1 / (σ * Math.sqrt(2 * Math.PI))) * Math.E ** ((-1 / 2) * (x - μ / σ) ** 2);
+export function normaldist(x: number, standardDeviation: number, mean: number): number {
+	return (1 / (standardDeviation * Math.sqrt(2 * Math.PI))) * Math.E ** ((-1 / 2) * (x - mean / standardDeviation) ** 2);
 }
 
 /**
@@ -84,6 +92,8 @@ export function normaldist(x: number, σ: number, μ: number): number {
  * @see {@link normaldist} For calculating the normal distribution
  *
  * @returns The standard normal distribution
+ *
+ * @public
  */
 export function standardNormaldist(x: number): number {
 	return normaldist(x, 1, 0);
@@ -105,6 +115,8 @@ export function standardNormaldist(x: number): number {
  * @see {@link mode} to calculate the mode of an array
  *
  * @returns The mean of the array
+ *
+ * @public
  */
 export function mean(array: readonly number[]): number;
 /**
@@ -123,6 +135,8 @@ export function mean(array: readonly number[]): number;
  * @see {@link mode} to calculate the mode of an array
  *
  * @returns The mean of the array
+ *
+ * @public
  */
 export function mean(array: readonly bigint[]): bigint;
 export function mean<T extends number>(array: readonly T[]): T {
@@ -149,8 +163,29 @@ export function mean<T extends number>(array: readonly T[]): T {
  * @see {@link mode} to calculate the mode of an array
  *
  * @returns The median of `values`
+ *
+ * @public
  */
 export function median(array: readonly number[]): number;
+/**
+ * Calculate the median of an array of bigints.
+ *
+ * @example
+ * ```js
+ * const values = [1n, 2n, 3n];
+ *
+ * median(values); // 2n
+ * ```
+ *
+ * @param array - Values to use in the calculation
+ *
+ * @see {@link mean} to calculate the mean of an array
+ * @see {@link mode} to calculate the mode of an array
+ *
+ * @returns The median of `values`
+ *
+ * @public
+ */
 export function median(array: readonly bigint[]): bigint;
 export function median<T extends number>(array: readonly T[]): T {
 	const even = array.length % 2 === 0;
@@ -182,6 +217,8 @@ export function median<T extends number>(array: readonly T[]): T {
  * @see {@link median} to calculate the median of an array
  *
  *  @returns An array of the modes of `values`
+ *
+ * @public
  */
 export function mode<T>(iterable: Iterable<T>): T[] {
 	const frequencyTable: Map<T, number> = new Map();
@@ -219,6 +256,8 @@ export function mode<T>(iterable: Iterable<T>): T[] {
  * @param max - Upper bound (exclusive) of the output range
  *
  * @returns A random number within the given bounds
+ *
+ * @public
  */
 export function random(min: number, max: number): number {
 	if (__DEV__ && min > max) {
@@ -240,6 +279,8 @@ export function random(min: number, max: number): number {
  * @param max - Upper bound (exclusive) of the output range
  *
  * @returns A random integer within the given bounds
+ *
+ * @public
  */
 export function randomInt(min: number, max: number): number {
 	if (__DEV__ && min > max) {
@@ -264,6 +305,8 @@ export function randomInt(min: number, max: number): number {
  * @param max - The upper bound of the range of numbers
  *
  * @returns The value nearest to `value` which is within the provided range
+ *
+ * @public
  */
 export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(value: T, min: M1, max: M2): T | M1 | M2 {
 	if (__DEV__ && min > max) {

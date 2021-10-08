@@ -25,6 +25,8 @@
  * 	console.log(`${step.name} finished - job is ${Math.round(progress * 100)}% complete`);
  * }
  * ```
+ *
+ * @public
  */
 export class AutoPercentage {
 	private _count = 0;

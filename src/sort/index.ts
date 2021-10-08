@@ -1,6 +1,7 @@
 import {CompareFn} from '../types';
 
-export * as Sort from './compare';
+import * as Sort from './compare';
+export {Sort};
 
 /**
  * Sort an object's keys by comparing their respective values.
@@ -18,6 +19,8 @@ export * as Sort from './compare';
  * @param compareFn - Function used to compare object values
  *
  * @returns A new object with the keys in order
+ *
+ * @public
  */
 export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, V>>, compareFn: CompareFn<V>): Array<[K, V]> {
 	return Object.entries<V>(object).sort(([, aValue], [, bValue]) => compareFn(aValue, bValue)) as Array<[K, V]>;
@@ -39,6 +42,8 @@ export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, 
  * @param compareFn - Function to compare elements
  *
  * @returns Whether the array is sorted according to the given compare function
+ *
+ * @public
  */
 export function isSorted<T>(array: ArrayLike<T>, compareFn: CompareFn<T>): boolean {
 	for (let index = 0; index < array.length - 1; index++) {

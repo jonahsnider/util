@@ -2,13 +2,15 @@ import {Comparable} from './types';
 
 /**
  * A range between 2 values.
+ *
+ * @public
  */
 export class Range {
 	/**
 	 * Create a new range from 2 values.
 	 *
-	 * @param lower The lower bound of this range
-	 * @param upper The upper bound of this range
+	 * @param lower - The lower bound of this range
+	 * @param upper - The upper bound of this range
 	 *
 	 * @throws If `lower` is greater than `upper`
 	 *

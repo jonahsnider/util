@@ -16,6 +16,8 @@
  *
  * const elapsed = stopwatch.end();
  * ```
+ *
+ * @public
  */
 export class Stopwatch {
 	private startTime?: bigint;

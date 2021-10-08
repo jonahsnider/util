@@ -1,6 +1,8 @@
 /**
  * HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status | MDN docs}
+ *
+ * @public
  */
 export enum Status {
 	/**

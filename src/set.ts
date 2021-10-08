@@ -10,6 +10,8 @@ import {combineIterables} from './iterable';
  * @see {@link isSubset} for checking if one set is a subset of another
  *
  * @returns `true` if `a` is a superset of `b`, `false` otherwise
+ *
+ * @public
  */
 export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean {
 	if (a === b) {
@@ -34,6 +36,8 @@ export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean {
  * @see {@link isSuperset} for checking if one set is a superset of another
  *
  * @returns `true` if `a` is a subset of `b`, `false` otherwise
+ *
+ * @public
  */
 export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean {
 	if (a === b) {
@@ -57,6 +61,8 @@ export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean {
  * @param b - Second iterable
  *
  * @returns A new set which is the union of `a` and `b`
+ *
+ * @public
  */
 export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
 	if (a === (b as unknown as typeof a)) {
@@ -74,6 +80,8 @@ export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
  * @param b - Second iterable
  *
  * @returns `true` if `a` and `b` are disjoint
+ *
+ * @public
  */
 export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean {
 	if (a === b) {
@@ -98,6 +106,8 @@ export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean {
  * @param b - Second set
  *
  * @returns A new set which is the intersection of `a` and `b`
+ *
+ * @public
  */
 export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T> {
 	if (a === b) {
@@ -124,6 +134,8 @@ export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T> {
  * @param b - Second iterable
  *
  * @returns A new set which is the symmetric difference of `a` and `b`
+ *
+ * @public
  */
 export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
 	if (a === (b as unknown as typeof a)) {
@@ -151,6 +163,8 @@ export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A
  * @param b - Second iterable
  *
  * @returns A new set which is the difference of `a` and `b`
+ *
+ * @public
  */
 export function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T> {
 	if (a === b) {

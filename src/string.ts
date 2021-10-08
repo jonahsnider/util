@@ -14,6 +14,8 @@ import {frequencyTable} from './iterable';
  * @see {@link uncapitalize} for the inverse operation
  *
  * @returns Capitalized string
+ *
+ * @public
  */
 export function capitalize<T extends string>(text: T): Capitalize<T> {
 	const firstCharacter = text.charAt(0).toUpperCase();
@@ -34,6 +36,8 @@ export function capitalize<T extends string>(text: T): Capitalize<T> {
  * @see {@link capitalize} for the inverse operation
  *
  * @returns Uncapitalized string
+ *
+ * @public
  */
 export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
 	const firstCharacter = text.charAt(0).toLowerCase();
@@ -54,6 +58,8 @@ export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
  * @param suffix - Suffix to append if text was truncated
  *
  * @returns Truncated text
+ *
+ * @public
  */
 export function truncate<T extends string>(text: T, maxLength: number, suffix = ''): T | `${string}${typeof suffix}` {
 	if (text.length > maxLength) {
@@ -77,6 +83,8 @@ export function truncate<T extends string>(text: T, maxLength: number, suffix = 
  * @param replacements - An object of replacements where keys are the search values and values are the replacement values
  *
  * @returns A new string with the replacements applied
+ *
+ * @public
  */
 export function multiReplace(string: string, replacements: Record<string, string>): string {
 	const replacementsIterable: Iterable<[sub: string, by: string]> = Object.entries(replacements);
@@ -112,6 +120,8 @@ export function multiReplace(string: string, replacements: Record<string, string
  * @param string - String to get the lines of
  *
  * @returns An array of lines with leading and trailing whitespace removed
+ *
+ * @public
  */
 export function lines(string: string): string[] {
 	return string
@@ -138,6 +148,8 @@ export function lines(string: string): string[] {
  * @param b - Second string to compare
  *
  * @returns Whether the strings are anagrams of each other
+ *
+ * @public
  */
 export function isAnagram<T>(a: ArrayLike<T> & Iterable<T>, b: ArrayLike<T> & Iterable<T>): boolean {
 	if (a === b) {
@@ -172,6 +184,8 @@ const notWhitespaceRegExp = /\S/;
  * @param string - String to check
  *
  * @returns Whether the string is whitespace
+ *
+ * @public
  */
 export function isWhitespace(string: string): boolean {
 	return !notWhitespaceRegExp.test(string);

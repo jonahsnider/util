@@ -4,10 +4,9 @@
 		"module": "ESNext",
 		"moduleResolution": "node",
 
-		"outDir": "dist",
+		"emitDeclarationOnly": true,
 		"declaration": true,
-		"declarationDir": "."
+		"declarationDir": "tsc_types"
 	},
-	"exclude": ["dist"],
 	"include": ["src", "types"]
 }

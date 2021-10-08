@@ -17,9 +17,13 @@ import {AnyFunction} from './types';
  *
  * map.get('a'); // 'A'
  * ```
+ *
+ * @public
  */
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
-	/** If the default value is a function. */
+	/**
+	 * If the default value is a function.
+	 */
 	private readonly defaultValueIsFunction: boolean;
 
 	/**

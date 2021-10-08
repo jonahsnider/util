@@ -36,16 +36,19 @@
 	"browser": "./dist/index.prod.mjs",
 	"typings": "./dist/index.d.ts",
 	"files": [
-		"dist"
+		"dist",
+		"!dist/tsc_types"
 	],
 	"scripts": {
 		"analyze": "size-limit --why",
 		"build": "rollup --config rollup.config.js",
 		"docs": "typedoc --options ./typedoc.json",
-		"publish": "semantic-release",
+		"deploy": "semantic-release",
 		"size": "size-limit",
 		"style": "prettier --check .",
-		"test": "jest"
+		"test": "jest",
+		"validate-api": "api-extractor run",
+		"validate-api:local": "api-extractor run --local --verbose"
 	},
 	"prettier": "@jonahsnider/prettier-config",
 	"resolutions": {
@@ -55,6 +58,7 @@
 		"@babel/core": "7.15.8",
 		"@babel/preset-env": "7.15.8",
 		"@jonahsnider/prettier-config": "1.0.0",
+		"@microsoft/api-extractor": "7.18.14",
 		"@rollup/plugin-babel": "5.3.0",
 		"@rollup/plugin-replace": "3.0.0",
 		"@rollup/plugin-typescript": "8.2.5",

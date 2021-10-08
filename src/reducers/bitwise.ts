@@ -13,6 +13,8 @@
  * @param b - Second operand
  *
  * @returns The bitwise AND of `a` and `b`
+ *
+ * @public
  */
 export function and(a: number, b: number): number;
 /**
@@ -30,6 +32,8 @@ export function and(a: number, b: number): number;
  * @param b - Second operand
  *
  * @returns The bitwise AND of `a` and `b`
+ *
+ * @public
  */
 export function and(a: bigint, b: bigint): bigint;
 export function and<T extends number>(a: T, b: T): T {
@@ -51,6 +55,8 @@ export function and<T extends number>(a: T, b: T): T {
  * @param b - Second operand
  *
  * @returns The bitwise OR of `a` and `b`
+ *
+ * @public
  */
 export function or(a: number, b: number): number;
 /**
@@ -68,6 +74,8 @@ export function or(a: number, b: number): number;
  * @param b - Second operand
  *
  * @returns The bitwise OR of `a` and `b`
+ *
+ * @public
  */
 export function or(a: bigint, b: bigint): bigint;
 export function or<T extends number>(a: T, b: T): T {
@@ -89,6 +97,8 @@ export function or<T extends number>(a: T, b: T): T {
  * @param b - Second operand
  *
  * @returns The bitwise XOR of `a` and `b`
+ *
+ * @public
  */
 export function xor(a: number, b: number): number;
 /**
@@ -106,6 +116,8 @@ export function xor(a: number, b: number): number;
  * @param b - Second operand
  *
  * @returns The bitwise XOR of `a` and `b`
+ *
+ * @public
  */
 export function xor(a: bigint, b: bigint): bigint;
 export function xor<T extends number>(a: T, b: T): T {

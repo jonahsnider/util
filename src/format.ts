@@ -7,6 +7,8 @@ import {Table} from './array';
  * @param table - The table of strings to use for calculations
  *
  * @returns An array of lengths
+ *
+ * @public
  */
 export function maxColumnLength(table: Table<string>): number[] {
 	const lengths = table[0].map(column => column.length);
@@ -32,6 +34,8 @@ export function maxColumnLength(table: Table<string>): number[] {
  * @param delimiter - Delimiter to use in columns
  *
  * @returns A formatted string representation of the table
+ *
+ * @public
  */
 export function formatTable(table: Table<string>, delimiter = ' '): string {
 	const maxLengths = maxColumnLength(table);
