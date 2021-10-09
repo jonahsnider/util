@@ -1,4 +1,4 @@
-import process from 'node:process';
+/* eslint-disable node/prefer-global/process */
 
 /**
  * Helper to record the amount of time elapsed between 2 points during execution.

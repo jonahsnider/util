@@ -111,7 +111,7 @@ export function standardNormaldist(x: number): number {
  *
  * @param array - The array to calculate the mean of
  *
- * @see {@link median} to calculate the median of an array
+ * @see {@link (median:1)} to calculate the median of an array
  * @see {@link mode} to calculate the mode of an array
  *
  * @returns The mean of the array
@@ -131,7 +131,7 @@ export function mean(array: readonly number[]): number;
  *
  * @param array - The array to calculate the mean of
  *
- * @see {@link median} to calculate the median of an array
+ * @see {@link (median:2)} to calculate the median of an array
  * @see {@link mode} to calculate the mode of an array
  *
  * @returns The mean of the array
@@ -159,14 +159,14 @@ export function mean<T extends number>(array: readonly T[]): T {
  *
  * @param array - Values to use in the calculation
  *
- * @see {@link mean} to calculate the mean of an array
+ * @see {@link (mean:1)} to calculate the mean of an array
  * @see {@link mode} to calculate the mode of an array
  *
  * @returns The median of `values`
  *
  * @public
  */
-export function median(array: readonly number[]): number;
+export function median(array: ArrayLike<number>): number;
 /**
  * Calculate the median of an array of bigints.
  *
@@ -179,15 +179,15 @@ export function median(array: readonly number[]): number;
  *
  * @param array - Values to use in the calculation
  *
- * @see {@link mean} to calculate the mean of an array
+ * @see {@link (mean:2)} to calculate the mean of an array
  * @see {@link mode} to calculate the mode of an array
  *
  * @returns The median of `values`
  *
  * @public
  */
-export function median(array: ReadonlyArray<bigint>): bigint;
-export function median<T extends number>(array: readonly T[]): T {
+export function median(array: ArrayLike<bigint>): bigint;
+export function median<T extends number>(array: ArrayLike<T>): T {
 	const isEven = array.length % 2 === 0;
 	const middleIndex = array.length / 2;
 
@@ -213,8 +213,8 @@ export function median<T extends number>(array: readonly T[]): T {
  *
  * @param iterable - Values to use in the calculation
  *
- * @see {@link mean} to calculate the mean of an array
- * @see {@link median} to calculate the median of an array
+ * @see {@link (mean:1)} to calculate the mean of an array
+ * @see {@link (median:1)} to calculate the median of an array
  *
  *  @returns An array of the modes of `values`
  *

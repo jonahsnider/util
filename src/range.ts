@@ -37,7 +37,16 @@ export class Range {
 	 * const range = new Range(100, 200);
 	 * ```
 	 */
-	constructor(public lower: Comparable, public upper: Comparable) {
+	constructor(
+		/**
+		 * The lower bound of this range
+		 */
+		public lower: Comparable,
+		/**
+		 * The upper bound of this range
+		 */
+		public upper: Comparable,
+	) {
 		if (lower! > upper!) {
 			throw new RangeError('lower must be less than upper');
 		}

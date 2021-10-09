@@ -6,7 +6,7 @@
 
 /// <reference types="node" />
 
-import { EventEmitter } from 'events';
+import type { EventEmitter } from 'node:events';
 
 // @public
 export function allDuplicates<T>(iterable: Iterable<T>): T[];
@@ -110,13 +110,13 @@ export function clamp<T extends number | bigint, M1 extends number | bigint, M2 
 const clientErrors: Readonly<Range>;
 
 // @public
-export function combineIterables<T>(...iterables: Iterable<T>[]): Iterable<T>;
+export function combineIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T>;
 
 // @public
 export type Comparable = string | NumberLike;
 
 // @public (undocumented)
-export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
+export type CompareFn<T = Comparable> = Exclude<Parameters<T[]['sort']>[0], undefined>;
 
 // @public
 export function count(iterable: Iterable<unknown>): number;
@@ -126,8 +126,8 @@ export function cycle<T>(iterable: Iterable<T>, times: number): Iterable<T>;
 
 // @public
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
-    constructor(defaultValue: Exclude<D, AnyFunction>, entries?: readonly (readonly [K, V])[] | null);
-    constructor(defaultValueFn: (key: K) => D, entries?: readonly (readonly [K, V])[] | null);
+    constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ReadonlyArray<readonly [K, V]> | null);
+    constructor(defaultValueFn: (key: K) => D, entries?: ReadonlyArray<readonly [K, V]> | null);
     get(key: K): V | D;
 }
 
@@ -201,7 +201,7 @@ const informational: Readonly<Range>;
 export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T>;
 
 // @public
-export function invert<T extends (...params: any[]) => NumberLike>(fn: T): T;
+export function invert<T extends (...parameters: any[]) => NumberLike>(fn: T): T;
 
 // @public
 export function isAnagram<T>(a: ArrayLike<T> & Iterable<T>, b: ArrayLike<T> & Iterable<T>): boolean;
@@ -258,13 +258,13 @@ export function maxColumnLength(table: Table<string>): number[];
 export function mean(array: readonly number[]): number;
 
 // @public
-export function mean(array: readonly bigint[]): bigint;
+export function mean(array: ReadonlyArray<bigint>): bigint;
 
 // @public
-export function median(array: readonly number[]): number;
+export function median(array: ArrayLike<number>): number;
 
 // @public
-export function median(array: readonly bigint[]): bigint;
+export function median(array: ArrayLike<bigint>): bigint;
 
 // @public
 export enum Method {
@@ -301,7 +301,7 @@ export type _NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false 
 export function normaldist(x: number, standardDeviation: number, mean: number): number;
 
 // @public
-export function not<T extends (...params: any[]) => boolean>(fn: T): T;
+export function not<T extends (...parameters: any[]) => boolean>(fn: T): T;
 
 // @public
 export type Nullish = null | undefined;
@@ -368,16 +368,16 @@ export function randomInt(min: number, max: number): number;
 // @public
 export class Range {
     [Symbol.iterator](): IterableIterator<Comparable>;
-    constructor(lower: Comparable, upper: Comparable);
+    constructor(
+    lower: Comparable,
+    upper: Comparable);
     equals(range: Range): boolean;
     static from(iterable: Iterable<Comparable>): Range;
     has(value: Comparable): boolean;
     intersects(range: Range): boolean;
     isSubrange(range: Range): boolean;
     isSuperrange(range: Range): boolean;
-    // (undocumented)
     lower: Comparable;
-    // (undocumented)
     upper: Comparable;
 }
 
@@ -444,7 +444,7 @@ export type ResolvedResult<T> = [value: T, error: undefined];
 export type Result<T, E> = ResolvedResult<T> | RejectedResult<E>;
 
 // @public
-export function same<T>(...iterables: [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean;
+export function same<T>(...iterables: readonly [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean;
 
 // @public
 export function sample<T>(array: ArrayLike<T>): T | undefined;
@@ -589,7 +589,7 @@ export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A
 export type Table<T> = T[][];
 
 // @public
-export function thunkify<T extends AnyFunction>(fn: T): (...params: Parameters<T>) => ReturnType<T>;
+export function thunkify<T extends (...args: unknown[]) => unknown>(fn: T): (...parameters: Parameters<T>) => ReturnType<T>;
 
 // @public
 export function timeout<T>(promise: PromiseLike<T>, timeoutMs: number): Promise<T>;
@@ -604,7 +604,7 @@ export function truncate<T extends string>(text: T, maxLength: number, suffix?: 
 // Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "BuiltInEvents" which is marked as @internal
 //
 // @public
-export interface TypedEventEmitter<T extends EventListeners = {}> extends _BaseTypedEventEmitter<T & _BuiltInEvents<T>> {
+export interface TypedEventEmitter<T extends EventListeners = Record<never, never>> extends _BaseTypedEventEmitter<T & _BuiltInEvents<T>> {
 }
 
 // @public

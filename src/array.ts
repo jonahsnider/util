@@ -27,7 +27,7 @@ export type NonEmptyArray<T> = [T, ...T[]];
  *
  * @param array - Array to sample element from
  *
- * @see {@link shuffle} if you want to implement a random selection without replacement
+ * @see {@link (shuffle:1)} if you want to implement a random selection without replacement
  *
  * @returns A random element from the array or `undefined` if the array was empty
  *
