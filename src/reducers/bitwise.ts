@@ -1,3 +1,5 @@
+/* eslint-disable no-bitwise */
+
 /**
  * Calculate the bitwise AND of 2 `number`s.
  * Meant to be used with `Array.prototype.reduce`.

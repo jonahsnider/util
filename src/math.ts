@@ -138,7 +138,7 @@ export function mean(array: readonly number[]): number;
  *
  * @public
  */
-export function mean(array: readonly bigint[]): bigint;
+export function mean(array: ReadonlyArray<bigint>): bigint;
 export function mean<T extends number>(array: readonly T[]): T {
 	const summed = (array as readonly number[]).reduce(sum) as unknown as T;
 
@@ -186,12 +186,12 @@ export function median(array: readonly number[]): number;
  *
  * @public
  */
-export function median(array: readonly bigint[]): bigint;
+export function median(array: ReadonlyArray<bigint>): bigint;
 export function median<T extends number>(array: readonly T[]): T {
-	const even = array.length % 2 === 0;
+	const isEven = array.length % 2 === 0;
 	const middleIndex = array.length / 2;
 
-	if (even) {
+	if (isEven) {
 		const divisor = (typeof array[0] === 'bigint' ? 2n : 2) as T;
 
 		return ((array[middleIndex - 1] + array[middleIndex]) / divisor) as T;

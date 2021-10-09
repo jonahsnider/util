@@ -5,6 +5,7 @@ import {terser} from 'rollup-plugin-terser';
 
 /** @type {import('rollup-plugin-terser').Options} */
 const terserConfig = {
+	/* eslint-disable camelcase */
 	ecma: 5,
 	compress: {
 		arrows: false,
@@ -19,6 +20,7 @@ const terserConfig = {
 	mangle: {toplevel: true},
 	module: false,
 	ie8: true,
+	/* eslint-enable camelcase */
 };
 
 /** @type {import('rollup-plugin-terser').Options} */

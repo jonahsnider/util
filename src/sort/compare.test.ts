@@ -1,4 +1,4 @@
-import {Sort} from './';
+import {Sort} from '.';
 
 describe(Sort.descending.name, () => {
 	it('sorts', () => {

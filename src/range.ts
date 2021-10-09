@@ -1,4 +1,4 @@
-import {Comparable} from './types';
+import type {Comparable} from './types';
 
 /**
  * A range between 2 values.
@@ -6,6 +6,24 @@ import {Comparable} from './types';
  * @public
  */
 export class Range {
+	/**
+	 * Create a new range from the first 2 values of an iterable.
+	 *
+	 * @example
+	 * ```js
+	 * const range = Range.from([100, 200]);
+	 * ```
+	 *
+	 * @param iterable - The iterable to create a range from
+	 *
+	 * @returns A new range
+	 */
+	static from(iterable: Iterable<Comparable>): Range {
+		const [lower, upper] = iterable;
+
+		return new Range(lower, upper);
+	}
+
 	/**
 	 * Create a new range from 2 values.
 	 *
@@ -23,24 +41,6 @@ export class Range {
 		if (lower! > upper!) {
 			throw new RangeError('lower must be less than upper');
 		}
-	}
-
-	/**
-	 * Create a new range from the first 2 values of an iterable.
-	 *
-	 * @example
-	 * ```js
-	 * const range = Range.from([100, 200]);
-	 * ```
-	 *
-	 * @param iterable - The iterable to create a range from
-	 *
-	 * @returns A new range
-	 */
-	static from(iterable: Iterable<Comparable>): Range {
-		const [lower, upper] = iterable;
-
-		return new Range(lower, upper);
 	}
 
 	/**

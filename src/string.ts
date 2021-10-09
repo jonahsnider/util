@@ -63,7 +63,7 @@ export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
  */
 export function truncate<T extends string>(text: T, maxLength: number, suffix = ''): T | `${string}${typeof suffix}` {
 	if (text.length > maxLength) {
-		return `${text.slice(0, maxLength)}${suffix}` as `${string}${typeof suffix}`;
+		return `${text.slice(0, maxLength)}${suffix}`;
 	}
 
 	return text;
@@ -92,7 +92,8 @@ export function multiReplace(string: string, replacements: Record<string, string
 	let index = 0;
 
 	while (index < string.length) {
-		foundReplace: do {
+		/* eslint-disable no-labels */
+		foundReplace: {
 			for (const [searchValue, replaceValue] of replacementsIterable) {
 				if (string.slice(index).startsWith(searchValue)) {
 					result += replaceValue;
@@ -102,7 +103,8 @@ export function multiReplace(string: string, replacements: Record<string, string
 			}
 
 			result += string[index++];
-		} while (false);
+		}
+		/* eslint-enable no-labels */
 	}
 
 	return result;

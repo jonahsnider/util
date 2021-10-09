@@ -49,11 +49,11 @@ describe(same.name, () => {
 describe(identical.name, () => {
 	it('throws on bad input', () => {
 		expect(
-			// @ts-expect-error
+			// @ts-expect-error Mixed types
 			() => identical([], new Set()),
 		).toThrow(RangeError);
 		expect(
-			// @ts-expect-error
+			// @ts-expect-error Mixed types
 			() => identical(new Set(), []),
 		).toThrow(RangeError);
 	});

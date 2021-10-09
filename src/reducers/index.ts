@@ -1,6 +1,7 @@
-import {Comparable} from '../types';
+import type {Comparable} from '../types';
 
 import * as Bitwise from './bitwise';
+
 export {Bitwise};
 
 /**

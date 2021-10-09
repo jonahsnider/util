@@ -1,6 +1,7 @@
-import {CompareFn} from '../types';
+import type {CompareFn} from '../types';
 
 import * as Sort from './compare';
+
 export {Sort};
 
 /**

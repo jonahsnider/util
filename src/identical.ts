@@ -143,12 +143,14 @@ export function identical<V, K = never>(a: readonly V[] | ReadonlySet<V> | Reado
  *
  * @public
  */
-export function same<T>(...iterables: [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
+export function same<T>(...iterables: readonly [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
 	const iterators = iterables.map(item => item[Symbol.iterator]());
 
+	// eslint-disable-next-line no-constant-condition
 	while (true) {
 		const nexts = iterators.map(iterator => iterator.next());
 
+		// eslint-disable-next-line @typescript-eslint/naming-convention
 		const [{done, value}] = nexts;
 
 		for (const next of nexts) {

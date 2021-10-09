@@ -1,4 +1,4 @@
-import {Table} from './array';
+import type {Table} from './array';
 
 /**
  * Get the lengths of each column in a table.
@@ -14,9 +14,8 @@ export function maxColumnLength(table: Table<string>): number[] {
 	const lengths = table[0].map(column => column.length);
 
 	for (const row of table) {
-		for (let index = 0; index < row.length; index++) {
+		for (const [index, {length: columnLength}] of row.entries()) {
 			const length = lengths[index];
-			const {length: columnLength} = row[index];
 
 			if (length < columnLength) {
 				lengths[index] = columnLength;

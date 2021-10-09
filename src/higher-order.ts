@@ -1,4 +1,4 @@
-import {AnyFunction, NumberLike} from './types';
+import type {NumberLike} from './types';
 
 /**
  * Create a new function that calls the provided `fn` and negates the result.
@@ -18,8 +18,8 @@ import {AnyFunction, NumberLike} from './types';
  *
  * @public
  */
-export function not<T extends (...params: any[]) => boolean>(fn: T): T {
-	return ((...params) => !fn(...params)) as T;
+export function not<T extends (...parameters: any[]) => boolean>(fn: T): T {
+	return ((...parameters) => !fn(...parameters)) as T;
 }
 
 /**
@@ -42,8 +42,8 @@ export function not<T extends (...params: any[]) => boolean>(fn: T): T {
  *
  * @public
  */
-export function invert<T extends (...params: any[]) => NumberLike>(fn: T): T {
-	return ((...params) => -fn(...params)!) as T;
+export function invert<T extends (...parameters: any[]) => NumberLike>(fn: T): T {
+	return ((...parameters) => -fn(...parameters)!) as T;
 }
 
 /**
@@ -68,15 +68,15 @@ export function invert<T extends (...params: any[]) => NumberLike>(fn: T): T {
  *
  * @public
  */
-export function thunkify<T extends AnyFunction>(fn: T): (...params: Parameters<T>) => ReturnType<T> {
-	let called = false;
+export function thunkify<T extends (...args: unknown[]) => unknown>(fn: T): (...parameters: Parameters<T>) => ReturnType<T> {
+	let wasCalled = false;
 	let result: ReturnType<T>;
 
-	return (...params: Parameters<T>): ReturnType<T> => {
-		if (!called) {
-			called = true;
+	return (...parameters: Parameters<T>): ReturnType<T> => {
+		if (!wasCalled) {
+			wasCalled = true;
 
-			result = fn(...params);
+			result = fn(...parameters) as ReturnType<T>;
 		}
 
 		return result;

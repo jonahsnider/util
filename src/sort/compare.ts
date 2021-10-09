@@ -1,7 +1,7 @@
-import {Comparable, CompareFn} from '../types';
+import type {Comparable, CompareFn} from '../types';
 
 function ascendingRaw(a: Comparable, b: Comparable): number {
-	// null is converted to 0 in comparisons
+	// `null` is converted to 0 in comparisons
 	if (a! < b!) {
 		return -1;
 	}
@@ -14,7 +14,7 @@ function ascendingRaw(a: Comparable, b: Comparable): number {
 }
 
 function descendingRaw(a: Comparable, b: Comparable): number {
-	// null is converted to 0 in comparisons
+	// `null` is converted to 0 in comparisons
 	if (a! < b!) {
 		return 1;
 	}

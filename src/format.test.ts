@@ -1,5 +1,5 @@
-import {Table} from './';
 import {formatTable, maxColumnLength} from './format';
+import type {Table} from '.';
 
 // prettier-ignore
 const table: Table<string> = [

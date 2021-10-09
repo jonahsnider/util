@@ -12,7 +12,7 @@
  *
  * @public
  */
-export function* combineIterables<T>(...iterables: Iterable<T>[]): Iterable<T> {
+export function* combineIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T> {
 	for (const iterable of iterables) {
 		yield* iterable;
 	}
@@ -45,17 +45,18 @@ export function join(iterable: Iterable<unknown>, separator = ','): string {
 
 	let next = iterator.next();
 
+	// eslint-disable-next-line no-constant-condition
 	while (true) {
-		const prev = next;
+		const previous = next;
 		next = iterator.next();
 
-		result += prev.value;
+		result += previous.value;
 
 		if (next.done) {
 			return result;
-		} else {
-			result += separator;
 		}
+
+		result += separator;
 	}
 }
 
@@ -338,6 +339,7 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
 export function first<T>(iterable: Iterable<T>, take: number): Iterable<T>;
 export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | Iterable<T> {
 	if (take === undefined) {
+		// eslint-disable-next-line no-unreachable-loop
 		for (const element of iterable) {
 			return element;
 		}
@@ -503,6 +505,7 @@ export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number):
  * @public
  */
 export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never> {
+	// eslint-disable-next-line no-unreachable-loop, @typescript-eslint/no-unused-vars
 	for (const _ of iterable) {
 		return false;
 	}
@@ -529,6 +532,7 @@ export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never
 export function count(iterable: Iterable<unknown>): number {
 	let count = 0;
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	for (const _ of iterable) {
 		count++;
 	}

@@ -45,7 +45,9 @@ function delay(ms: number): [timer: NodeJS.Timeout, delay: PromiseLike<typeof DE
 	let timer: NodeJS.Timeout;
 
 	const promise = new Promise<typeof DELAY_RESOLVED_VALUE>(resolve => {
-		timer = setTimeout(() => resolve(DELAY_RESOLVED_VALUE), ms);
+		timer = setTimeout(() => {
+			resolve(DELAY_RESOLVED_VALUE);
+		}, ms);
 	});
 
 	return [timer!, promise];

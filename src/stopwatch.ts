@@ -1,3 +1,5 @@
+import process from 'node:process';
+
 /**
  * Helper to record the amount of time elapsed between 2 points during execution.
  *
@@ -20,6 +22,22 @@
  * @public
  */
 export class Stopwatch {
+	/**
+	 * Create a new stopwatch and start it.
+	 *
+	 * @example
+	 * ```js
+	 * const stopwatch = Stopwatch.start();
+	 * ```
+	 */
+	static start(): Stopwatch {
+		const stopwatch = new this();
+
+		stopwatch.start();
+
+		return stopwatch;
+	}
+
 	private startTime?: bigint;
 
 	/**
@@ -37,22 +55,6 @@ export class Stopwatch {
 	 */
 	get started(): boolean {
 		return this.startTime !== undefined;
-	}
-
-	/**
-	 * Create a new stopwatch and start it.
-	 *
-	 * @example
-	 * ```js
-	 * const stopwatch = Stopwatch.start();
-	 * ```
-	 */
-	static start(): Stopwatch {
-		const stopwatch = new this();
-
-		stopwatch.start();
-
-		return stopwatch;
 	}
 
 	/**

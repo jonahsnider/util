@@ -1,5 +1,5 @@
-import {isSorted, sortObject} from '.';
 import {ascending} from './compare';
+import {isSorted, sortObject} from '.';
 
 describe(sortObject.name, () => {
 	it('sorts', () => {

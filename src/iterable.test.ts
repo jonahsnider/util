@@ -77,7 +77,7 @@ describe(find.name, () => {
 
 describe(partition.name, () => {
 	it('partitions an array', () => {
-		expect(partition([1, 2, 3, 4, 5, 6], num => num % 2)).toStrictEqual([
+		expect(partition([1, 2, 3, 4, 5, 6], number => number % 2)).toStrictEqual([
 			[1, 3, 5],
 			[2, 4, 6],
 		]);
@@ -113,6 +113,7 @@ describe(first.name, () => {
 	});
 
 	it('works with empty iterables', () => {
+		// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 		expect(first([])).toBe(undefined);
 	});
 });

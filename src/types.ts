@@ -26,6 +26,7 @@ export type NumberLike =
 	| {[Symbol.toPrimitive](hint: 'number'): number}
 	| number
 	| bigint
+	// eslint-disable-next-line @typescript-eslint/ban-types
 	| Number
 	// Reasonable
 	| boolean
@@ -65,7 +66,7 @@ export type DirectionFn<T> = (element: T) => number;
  *
  * @public
  */
-export type CompareFn<T = Comparable> = Exclude<Parameters<Array<T>['sort']>[0], undefined>;
+export type CompareFn<T = Comparable> = Exclude<Parameters<T[]['sort']>[0], undefined>;
 
 /**
  * A percentage within `[0, 1]` accurate to 2 decimal places.

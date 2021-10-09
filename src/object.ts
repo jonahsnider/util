@@ -27,14 +27,18 @@ export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(
 	target: T,
 	oldKey: NonUnion<K1>,
 	newKey: NonUnion<K2>,
+	// eslint-disable-next-line @typescript-eslint/ban-types
 ): Omit<T, K1 | K2> & Record<K2, T[K1]>;
+// eslint-disable-next-line @typescript-eslint/ban-types
 export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(object: T, oldKey: K1, newKey: K1 | K2): Omit<T, K1 | K2> & Record<string, T[K1]> {
 	if (oldKey === newKey) {
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 		return {...object} as any;
 	}
 
 	const {[oldKey]: _, ...result} = {...object, [newKey]: object[oldKey]};
 
 	// This logic can be rewritten to remove the need for a type assertion, but would require 2 iterations over result instead of 1
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 	return result as any;
 }

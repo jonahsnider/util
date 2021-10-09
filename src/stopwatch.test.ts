@@ -40,17 +40,17 @@ describe(Stopwatch.name, () => {
 		it('ends the stopwatch', () => {
 			const stopwatch = new Stopwatch();
 
-			// @ts-expect-error
+			// @ts-expect-error Assigning to readonly global
 			global.__DEV__ = false;
 			expect(stopwatch.end).toThrow();
-			// @ts-expect-error
+			// @ts-expect-error Assigning to readonly global
 			global.__DEV__ = true;
 			expect(stopwatch.end).toThrow();
 
 			stopwatch.start();
 
 			expect(stopwatch.end()).toBeGreaterThan(0);
-			expect(stopwatch.end()).toBeLessThan(3_000);
+			expect(stopwatch.end()).toBeLessThan(3000);
 			expect(typeof stopwatch.end()).toBe('number');
 		});
 	});

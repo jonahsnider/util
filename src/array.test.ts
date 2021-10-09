@@ -1,5 +1,4 @@
 import {expectNotType, expectType} from 'tsd';
-import {relativeStddev} from './';
 import {
 	binarySearch,
 	chunk,
@@ -18,16 +17,21 @@ import {
 	sample,
 	shuffle,
 } from './array';
+import {relativeStddev} from '.';
 
 // Compilation tests
+// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 expectType<undefined>(sample([]));
+// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 expectType<undefined>(sample([] as const));
+// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 expectNotType<any>(sample([]));
 expectType<1 | undefined>(sample([1]));
 
 describe(sample.name, () => {
 	it('selects items', () => {
 		expect(sample([1])).toBe(1);
+		// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 		expect(sample([])).toBe(undefined);
 		const letters = ['a', 'b', 'c'];
 		expect(letters).toContain(sample(letters));
@@ -82,6 +86,7 @@ describe(shuffle.name, () => {
 		const values = Object.values(frequencies);
 		expect(relativeStddev(values)).toBeCloseTo(0, 1);
 
+		// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 		expect(shuffle([])).toBe(undefined);
 	});
 
@@ -101,16 +106,19 @@ describe(binarySearch.name, () => {
 		function directionFn(value: number) {
 			if (value > 5) {
 				return 1;
-			} else if (value < 5) {
-				return -1;
-			} else {
-				return 0;
 			}
+
+			if (value < 5) {
+				return -1;
+			}
+
+			return 0;
 		}
 
 		expect(binarySearch(array, directionFn)).toBe(5);
 		expect(binarySearch(array.slice(1), directionFn)).toBe(5);
 
+		// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 		expect(binarySearch([], () => 1)).toBe(undefined);
 	});
 });
@@ -155,17 +163,17 @@ describe(largeToSmall.name, () => {
 	});
 
 	it('throws on bad input', () => {
-		// @ts-expect-error
+		// @ts-expect-error Readonly global
 		global.__DEV__ = false;
 		expect(() =>
-			// @ts-expect-error
+			// @ts-expect-error Missing properties
 			largeToSmall({}, {}),
 		).toThrow();
 
-		// @ts-expect-error
+		// @ts-expect-error Readonly global
 		global.__DEV__ = true;
 		expect(() =>
-			// @ts-expect-error
+			// @ts-expect-error Missing properties
 			largeToSmall({}, {}),
 		).toThrow();
 	});
@@ -173,7 +181,9 @@ describe(largeToSmall.name, () => {
 
 describe(holes.name, () => {
 	it('finds holes', () => {
+		// eslint-disable-next-line no-sparse-arrays
 		expect(holes([, ,])).toStrictEqual([0, 1]);
+		// eslint-disable-next-line no-sparse-arrays
 		expect(holes([0, , 2])).toStrictEqual([1]);
 	});
 

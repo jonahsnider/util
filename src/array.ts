@@ -1,5 +1,5 @@
 import {repeat} from './iterable';
-import {DirectionFn} from './types';
+import type {DirectionFn} from './types';
 
 /**
  * A 2-dimensional table of type `T`.
@@ -120,7 +120,7 @@ export function binarySearch<T>(array: ArrayLike<T>, directionFn: DirectionFn<T>
 	let right = array.length - 1;
 
 	while (left <= right) {
-		let index = Math.trunc((left + right) / 2);
+		const index = Math.trunc((left + right) / 2);
 		const direction = directionFn(array[index]);
 
 		if (direction < 0) {
@@ -248,7 +248,7 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
 	a: A,
 	b: B,
 ): ArrangedLargestToSmallest<A, B> {
-	let key: 'size' | 'length' | undefined = undefined;
+	let key: 'size' | 'length' | undefined;
 
 	if ('size' in a) {
 		key = 'size';
@@ -257,14 +257,10 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
 	}
 
 	if (!key) {
-		if (__DEV__) {
-			throw new RangeError('Expected a to have a size property or a length property');
-		}
-
-		throw new RangeError();
+		throw new RangeError('Expected a to have a size property or a length property');
 	}
 
-	// @ts-expect-error
+	// @ts-expect-error We have validated the keys at this point
 	if (a[key] < b[key]) {
 		return [b, a];
 	}
@@ -549,6 +545,7 @@ export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
 export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
 	const indexes: number[] = [];
 
+	// eslint-disable-next-line unicorn/no-for-loop
 	for (let index = 0; index < array.length; index++) {
 		const element = array[index];
 
@@ -580,6 +577,7 @@ export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
 export function findIndexAll<T>(array: ArrayLike<T>, predicate: (element: T, index: number) => boolean): number[] {
 	const indexes: number[] = [];
 
+	// eslint-disable-next-line unicorn/no-for-loop
 	for (let index = 0; index < array.length; index++) {
 		const element = array[index];
 
