@@ -216,7 +216,7 @@ export function median<T extends number>(array: ArrayLike<T>): T {
  * @see {@link (mean:1)} to calculate the mean of an array
  * @see {@link (median:1)} to calculate the median of an array
  *
- *  @returns An array of the modes of `values`
+ * @returns An array of the modes of `values`
  *
  * @public
  */
