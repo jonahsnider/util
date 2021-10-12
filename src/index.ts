@@ -1,3 +1,5 @@
+import * as Http from './http/index';
+
 export {
 	ArrangedLargestToSmallest as _ArrangedLargestToSmallest,
 	binarySearch,
@@ -26,7 +28,6 @@ export {Card, newDeck, Rank, Suit} from './cards';
 export {DefaultMap} from './default-map';
 export {formatTable, maxColumnLength} from './format';
 export {invert, not, thunkify} from './higher-order';
-export {Method, Status, StatusRange} from './http/index';
 export {identical, same} from './identical';
 export {
 	allDuplicates,
@@ -60,3 +61,4 @@ export {capitalize, isAnagram, isWhitespace, lines, multiReplace, truncate, unca
 export {toDigits} from './to-digits';
 export {BaseTypedEventEmitter as _BaseTypedEventEmitter, BuiltInEvents as _BuiltInEvents, EventListeners, TypedEventEmitter} from './typed-event-emitter';
 export {AnyFunction, Comparable, CompareFn, DirectionFn, NumberLike, Percentage, Sign as _Sign} from './types';
+export {Http};

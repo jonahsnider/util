@@ -179,6 +179,15 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number>;
 // @public
 export function holes(array: ArrayLike<unknown>): number[];
 
+declare namespace Http {
+    export {
+        Status,
+        Method,
+        StatusRange
+    }
+}
+export { Http }
+
 // @public
 export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
 
@@ -267,7 +276,7 @@ export function median(array: ArrayLike<number>): number;
 export function median(array: ArrayLike<bigint>): bigint;
 
 // @public
-export enum Method {
+enum Method {
     Connect = "CONNECT",
     Delete = "DELETE",
     Get = "GET",
@@ -482,7 +491,7 @@ export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, 
 export function standardNormaldist(x: number): number;
 
 // @public
-export enum Status {
+enum Status {
     Accepted = 202,
     BadGateway = 502,
     BadRequest = 400,
@@ -548,7 +557,6 @@ declare namespace StatusRange {
         serverErrors
     }
 }
-export { StatusRange }
 
 // @public
 export function stddev(values: readonly number[], meanValue?: number): number;
