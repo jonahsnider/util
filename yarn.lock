@@ -1716,7 +1716,7 @@ __metadata:
     size-limit: 6.0.3
     terser: 5.9.0
     ts-jest: 27.0.6
-    tsd: 0.17.0
+    tsd: 0.18.0
     typedoc: 0.22.5
     typescript: 4.4.3
     xo: 0.45.0
@@ -2565,13 +2565,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsd/typescript@npm:~4.3.2":
-  version: 4.3.2
-  resolution: "@tsd/typescript@npm:4.3.2"
+"@tsd/typescript@npm:~4.4.3":
+  version: 4.4.4
+  resolution: "@tsd/typescript@npm:4.4.4"
   bin:
     tsc: typescript/bin/tsc
     tsserver: typescript/bin/tsserver
-  checksum: 176755fb2f8ba43eb2a9781071b75584a3faf45868cd7c48e3fd986d23ab03bed117b59a43c2fa9028331e6fb9f2988c050e5202ebb2e3cb6ca77285dbf17bdb
+  checksum: 092a49faaad0ff8e3a84d2d695a29125a05a9cc0801260cec84ff2b62aa826db1437c20c9d96f9de4cff724e53e7fd31051bd4b70692e043350d33ae16b2372b
   languageName: node
   linkType: hard
 
@@ -5362,21 +5362,6 @@ __metadata:
   peerDependencies:
     eslint: ">=7.20.0"
   checksum: 735cb6457b3f39f756d35c5ff51b42d0d89dfbeb08c52b1c75e87233aba4838ac87931bab046d652429baff01b319562f8472afbe5b50f4e5bcc21557fa1deb5
-  languageName: node
-  linkType: hard
-
-"eslint-formatter-pretty@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "eslint-formatter-pretty@npm:4.0.0"
-  dependencies:
-    ansi-escapes: ^4.2.1
-    chalk: ^4.1.0
-    eslint-rule-docs: ^1.1.5
-    log-symbols: ^4.0.0
-    plur: ^4.0.0
-    string-width: ^4.2.0
-    supports-hyperlinks: ^2.0.0
-  checksum: b47c70d69d689c2958e2820dc1b652aa7dbe9525c01b1f768c999a99569625e4fa1a2d77d19a29937a7422925da92aea632332afb2be3321f702fdb9183cae75
   languageName: node
   linkType: hard
 
@@ -12415,19 +12400,19 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"tsd@npm:0.17.0":
-  version: 0.17.0
-  resolution: "tsd@npm:0.17.0"
+"tsd@npm:0.18.0":
+  version: 0.18.0
+  resolution: "tsd@npm:0.18.0"
   dependencies:
-    "@tsd/typescript": ~4.3.2
-    eslint-formatter-pretty: ^4.0.0
+    "@tsd/typescript": ~4.4.3
+    eslint-formatter-pretty: ^4.1.0
     globby: ^11.0.1
     meow: ^9.0.0
     path-exists: ^4.0.0
     read-pkg-up: ^7.0.0
   bin:
     tsd: dist/cli.js
-  checksum: b5a1f0eedc46aa2f8d7daf0c0d780ee14d3f6bd54199079cc328d319a381189bc6b6d8376a3b2d82310d78840cfbb775c855f2ca7765c7ec115b71c0736a2ace
+  checksum: a7ce4402df573c388117bdaf0c7faaaaa721a05bdfae11cde846c8792b8aeaab61c6e22e829726b2de524b1405b9d79ea2600219f234dd711bd766abf75a2ac0
   languageName: node
   linkType: hard
 
