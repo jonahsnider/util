@@ -219,6 +219,27 @@ export function isAnagram<T>(a: ArrayLike<T> & Iterable<T>, b: ArrayLike<T> & It
 export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean;
 
 // @public
+export function isEmpty(map: ReadonlyMap<unknown, unknown>): map is ReadonlyMap<never, never>;
+
+// @public
+export function isEmpty(map: Map<unknown, unknown>): map is Map<never, never>;
+
+// @public
+export function isEmpty(set: ReadonlySet<unknown>): set is ReadonlySet<never>;
+
+// @public
+export function isEmpty(set: Set<unknown>): set is Set<never>;
+
+// @public
+export function isEmpty(string: string): string is '';
+
+// @public
+export function isEmpty(array: readonly unknown[]): array is readonly [];
+
+// @public
+export function isEmpty(array: unknown[]): array is [];
+
+// @public
 export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never>;
 
 // @public
