@@ -26,10 +26,10 @@ const terserConfig = {
 /** @type {import('rollup-plugin-terser').Options} */
 const esmTerserConfig = {
 	...terserConfig,
-	ecma: 2016,
+	ecma: 2015,
 	compress: {
 		...terserConfig.compress,
-		ecma: 2016,
+		ecma: 2015,
 	},
 };
 
@@ -37,46 +37,56 @@ const config = [
 	// UMD
 	{
 		input: './src/index.ts',
-		output: [
-			{
-				file: './dist/index.prod.js',
-				format: 'umd',
-				name: 'jonahsniderUtil',
-				plugins: [replace({__DEV__: false})],
-				exports: 'named',
-				sourcemap: true,
-			},
-			{
-				file: './dist/index.dev.js',
-				format: 'umd',
-				name: 'jonahsniderUtil',
-				plugins: [replace({__DEV__: true})],
-				exports: 'named',
-				sourcemap: true,
-			},
+		output: {
+			file: './dist/index.prod.js',
+			format: 'umd',
+			name: 'jonahsniderUtil',
+			exports: 'named',
+			sourcemap: true,
+		},
+		plugins: [
+			typescript({incremental: true}),
+			replace({preventAssignment: true, __DEV__: false}),
+			babel({babelHelpers: 'bundled', extensions: ['.ts']}),
+			terser(terserConfig),
 		],
-		plugins: [typescript({tsconfig: './tsconfig.json'}), babel({babelHelpers: 'bundled', extensions: ['.ts']}), terser(terserConfig)],
+	},
+	{
+		input: './src/index.ts',
+		output: {
+			file: './dist/index.dev.js',
+			format: 'umd',
+			name: 'jonahsniderUtil',
+			exports: 'named',
+			sourcemap: true,
+		},
+		plugins: [
+			typescript({incremental: true}),
+			replace({preventAssignment: true, __DEV__: true}),
+			babel({babelHelpers: 'bundled', extensions: ['.ts']}),
+			terser(terserConfig),
+		],
 	},
 	// ES Modules
 	{
 		input: './src/index.ts',
-		output: [
-			{
-				file: './dist/index.prod.mjs',
-				format: 'esm',
-				plugins: [replace({__DEV__: false})],
-				exports: 'named',
-				sourcemap: true,
-			},
-			{
-				file: './dist/index.dev.mjs',
-				format: 'esm',
-				plugins: [replace({__DEV__: true})],
-				exports: 'named',
-				sourcemap: true,
-			},
-		],
-		plugins: [typescript({tsconfig: './tsconfig.json'}), terser(esmTerserConfig)],
+		output: {
+			file: './dist/index.prod.mjs',
+			format: 'esm',
+			exports: 'named',
+			sourcemap: true,
+		},
+		plugins: [typescript({incremental: true}), replace({preventAssignment: true, __DEV__: false}), terser(esmTerserConfig)],
+	},
+	{
+		input: './src/index.ts',
+		output: {
+			file: './dist/index.dev.mjs',
+			format: 'esm',
+			exports: 'named',
+			sourcemap: true,
+		},
+		plugins: [typescript({incremental: true}), replace({preventAssignment: true, __DEV__: true}), terser(esmTerserConfig)],
 	},
 	// Entry
 	{
@@ -86,7 +96,7 @@ const config = [
 			format: 'cjs',
 			sourcemap: true,
 		},
-		plugins: [typescript({tsconfig: './tsconfig.json'}), babel({babelHelpers: 'bundled', extensions: ['.ts']}), terser(terserConfig)],
+		plugins: [typescript({incremental: true}), babel({babelHelpers: 'bundled', extensions: ['.ts']}), terser(terserConfig)],
 	},
 ];
 
