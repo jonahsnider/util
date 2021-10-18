@@ -2,7 +2,6 @@
  * A class to help with specific use-cases where you are using a percentage (ex. `1 / n`) but don't know `n` until runtime.
  *
  * @example
- * An example where an array of steps in a job
  * ```js
  * const autoPercentage = new AutoPercentage();
  *
