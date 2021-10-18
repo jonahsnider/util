@@ -6,7 +6,7 @@
 
 /// <reference types="node" />
 
-import type { EventEmitter } from 'node:events';
+import type { EventEmitter } from 'events';
 
 // @public
 export function allDuplicates<T>(iterable: Iterable<T>): T[];

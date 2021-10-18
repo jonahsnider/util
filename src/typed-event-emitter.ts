@@ -1,4 +1,4 @@
-import type {EventEmitter} from 'node:events';
+import type {EventEmitter} from 'events';
 
 /**
  * An object where keys are the names of events and values are the type signature of the listener function.
