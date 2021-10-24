@@ -49,7 +49,7 @@ export {
 } from './iterable';
 export {clamp, mean, median, mode, normaldist, random, randomInt, relativeStddev, standardNormaldist, stddev, variance} from './math';
 export {nullish, Nullish} from './nullish';
-export {NonUnion as _NonUnion, rename} from './object';
+export {name, NonUnion as _NonUnion, rename} from './object';
 export {RejectedResult, ResolvedResult, Result, settled, timeout} from './promise';
 export {Range} from './range';
 export {Bitwise, max, min, product, sum} from './reducers/index';

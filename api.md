@@ -319,6 +319,12 @@ export function mode<T>(iterable: Iterable<T>): T[];
 export function multiReplace(string: string, replacements: Record<string, string>): string;
 
 // @public
+export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `${string}${'.' | '#'}${string}`;
+
+// @public
+export function name(func: (new (...args: any[]) => any) | AnyFunction): string;
+
+// @public
 export function newDeck(): Card[];
 
 // @public
