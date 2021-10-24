@@ -17,8 +17,9 @@ import {
 	repeat,
 	some,
 } from './iterable';
+import {name} from './object';
 
-describe(combineIterables.name, () => {
+describe(name(combineIterables), () => {
 	it('combines iterables', () => {
 		expect([...combineIterables([])]).toStrictEqual([]);
 		expect([...combineIterables([1])]).toStrictEqual([1]);
@@ -26,14 +27,14 @@ describe(combineIterables.name, () => {
 	});
 });
 
-describe(join.name, () => {
+describe(name(join), () => {
 	it('joins elements', () => {
 		expect(join(['a', 'b', 'c'])).toStrictEqual('a,b,c');
 		expect(join(['a', 'b', 'c'], '|')).toStrictEqual('a|b|c');
 	});
 });
 
-describe(every.name, () => {
+describe(name(every), () => {
 	it('returns true if every element passes the predicate', () => {
 		expect(every([1, 2, 3] as unknown[], (x): x is number => typeof x === 'number')).toBe(true);
 		expect(every([1, 2, 3], () => true)).toBe(true);
@@ -45,7 +46,7 @@ describe(every.name, () => {
 	});
 });
 
-describe(some.name, () => {
+describe(name(some), () => {
 	it('returns true if any element passes the predicate', () => {
 		expect(some([1, 2, 3], x => x === 2)).toBe(true);
 	});
@@ -55,7 +56,7 @@ describe(some.name, () => {
 	});
 });
 
-describe(includes.name, () => {
+describe(name(includes), () => {
 	it('returns true when relevant', () => {
 		expect(includes([1, 2, 3], 2)).toBe(true);
 	});
@@ -65,7 +66,7 @@ describe(includes.name, () => {
 	});
 });
 
-describe(find.name, () => {
+describe(name(find), () => {
 	it('finds elements', () => {
 		expect(find([1, 2, 3], x => x === 2)).toBe(2);
 	});
@@ -75,7 +76,7 @@ describe(find.name, () => {
 	});
 });
 
-describe(partition.name, () => {
+describe(name(partition), () => {
 	it('partitions an array', () => {
 		expect(partition([1, 2, 3, 4, 5, 6], number => number % 2)).toStrictEqual([
 			[1, 3, 5],
@@ -89,7 +90,7 @@ describe(partition.name, () => {
 	});
 });
 
-describe(first.name, () => {
+describe(name(first), () => {
 	it('returns first element if take is undefined', () => {
 		expect(first([1, 2, 3])).toBe(1);
 		expect(first([1, 2, 3], undefined)).toBe(1);
@@ -118,7 +119,7 @@ describe(first.name, () => {
 	});
 });
 
-describe(allDuplicates.name, () => {
+describe(name(allDuplicates), () => {
 	it('returns duplicate elements', () => {
 		expect(allDuplicates([1, 2, 2, 2, 3])).toStrictEqual([2, 2]);
 	});
@@ -129,7 +130,7 @@ describe(allDuplicates.name, () => {
 	});
 });
 
-describe(duplicates.name, () => {
+describe(name(duplicates), () => {
 	it('returns duplicate elements', () => {
 		expect(duplicates([1, 2, 2, 2, 3])).toStrictEqual(new Set([2]));
 	});
@@ -140,7 +141,7 @@ describe(duplicates.name, () => {
 	});
 });
 
-describe(frequencyTable.name, () => {
+describe(name(frequencyTable), () => {
 	it('constructs a frequency table', () => {
 		const array = [1, 2, 2, 3, 3, 3];
 
@@ -154,7 +155,7 @@ describe(frequencyTable.name, () => {
 	});
 });
 
-describe(count.name, () => {
+describe(name(count), () => {
 	it('counts elements', () => {
 		expect(count([1, 2, 3])).toBe(3);
 	});
@@ -164,7 +165,7 @@ describe(count.name, () => {
 	});
 });
 
-describe(cycle.name, () => {
+describe(name(cycle), () => {
 	it('cycles an array', () => {
 		expect([...cycle(['a', 'b'], 2)]).toStrictEqual(['a', 'b', 'a', 'b']);
 	});
@@ -174,21 +175,21 @@ describe(cycle.name, () => {
 	});
 });
 
-describe(repeat.name, () => {
+describe(name(repeat), () => {
 	it('repeats', () => {
 		expect([...repeat('a', 3)]).toStrictEqual(['a', 'a', 'a']);
 		expect([...repeat('a', 0)]).toStrictEqual([]);
 	});
 });
 
-describe(mapRepeat.name, () => {
+describe(name(mapRepeat), () => {
 	it('repeats', () => {
 		expect([...mapRepeat(i => i, 3)]).toStrictEqual([0, 1, 2]);
 		expect([...mapRepeat(i => i, 0)]).toStrictEqual([]);
 	});
 });
 
-describe(isEmpty.name, () => {
+describe(name(isEmpty), () => {
 	it('returns true for empty iterables', () => {
 		expect(isEmpty([])).toBe(true);
 

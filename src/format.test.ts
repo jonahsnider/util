@@ -1,5 +1,6 @@
 import {formatTable, maxColumnLength} from './format';
-import type {Table} from '.';
+import type {Table} from './array';
+import {name} from './object';
 
 // prettier-ignore
 const table: Table<string> = [
@@ -8,13 +9,13 @@ const table: Table<string> = [
   ['22',    '4444', '333'],
 ];
 
-describe(maxColumnLength.name, () => {
+describe(name(maxColumnLength), () => {
 	it('finds the longest columns', () => {
 		expect(maxColumnLength(table)).toStrictEqual([5, 4, 3]);
 	});
 });
 
-describe(formatTable.name, () => {
+describe(name(formatTable), () => {
 	it('formats tables', () => {
 		// prettier-ignore
 		const formatted = [

@@ -1,6 +1,7 @@
 import {nullish} from './nullish';
+import {name} from './object';
 
-describe(nullish.name, () => {
+describe(name(nullish), () => {
 	it('returns true for nullish values', () => {
 		expect(nullish(null)).toBe(true);
 		expect(nullish(undefined)).toBe(true);

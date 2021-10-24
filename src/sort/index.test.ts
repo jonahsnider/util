@@ -1,7 +1,8 @@
+import {name} from '../object';
 import {ascending} from './compare';
 import {isSorted, sortObject} from '.';
 
-describe(sortObject.name, () => {
+describe(name(sortObject), () => {
 	it('sorts', () => {
 		const object = {a: 3, c: 1, b: 2};
 
@@ -11,7 +12,7 @@ describe(sortObject.name, () => {
 	});
 });
 
-describe(isSorted.name, () => {
+describe(name(isSorted), () => {
 	it('works with empty arrays', () => {
 		expect(isSorted([], () => 1)).toBe(true);
 	});

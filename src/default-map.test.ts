@@ -1,6 +1,7 @@
+import {name} from './object';
 import {DefaultMap} from './default-map';
 
-describe(DefaultMap.name, () => {
+describe(name(DefaultMap), () => {
 	describe(`${DefaultMap.name}#${DefaultMap.prototype.get.name}`, () => {
 		it('gets values', () => {
 			const map = new DefaultMap(2, [['a', 1]]);

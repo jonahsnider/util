@@ -1,7 +1,8 @@
 import {invert, not, thunkify} from './higher-order';
-import {nullish} from '.';
+import {nullish} from './nullish';
+import {name} from './object';
 
-describe(not.name, () => {
+describe(name(not), () => {
 	it('negates booleans', () => {
 		expect(not(() => true)()).toBe(false);
 		expect(not(() => false)()).toBe(true);
@@ -14,7 +15,7 @@ function sort(a: number, b: number) {
 	return a - b;
 }
 
-describe(invert.name, () => {
+describe(name(invert), () => {
 	it('inverts numbers', () => {
 		expect(invert(() => 1)()).toBe(-1);
 		expect(invert(() => -1)()).toBe(1);
@@ -32,7 +33,7 @@ describe(invert.name, () => {
 	});
 });
 
-describe(thunkify.name, () => {
+describe(name(thunkify), () => {
 	it('thunks', () => {
 		const f = jest.fn(() => 123);
 		const g = thunkify(f);

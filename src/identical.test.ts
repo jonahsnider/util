@@ -1,6 +1,7 @@
 import {same, identical} from './identical';
+import {name} from './object';
 
-describe(same.name, () => {
+describe(name(same), () => {
 	it('reports identical arrays', () => {
 		const original = [1, 2, 3];
 		const copy = [...original];
@@ -46,7 +47,7 @@ describe(same.name, () => {
 	});
 });
 
-describe(identical.name, () => {
+describe(name(identical), () => {
 	it('throws on bad input', () => {
 		expect(
 			// @ts-expect-error Mixed types

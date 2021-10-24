@@ -1,18 +1,19 @@
 import {isAnagram, capitalize, lines, multiReplace, truncate, uncapitalize, isWhitespace} from './string';
+import {name} from './object';
 
-describe(capitalize.name, () => {
+describe(name(capitalize), () => {
 	it('capitalizes strings', () => {
 		expect(capitalize('hello')).toBe('Hello');
 	});
 });
 
-describe(uncapitalize.name, () => {
+describe(name(uncapitalize), () => {
 	it('uncapitalizes strings', () => {
 		expect(uncapitalize('Hello')).toBe('hello');
 	});
 });
 
-describe(truncate.name, () => {
+describe(name(truncate), () => {
 	it('truncates long strings', () => {
 		expect(truncate('hello', 3)).toBe('hel');
 	});
@@ -26,7 +27,7 @@ describe(truncate.name, () => {
 	});
 });
 
-describe(multiReplace.name, () => {
+describe(name(multiReplace), () => {
 	it('replaces strings', () => {
 		expect(multiReplace('a b c', {a: 'c', c: 'a'})).toBe('c b a');
 	});
@@ -47,7 +48,7 @@ describe(multiReplace.name, () => {
 	});
 });
 
-describe(lines.name, () => {
+describe(name(lines), () => {
 	it('splits strings into lines', () => {
 		expect(lines('')).toStrictEqual([]);
 		expect(lines(' ')).toStrictEqual([]);
@@ -62,7 +63,7 @@ describe(lines.name, () => {
 	});
 });
 
-describe(isAnagram.name, () => {
+describe(name(isAnagram), () => {
 	it('returns true for anagrams', () => {
 		expect(isAnagram('abc', 'cba')).toBe(true);
 		expect(isAnagram('', '')).toBe(true);
@@ -74,7 +75,7 @@ describe(isAnagram.name, () => {
 	});
 });
 
-describe(isWhitespace.name, () => {
+describe(name(isWhitespace), () => {
 	it('returns true for empty strings', () => {
 		expect(isWhitespace('')).toBe(true);
 	});

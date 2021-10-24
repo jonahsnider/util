@@ -1,6 +1,7 @@
+import {name} from '../object';
 import {Sort} from '.';
 
-describe(Sort.descending.name, () => {
+describe(name(Sort.descending), () => {
 	it('sorts', () => {
 		const array = [2, 3, 1, 3];
 
@@ -30,7 +31,7 @@ describe(Sort.descending.name, () => {
 	});
 });
 
-describe(Sort.ascending.name, () => {
+describe(name(Sort.ascending), () => {
 	it('sorts', () => {
 		const array = [2, 3, 1, 3];
 

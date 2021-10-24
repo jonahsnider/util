@@ -1,7 +1,8 @@
 import {Stopwatch} from './stopwatch';
+import {name} from './object';
 
-describe(Stopwatch.name, () => {
-	describe('Stopwatch#started', () => {
+describe(name(Stopwatch), () => {
+	describe(name(Stopwatch) + '.started', () => {
 		it('reports when a stopwatch is started', () => {
 			const stopwatch = new Stopwatch();
 
@@ -17,7 +18,7 @@ describe(Stopwatch.name, () => {
 		});
 	});
 
-	describe('Stopwatch.start', () => {
+	describe(name(Stopwatch, Stopwatch.start), () => {
 		it('starts a stopwatch', () => {
 			const stopwatch = Stopwatch.start();
 
@@ -26,7 +27,7 @@ describe(Stopwatch.name, () => {
 		});
 	});
 
-	describe('Stopwatch#start', () => {
+	describe(name(Stopwatch, Stopwatch.prototype.start), () => {
 		it('starts the stopwatch', () => {
 			const stopwatch = new Stopwatch();
 
@@ -36,7 +37,7 @@ describe(Stopwatch.name, () => {
 		});
 	});
 
-	describe('Stopwatch#end', () => {
+	describe(name(Stopwatch, Stopwatch.prototype.end), () => {
 		it('ends the stopwatch', () => {
 			const stopwatch = new Stopwatch();
 

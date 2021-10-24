@@ -1,6 +1,7 @@
 import {toDigits} from './to-digits';
+import {name} from './object';
 
-describe(toDigits.name, () => {
+describe(name(toDigits), () => {
 	it('formats numbers', () => {
 		expect(toDigits(1, 1)).toBe(1);
 		expect(toDigits(1, 5)).toBe(1);

@@ -1,6 +1,7 @@
 import {difference, intersection, isDisjoint, isSubset, isSuperset, symmetricDifference, union} from './set';
+import {name} from './object';
 
-describe(isSuperset.name, () => {
+describe(name(isSuperset), () => {
 	it('returns true for supersets', () => {
 		const set = new Set([1, 2, 3]);
 
@@ -16,7 +17,7 @@ describe(isSuperset.name, () => {
 	});
 });
 
-describe(isSubset.name, () => {
+describe(name(isSubset), () => {
 	it('returns true for subsets', () => {
 		const set = new Set([1, 2, 3]);
 
@@ -32,7 +33,7 @@ describe(isSubset.name, () => {
 	});
 });
 
-describe(union.name, () => {
+describe(name(union), () => {
 	it('creates a union Set', () => {
 		const set = new Set([1, 2, 3]);
 
@@ -48,7 +49,7 @@ describe(union.name, () => {
 	});
 });
 
-describe(isDisjoint.name, () => {
+describe(name(isDisjoint), () => {
 	it('returns true for disjoint iterables', () => {
 		expect(isDisjoint([], [])).toBe(true);
 
@@ -66,7 +67,7 @@ describe(isDisjoint.name, () => {
 	});
 });
 
-describe(intersection.name, () => {
+describe(name(intersection), () => {
 	it('creates an intersection Set', () => {
 		const set = new Set([1, 2, 3]);
 
@@ -79,7 +80,7 @@ describe(intersection.name, () => {
 	});
 });
 
-describe(symmetricDifference.name, () => {
+describe(name(symmetricDifference), () => {
 	it('creates a Set of the symmetric difference', () => {
 		const set = new Set([1, 2, 3]);
 		expect(symmetricDifference(set, set)).toStrictEqual(new Set());
@@ -94,7 +95,7 @@ describe(symmetricDifference.name, () => {
 	});
 });
 
-describe(difference.name, () => {
+describe(name(difference), () => {
 	it('creates a Set of the difference', () => {
 		const set = new Set([1, 2, 3]);
 

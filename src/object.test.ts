@@ -1,6 +1,6 @@
 import {name, rename} from './object';
 
-describe(rename.name, () => {
+describe(name(rename), () => {
 	it('renames', () => {
 		expect(rename({a: 1, c: 2}, 'a', 'b')).toStrictEqual({b: 1, c: 2});
 
@@ -27,7 +27,7 @@ describe(rename.name, () => {
 	});
 });
 
-describe(name.name, () => {
+describe(name(name), () => {
 	class Test {
 		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		static staticMethod() {}

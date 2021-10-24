@@ -1,6 +1,7 @@
 import {AutoPercentage} from './auto-percentage';
+import {name} from './object';
 
-describe(AutoPercentage.name, () => {
+describe(name(AutoPercentage), () => {
 	it('generates percentages', () => {
 		const percentage = new AutoPercentage();
 

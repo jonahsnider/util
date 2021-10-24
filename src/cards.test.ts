@@ -1,6 +1,7 @@
 import {newDeck} from './cards';
+import {name} from './object';
 
-describe(newDeck.name, () => {
+describe(name(newDeck), () => {
 	it('creates a new deck of cards', () => {
 		const deck = newDeck();
 

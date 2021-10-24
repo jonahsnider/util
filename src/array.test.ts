@@ -17,7 +17,8 @@ import {
 	sample,
 	shuffle,
 } from './array';
-import {relativeStddev} from '.';
+import {relativeStddev} from './math';
+import {name} from './object';
 
 // Compilation tests
 // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
@@ -28,7 +29,7 @@ expectType<undefined>(sample([] as const));
 expectNotType<any>(sample([]));
 expectType<1 | undefined>(sample([1]));
 
-describe(sample.name, () => {
+describe(name(sample), () => {
 	it('selects items', () => {
 		expect(sample([1])).toBe(1);
 		// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
@@ -40,7 +41,7 @@ describe(sample.name, () => {
 
 const iterations = 1e5;
 
-describe(shuffle.name, () => {
+describe(name(shuffle), () => {
 	it('shuffles arrays', () => {
 		// Testing randomness is always fun
 		// If you get unlucky this test will fail
@@ -99,7 +100,7 @@ describe(shuffle.name, () => {
 	});
 });
 
-describe(binarySearch.name, () => {
+describe(name(binarySearch), () => {
 	it('searches', () => {
 		const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -123,7 +124,7 @@ describe(binarySearch.name, () => {
 	});
 });
 
-describe(chunk.name, () => {
+describe(name(chunk), () => {
 	it('chunks', () => {
 		const array = [1, 2, 3, 4, 5, 6];
 
@@ -141,7 +142,7 @@ describe(chunk.name, () => {
 	});
 });
 
-describe(largeToSmall.name, () => {
+describe(name(largeToSmall), () => {
 	it('arranges by length', () => {
 		expect(largeToSmall({id: 0, length: 0}, {id: 1, length: 0})).toStrictEqual([
 			{id: 0, length: 0},
@@ -179,7 +180,7 @@ describe(largeToSmall.name, () => {
 	});
 });
 
-describe(holes.name, () => {
+describe(name(holes), () => {
 	it('finds holes', () => {
 		// eslint-disable-next-line no-sparse-arrays
 		expect(holes([, ,])).toStrictEqual([0, 1]);
@@ -194,7 +195,7 @@ describe(holes.name, () => {
 	});
 });
 
-describe(pull.name, () => {
+describe(name(pull), () => {
 	it('pulls from an array', () => {
 		const array = [1, 2, 3];
 
@@ -220,7 +221,7 @@ describe(pull.name, () => {
 	});
 });
 
-describe(pullAll.name, () => {
+describe(name(pullAll), () => {
 	it('pulls all elements from an array', () => {
 		const array = [1, 2, 1, 2, 2, 3, 2, 3];
 
@@ -246,7 +247,7 @@ describe(pullAll.name, () => {
 	});
 });
 
-describe(replace.name, () => {
+describe(name(replace), () => {
 	it('replaces elements from an array', () => {
 		const array = [1, 2, 3];
 
@@ -272,7 +273,7 @@ describe(replace.name, () => {
 	});
 });
 
-describe(replaceAll.name, () => {
+describe(name(replaceAll), () => {
 	it('replaces all elements from an array', () => {
 		const array = [1, 2, 1, 3];
 
@@ -298,19 +299,19 @@ describe(replaceAll.name, () => {
 	});
 });
 
-describe(fill.name, () => {
+describe(name(fill), () => {
 	it('fills arrays', () => {
 		expect(fill('a', 3)).toStrictEqual(['a', 'a', 'a']);
 	});
 });
 
-describe(mapFill.name, () => {
+describe(name(mapFill), () => {
 	it('fills arrays', () => {
 		expect(mapFill(i => i, 3)).toStrictEqual([0, 1, 2]);
 	});
 });
 
-describe(padStart.name, () => {
+describe(name(padStart), () => {
 	it('pads an array', () => {
 		const array = [1, 2, 3];
 
@@ -328,7 +329,7 @@ describe(padStart.name, () => {
 	});
 });
 
-describe(padEnd.name, () => {
+describe(name(padEnd), () => {
 	it('pads an array', () => {
 		const array = [1, 2, 3];
 
@@ -346,7 +347,7 @@ describe(padEnd.name, () => {
 	});
 });
 
-describe(indexOfAll.name, () => {
+describe(name(indexOfAll), () => {
 	it('finds all indexes', () => {
 		expect(indexOfAll([1, 2, 1, 3, 1], 1)).toStrictEqual([0, 2, 4]);
 	});
@@ -360,7 +361,7 @@ describe(indexOfAll.name, () => {
 	});
 });
 
-describe(findIndexAll.name, () => {
+describe(name(findIndexAll), () => {
 	it('finds all indexes', () => {
 		expect(findIndexAll([1, 2, 1, 3, 1], element => element === 1)).toStrictEqual([0, 2, 4]);
 	});

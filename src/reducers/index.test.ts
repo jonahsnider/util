@@ -1,3 +1,4 @@
+import {name} from '../object';
 import {max, min, product, sum} from '.';
 
 // Compilation tests
@@ -8,7 +9,7 @@ import {max, min, product, sum} from '.';
 		// @ts-expect-error Mixed types
 		.reduce(sum);
 
-describe(sum.name, () => {
+describe(name(sum), () => {
 	it('adds numbers', () => {
 		expect([1, 1].reduce(sum)).toBe(2);
 	});
@@ -18,7 +19,7 @@ describe(sum.name, () => {
 	});
 });
 
-describe(product.name, () => {
+describe(name(product), () => {
 	it('multiplies numbers', () => {
 		expect([2, 3].reduce(product)).toBe(6);
 	});
@@ -28,7 +29,7 @@ describe(product.name, () => {
 	});
 });
 
-describe(max.name, () => {
+describe(name(max), () => {
 	it('selects the largest number', () => {
 		expect([2, 3, 1].reduce(max)).toBe(3);
 	});
@@ -38,7 +39,7 @@ describe(max.name, () => {
 	});
 });
 
-describe(min.name, () => {
+describe(name(min), () => {
 	it('selects the smallest number', () => {
 		expect([3, 1, 2].reduce(min)).toBe(1);
 	});

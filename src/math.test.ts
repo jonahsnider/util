@@ -1,6 +1,7 @@
+import {name} from './object';
 import {clamp, mean, median, mode, normaldist, random, randomInt, relativeStddev, standardNormaldist, stddev, variance} from './math';
 
-describe(variance.name, () => {
+describe(name(variance), () => {
 	it('calculates variance', () => {
 		expect(variance([1, 1, 1])).toBe(0);
 		expect(variance([1, 2, 3])).toBe(1);
@@ -8,7 +9,7 @@ describe(variance.name, () => {
 	});
 });
 
-describe(stddev.name, () => {
+describe(name(stddev), () => {
 	it('calculates standard deviation', () => {
 		expect(stddev([1, 1, 1])).toBe(0);
 		expect(stddev([1, 2, 3])).toBe(1);
@@ -16,7 +17,7 @@ describe(stddev.name, () => {
 	});
 });
 
-describe(relativeStddev.name, () => {
+describe(name(relativeStddev), () => {
 	it('calculates relative standard deviation', () => {
 		expect(relativeStddev([1, 1, 1])).toBe(0);
 		expect(relativeStddev([1, 2, 3])).toBe(0.5);
@@ -24,19 +25,19 @@ describe(relativeStddev.name, () => {
 	});
 });
 
-describe(normaldist.name, () => {
+describe(name(normaldist), () => {
 	it('calculates normal distribution', () => {
 		expect(normaldist(0, 1, 0)).toBeCloseTo(0.3989);
 	});
 });
 
-describe(standardNormaldist.name, () => {
+describe(name(standardNormaldist), () => {
 	it('calculates normal distribution', () => {
 		expect(standardNormaldist(0)).toBe(normaldist(0, 1, 0));
 	});
 });
 
-describe(mean.name, () => {
+describe(name(mean), () => {
 	const numbers = [1, 2, 3];
 
 	it('calculates the mean of numbers', () => {
@@ -49,7 +50,7 @@ describe(mean.name, () => {
 	});
 });
 
-describe(median.name, () => {
+describe(name(median), () => {
 	it('calculates the median', () => {
 		expect(median([1])).toBe(1);
 		expect(median([1, 2, 3])).toBe(2);
@@ -60,7 +61,7 @@ describe(median.name, () => {
 	});
 });
 
-describe(mode.name, () => {
+describe(name(mode), () => {
 	it('calculates the mode', () => {
 		expect(mode([])).toStrictEqual([]);
 		expect(mode([1])).toStrictEqual([1]);
@@ -70,7 +71,7 @@ describe(mode.name, () => {
 	});
 });
 
-describe(random.name, () => {
+describe(name(random), () => {
 	it('generates random numbers', () => {
 		const value = random(0, 1);
 
@@ -86,7 +87,7 @@ describe(random.name, () => {
 	});
 });
 
-describe(randomInt.name, () => {
+describe(name(randomInt), () => {
 	it('generates random integers', () => {
 		const value = randomInt(0, 1);
 
@@ -101,7 +102,7 @@ describe(randomInt.name, () => {
 	});
 });
 
-describe(clamp.name, () => {
+describe(name(clamp), () => {
 	it('clamps', () => {
 		expect(clamp(0, 1, 2)).toBe(1);
 		expect(clamp(3, 1, 2)).toBe(2);

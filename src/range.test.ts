@@ -1,17 +1,18 @@
 import {Range} from './range';
+import {name} from './object';
 
-describe(Range.name, () => {
+describe(name(Range), () => {
 	it('throws on bad input', () => {
 		expect(() => new Range(2, 1)).toThrow(RangeError);
 	});
 
-	describe(`${Range.name}.${Range.from.name}`, () => {
+	describe(name(Range, Range.from), () => {
 		it('creates a range', () => {
 			expect(Range.from([1, 2])).toStrictEqual(new Range(1, 2));
 		});
 	});
 
-	describe(`${Range.name}#${Range.prototype.has.name}`, () => {
+	describe(name(Range, Range.prototype.has), () => {
 		it('works with values in range', () => {
 			expect(new Range(1, 3).has(2)).toBe(true);
 			expect(new Range(1, 3n).has(2)).toBe(true);
@@ -23,13 +24,13 @@ describe(Range.name, () => {
 		});
 	});
 
-	describe(`${Range.name}#${Range.prototype[Symbol.iterator].name}`, () => {
+	describe(name(Range, Range.prototype[Symbol.iterator]), () => {
 		it('yields start and end value', () => {
 			expect([...new Range(1, 3)]).toStrictEqual([1, 3]);
 		});
 	});
 
-	describe(`${Range.name}#${Range.prototype.isSuperrange.name}`, () => {
+	describe(name(Range, Range.prototype.isSuperrange), () => {
 		it('returns true for superrange', () => {
 			const range = new Range(1, 4);
 			expect(range.isSuperrange(range)).toBe(true);
@@ -44,7 +45,7 @@ describe(Range.name, () => {
 		});
 	});
 
-	describe(`${Range.name}#${Range.prototype.isSubrange.name}`, () => {
+	describe(name(Range, Range.prototype.isSubrange), () => {
 		it('returns true for subrange', () => {
 			const range = new Range(1, 4);
 			expect(range.isSubrange(range)).toBe(true);
@@ -60,7 +61,7 @@ describe(Range.name, () => {
 		});
 	});
 
-	describe(`${Range.name}#${Range.prototype.equals.name}`, () => {
+	describe(name(Range, Range.prototype.equals), () => {
 		it('returns true for equal ranges', () => {
 			const range = new Range(1, 4);
 
@@ -73,7 +74,7 @@ describe(Range.name, () => {
 		});
 	});
 
-	describe(`${Range.name}#${Range.prototype.intersects.name}`, () => {
+	describe(name(Range, Range.prototype.intersects), () => {
 		it('returns true for intersecting ranges', () => {
 			const range = new Range(1, 4);
 

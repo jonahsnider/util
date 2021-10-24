@@ -1,8 +1,9 @@
 /* eslint-disable prefer-promise-reject-errors */
 
 import {settled, timeout} from './promise';
+import {name} from './object';
 
-describe(settled.name, () => {
+describe(name(settled), () => {
 	it('returns the resolved value', async () => {
 		const promise = Promise.resolve(1);
 
@@ -16,7 +17,7 @@ describe(settled.name, () => {
 	});
 });
 
-describe(timeout.name, () => {
+describe(name(timeout), () => {
 	it('returns the resolved value', async () => {
 		const promise = Promise.resolve(1);
 
