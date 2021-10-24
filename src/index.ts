@@ -60,5 +60,5 @@ export {Stopwatch} from './stopwatch';
 export {capitalize, isAnagram, isWhitespace, lines, multiReplace, truncate, uncapitalize} from './string';
 export {toDigits} from './to-digits';
 export {BaseTypedEventEmitter as _BaseTypedEventEmitter, BuiltInEvents as _BuiltInEvents, EventListeners, TypedEventEmitter} from './typed-event-emitter';
-export {AnyFunction, Comparable, CompareFn, DirectionFn, NumberLike, Percentage, Sign as _Sign} from './types';
+export {AnyFunction, Comparable, CompareFn, DirectionFn, NumberLike, Percentage, Sign as _Sign, UnknownFunction} from './types';
 export {Http};

@@ -4,9 +4,20 @@
  * @typeParam P - Parameters type
  * @typeParam R - Return type
  *
+ * @see {@link UnknownFunction}
+ *
  * @public
  */
 export type AnyFunction<P extends any[] = any[], R = any> = (...args: P) => R;
+
+/**
+ * An unknown function.
+ *
+ * @see {@link AnyFunction}
+ *
+ * @public
+ */
+export type UnknownFunction = (...args: unknown[]) => unknown;
 
 /**
  * A number sign.

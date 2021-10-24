@@ -643,6 +643,9 @@ export function uncapitalize<T extends string>(text: T): Uncapitalize<T>;
 export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B>;
 
 // @public
+export type UnknownFunction = (...args: unknown[]) => unknown;
+
+// @public
 export function variance(values: readonly number[], meanValue?: number): number;
 
 // @public
