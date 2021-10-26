@@ -67,7 +67,7 @@
 		"@size-limit/preset-small-lib": "6.0.3",
 		"@tsconfig/node16": "1.0.2",
 		"@types/jest": "27.0.2",
-		"@types/node": "16.10.3",
+		"@types/node": "16.10.9",
 		"@types/xo": "0.39.1",
 		"jest": "27.2.5",
 		"prettier": "2.4.1",
