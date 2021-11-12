@@ -29,6 +29,10 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	/**
 	 * Create a new `DefaultMap` with a specified default value.
 	 *
+	 * Time complexity: _O(n)_
+	 *
+	 * Space complexity: _O(n)_
+	 *
 	 * @param defaultValue - The default value to use for missing keys
 	 *
 	 * @example
@@ -39,6 +43,10 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ReadonlyArray<readonly [K, V]> | null);
 	/**
 	 * Create a new `DefaultMap` with a specified function to generate default values.
+	 *
+	 * Time complexity: _O(n)_
+	 *
+	 * Space complexity: _O(n)_
 	 *
 	 * @param defaultValueFn - The function to generate default values
 	 *
@@ -57,6 +65,10 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 
 	/**
 	 * Get the value for a given key, or the default value if it's missing.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
 	 *
 	 * @example
 	 * ```js

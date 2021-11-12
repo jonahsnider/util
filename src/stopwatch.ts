@@ -25,6 +25,10 @@ export class Stopwatch {
 	/**
 	 * Create a new stopwatch and start it.
 	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
 	 * @example
 	 * ```js
 	 * const stopwatch = Stopwatch.start();
@@ -44,6 +48,10 @@ export class Stopwatch {
 	 * If this stopwatch was started at any some point.
 	 * This will return `true` even if the stopwatch is stopped.
 	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
 	 * @example
 	 * ```js
 	 * const stopwatch = new Stopwatch();
@@ -59,6 +67,11 @@ export class Stopwatch {
 
 	/**
 	 * Start recording the duration of this stopwatch.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
 	 * @example
 	 * ```js
 	 * stopwatch.start();
@@ -70,6 +83,10 @@ export class Stopwatch {
 
 	/**
 	 * Return the duration elapsed since the start.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
 	 *
 	 * @example
 	 * ```js

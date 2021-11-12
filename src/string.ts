@@ -4,6 +4,10 @@ import {frequencyTable} from './iterable';
 /**
  * Capitalizes the first letter of a string.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * capitalize('hello'); // 'Hello'
@@ -26,6 +30,10 @@ export function capitalize<T extends string>(text: T): Capitalize<T> {
 /**
  * Uncapitalizes the first letter of a string.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * uncapitalize('HELLO'); // hELLO
@@ -47,6 +55,10 @@ export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
 
 /**
  * Truncate text to a certain length, optionally appending a suffix when truncated.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -73,6 +85,10 @@ export function truncate<T extends string>(text: T, maxLength: number, suffix = 
  * A string replacement function, but specialized for doing multiple replacements in a single pass through the input string.
  *
  * Based off [Nim's `strutils.multiReplace`](https://nim-lang.org/docs/strutils.html#multiReplace%2Cstring%2Cvarargs%5B%5D).
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -114,6 +130,10 @@ export function multiReplace(string: string, replacements: Record<string, string
  * Get each line in a string with leading and trailing whitespace removed.
  * Works with LF and CRLF line endings.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * lines('a\nb\nc'); // ['a', 'b', 'c']
@@ -135,6 +155,10 @@ export function lines(string: string): string[] {
 /**
  * Check if 2 strings are anagrams of each other.
  * Case-sensitive.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -172,6 +196,10 @@ const notWhitespaceRegExp = /\S/;
 
 /**
  * Check whether a string is empty or whitespace.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js

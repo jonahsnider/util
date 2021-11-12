@@ -8,6 +8,10 @@ export type Nullish = null | undefined;
 /**
  * Check if something is `null` or `undefined`.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const value = Math.random() > 0.5 ? 'hello' : null;

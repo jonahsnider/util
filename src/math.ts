@@ -3,6 +3,10 @@ import {sum} from './reducers/index';
 /**
  * Calculate the variance of a sequence of numbers.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * variance([1, 2, 3]); // 1
@@ -21,6 +25,10 @@ export function variance(values: readonly number[], meanValue = mean(values)): n
 
 /**
  * Calculate the standard deviation of a sequence of numbers.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -41,6 +49,10 @@ export function stddev(values: readonly number[], meanValue = mean(values)): num
 /**
  * Calculate the relative standard deviation (coefficient of variation) of a sequence of numbers.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * relativeStddev([1, 2, 3]); // 0.5
@@ -59,6 +71,10 @@ export function relativeStddev(values: readonly number[], meanValue = mean(value
 
 /**
  * Calculate the normal distribution.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -82,6 +98,10 @@ export function normaldist(x: number, standardDeviation: number, mean: number): 
 /**
  * Calculate the standard normal distribution.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * standardNormaldist(0) === normaldist(0, 1, 0); // true
@@ -102,6 +122,10 @@ export function standardNormaldist(x: number): number {
 /**
  * Get the mean of an array of `number`s.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const array = [1, 2, 3];
@@ -121,6 +145,10 @@ export function standardNormaldist(x: number): number {
 export function mean(array: readonly number[]): number;
 /**
  * Get the mean of an array of `bigint`s.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -150,6 +178,10 @@ export function mean<T extends number>(array: readonly T[]): T {
 /**
  * Calculate the median of an array of numbers.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const values = [1, 2, 3];
@@ -169,6 +201,10 @@ export function mean<T extends number>(array: readonly T[]): T {
 export function median(array: ArrayLike<number>): number;
 /**
  * Calculate the median of an array of bigints.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -203,6 +239,10 @@ export function median<T extends number>(array: ArrayLike<T>): T {
 /**
  * Calculate the mode of an iterable.
  * Strict equality (`===`) is used to compare elements.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -245,6 +285,10 @@ export function mode<T>(iterable: Iterable<T>): T[] {
 /**
  * Generate a random number within the given bounds.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const value = random(0, 10);
@@ -270,6 +314,10 @@ export function random(min: number, max: number): number {
 /**
  * Generate a random integer within the given bounds.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * randomInt(0, 3); // 0, 1, or 2
@@ -292,6 +340,10 @@ export function randomInt(min: number, max: number): number {
 
 /**
  * Returns the value nearest to value which is within the closed range [`min`, `max`].
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js

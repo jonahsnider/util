@@ -20,6 +20,10 @@ export type Result<T, E> = ResolvedResult<T> | RejectedResult<E>;
  * Settle a promise by returning a tuple of the resolved value or rejected error.
  * This function never rejects.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const [value, error] = await settled(promise);
@@ -55,6 +59,10 @@ function delay(ms: number): [timer: NodeJS.Timeout, delay: PromiseLike<typeof DE
 
 /**
  * Reject if the given promise does not resolve within the given timeout.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @param promise - The promise to wait for
  * @param timeoutMs - The timeout in milliseconds

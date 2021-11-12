@@ -10,6 +10,10 @@ export type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false :
 /**
  * Create a copy of an object with a key renamed.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const object = { a: 1 };
@@ -30,7 +34,6 @@ export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(
 	oldKey: NonUnion<K1>,
 	newKey: NonUnion<K2>,
 ): Omit<T, K1 | K2> & Record<K2, T[K1]>;
-
 export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(object: T, oldKey: K1, newKey: K1 | K2): Omit<T, K1 | K2> & Record<string, T[K1]> {
 	if (oldKey === newKey) {
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
@@ -46,6 +49,10 @@ export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(object: T,
 
 /**
  * Get a string name for a class method.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -75,6 +82,10 @@ export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(object: T,
 export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `${string}${'.' | '#'}${string}`;
 /**
  * Get the name of a function or class.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js

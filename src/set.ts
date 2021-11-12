@@ -4,6 +4,10 @@ import {combineIterables} from './iterable';
 /**
  * Check if `a` is a superset of `b`.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @param a - First set
  * @param b - Second set/iterable
  *
@@ -29,6 +33,10 @@ export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean {
 
 /**
  * Check if `a` is a subset of `b`.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @param a - First set/iterable
  * @param b - Second set
@@ -57,6 +65,10 @@ export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean {
  * Get the union of 2 iterables.
  * For best performance `a` should have more elements than `b`.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @param a - First iterable
  * @param b - Second iterable
  *
@@ -75,6 +87,10 @@ export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
 /**
  * Check if `a` and `b` are disjoint.
  * For best performance `a` should have more elements than `b`.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @param a - First iterable
  * @param b - Second iterable
@@ -101,6 +117,10 @@ export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean {
 
 /**
  * Get the intersection of 2 `Set`s.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @param a - First set
  * @param b - Second set
@@ -130,6 +150,10 @@ export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T> {
  * Get the symmetric difference of 2 iterables (`a Δ b`).
  * For best performance `a` should have more elements than `b`.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @param a - First iterable
  * @param b - Second iterable
  *
@@ -158,6 +182,10 @@ export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A
 /**
  * Get a set representing the difference of `a` and `b` (`a \ b`).
  * The order of parameters matters.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @param a - First iterable
  * @param b - Second iterable

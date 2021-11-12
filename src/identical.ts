@@ -50,6 +50,10 @@ function identicalMap<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean
  * Check if 2 arrays have the same elements in the same order.
  * Strict equality (`===`) is used to compare elements.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const a = [1, 2, 3];
@@ -70,6 +74,10 @@ export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
  * Check if 2 `Set`s have the same elements.
  * Strict equality (`===`) is used to compare elements.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const a = new Set([1, 2, 3]);
@@ -89,6 +97,10 @@ export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
 /**
  * Check if 2 `Map`s have the same key-value pairs.
  * Strict equality (`===`) is used to compare values.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -125,6 +137,10 @@ export function identical<V, K = never>(a: readonly V[] | ReadonlySet<V> | Reado
 /**
  * Check if 2 or more iterables hold the same elements.
  * Strict equality (`===`) is used to compare elements.
+ *
+ * Time complexity: _O(n)_ where _n_ is the number of elements in the iterables
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js

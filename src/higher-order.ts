@@ -3,6 +3,10 @@ import type {NumberLike} from './types';
 /**
  * Create a new function that calls the provided `fn` and negates the result.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * import { nullish } from '@jonahsnider/util';
@@ -24,6 +28,10 @@ export function not<T extends (...parameters: any[]) => boolean>(fn: T): T {
 
 /**
  * Create a new function taht calls the provided `fn` and then inverts the sign of the result.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -49,6 +57,10 @@ export function invert<T extends (...parameters: any[]) => NumberLike>(fn: T): T
 /**
  * Create a new function that calls the provided `fn` with the given arguments.
  * After the first call the return value will be cached and returned again, meaning you technically only need to pass the arguments the first time.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js

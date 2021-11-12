@@ -1,6 +1,10 @@
 /**
  * Combines multiple iterables into a single iterable.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * [...combineIterables([1, 2, 3], [4, 5, 6])]; // [1, 2, 3, 4, 5, 6]
@@ -20,6 +24,10 @@ export function* combineIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): 
 
 /**
  * Adds all the elements of an iterable into a string, separated by the specified separator string.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -63,6 +71,10 @@ export function join(iterable: Iterable<unknown>, separator = ','): string {
 /**
  * Determines whether all the elements of an iterable are truthy.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * every([false], x => x); // false
@@ -86,6 +98,10 @@ export function join(iterable: Iterable<unknown>, separator = ','): string {
 export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element: T) => element is S): iterable is Iterable<S>;
 /**
  * Determines whether all the elements of an iterable are truthy.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -121,6 +137,10 @@ export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unkno
 /**
  * Determines whether any of the elements of an iterable are truthy.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * some([false], x => x); // false
@@ -155,6 +175,10 @@ export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknow
  * Determines whether an iterable includes a certain element, returning true or false as appropriate.
  * Strict equality (`===`) is used to compare elements.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * includes([1, 2, 3], 2); // true
@@ -185,6 +209,10 @@ export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean {
 /**
  * Returns the value of the first element in the iterable where `predicate` is truthy, and `undefined` otherwise.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * find([1, 2, 3], x => x === 2); // 2
@@ -210,6 +238,10 @@ export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolea
 /**
  * Construct a frequency table from an iterable.
  * Similar to [Python's `Counter` class](https://docs.python.org/3/library/collections.html#collections.Counter).
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -240,6 +272,10 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 /**
  * Split an iterable into 2 arrays of elements that passed or failed a provided type guard.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * const [numbers, strings] = partition(['a', 1, 'b', 2, 'c', 3], (element): element is number => typeof element === 'number');
@@ -259,6 +295,10 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (element: T) => element is S): [passed: S[], failed: Array<Exclude<T, S>>];
 /**
  * Split an iterable into 2 arrays of elements that passed or failed a provided predicate.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -304,6 +344,10 @@ function* firstIterable<T>(iterable: Iterable<T>, take: number): Iterable<T> {
 /**
  * Get the first element from an iterable.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * first([1, 2, 3]); // 1
@@ -318,6 +362,10 @@ function* firstIterable<T>(iterable: Iterable<T>, take: number): Iterable<T> {
 export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined;
 /**
  * Get the first `n` elements from an iterable.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -352,6 +400,10 @@ export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) 
 
 /**
  * Get an array of all the duplicate elements in an iterable.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -389,6 +441,10 @@ export function allDuplicates<T>(iterable: Iterable<T>): T[] {
 /**
  * Get a Set of the duplicate elements in an iterable.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * duplicates([1, 2, 2, 2, 3]); // Set(1) { 2 }
@@ -419,6 +475,10 @@ export function duplicates<T>(iterable: Iterable<T>): Set<T> {
 /**
  * Returns an array with the elements of the iterable repeated a provided number of times.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * [...cycle(['a', 'b'], 2)]; // ['a', 'b', 'a', 'b']
@@ -439,6 +499,10 @@ export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
 
 /**
  * Returns an iterable that repeats a given value a given number of times.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -464,6 +528,10 @@ export function* repeat<T>(value: T, times: number): Iterable<T> {
 /**
  * Returns an iterable that repeats a given value a given number of times.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * [...repeat('a', 3)]; // ['a', 'a', 'a']
@@ -488,6 +556,10 @@ export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number):
 /**
  * Check if a readonly `Set` is empty.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * isEmpty(new Set([1, 2, 3])); // false
@@ -507,6 +579,10 @@ export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number):
 export function isEmpty(map: ReadonlyMap<unknown, unknown>): map is ReadonlyMap<never, never>;
 /**
  * Check if a `Map` is empty.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -528,6 +604,10 @@ export function isEmpty(map: Map<unknown, unknown>): map is Map<never, never>;
 /**
  * Check if a readonly `Set` is empty.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * isEmpty(new Set([1, 2, 3])); // false
@@ -547,6 +627,10 @@ export function isEmpty(map: Map<unknown, unknown>): map is Map<never, never>;
 export function isEmpty(set: ReadonlySet<unknown>): set is ReadonlySet<never>;
 /**
  * Check if a `Set` is empty.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -568,6 +652,10 @@ export function isEmpty(set: Set<unknown>): set is Set<never>;
 /**
  * Check if a string is empty.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * isEmpty('hello'); // false
@@ -587,6 +675,10 @@ export function isEmpty(set: Set<unknown>): set is Set<never>;
 export function isEmpty(string: string): string is '';
 /**
  * Check if a readonly array is empty.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -609,6 +701,10 @@ export function isEmpty(array: readonly unknown[]): array is readonly [];
 /**
  * Check if an array is empty.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * isEmpty([1, 2, 3]); // false
@@ -629,6 +725,10 @@ export function isEmpty(array: readonly unknown[]): array is readonly [];
 export function isEmpty(array: unknown[]): array is [];
 /**
  * Check if an iterable is empty.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -658,6 +758,10 @@ export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never
 
 /**
  * Count the number of elements in an iterable.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js

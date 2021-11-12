@@ -4,6 +4,10 @@
  * Calculate the bitwise AND of 2 `number`s.
  * Meant to be used with `Array.prototype.reduce`.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const array = [5, 3];
@@ -22,6 +26,10 @@ export function and(a: number, b: number): number;
 /**
  * Calculate the bitwise AND of 2 `bigint`s.
  * Meant to be used with `Array.prototype.reduce`.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -46,6 +54,10 @@ export function and<T extends number>(a: T, b: T): T {
  * Calculate the bitwise OR of 2 `number`s.
  * Meant to be used with `Array.prototype.reduce`.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const array = [5, 3];
@@ -64,6 +76,10 @@ export function or(a: number, b: number): number;
 /**
  * Calculate the bitwise OR of 2 `bigint`s.
  * Meant to be used with `Array.prototype.reduce`.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -88,6 +104,10 @@ export function or<T extends number>(a: T, b: T): T {
  * Calculate the bitwise XOR of 2 `number`s.
  * Meant to be used with `Array.prototype.reduce`.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const array = [5, 3];
@@ -106,6 +126,10 @@ export function xor(a: number, b: number): number;
 /**
  * Calculate the bitwise XOR of 2 `bigint`s.
  * Meant to be used with `Array.prototype.reduce`.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js

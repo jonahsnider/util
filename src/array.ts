@@ -18,6 +18,10 @@ export type NonEmptyArray<T> = [T, ...T[]];
 /**
  * Samples a single element at random from an array.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const array = [1, 2, 3];
@@ -40,6 +44,10 @@ export function sample<T>(array: ArrayLike<T>): T | undefined {
 /**
  * A mutating (in-place) uniformly random array shuffle.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const array = [1, 2, 3];
@@ -57,6 +65,10 @@ export function sample<T>(array: ArrayLike<T>): T | undefined {
 export function shuffle<T>(array: T[], mutate?: true): void;
 /**
  * A non-mutating uniformly random array shuffle.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -90,6 +102,10 @@ export function shuffle<T>(array: T[] | (ArrayLike<T> & Iterable<T>), mutate = t
 
 /**
  * Perform a binary search to find an element in a sorted array.
+ *
+ * Time complexity: _O(log n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -144,6 +160,10 @@ export function binarySearch<T>(array: ArrayLike<T>, directionFn: DirectionFn<T>
 /**
  * Divides an array into several chunks of `size`.
  * If `size` is equal to the length of the array each item will be in their own array.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -202,6 +222,10 @@ export type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [large
  * Arrange 2 objects in a tuple by their length.
  * Useful for situations where you are iterating `a` or `b` depending on which is larger.
  *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const a = [1, 2];
@@ -224,6 +248,10 @@ export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLen
 /**
  * Arrange 2 objects in a tuple by their size.
  * Useful for situations where you are iterating `a` or `b` depending on which is larger.
+ *
+ * Time complexity: _O(1)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -271,6 +299,10 @@ export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B exte
 /**
  * Get an array of indexes of holes in an array.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * holes([0, , 2]); // [1]
@@ -296,6 +328,10 @@ export function holes(array: ArrayLike<unknown>): number[] {
 
 /**
  * Remove an element from an array.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -328,6 +364,10 @@ export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice
 /**
  * Remove all elements equal to a given element from an array.
  * Strict equality (`===`) is used to compare elements.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -368,6 +408,10 @@ export function pullAll<T>(array: T[], element: T): ReturnType<typeof array['spl
  * Replace the first occurrence of `searchElement` with `replacement` in an array.
  * Strict equality (`===`) is used to compare elements.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * const array = [1, 2, 1, 3, 1];
@@ -398,6 +442,10 @@ export function replace<T>(array: T[], searchElement: T, replacement: T): number
 /**
  * Replace all occurrences of `searchElement` with `replacement` in an array.
  * Strict equality (`===`) is used to compare elements.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
  *
  * @example
  * ```js
@@ -433,6 +481,10 @@ export function replaceAll<T>(array: T[], searchElement: T, replacement: T): num
 /**
  * Create a new array of a specified length and fill it with a given value.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * fill(3, 'a'); // ['a', 'a', 'a']
@@ -455,13 +507,17 @@ export function fill<T>(value: T, length: number): T[] {
 /**
  * Create a new array of a specified length and fill it using the given function.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
- * mapFill(3, i => i + 1); // [1, 2, 3]
+ * mapFill(i => i + 1, 3); // [1, 2, 3]
  * ```
  *
- * @param length - The length of the array
  * @param valueFn - A function that returns each value to fill the array with
+ * @param length - The length of the array
  *
  * @returns The filled array
  *
@@ -470,6 +526,7 @@ export function fill<T>(value: T, length: number): T[] {
  *
  * @public
  */
+// TODO: Swap the order of valueFn and length
 export function mapFill<T>(valueFn: (index: number) => T, length: number): T[] {
 	return Array.from({length}, (_, i) => valueFn(i));
 }
@@ -477,6 +534,10 @@ export function mapFill<T>(valueFn: (index: number) => T, length: number): T[] {
 /**
  * Pads an array with a given value so that the array reaches a given length.
  * The padding is applied from the start (left) of the array.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -503,6 +564,10 @@ export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
  * Pads an array with a given value so that the array reaches a given length.
  * The padding is applied from the end (right) of the array.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * const array = [0, 1, 2];
@@ -513,7 +578,7 @@ export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {
  * ```
  *
  * @param array - The array to pad
- * @param maxLength - The length of `array` once it has been padded. If this parameter is smaller than the current string's length, `array` will not be modified
+ * @param maxLength - The length of `array` once it has been padded. If this parameter is smaller than `array`'s length, `array` will not be modified
  * @param fillValue - The value to pad the array with
  *
  * @see {@link padStart} to pad the start of an array
@@ -527,6 +592,10 @@ export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
 /**
  * Get an array of indexes of `searchElement` in an array.
  * Strict equality (`===`) is used to compare elements.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js
@@ -559,6 +628,10 @@ export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
 
 /**
  * Get an array of all indexes of elements in an array that passed a given predicate.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
  *
  * @example
  * ```js

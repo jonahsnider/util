@@ -33,6 +33,10 @@ export class AutoPercentage {
 	/**
 	 * Increment and get the percentage.
 	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
 	 * @example
 	 * ```js
 	 * const autoPercentage = new AutoPercentage();
@@ -56,6 +60,10 @@ export class AutoPercentage {
 
 	/**
 	 * Increment and get the number of times the percentage has been incremented.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
 	 *
 	 * @example
 	 * ```js

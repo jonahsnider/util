@@ -99,6 +99,10 @@ const deck = [
 /**
  * Get a sorted deck of cards.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
  * @example
  * ```js
  * import { shuffle } from '@jonahsnider/util';

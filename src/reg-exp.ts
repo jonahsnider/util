@@ -1,6 +1,10 @@
 /**
  * Combines several regular expressions into a new one that matches any of them.
  *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(1)_
+ *
  * @example
  * ```js
  * regExpUnion(/[a-z]/, /\d/); // /([a-z])|(\d)/

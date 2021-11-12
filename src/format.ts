@@ -4,6 +4,10 @@ import type {Table} from './array';
  * Get the lengths of each column in a table.
  * Can include a header.
  *
+ * Time complexity: _O(n)_ where _n_ is the number of rows * columns.
+ *
+ * Space complexity: _O(n)_
+ *
  * @param table - The table of strings to use for calculations
  *
  * @returns An array of lengths
@@ -28,6 +32,10 @@ export function maxColumnLength(table: Table<string>): number[] {
 
 /**
  * Format a table into a string of equally sized columns.
+ *
+ * Time complexity: _O(n)_ where _n_ is the number of rows * columns.
+ *
+ * Space complexity: _O(n)_
  *
  * @param table - Table to format
  * @param delimiter - Delimiter to use in columns

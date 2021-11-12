@@ -9,6 +9,10 @@ export class Range {
 	/**
 	 * Create a new range from the first 2 values of an iterable.
 	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
 	 * @example
 	 * ```js
 	 * const range = Range.from([100, 200]);
@@ -26,6 +30,10 @@ export class Range {
 
 	/**
 	 * Create a new range from 2 values.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
 	 *
 	 * @param lower - The lower bound of this range
 	 * @param upper - The upper bound of this range
@@ -56,6 +64,10 @@ export class Range {
 	 * Returns `true` if `value` is within `this.lower` and `this.upper`, false otherwise.
 	 * The `>=` and `<=` operators are used to compare `value`.
 	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
 	 * @example
 	 * ```js
 	 * const range = new Range(100, 200);
@@ -71,6 +83,10 @@ export class Range {
 	/**
 	 * An iterable that contains `this.lower` and `this.upper`.
 	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
 	 * @example
 	 * ```js
 	 * const [lower, upper] = range;
@@ -83,6 +99,10 @@ export class Range {
 
 	/**
 	 * Check whether a given range contains this range.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
 	 *
 	 * @example
 	 * ```js
@@ -104,6 +124,10 @@ export class Range {
 	/**
 	 * Check whether this range contains the given range
 	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
 	 * @example
 	 * ```js
 	 * const a = new Range(0, 100);
@@ -123,6 +147,10 @@ export class Range {
 
 	/**
 	 * Check whether a given range has the same lower and upper bounds as this one.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
 	 *
 	 * @example
 	 * ```js
@@ -151,6 +179,10 @@ export class Range {
 
 	/**
 	 * Check if this range and a given range have any intersection.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
 	 *
 	 * @example
 	 * ```js
