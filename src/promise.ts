@@ -65,13 +65,13 @@ function delay(ms: number): [timer: NodeJS.Timeout, delay: PromiseLike<typeof DE
  */
 export async function timeout<T>(promise: PromiseLike<T>, timeoutMs: number): Promise<T> {
 	const [timer, timeoutPromise] = delay(timeoutMs);
-	const resolvedValue = await Promise.race([promise, timeoutPromise]);
+	const resolvedValue = await Promise.race([promise, timeoutPromise]).finally(() => {
+		clearTimeout(timer);
+	});
 
 	if (resolvedValue === DELAY_RESOLVED_VALUE) {
 		throw new Error('Timed out');
 	}
-
-	clearTimeout(timer);
 
 	return resolvedValue;
 }
