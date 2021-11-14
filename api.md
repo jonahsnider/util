@@ -337,7 +337,7 @@ export type _NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false 
 export function normaldist(x: number, standardDeviation: number, mean: number): number;
 
 // @public
-export function not<T extends (...parameters: any[]) => boolean>(fn: T): T;
+export function not<T extends (...parameters: any[]) => boolean>(fn: T): (...parameters: Parameters<T>) => boolean;
 
 // @public
 export type Nullish = null | undefined;
