@@ -11,7 +11,7 @@ function* firstIterable<T>(iterable: Iterable<T>, take: number): Iterable<T> {
 /**
  * Get the first element from an iterable.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *

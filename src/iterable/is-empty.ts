@@ -1,7 +1,7 @@
 /**
  * Check if a readonly `Set` is empty.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *
@@ -25,7 +25,7 @@ export function isEmpty(map: ReadonlyMap<unknown, unknown>): map is ReadonlyMap<
 /**
  * Check if a `Map` is empty.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *
@@ -49,7 +49,7 @@ export function isEmpty(map: Map<unknown, unknown>): map is Map<never, never>;
 /**
  * Check if a readonly `Set` is empty.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *
@@ -73,7 +73,7 @@ export function isEmpty(set: ReadonlySet<unknown>): set is ReadonlySet<never>;
 /**
  * Check if a `Set` is empty.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *
@@ -97,7 +97,7 @@ export function isEmpty(set: Set<unknown>): set is Set<never>;
 /**
  * Check if a string is empty.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *
@@ -121,7 +121,7 @@ export function isEmpty(string: string): string is '';
 /**
  * Check if a readonly array is empty.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *
@@ -146,7 +146,7 @@ export function isEmpty(array: readonly unknown[]): array is readonly [];
 /**
  * Check if an array is empty.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *
@@ -171,7 +171,7 @@ export function isEmpty(array: unknown[]): array is [];
 /**
  * Check if an iterable is empty.
  *
- * Time complexity: _O(n)_
+ * Time complexity: _O(1)_
  *
  * Space complexity: _O(1)_
  *
