@@ -1,32 +1,30 @@
 import {name} from './name';
 
-describe(name(name), () => {
-	class Test {
-		// eslint-disable-next-line @typescript-eslint/no-empty-function
-		static staticMethod() {}
-
-		// eslint-disable-next-line @typescript-eslint/no-empty-function
-		method() {}
-	}
+class Test {
+	// eslint-disable-next-line @typescript-eslint/no-empty-function
+	static staticMethod() {}
 
 	// eslint-disable-next-line @typescript-eslint/no-empty-function
-	function func() {}
+	method() {}
+}
 
-	const test = new Test();
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+function func() {}
 
-	it('names classes', () => {
-		expect(name(Test)).toBe('Test');
-	});
+const test = new Test();
 
-	it('names class methods', () => {
-		expect(name(Test, Test.staticMethod)).toBe('Test.staticMethod');
-		expect(name(Test, Test.prototype.method)).toBe('Test#method');
-		expect(name(test.method)).toBe('method');
+it('names classes', () => {
+	expect(name(Test)).toBe('Test');
+});
 
-		expect(name(Test, test.method)).toBe('Test#method');
-	});
+it('names class methods', () => {
+	expect(name(Test, Test.staticMethod)).toBe('Test.staticMethod');
+	expect(name(Test, Test.prototype.method)).toBe('Test#method');
+	expect(name(test.method)).toBe('method');
 
-	it('names functions', () => {
-		expect(name(func)).toBe('func');
-	});
+	expect(name(Test, test.method)).toBe('Test#method');
+});
+
+it('names functions', () => {
+	expect(name(func)).toBe('func');
 });

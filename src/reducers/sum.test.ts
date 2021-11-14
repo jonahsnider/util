@@ -1,4 +1,3 @@
-import {name} from '../object';
 import {sum} from './sum';
 
 // Compilation tests
@@ -8,12 +7,11 @@ import {sum} from './sum';
 	[1n, 1]
 		// @ts-expect-error Mixed types
 		.reduce(sum);
-describe(name(sum), () => {
-	it('adds numbers', () => {
-		expect([1, 1].reduce(sum)).toBe(2);
-	});
 
-	it('adds bigints', () => {
-		expect([1n, 1n].reduce(sum)).toBe(2n);
-	});
+it('adds numbers', () => {
+	expect([1, 1].reduce(sum)).toBe(2);
+});
+
+it('adds bigints', () => {
+	expect([1n, 1n].reduce(sum)).toBe(2n);
 });

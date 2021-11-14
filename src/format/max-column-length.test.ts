@@ -1,5 +1,5 @@
 import type {Table} from '../array';
-import {name} from '../object';
+
 import {maxColumnLength} from './max-column-length';
 
 // prettier-ignore
@@ -9,8 +9,6 @@ const table: Table<string> = [
   ['22',    '4444', '333'],
 ];
 
-describe(name(maxColumnLength), () => {
-	it('finds the longest columns', () => {
-		expect(maxColumnLength(table)).toStrictEqual([5, 4, 3]);
-	});
+it('finds the longest columns', () => {
+	expect(maxColumnLength(table)).toStrictEqual([5, 4, 3]);
 });

@@ -1,9 +1,6 @@
-import {name} from '../../object';
 import {or} from '.';
 
-describe(name(or), () => {
-	it('returns bitwise OR', () => {
-		expect(or(3, 5)).toBe(7);
-		expect(or(5n, 3n)).toBe(7n);
-	});
+it('returns bitwise OR', () => {
+	expect(or(3, 5)).toBe(7);
+	expect(or(5n, 3n)).toBe(7n);
 });
