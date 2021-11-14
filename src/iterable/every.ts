@@ -1,5 +1,5 @@
 /**
- * Determines whether all the elements of an iterable are truthy.
+ * Determines whether all the elements of an iterable pass a given predicate.
  *
  * Time complexity: _O(n)_
  *
@@ -21,13 +21,13 @@
  * @param iterable - The iterable to take elements from
  * @param predicate - The function to call on each element in the iterable to determine if it passes the test
  *
- * @returns `true` if every element is truthy, `false` otherwise
+ * @returns `true` if every element passed the predicate, `false` otherwise
  *
  * @public
  */
 export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element: T) => element is S): iterable is Iterable<S>;
 /**
- * Determines whether all the elements of an iterable are truthy.
+ * Determines whether all the elements of an iterable pass a given predicate.
  *
  * Time complexity: _O(n)_
  *
@@ -49,7 +49,7 @@ export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element
  * @param iterable - The iterable to take elements from
  * @param predicate - The function to call on each element in the iterable to determine if it passes the test
  *
- * @returns `true` if every element is truthy, `false` otherwise
+ * @returns `true` if every element passed the predicate, `false` otherwise
  *
  * @public
  */

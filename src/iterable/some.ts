@@ -1,5 +1,5 @@
 /**
- * Determines whether any of the elements of an iterable are truthy.
+ * Determines whether any of the elements of an iterable pass a given predicate.
  *
  * Time complexity: _O(n)_
  *
