@@ -1,5 +1,7 @@
 import * as Http from './http/index';
 
+// TODO: see if it's possible to use export * instead of manual exports
+
 export {
 	ArrangedLargestToSmallest as _ArrangedLargestToSmallest,
 	binarySearch,

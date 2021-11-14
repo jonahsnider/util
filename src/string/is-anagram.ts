@@ -1,0 +1,42 @@
+import {identical} from '../identical';
+import {frequencyTable} from '../iterable';
+
+/**
+ * Check if 2 strings are anagrams of each other.
+ * Case-sensitive.
+ *
+ * Time complexity: _O(n)_
+ *
+ * Space complexity: _O(n)_
+ *
+ * @example
+ * ```js
+ * isAnagram('abc', 'cba'); // true
+ * ```
+ *
+ * @example
+ * ```js
+ * isAnagram('abc', 'Cba'); // false
+ * ```
+ *
+ * @param a - First string to compare
+ * @param b - Second string to compare
+ *
+ * @returns Whether the strings are anagrams of each other
+ *
+ * @public
+ */
+export function isAnagram<T>(a: ArrayLike<T> & Iterable<T>, b: ArrayLike<T> & Iterable<T>): boolean {
+	if (a === b) {
+		return true;
+	}
+
+	if (a.length !== b.length) {
+		return false;
+	}
+
+	const aFreqTable = frequencyTable(a);
+	const bFreqTable = frequencyTable(b);
+
+	return identical(aFreqTable, bFreqTable);
+}
