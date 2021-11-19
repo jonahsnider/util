@@ -66,7 +66,7 @@
 		"@rollup/plugin-typescript": "8.3.0",
 		"@size-limit/preset-small-lib": "6.0.4",
 		"@tsconfig/node16": "1.0.2",
-		"@types/jest": "27.0.2",
+		"@types/jest": "27.0.3",
 		"@types/node": "16.11.7",
 		"@types/xo": "0.39.1",
 		"jest": "27.3.1",
