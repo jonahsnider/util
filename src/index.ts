@@ -28,6 +28,7 @@ export {
 export {AutoPercentage} from './auto-percentage';
 export {Card, newDeck, Rank, Suit} from './cards';
 export {DefaultMap} from './default-map';
+export {Enum, enumHas, EnumValue} from './enum/index';
 export {formatTable, maxColumnLength} from './format';
 export {invert, not, thunkify} from './higher-order';
 export {identical, same} from './identical';

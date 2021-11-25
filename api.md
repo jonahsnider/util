@@ -147,6 +147,15 @@ export type DirectionFn<T> = (element: T) => number;
 export function duplicates<T>(iterable: Iterable<T>): Set<T>;
 
 // @public
+export type Enum<T extends EnumValue> = Readonly<Record<string | number, T>>;
+
+// @public
+export function enumHas<T extends EnumValue>(Enum: Enum<T>, value: unknown): value is T;
+
+// @public
+export type EnumValue = number | string;
+
+// @public
 export type EventListeners = Record<Parameters<EventEmitter['on']>[0], Parameters<EventEmitter['on']>[1]>;
 
 // @public
