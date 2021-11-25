@@ -1,4 +1,4 @@
-import type {AnyFunction} from '../types.js';
+import type {AnyFunction} from '../types';
 
 /**
  * Get a string name for a class method.
