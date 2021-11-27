@@ -2,20 +2,23 @@
  * An object with a `length` property.
  * @internal
  */
-export type ObjectWithLength = {length: number};
+type ObjectWithLength = {length: number};
+export {ObjectWithLength as _ObjectWithLength};
 
 /**
  * An object with a `size` property.
  * @internal
  */
-export type ObjectWithSize = {size: number};
+type ObjectWithSize = {size: number};
+export {ObjectWithSize as _ObjectWithSize};
 
 /**
  * A tuple of two elements arranged so the largest element is first and the smallest is last.
  *
  * @internal
  */
-export type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
+type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
+export {ArrangedLargestToSmallest as _ArrangedLargestToSmallest};
 
 /**
  * Arrange 2 objects in a tuple by their length.

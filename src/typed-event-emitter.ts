@@ -20,17 +20,18 @@ export type EventListeners = Record<Parameters<EventEmitter['on']>[0], Parameter
  *
  * @internal
  */
-export interface BuiltInEvents<T extends EventListeners> {
+interface BuiltInEvents<T extends EventListeners> {
 	newListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
 	removeListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
 }
+export {BuiltInEvents as _BuiltInEvents};
 
 /**
  * Typed event emitter with no built in events.
  *
  * @internal
  */
-export interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
+interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
 	addListener<E extends keyof T>(eventName: E, listener: T[E]): this;
 	emit<E extends keyof T>(eventName: E, ...args: Parameters<T[E]>): ReturnType<EventEmitter['emit']>;
 	eventNames(): Array<Exclude<keyof T, number>>;
@@ -45,6 +46,7 @@ export interface BaseTypedEventEmitter<T extends EventListeners> extends EventEm
 	removeListener<E extends keyof T>(eventName: E, listener: T[E]): this;
 	rawListeners<E extends keyof T>(eventName: E): Array<T[E]>;
 }
+export {BaseTypedEventEmitter as _BaseTypedEventEmitter};
 
 /**
  * A type-checked `EventEmitter`.

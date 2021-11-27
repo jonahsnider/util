@@ -24,7 +24,8 @@ export type UnknownFunction = (...args: unknown[]) => unknown;
  *
  * @internal
  */
-export type Sign = '-' | '+';
+type Sign = '-' | '+';
+export {Sign as _Sign};
 
 /**
  * A value that can be converted to a Number.

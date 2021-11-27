@@ -3,7 +3,8 @@
  *
  * @internal
  */
-export type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) : never) extends false ? T : never;
+type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) : never) extends false ? T : never;
+export {NonUnion as _NonUnion};
 
 /**
  * Create a copy of an object with a key renamed.

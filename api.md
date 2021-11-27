@@ -190,9 +190,9 @@ export function holes(array: ArrayLike<unknown>): number[];
 
 declare namespace Http {
     export {
+        StatusRange,
         Status,
-        Method,
-        StatusRange
+        Method
     }
 }
 export { Http }
