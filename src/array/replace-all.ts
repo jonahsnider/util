@@ -22,6 +22,7 @@
  * @returns The number of elements replaced
  *
  * @public
+ * @category Array
  */
 export function replaceAll<T>(array: T[], searchElement: T, replacement: T): number {
 	let timesReplaced = 0;

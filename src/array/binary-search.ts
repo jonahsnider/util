@@ -30,6 +30,7 @@ import type {DirectionFn} from '../types';
  * @returns The value of the first element in the array that satisfies the provided testing function. Otherwise, `undefined` is returned.
  *
  * @public
+ * @category Array
  */
 export function binarySearch<T>(array: ArrayLike<T>, directionFn: DirectionFn<T>): ReturnType<T[]['find']> {
 	let left = 0;

@@ -17,6 +17,7 @@
  * @returns Uncapitalized string
  *
  * @public
+ * @category String
  */
 export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {
 	const firstCharacter = text.charAt(0).toLowerCase();

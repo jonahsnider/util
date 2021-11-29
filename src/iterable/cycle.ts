@@ -16,6 +16,7 @@
  * @returns An array with the elements of `iterable` repeated `times` number of times
  *
  * @public
+ * @category Iterable
  */
 export function* cycle<T>(iterable: Iterable<T>, times: number): Iterable<T> {
 	for (let index = 0; index < times; index++) {

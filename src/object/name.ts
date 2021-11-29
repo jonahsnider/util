@@ -31,6 +31,7 @@ import type {AnyFunction} from '../types';
  * @returns A string name for the method
  *
  * @public
+ * @category Object
  */
 export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `${string}${'.' | '#'}${string}`;
 /**
@@ -59,6 +60,7 @@ export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `$
  * @returns The name of `func`
  *
  * @public
+ * @category Object
  */
 export function name(func: (new (...args: any[]) => any) | AnyFunction): string;
 export function name(ctorOrFunc: AnyFunction | (new (...args: any[]) => any), func?: AnyFunction): string {

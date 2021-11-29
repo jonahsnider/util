@@ -19,6 +19,7 @@
  * @returns The sum of `a` and `b`
  *
  * @public
+ * @category Reducers
  */
 export function sum(a: number, b: number): number;
 /**
@@ -42,6 +43,7 @@ export function sum(a: number, b: number): number;
  * @returns The sum of `a` and `b`
  *
  * @public
+ * @category Reducers
  */
 export function sum(a: bigint, b: bigint): bigint;
 export function sum<T extends number>(a: T, b: T): T {

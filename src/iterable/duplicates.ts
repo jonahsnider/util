@@ -16,6 +16,7 @@
  * @returns A `Set` of the duplicated elements
  *
  * @public
+ * @category Iterable
  */
 export function duplicates<T>(iterable: Iterable<T>): Set<T> {
 	const seen: Set<T> = new Set();

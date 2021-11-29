@@ -17,6 +17,7 @@
  * @see {@link frequencyTable} to count the occurrences of all elements in an iterable
  *
  * @public
+ * @category Iterable
  */
 export function count(iterable: Iterable<unknown>): number {
 	let count = 0;

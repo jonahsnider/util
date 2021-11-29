@@ -15,6 +15,7 @@
  * @returns An array of indexes of holes in the array
  *
  * @public
+ * @category Array
  */
 export function holes(array: ArrayLike<unknown>): number[] {
 	const result: number[] = [];

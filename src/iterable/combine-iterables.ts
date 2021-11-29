@@ -15,6 +15,7 @@
  * @returns A single iterable containing all the elements of all the iterables
  *
  * @public
+ * @category Iterable
  */
 export function* combineIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T> {
 	for (const iterable of iterables) {

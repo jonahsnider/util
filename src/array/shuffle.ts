@@ -18,6 +18,7 @@
  * @see {@link sample} if you only want to select one element at random
  *
  * @public
+ * @category Array
  */
 export function shuffle<T>(array: T[], mutate?: true): void;
 /**
@@ -42,6 +43,7 @@ export function shuffle<T>(array: T[], mutate?: true): void;
  * @returns The shuffled array
  *
  * @public
+ * @category Array
  */
 export function shuffle<T>(array: ArrayLike<T> & Iterable<T>, mutate: false): T[];
 export function shuffle<T>(array: T[] | (ArrayLike<T> & Iterable<T>), mutate = true): void | T[] {

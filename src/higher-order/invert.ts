@@ -23,6 +23,7 @@ import type {NumberLike} from '../types';
  * @returns The inverted return value of `fn`
  *
  * @public
+ * @category Higher order
  */
 export function invert<T extends (...parameters: any[]) => NumberLike>(fn: T): T {
 	return ((...parameters) => -fn(...parameters)!) as T;

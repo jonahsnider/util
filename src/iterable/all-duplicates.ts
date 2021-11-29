@@ -22,6 +22,7 @@
  * @returns An array of the duplicated elements
  *
  * @public
+ * @category Iterable
  */
 export function allDuplicates<T>(iterable: Iterable<T>): T[] {
 	const seen: Set<T> = new Set();

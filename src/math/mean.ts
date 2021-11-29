@@ -22,6 +22,7 @@ import {sum} from '../reducers/sum';
  * @returns The mean of the array
  *
  * @public
+ * @category Math
  */
 export function mean(array: readonly number[]): number;
 /**
@@ -46,6 +47,7 @@ export function mean(array: readonly number[]): number;
  * @returns The mean of the array
  *
  * @public
+ * @category Math
  */
 export function mean(array: ReadonlyArray<bigint>): bigint;
 export function mean<T extends number>(array: readonly T[]): T {

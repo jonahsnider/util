@@ -32,6 +32,7 @@ function descendingRaw(a: Comparable, b: Comparable): number {
  * @returns A compare function that returns a positive value if first argument is less than second argument, zero if they're equal and a negative value otherwise
  *
  * @public
+ * @category Sort
  */
 export function descending<T>(predicate: (element: T) => Comparable): CompareFn<T>;
 /**
@@ -54,6 +55,7 @@ export function descending<T>(predicate: (element: T) => Comparable): CompareFn<
  * @returns A positive value if first argument is less than second argument, zero if they're equal and a negative value otherwise
  *
  * @public
+ * @category Sort
  */
 export function descending(a: Comparable, b: Comparable): number;
 export function descending<T>(aOrPredicate: Comparable | ((element: T) => Comparable), b: Comparable | void): number | CompareFn<T> {

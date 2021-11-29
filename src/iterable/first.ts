@@ -25,6 +25,7 @@ function* firstIterable<T>(iterable: Iterable<T>, take: number): Iterable<T> {
  * @returns The first element of the iterable
  *
  * @public
+ * @category Iterable
  */
 export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined;
 /**
@@ -50,6 +51,7 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
  * @returns The first `take` elements of the iterable
  *
  * @public
+ * @category Iterable
  */
 export function first<T>(iterable: Iterable<T>, take: number): Iterable<T>;
 export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | Iterable<T> {

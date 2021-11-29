@@ -19,6 +19,7 @@
  * @returns An iterable that repeats `value` `times` number of times
  *
  * @public
+ * @category Iterable
  */
 export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number): Iterable<T> {
 	for (let index = 0; index < times; index++) {

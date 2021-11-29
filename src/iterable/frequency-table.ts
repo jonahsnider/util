@@ -18,6 +18,7 @@
  * @see {@link count} to count the occurrences of one value in an iterable
  *
  * @public
+ * @category Iterable
  */
 export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
 	const frequencies: Map<T, number> = new Map();

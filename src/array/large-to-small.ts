@@ -1,6 +1,7 @@
 /**
  * An object with a `length` property.
  * @internal
+ * @category Array
  */
 type ObjectWithLength = {length: number};
 export {ObjectWithLength as _ObjectWithLength};
@@ -8,6 +9,7 @@ export {ObjectWithLength as _ObjectWithLength};
 /**
  * An object with a `size` property.
  * @internal
+ * @category Array
  */
 type ObjectWithSize = {size: number};
 export {ObjectWithSize as _ObjectWithSize};
@@ -16,6 +18,7 @@ export {ObjectWithSize as _ObjectWithSize};
  * A tuple of two elements arranged so the largest element is first and the smallest is last.
  *
  * @internal
+ * @category Array
  */
 type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
 export {ArrangedLargestToSmallest as _ArrangedLargestToSmallest};
@@ -45,6 +48,7 @@ export {ArrangedLargestToSmallest as _ArrangedLargestToSmallest};
  * @throws If `a` does not have a `length` or `size` property
  *
  * @public
+ * @category Array
  */
 export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLength>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
 /**
@@ -72,6 +76,7 @@ export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLen
  * @throws If `a` does not have a `length` or `size` property
  *
  * @public
+ * @category Array
  */
 export function largeToSmall<A extends ObjectWithSize, B extends ObjectWithSize>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
 export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B extends ObjectWithSize | ObjectWithLength>(

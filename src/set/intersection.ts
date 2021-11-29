@@ -13,6 +13,7 @@ import {largeToSmall} from '../array/large-to-small';
  * @returns A new set which is the intersection of `a` and `b`
  *
  * @public
+ * @category Set
  */
 export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T> {
 	if (a === b) {

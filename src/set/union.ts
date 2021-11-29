@@ -14,6 +14,7 @@ import {combineIterables} from '../iterable';
  * @returns A new set which is the union of `a` and `b`
  *
  * @public
+ * @category Set
  */
 export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
 	if (a === (b as unknown as typeof a)) {

@@ -16,6 +16,7 @@
  * @returns An array of lines with leading and trailing whitespace removed
  *
  * @public
+ * @category String
  */
 export function lines(string: string): string[] {
 	return string

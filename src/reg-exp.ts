@@ -15,6 +15,7 @@
  * @returns A new regular expression
  *
  * @public
+ * @category Regular expressions
  */
 export function regExpUnion(...regExps: RegExp[]): RegExp {
 	return new RegExp(regExps.map(regExp => `(${regExp.source})`).join('|'));

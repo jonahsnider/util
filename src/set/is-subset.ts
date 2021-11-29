@@ -13,6 +13,7 @@
  * @returns `true` if `a` is a subset of `b`, `false` otherwise
  *
  * @public
+ * @category Set
  */
 export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean {
 	if (a === b) {

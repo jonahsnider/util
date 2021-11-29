@@ -23,6 +23,7 @@
  * @returns A function that returns whatever the first call of `fn` returns for the given arguments
  *
  * @public
+ * @category Higher order
  */
 export function thunkify<T extends (...args: unknown[]) => unknown>(fn: T): (...parameters: Parameters<T>) => ReturnType<T> {
 	let wasCalled = false;

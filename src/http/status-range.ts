@@ -12,6 +12,7 @@ import {Range} from '../range';
  * ```
  *
  * @public
+ * @category HTTP
  */
 export const informational: Readonly<Range> = Object.freeze(new Range(100, 200));
 /**
@@ -26,6 +27,7 @@ export const informational: Readonly<Range> = Object.freeze(new Range(100, 200))
  * ```
  *
  * @public
+ * @category HTTP
  */
 export const success: Readonly<Range> = Object.freeze(new Range(200, 300));
 /**
@@ -40,6 +42,7 @@ export const success: Readonly<Range> = Object.freeze(new Range(200, 300));
  * ```
  *
  * @public
+ * @category HTTP
  */
 export const redirects: Readonly<Range> = Object.freeze(new Range(300, 400));
 /**
@@ -54,6 +57,7 @@ export const redirects: Readonly<Range> = Object.freeze(new Range(300, 400));
  * ```
  *
  * @public
+ * @category HTTP
  */
 export const clientErrors: Readonly<Range> = Object.freeze(new Range(400, 500));
 /**
@@ -68,5 +72,6 @@ export const clientErrors: Readonly<Range> = Object.freeze(new Range(400, 500));
  * ```
  *
  * @public
+ * @category HTTP
  */
 export const serverErrors: Readonly<Range> = Object.freeze(new Range(500, 600));

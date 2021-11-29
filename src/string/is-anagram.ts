@@ -25,6 +25,7 @@ import {frequencyTable} from '../iterable';
  * @returns Whether the strings are anagrams of each other
  *
  * @public
+ * @category String
  */
 export function isAnagram<T>(a: ArrayLike<T> & Iterable<T>, b: ArrayLike<T> & Iterable<T>): boolean {
 	if (a === b) {

@@ -22,6 +22,7 @@ import type {CompareFn} from '../types';
  * @returns Whether the array is sorted according to the given compare function
  *
  * @public
+ * @category Sort
  */
 export function isSorted<T>(array: ArrayLike<T>, compareFn: CompareFn<T>): boolean {
 	for (let index = 0; index < array.length - 1; index++) {

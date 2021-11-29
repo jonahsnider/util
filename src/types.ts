@@ -51,6 +51,7 @@ export type NumberLike =
  * A value that can be compared numerically using `<`, `>`, `<=`, or `>=`.
  *
  * @public
+ * @category Sort
  */
 export type Comparable = string | NumberLike;
 
@@ -77,6 +78,7 @@ export type DirectionFn<T> = (element: T) => number;
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort | MDN docs on this function}
  *
  * @public
+ * @category Sort
  */
 export type CompareFn<T = Comparable> = Exclude<Parameters<T[]['sort']>[0], undefined>;
 

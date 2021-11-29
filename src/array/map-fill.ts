@@ -19,6 +19,7 @@
  * @see {@link fill} to do the same thing but with a given value
  *
  * @public
+ * @category Array
  */
 // TODO: Swap the order of valueFn and length
 export function mapFill<T>(valueFn: (index: number) => T, length: number): T[] {

@@ -19,6 +19,7 @@ import {mean} from './mean';
  * @returns The variance of `values`
  *
  * @public
+ * @category Math
  */
 export function variance(values: readonly number[], meanValue = mean(values)): number {
 	return values.map(value => (value - meanValue) ** 2).reduce(sum) / (values.length - 1);

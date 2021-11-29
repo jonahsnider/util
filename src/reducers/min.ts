@@ -21,6 +21,7 @@ import type {Comparable} from '../types';
  * @returns `previousValue` or `currentValue`, whichever is lower
  *
  * @public
+ * @category Reducers
  */
 export function min<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B {
 	return (currentValue as unknown as A)! < accumulator! ? currentValue : accumulator;

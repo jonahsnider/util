@@ -24,6 +24,7 @@ import {repeat} from '../iterable';
  * @see {@link padStart} to pad the start of an array
  *
  * @public
+ * @category Array
  */
 export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void {
 	array.push(...repeat(fillValue, maxLength - array.length));

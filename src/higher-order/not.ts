@@ -19,6 +19,7 @@
  * @returns The inverted return value of `fn`
  *
  * @public
+ * @category Higher order
  */
 export function not<T extends (...parameters: any[]) => boolean>(fn: T): (...parameters: Parameters<T>) => boolean {
 	return ((...parameters) => !fn(...parameters)) as T;

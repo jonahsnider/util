@@ -13,6 +13,7 @@
  * @returns `true` if `a` is a superset of `b`, `false` otherwise
  *
  * @public
+ * @category Set
  */
 export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean {
 	if (a === b) {

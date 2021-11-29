@@ -22,6 +22,7 @@ import type {CompareFn} from '../types';
  * @returns A new object with the keys in order
  *
  * @public
+ * @category Sort
  */
 export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, V>>, compareFn: CompareFn<V>): Array<[K, V]> {
 	return Object.entries<V>(object).sort(([, aValue], [, bValue]) => compareFn(aValue, bValue)) as Array<[K, V]>;

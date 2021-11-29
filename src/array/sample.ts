@@ -19,6 +19,7 @@
  * @returns A random element from the array or `undefined` if the array was empty
  *
  * @public
+ * @category Array
  */
 export function sample<T>(array: ArrayLike<T>): T | undefined {
 	return array[Math.floor(Math.random() * array.length)] as T | undefined;

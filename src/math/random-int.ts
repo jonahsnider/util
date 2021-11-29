@@ -18,6 +18,7 @@ import {random} from './random';
  * @returns A random integer within the given bounds
  *
  * @public
+ * @category Math
  */
 export function randomInt(min: number, max: number): number {
 	if (__DEV__ && min > max) {

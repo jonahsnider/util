@@ -16,6 +16,7 @@
  * @returns The value of the first element in the iterable where `predicate` is truthy, and `undefined` otherwise
  *
  * @public
+ * @category Iterable
  */
 export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolean): T | undefined {
 	for (const element of iterable) {

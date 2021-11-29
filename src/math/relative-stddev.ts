@@ -19,6 +19,7 @@ import {stddev} from './stddev';
  * @returns The standard deviation of `values`
  *
  * @public
+ * @category Math
  */
 export function relativeStddev(values: readonly number[], meanValue = mean(values)): number {
 	return stddev(values, meanValue) / meanValue;

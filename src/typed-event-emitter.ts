@@ -12,6 +12,7 @@ import type {EventEmitter} from 'events';
  * ```
  *
  * @public
+ * @category Typed EventEmitter
  */
 export type EventListeners = Record<Parameters<EventEmitter['on']>[0], Parameters<EventEmitter['on']>[1]>;
 
@@ -19,6 +20,7 @@ export type EventListeners = Record<Parameters<EventEmitter['on']>[0], Parameter
  * Built-in events on all `EventEmitter`s.
  *
  * @internal
+ * @category Typed EventEmitter
  */
 interface BuiltInEvents<T extends EventListeners> {
 	newListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
@@ -30,6 +32,7 @@ export {BuiltInEvents as _BuiltInEvents};
  * Typed event emitter with no built in events.
  *
  * @internal
+ * @category Typed EventEmitter
  */
 interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
 	addListener<E extends keyof T>(eventName: E, listener: T[E]): this;
@@ -66,5 +69,6 @@ export {BaseTypedEventEmitter as _BaseTypedEventEmitter};
  * ```
  *
  * @public
+ * @category Typed EventEmitter
  */
 export interface TypedEventEmitter<T extends EventListeners = Record<never, never>> extends BaseTypedEventEmitter<T & BuiltInEvents<T>> {}

@@ -24,6 +24,7 @@
  * @returns `true` if any element passes the predicate, `false` otherwise
  *
  * @public
+ * @category Iterable
  */
 export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean {
 	for (const element of iterable) {

@@ -21,6 +21,7 @@
  * @returns An array of the modes of `values`
  *
  * @public
+ * @category Math
  */
 export function mode<T>(iterable: Iterable<T>): T[] {
 	const frequencyTable: Map<T, number> = new Map();

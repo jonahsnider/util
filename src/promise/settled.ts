@@ -2,17 +2,20 @@
  * A result type for a `Promise` that resolved.
  *
  * @public
+ * @category Promise
  */
 export type ResolvedResult<T> = [value: T, error: undefined];
 /**
  * A result type for a `Promise` that rejected.
  *
  * @public
+ * @category Promise
  */
 export type RejectedResult<T> = [value: undefined, error: T];
 /**
  * A result type to represent a resolved or rejected `Promise`.
  * @public
+ * @category Promise
  */
 export type Result<T, E> = ResolvedResult<T> | RejectedResult<E>;
 /**
@@ -33,6 +36,7 @@ export type Result<T, E> = ResolvedResult<T> | RejectedResult<E>;
  * @returns A tuple of the resolved value or rejected error
  *
  * @public
+ * @category Promise
  */
 export async function settled<E, T>(promise: PromiseLike<T>): Promise<Result<T, E>> {
 	try {

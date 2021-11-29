@@ -19,6 +19,7 @@
  * @returns The value nearest to `value` which is within the provided range
  *
  * @public
+ * @category Math
  */
 export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(value: T, min: M1, max: M2): T | M1 | M2 {
 	if (__DEV__ && min > max) {

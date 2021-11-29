@@ -3,8 +3,10 @@
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods | MDN docs}
  *
  * @public
+ * @category HTTP
  *
  * @public
+ * @category HTTP
  */
 export enum Method {
 	/**

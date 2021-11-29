@@ -12,6 +12,7 @@
  * @returns `true` if `a` and `b` are disjoint
  *
  * @public
+ * @category Set
  */
 export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean {
 	if (a === b) {

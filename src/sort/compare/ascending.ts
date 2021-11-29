@@ -32,6 +32,7 @@ function ascendingRaw(a: Comparable, b: Comparable): number {
  * @returns A compare function that returns a negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise
  *
  * @public
+ * @category Sort
  */
 export function ascending<T>(predicate: (element: T) => Comparable): CompareFn<T>;
 /**
@@ -54,6 +55,7 @@ export function ascending<T>(predicate: (element: T) => Comparable): CompareFn<T
  * @returns A negative value if first argument is less than second argument, zero if they're equal and a positive value otherwise
  *
  * @public
+ * @category Sort
  */
 export function ascending(a: Comparable, b: Comparable): number;
 export function ascending<T>(aOrPredicate: Comparable | ((element: T) => Comparable), b: Comparable | void): number | CompareFn<T> {

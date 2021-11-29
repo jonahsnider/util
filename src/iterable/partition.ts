@@ -20,6 +20,7 @@
  * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
  *
  * @public
+ * @category Iterable
  */
 export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (element: T) => element is S): [passed: S[], failed: Array<Exclude<T, S>>];
 /**
@@ -44,6 +45,7 @@ export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (ele
  * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
  *
  * @public
+ * @category Iterable
  */
 export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increment: number) => unknown): [passed: T[], failed: T[]];
 export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increment: number) => unknown): [passed: T[], failed: T[]] {

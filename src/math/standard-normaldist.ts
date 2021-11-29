@@ -19,6 +19,7 @@ import {normaldist} from './normaldist';
  * @returns The standard normal distribution
  *
  * @public
+ * @category Math
  */
 export function standardNormaldist(x: number): number {
 	return normaldist(x, 1, 0);

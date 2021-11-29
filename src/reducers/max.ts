@@ -21,6 +21,7 @@ import type {Comparable} from '../types';
  * @returns `previousValue` or `currentValue`, whichever is larger
  *
  * @public
+ * @category Reducers
  */
 export function max<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B {
 	return (currentValue as unknown as A)! > accumulator! ? currentValue : accumulator;

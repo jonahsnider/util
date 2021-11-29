@@ -2,6 +2,7 @@
  * @returns `T` if `T` is not a union type, `never` otherwise.
  *
  * @internal
+ * @category Object
  */
 type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) : never) extends false ? T : never;
 export {NonUnion as _NonUnion};
@@ -27,6 +28,7 @@ export {NonUnion as _NonUnion};
  * @returns A shallow-copied object with the key name updated
  *
  * @public
+ * @category Object
  */
 export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(
 	target: T,

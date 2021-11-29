@@ -24,6 +24,7 @@
  * @returns `true` if every element passed the predicate, `false` otherwise
  *
  * @public
+ * @category Iterable
  */
 export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element: T) => element is S): iterable is Iterable<S>;
 /**
@@ -52,6 +53,7 @@ export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element
  * @returns `true` if every element passed the predicate, `false` otherwise
  *
  * @public
+ * @category Iterable
  */
 export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean;
 export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean {

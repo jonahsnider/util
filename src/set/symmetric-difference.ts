@@ -12,6 +12,7 @@
  * @returns A new set which is the symmetric difference of `a` and `b`
  *
  * @public
+ * @category Set
  */
 export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
 	if (a === (b as unknown as typeof a)) {

@@ -35,6 +35,7 @@ import type {Table} from '.';
  * @returns The new array containing chunks of the original `array`
  *
  * @public
+ * @category Array
  */
 export function chunk<T>(array: readonly T[], size: number): Table<T> {
 	if (array.length === size) {

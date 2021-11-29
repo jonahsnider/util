@@ -2,6 +2,7 @@
  * The rank of a card going from ace to king, where aces are `1`.
  *
  * @public
+ * @category Cards
  */
 export enum Rank {
 	Ace = 1,
@@ -23,6 +24,7 @@ export enum Rank {
  * A suit of cards, sorted in alphabetical order.
  *
  * @public
+ * @category Cards
  */
 export enum Suit {
 	Clubs,
@@ -35,6 +37,7 @@ export enum Suit {
  * A playing card.
  *
  * @public
+ * @category Cards
  */
 export interface Card {
 	rank: Rank;
@@ -113,6 +116,7 @@ const deck = [
  * @returns A sorted deck of cards
  *
  * @public
+ * @category Cards
  */
 export function newDeck(): Card[] {
 	return [...deck];

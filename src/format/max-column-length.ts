@@ -13,6 +13,7 @@ import type {Table} from '../array';
  * @returns An array of lengths
  *
  * @public
+ * @category Format
  */
 export function maxColumnLength(table: Table<string>): number[] {
 	const lengths = table[0].map(column => column.length);

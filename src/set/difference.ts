@@ -12,6 +12,7 @@
  * @returns A new set which is the difference of `a` and `b`
  *
  * @public
+ * @category Set
  */
 export function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T> {
 	if (a === b) {

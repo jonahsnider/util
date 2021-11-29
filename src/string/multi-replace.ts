@@ -18,6 +18,7 @@
  * @returns A new string with the replacements applied
  *
  * @public
+ * @category String
  */
 export function multiReplace(string: string, replacements: Record<string, string>): string {
 	const replacementsIterable: Iterable<[sub: string, by: string]> = Object.entries(replacements);

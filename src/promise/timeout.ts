@@ -24,6 +24,7 @@ function delay(ms: number): [timer: NodeJS.Timeout, delay: PromiseLike<typeof DE
  * @returns The resolved value of the promise
  *
  * @public
+ * @category Promise
  */
 export async function timeout<T>(promise: PromiseLike<T>, timeoutMs: number): Promise<T> {
 	const [timer, timeoutPromise] = delay(timeoutMs);

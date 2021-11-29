@@ -19,6 +19,7 @@
  * @see {@link repeat} to do the same thing but return an iterable
  *
  * @public
+ * @category Array
  */
 export function fill<T>(value: T, length: number): T[] {
 	return Array.from({length}, () => value);
