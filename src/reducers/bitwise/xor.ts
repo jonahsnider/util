@@ -21,6 +21,7 @@
  * @returns The bitwise XOR of `a` and `b`
  *
  * @public
+ * @category Reducers
  */
 export function xor(a: number, b: number): number;
 /**
@@ -44,6 +45,7 @@ export function xor(a: number, b: number): number;
  * @returns The bitwise XOR of `a` and `b`
  *
  * @public
+ * @category Reducers
  */
 export function xor(a: bigint, b: bigint): bigint;
 export function xor<T extends number>(a: T, b: T): T {
