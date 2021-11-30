@@ -1,6 +1,7 @@
 import {mapFill} from './map-fill';
 import type {Table} from '.';
 
+// TODO: Consider implementing an overload that chunks iterables
 /**
  * Divides an array into several chunks of `size`.
  * If `size` is equal to the length of the array each item will be in their own array.
