@@ -93,26 +93,22 @@
 		{
 			"brotli": true,
 			"limit": "4.5 KiB",
-			"path": "./dist/index.prod.js",
-			"webpack": false
+			"path": "./dist/index.prod.js"
 		},
 		{
 			"gzip": true,
 			"limit": "5.5 KiB",
-			"path": "./dist/index.prod.js",
-			"webpack": false
+			"path": "./dist/index.prod.js"
 		},
 		{
 			"brotli": true,
 			"limit": "4.5 KiB",
-			"path": "./dist/index.prod.mjs",
-			"webpack": false
+			"path": "./dist/index.prod.mjs"
 		},
 		{
 			"gzip": true,
 			"limit": "5.5 KiB",
-			"path": "./dist/index.prod.mjs",
-			"webpack": false
+			"path": "./dist/index.prod.mjs"
 		}
 	]
 }
