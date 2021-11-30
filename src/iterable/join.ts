@@ -30,8 +30,7 @@ export function join(iterable: Iterable<unknown>, separator = ','): string {
 
 	let next = iterator.next();
 
-	// eslint-disable-next-line no-constant-condition
-	while (true) {
+	for (;;) {
 		const previous = next;
 		next = iterator.next();
 

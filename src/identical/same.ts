@@ -26,8 +26,7 @@
 export function same<T>(...iterables: readonly [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
 	const iterators = iterables.map(item => item[Symbol.iterator]());
 
-	// eslint-disable-next-line no-constant-condition
-	while (true) {
+	for (;;) {
 		const nexts = iterators.map(iterator => iterator.next());
 
 		// eslint-disable-next-line @typescript-eslint/naming-convention
