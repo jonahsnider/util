@@ -2,14 +2,14 @@ import {clamp} from '../math/clamp';
 import {largeToSmall} from '../array/large-to-small';
 
 /**
- * Get the Jaccard index of 2 sets.
+ * Get the Jaccard index of 2 `Set`s.
  *
  * Time complexity: _O(n)_
  *
  * Space complexity: _O(1)_
  *
- * @param a - First set
- * @param b - Second set
+ * @param a - First `Set`
+ * @param b - Second `Set`
  *
  * @returns The Jaccard index of `a` and `b`
  *

@@ -7,10 +7,10 @@ import {largeToSmall} from '../array/large-to-small';
  *
  * Space complexity: _O(n)_
  *
- * @param a - First set
- * @param b - Second set
+ * @param a - First `Set`
+ * @param b - Second `Set`
  *
- * @returns A new set which is the intersection of `a` and `b`
+ * @returns A new `Set` which is the intersection of `a` and `b`
  *
  * @public
  * @category Set

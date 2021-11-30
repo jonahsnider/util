@@ -1,5 +1,5 @@
 /**
- * Get a set representing the difference of `a` and `b` (`a \ b`).
+ * Get a `Set` representing the difference of `a` and `b` (`a \ b`).
  * The order of parameters matters.
  *
  * Time complexity: _O(n)_
@@ -9,7 +9,7 @@
  * @param a - First iterable
  * @param b - Second iterable
  *
- * @returns A new set which is the difference of `a` and `b`
+ * @returns A new `Set` which is the difference of `a` and `b`
  *
  * @public
  * @category Set

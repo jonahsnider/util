@@ -5,10 +5,10 @@
  *
  * Space complexity: _O(1)_
  *
- * @param a - First set/iterable
- * @param b - Second set
+ * @param a - First `Set`/iterable
+ * @param b - Second `Set`
  *
- * @see {@link isSuperset} for checking if one set is a superset of another
+ * @see {@link isSuperset} for checking if one `Set` is a superset of another
  *
  * @returns `true` if `a` is a subset of `b`, `false` otherwise
  *

@@ -9,7 +9,7 @@
  * @param a - First iterable
  * @param b - Second iterable
  *
- * @returns A new set which is the symmetric difference of `a` and `b`
+ * @returns A new `Set` which is the symmetric difference of `a` and `b`
  *
  * @public
  * @category Set

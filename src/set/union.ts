@@ -11,7 +11,7 @@ import {combineIterables} from '../iterable';
  * @param a - First iterable
  * @param b - Second iterable
  *
- * @returns A new set which is the union of `a` and `b`
+ * @returns A new `Set` which is the union of `a` and `b`
  *
  * @public
  * @category Set

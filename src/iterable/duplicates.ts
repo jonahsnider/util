@@ -1,5 +1,5 @@
 /**
- * Get a Set of the duplicate elements in an iterable.
+ * Get a `Set` of the duplicate elements in an iterable.
  *
  * Time complexity: _O(n)_
  *
