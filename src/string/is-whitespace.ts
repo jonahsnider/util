@@ -1,4 +1,5 @@
 const notWhitespaceRegExp = /\S/;
+
 /**
  * Check whether a string is empty or whitespace.
  *
