@@ -264,6 +264,9 @@ export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean;
 export function isWhitespace(string: string): boolean;
 
 // @public
+export function jaccardIndex<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): number;
+
+// @public
 export function join(iterable: Iterable<unknown>, separator?: string): string;
 
 // Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "ObjectWithLength" which is marked as @internal
