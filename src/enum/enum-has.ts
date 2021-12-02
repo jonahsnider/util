@@ -19,6 +19,7 @@ const lookup = new WeakMap<Enum<EnumValue>, ReadonlySet<EnumValue>>();
  * Check whether a given value is a member value of an enum.
  *
  * Time complexity: _O(1)_ if `Enum` has been seen before. Otherwise, _O(n)_ where _n_ is the number of enum values.
+ *
  * Space complexity: _O(1)_ if `Enum` has been seen before. Otherwise, _O(n)_ where _n_ is the number of unique enum values.
  *
  * @example
