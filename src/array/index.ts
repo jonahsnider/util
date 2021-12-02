@@ -22,6 +22,7 @@ export * from './holes';
 export * from './index-of-all';
 export * from './large-to-small';
 export * from './map-fill';
+export * from './overwrite';
 export * from './pad-end';
 export * from './pad-start';
 export * from './pull';
