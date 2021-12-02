@@ -1,3 +1,4 @@
+// TODO: Rename to concatIterables
 /**
  * Combines multiple iterables into a single iterable.
  *
