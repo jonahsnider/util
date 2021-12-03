@@ -119,7 +119,7 @@ export type Comparable = string | NumberLike;
 export type CompareFn<T = Comparable> = Exclude<Parameters<T[]['sort']>[0], undefined>;
 
 // @public
-export function count(iterable: Iterable<unknown>): number;
+export function count<T>(iterable: Iterable<T>, filterPredicate?: undefined | ((element: T) => boolean)): number;
 
 // @public
 export function cycle<T>(iterable: Iterable<T>, times: number): Iterable<T>;
