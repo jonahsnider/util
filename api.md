@@ -299,6 +299,26 @@ export function mapFill<T>(valueFn: (index: number) => T, length: number): T[];
 // @public
 export function mapRepeat<T>(valueFn: (increment: number) => T, times: number): Iterable<T>;
 
+// Warning: (ae-forgotten-export) The symbol "V" needs to be exported by the entry point index.d.ts
+//
+// @alpha (undocumented)
+export class MathMap<K> extends DefaultMap<K, V> {
+    // (undocumented)
+    add(key: K, addend: V): V;
+    // (undocumented)
+    divide(key: K, divisor: V): V;
+    // (undocumented)
+    multiply(key: K, multiplicand: V): V;
+    // (undocumented)
+    pow(key: K, exponent: V): V;
+    // (undocumented)
+    root(key: K, root: V): V;
+    // (undocumented)
+    sqrt(key: K): V;
+    // (undocumented)
+    subtract(key: K, subtrahend: V): V;
+}
+
 // @public
 export function max<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B;
 
