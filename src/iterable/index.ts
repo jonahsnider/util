@@ -13,4 +13,5 @@ export * from './join';
 export * from './map-repeat';
 export * from './partition';
 export * from './repeat';
+export * from './skip';
 export * from './some';
