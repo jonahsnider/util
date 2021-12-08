@@ -1,4 +1,4 @@
-import type {AnyFunction} from './types';
+import type {AnyFunction} from '../types';
 
 /**
  * A `Map` that has a default value for missing keys.
@@ -19,6 +19,7 @@ import type {AnyFunction} from './types';
  * ```
  *
  * @public
+ * @category Map
  */
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	/**
