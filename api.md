@@ -126,8 +126,8 @@ export function cycle<T>(iterable: Iterable<T>, times: number): Iterable<T>;
 
 // @public
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
-    constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ReadonlyArray<readonly [K, V]> | null);
-    constructor(defaultValueFn: (key: K) => D, entries?: ReadonlyArray<readonly [K, V]> | null);
+    constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ConstructorParameters<MapConstructor>[0] | null);
+    constructor(defaultValueFn: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
     get(key: K): V | D;
 }
 
