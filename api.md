@@ -660,6 +660,12 @@ export function timeout<T>(promise: PromiseLike<T>, timeoutMs: number): Promise<
 export function toDigits(value: number, precision: number): number;
 
 // @public
+export function trimEnd(string: string, end: string): string;
+
+// @public
+export function trimEnd<T>(array: readonly T[], end: T): T[];
+
+// @public
 export function trimStart(string: string, start: string): string;
 
 // @public

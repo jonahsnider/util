@@ -17,6 +17,8 @@ import {lastIndexOfFirstGroup} from '../iterable/last-index-of-first-group';
  *
  * @returns A string with the leading `start` characters removed
  *
+ * @see {@link (trimEnd:1)} to do the same thing but trim from the end of a string
+ *
  * @public
  * @category String
  */
@@ -37,6 +39,8 @@ export function trimStart(string: string, start: string): string;
  * @param start - The character to remove from the start of `array`
  *
  * @returns A shallow-copied array with the leading `start` characters removed
+ *
+ * @see {@link (trimEnd:2)} to do the same thing but trim from the end of an array
  *
  * @public
  * @category Array
