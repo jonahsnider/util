@@ -24,17 +24,15 @@
  * @category Iterable
  */
 export function lastIndexOfFirstGroup<T>(iterable: Iterable<T>, value: T): number {
-	let lastIndex = -1;
-	let index = 0;
+	let index = -1;
 
 	for (const element of iterable) {
 		if (element !== value) {
 			break;
 		}
 
-		lastIndex = index;
 		index++;
 	}
 
-	return lastIndex;
+	return index;
 }
