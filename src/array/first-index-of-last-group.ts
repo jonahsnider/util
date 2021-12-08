@@ -24,16 +24,16 @@
  * @category Array
  */
 export function firstIndexOfLastGroup<T>(array: ArrayLike<T>, value: T): number {
-	let lastIndex = -1;
+	let firstIndex = -1;
 
-	for (let i = array.length - 1; i >= 0; i--) {
-		const element = array[i];
+	for (let index = array.length - 1; index >= 0; index--) {
+		const element = array[index];
 		if (element !== value) {
 			break;
 		}
 
-		lastIndex = i;
+		firstIndex = index;
 	}
 
-	return lastIndex;
+	return firstIndex;
 }

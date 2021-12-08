@@ -25,7 +25,7 @@
 export function skip<T>(iterable: Iterable<T>, count: number): Iterator<T> {
 	const iterator = iterable[Symbol.iterator]();
 
-	for (let i = 0; i < count; i++) {
+	for (let index = 0; index < count; index++) {
 		const isDone = iterator.next().done;
 
 		if (isDone) {
