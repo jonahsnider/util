@@ -180,6 +180,9 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
 export function first<T>(iterable: Iterable<T>, take: number): Iterable<T>;
 
 // @public
+export function firstIndexOfLastGroup<T>(array: ArrayLike<T>, value: T): number;
+
+// @public
 export function formatTable(table: Table<string>, delimiter?: string): string;
 
 // @public

@@ -18,6 +18,7 @@ export * from './binary-search';
 export * from './chunk';
 export * from './fill';
 export * from './find-index-all';
+export * from './first-index-of-last-group';
 export * from './holes';
 export * from './index-of-all';
 export * from './large-to-small';

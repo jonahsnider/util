@@ -18,6 +18,8 @@
  *
  * @returns The last index of the first group of a given value
  *
+ *  @see {@link firstIndexOfLastGroup} to do the same thing but find the first index of the last group
+ *
  * @public
  * @category Iterable
  */
