@@ -264,6 +264,9 @@ export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean;
 export function isWhitespace(string: string): boolean;
 
 // @public
+export function iteratorToIterable<T>(iterator: Iterator<T>): Iterable<T>;
+
+// @public
 export function jaccardIndex<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): number;
 
 // @public
