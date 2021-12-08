@@ -32,3 +32,4 @@ export * from './replace';
 export * from './replace-all';
 export * from './sample';
 export * from './shuffle';
+export * from './trim-start';

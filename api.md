@@ -660,6 +660,12 @@ export function timeout<T>(promise: PromiseLike<T>, timeoutMs: number): Promise<
 export function toDigits(value: number, precision: number): number;
 
 // @public
+export function trimStart(string: string, start: string): string;
+
+// @public
+export function trimStart<T>(array: readonly T[], start: T): T[];
+
+// @public
 export function truncate<T extends string>(text: T, maxLength: number, suffix?: string): T | `${string}${typeof suffix}`;
 
 // Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "BaseTypedEventEmitter" which is marked as @internal
