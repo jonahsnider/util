@@ -285,6 +285,9 @@ export function largeToSmall<A extends _ObjectWithLength, B extends _ObjectWithL
 export function largeToSmall<A extends _ObjectWithSize, B extends _ObjectWithSize>(a: A, b: B): _ArrangedLargestToSmallest<A, B>;
 
 // @public
+export function lastIndexOfFirstGroup<T>(iterable: Iterable<T>, value: T): number;
+
+// @public
 export function lines(string: string): string[];
 
 // @public

@@ -10,6 +10,7 @@ export * from './frequency-table';
 export * from './includes';
 export * from './is-empty';
 export * from './iterator-to-iterable';
+export * from './last-index-of-first-group';
 export * from './join';
 export * from './map-repeat';
 export * from './partition';
