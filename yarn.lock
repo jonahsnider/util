@@ -2001,7 +2001,7 @@ __metadata:
     "@babel/preset-env": 7.16.4
     "@jonahsnider/prettier-config": 1.1.0
     "@jonahsnider/xo-config": 5.0.1
-    "@microsoft/api-extractor": 7.18.21
+    "@microsoft/api-extractor": 7.19.1
     "@rollup/plugin-babel": 5.3.0
     "@rollup/plugin-replace": 3.0.0
     "@rollup/plugin-typescript": 8.3.0
@@ -2036,22 +2036,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/api-extractor-model@npm:7.13.18":
-  version: 7.13.18
-  resolution: "@microsoft/api-extractor-model@npm:7.13.18"
+"@microsoft/api-extractor-model@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@microsoft/api-extractor-model@npm:7.15.0"
   dependencies:
     "@microsoft/tsdoc": 0.13.2
     "@microsoft/tsdoc-config": ~0.15.2
     "@rushstack/node-core-library": 3.44.1
-  checksum: 9375e0aec52c2f8668f15b7073941b373aa4b283b0ebada310a222d3418e811e70aaad9241cbc4320d4db2e134b8ef30e6c2a0de49462f0cb3725fd7be1dc6ee
+  checksum: 9fea62df573ef18f7c2a5662da92c25fe2fb7f2e1d650424fde8c2f9bbe7aae488679391705b36f0b1aa4c38b8a30210957f66b1fb7d295581fc78e57385d74e
   languageName: node
   linkType: hard
 
-"@microsoft/api-extractor@npm:7.18.21":
-  version: 7.18.21
-  resolution: "@microsoft/api-extractor@npm:7.18.21"
+"@microsoft/api-extractor@npm:7.19.1":
+  version: 7.19.1
+  resolution: "@microsoft/api-extractor@npm:7.19.1"
   dependencies:
-    "@microsoft/api-extractor-model": 7.13.18
+    "@microsoft/api-extractor-model": 7.15.0
     "@microsoft/tsdoc": 0.13.2
     "@microsoft/tsdoc-config": ~0.15.2
     "@rushstack/node-core-library": 3.44.1
@@ -2062,10 +2062,10 @@ __metadata:
     resolve: ~1.17.0
     semver: ~7.3.0
     source-map: ~0.6.1
-    typescript: ~4.4.2
+    typescript: ~4.5.2
   bin:
     api-extractor: bin/api-extractor
-  checksum: 8c43f48525ab102eaaf1dc29953fc6f1bc909b2afea4752e6d5cea6c1d0a3820d51a08561ea7760ac449d58ce4a4c7403d4773056f465d3add43d5ffe0062818
+  checksum: 991ccd8b70f9c0c99994157d8f715196745204e81172654753c101c67d69226bb8dde25c3194f33850bfd7bfed181c69d90ad82e76392cabf2339f284636ff44
   languageName: node
   linkType: hard
 
@@ -11608,7 +11608,7 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.5.2, typescript@npm:^4.5.2":
+"typescript@npm:4.5.2, typescript@npm:^4.5.2, typescript@npm:~4.5.2":
   version: 4.5.2
   resolution: "typescript@npm:4.5.2"
   bin:
@@ -11618,33 +11618,13 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.5.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.5.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>, typescript@patch:typescript@~4.5.2#~builtin<compat/typescript>":
   version: 4.5.2
   resolution: "typescript@patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 53838d56aba6fcc947d63aa0771e5d966b1b648fddafed6e221d7f38c71219c4e036ece8cfe9e35ed80cf5a35ff4eb958934c993f99c3233773ec4f9ccd53f69
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@~4.4.2#~builtin<compat/typescript>":
-  version: 4.4.3
-  resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=493e53"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 79f5c13d21c9dea3eb44d2b7002ff25a0569fefc432e083d65a360e3aca990aca25fc733e14aa6883b5e9a68e3e2f0330a34123e048806f91d701732ece00e6f
-  languageName: node
-  linkType: hard
-
-typescript@~4.4.2:
-  version: 4.4.3
-  resolution: "typescript@npm:4.4.3"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 05823f21796d450531a7e4ab299715d38fd9ded0e4ce7400876053f4b5166ca3dde7a68cecfe72d9086039f03c0b6edba36516fb10ed83c5837d9600532ea4c2
   languageName: node
   linkType: hard
 
