@@ -7,11 +7,11 @@
  *
  * @example
  * ```js
- * fill(3, 'a'); // ['a', 'a', 'a']
+ * fill('a', 3); // ['a', 'a', 'a']
  * ```
  *
- * @param length - The length of the array
  * @param value - Value to fill the array with
+ * @param length - The length of the array
  *
  * @returns The filled array
  *
@@ -21,6 +21,7 @@
  * @public
  * @category Array
  */
+// TODO: Swap order of parameters & update documentation example
 export function fill<T>(value: T, length: number): T[] {
 	return Array.from({length}, () => value);
 }
