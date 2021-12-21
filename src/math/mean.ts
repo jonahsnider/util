@@ -19,6 +19,7 @@ import {sum} from '../reducers/sum';
  * @see {@link (median:1)} to calculate the median of an array
  * @see {@link mode} to calculate the mode of an array
  * @see {@link geometricMean} to calculate the geometric mean of an array
+ * @see {@link harmonicMean} to calculate the harmonic mean of an array
  *
  * @returns The mean of the array
  *

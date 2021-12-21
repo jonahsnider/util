@@ -192,6 +192,9 @@ export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number>;
 export function geometricMean(array: readonly number[]): number;
 
 // @public
+export function harmonicMean(array: readonly number[]): number;
+
+// @public
 export function holes(array: ArrayLike<unknown>): number[];
 
 declare namespace Http {

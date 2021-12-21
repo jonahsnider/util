@@ -17,6 +17,7 @@ import {product} from '../reducers/product';
  * @param array - The array to calculate the mean of
  *
  * @see {@link (mean:1)} to calculate the arithmetic mean of an array
+ * @see {@link geometricMean} to calculate the harmonic mean of an array
  *
  * @returns The geometric mean of the array
  *

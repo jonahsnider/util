@@ -1,5 +1,6 @@
 export * from './clamp';
 export * from './geometric-mean';
+export * from './harmonic-mean';
 export * from './mean';
 export * from './median';
 export * from './mode';
