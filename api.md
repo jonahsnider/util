@@ -189,6 +189,9 @@ export function formatTable(table: Table<string>, delimiter?: string): string;
 export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number>;
 
 // @public
+export function geometricMean(array: readonly number[]): number;
+
+// @public
 export function holes(array: ArrayLike<unknown>): number[];
 
 declare namespace Http {
@@ -301,21 +304,14 @@ export function mapRepeat<T>(valueFn: (increment: number) => T, times: number): 
 
 // Warning: (ae-forgotten-export) The symbol "V" needs to be exported by the entry point index.d.ts
 //
-// @alpha (undocumented)
+// @alpha
 export class MathMap<K> extends DefaultMap<K, V> {
-    // (undocumented)
     add(key: K, addend: V): V;
-    // (undocumented)
     divide(key: K, divisor: V): V;
-    // (undocumented)
     multiply(key: K, multiplicand: V): V;
-    // (undocumented)
     pow(key: K, exponent: V): V;
-    // (undocumented)
     root(key: K, root: V): V;
-    // (undocumented)
     sqrt(key: K): V;
-    // (undocumented)
     subtract(key: K, subtrahend: V): V;
 }
 

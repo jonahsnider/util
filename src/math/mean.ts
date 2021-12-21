@@ -1,7 +1,7 @@
 import {sum} from '../reducers/sum';
 
 /**
- * Get the mean of an array of `number`s.
+ * Get the arithmetic mean of an array of `number`s.
  *
  * Time complexity: _O(n)_
  *
@@ -18,6 +18,7 @@ import {sum} from '../reducers/sum';
  *
  * @see {@link (median:1)} to calculate the median of an array
  * @see {@link mode} to calculate the mode of an array
+ * @see {@link geometricMean} to calculate the geometric mean of an array
  *
  * @returns The mean of the array
  *
@@ -26,7 +27,7 @@ import {sum} from '../reducers/sum';
  */
 export function mean(array: readonly number[]): number;
 /**
- * Get the mean of an array of `bigint`s.
+ * Get the arithmetic mean of an array of `bigint`s.
  *
  * Time complexity: _O(n)_
  *
