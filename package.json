@@ -69,7 +69,7 @@
 		"@types/jest": "27.4.0",
 		"@types/node": "16.11.19",
 		"@types/xo": "0.39.2",
-		"jest": "27.4.6",
+		"jest": "27.4.7",
 		"prettier": "2.5.1",
 		"rollup": "2.62.0",
 		"rollup-plugin-terser": "7.0.2",
