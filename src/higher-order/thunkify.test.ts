@@ -10,7 +10,7 @@ it('thunks', () => {
 });
 
 it('works with promises that resolve', () => {
-	const f = jest.fn(async () => Promise.resolve(123));
+	const f = jest.fn(async () => 123);
 	const g = thunkify(f);
 
 	void expect(g()).resolves.toBe(123);
@@ -19,7 +19,9 @@ it('works with promises that resolve', () => {
 });
 
 it('works with promises that reject', () => {
-	const f = jest.fn(async () => Promise.reject(new Error('abc')));
+	const f = jest.fn(async () => {
+		throw new Error('abc');
+	});
 	const g = thunkify(f);
 
 	void expect(g()).rejects.toThrow('abc');
