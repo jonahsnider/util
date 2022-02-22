@@ -47,7 +47,7 @@ export function trimEnd(string: string, end: string): string;
  */
 export function trimEnd<T>(array: readonly T[], end: T): T[];
 export function trimEnd<T>(base: string | readonly T[], toTrim: string | T): string | T[] {
-	// `firstIndexOfLastGroup` consumes the first few elements of the iterable which means you can't use `skip` on `base` since it's been mutated
+	// `firstIndexOfLastGroup()` consumes the first few elements of the iterable which means you can't use `skip()` on `base` since it's been mutated
 	const index = firstIndexOfLastGroup(base, toTrim);
 
 	if (index === -1) {
