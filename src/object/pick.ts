@@ -13,10 +13,10 @@
  * pick(object, ['a', 'b']); // { a: 1, b: 2 }
  * ```
  *
- * @param object - The object you are renaming a key of
+ * @param object - The object you are picking entries from
  * @param keys - The keys to keep from the object
  *
- * @returns A new object containing the picked keys and corresponding values
+ * @returns A new object containing the picked entries
  *
  * @public
  * @category Object
