@@ -1,3 +1,4 @@
 export * from './name';
-export * from './rename';
+export * from './omit';
 export * from './pick';
+export * from './rename';
