@@ -57,7 +57,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "7.17.10",
-		"@babel/preset-env": "7.16.11",
+		"@babel/preset-env": "7.17.10",
 		"@jonahsnider/prettier-config": "1.1.1",
 		"@jonahsnider/xo-config": "5.1.0",
 		"@microsoft/api-extractor": "7.22.2",
