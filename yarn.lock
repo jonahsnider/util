@@ -2281,7 +2281,7 @@ __metadata:
     semantic-release: 19.0.2
     size-limit: 7.0.8
     terser: 5.13.1
-    ts-jest: 28.0.2
+    ts-jest: 28.0.3
     tsd: 0.20.0
     typedoc: 0.22.15
     typescript: 4.6.4
@@ -8047,17 +8047,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:2.x, json5@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "json5@npm:2.2.0"
-  dependencies:
-    minimist: ^1.2.5
-  bin:
-    json5: lib/cli.js
-  checksum: e88fc5274bb58fc99547baa777886b069d2dd96d9cfc4490b305fd16d711dabd5979e35a4f90873cefbeb552e216b041a304fe56702bedba76e19bc7845f208d
-  languageName: node
-  linkType: hard
-
 "json5@npm:^1.0.1":
   version: 1.0.1
   resolution: "json5@npm:1.0.1"
@@ -8077,6 +8066,17 @@ __metadata:
   bin:
     json5: lib/cli.js
   checksum: b2de57a66520eca0fbb6c5ef59249b8308efb93fe89a8c75f5a6846e4f5f7d99a5a6f2e4db4d7a1c7047802dd816ed602a052d147a415d0e6b7f834885b62bc3
+  languageName: node
+  linkType: hard
+
+"json5@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "json5@npm:2.2.0"
+  dependencies:
+    minimist: ^1.2.5
+  bin:
+    json5: lib/cli.js
+  checksum: e88fc5274bb58fc99547baa777886b069d2dd96d9cfc4490b305fd16d711dabd5979e35a4f90873cefbeb552e216b041a304fe56702bedba76e19bc7845f208d
   languageName: node
   linkType: hard
 
@@ -11597,14 +11597,14 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:28.0.2":
-  version: 28.0.2
-  resolution: "ts-jest@npm:28.0.2"
+"ts-jest@npm:28.0.3":
+  version: 28.0.3
+  resolution: "ts-jest@npm:28.0.3"
   dependencies:
     bs-logger: 0.x
     fast-json-stable-stringify: 2.x
     jest-util: ^28.0.0
-    json5: 2.x
+    json5: ^2.2.1
     lodash.memoize: 4.x
     make-error: 1.x
     semver: 7.x
@@ -11626,7 +11626,7 @@ resolve@~1.17.0:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: bb244015f947cf9a77c892691a8131116a86f4f1cc7a1ff045cd72f78c16485c07ac582b31117f8d722a0ebb9d51c27468c28e2f8eec8bbae6e2a09ee41066f2
+  checksum: dc6f49507cef996abb75d5870f6ce09c9f191d135a5bb2c38c46adac890f10fd4610b7697a0045b9b37315ce4e075f39d5578da8034d6791952eebc7951475c2
   languageName: node
   linkType: hard
 
