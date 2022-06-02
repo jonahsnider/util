@@ -27,7 +27,7 @@ export function omit<T, K extends keyof T>(object: T, keys: readonly K[]): Omit<
 	const keptKeys = difference(
 		Object.keys(object),
 		// Replicates the behavior of Object.keys() casting numeric keys to strings and removing symbols
-		keys.filter(key => typeof key !== 'symbol').map(key => String(key)),
+		keys.filter(key => typeof key !== 'symbol').map(String),
 	) as Set<keyof T>;
 
 	return Object.fromEntries([...keptKeys].map(key => [key, object[key]])) as Omit<T, K>;
