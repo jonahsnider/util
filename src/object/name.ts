@@ -22,7 +22,7 @@ import type {AnyFunction} from '../types';
  * 	 instanceMethod() {}
  * }
  *
- * name(Class, Class.prototype.instanceMethod); // 'Class#staticMethod'
+ * name(Class, Class.prototype.instanceMethod); // 'Class#instanceMethod'
  * ```
  *
  * @param ctor - The class to use as the first part of the name
