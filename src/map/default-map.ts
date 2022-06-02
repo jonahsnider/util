@@ -63,7 +63,7 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 		entries?: ConstructorParameters<MapConstructor>[0] | null,
 	) {
 		// @ts-expect-error The types to allow constructing via an Iterable don't work for some reason
-		super(entries as ConstructorParameters<MapConstructor>[0] | null);
+		super(entries);
 
 		this.defaultValueIsFunction = typeof defaultValueOrDefaultValueFn === 'function';
 	}
