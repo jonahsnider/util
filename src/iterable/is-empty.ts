@@ -1,5 +1,5 @@
 /**
- * Check if a readonly `Set` is empty.
+ * Check if a readonly `Map` is empty.
  *
  * Time complexity: _O(1)_
  *
@@ -7,17 +7,17 @@
  *
  * @example
  * ```js
- * isEmpty(new Set([1, 2, 3])); // false
+ * isEmpty(new Map([1, 2, 3])); // false
  * ```
  *
  * @example
  * ```js
- * isEmpty(new Set()); // true
+ * isEmpty(new Map()); // true
  * ```
  *
- * @param set - The `Set` to check
+ * @param map - The `Map` to check
  *
- * @returns `true` if `set` is empty, `false` otherwise
+ * @returns `true` if `map` is empty, `false` otherwise
  *
  * @public
  * @category Map
