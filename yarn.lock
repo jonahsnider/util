@@ -2359,7 +2359,7 @@ __metadata:
     "@tsconfig/node16": 1.0.2
     "@types/jest": 28.1.1
     "@types/node": 16.11.39
-    "@types/xo": 0.39.2
+    "@types/xo": 0.39.3
     jest: 28.1.1
     prettier: 2.6.2
     rollup: 2.75.6
@@ -3373,6 +3373,15 @@ __metadata:
   dependencies:
     "@types/eslint": "*"
   checksum: a3bc56539ab1af2c0132d4b9735ac48bb95740fd6d2c8315477709d7c564deb4c4b4684bf2631961d080a4f14a28920838a9d9f031e0b21001c88619a41fcd58
+  languageName: node
+  linkType: hard
+
+"@types/xo@npm:0.39.3":
+  version: 0.39.3
+  resolution: "@types/xo@npm:0.39.3"
+  dependencies:
+    "@types/eslint": "*"
+  checksum: 084b0d5e7ff7b50a5e6004a8dc349c7d1b43f125aa79b412a96ae385ee741df88baffaf5cfdbd094787f1fbc27ead1dc72fd46e20213d527e4e3761b0e059865
   languageName: node
   linkType: hard
 
