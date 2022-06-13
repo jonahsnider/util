@@ -1,4 +1,4 @@
-/* eslint-disable node/prefer-global/process */
+/* eslint-disable n/prefer-global/process */
 
 /**
  * Helper to record the amount of time elapsed between 2 points during execution.
