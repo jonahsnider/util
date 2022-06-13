@@ -2405,7 +2405,7 @@ __metadata:
     size-limit: 7.0.8
     terser: 5.14.1
     ts-jest: 28.0.4
-    tsd: 0.20.0
+    tsd: 0.21.0
     typedoc: 0.22.17
     typescript: 4.7.3
     xo: 0.50.0
@@ -3183,13 +3183,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsd/typescript@npm:~4.6.3":
-  version: 4.6.3
-  resolution: "@tsd/typescript@npm:4.6.3"
+"@tsd/typescript@npm:~4.7.3":
+  version: 4.7.3
+  resolution: "@tsd/typescript@npm:4.7.3"
   bin:
     tsc: typescript/bin/tsc
     tsserver: typescript/bin/tsserver
-  checksum: 8a8d570bd4cd392c8bf33bd5a9516a4bc06964d5e98754a346f2dfd051a7c8a44d33d1f449e17a696a7d6b5f81ceb36e8a7b473d9aee077bd7138f0ed252a7f6
+  checksum: 18f7537b883ee9ccf697938ff7cbc042cc6137c1b473d4d36dabf68eca1c6190fbfb6dad0f2b0f7f71bff66a1518295cb1e01731f8fbaf678cf5c3d6e363fdb9
   languageName: node
   linkType: hard
 
@@ -11880,11 +11880,11 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"tsd@npm:0.20.0":
-  version: 0.20.0
-  resolution: "tsd@npm:0.20.0"
+"tsd@npm:0.21.0":
+  version: 0.21.0
+  resolution: "tsd@npm:0.21.0"
   dependencies:
-    "@tsd/typescript": ~4.6.3
+    "@tsd/typescript": ~4.7.3
     eslint-formatter-pretty: ^4.1.0
     globby: ^11.0.1
     meow: ^9.0.0
@@ -11892,7 +11892,7 @@ resolve@~1.17.0:
     read-pkg-up: ^7.0.0
   bin:
     tsd: dist/cli.js
-  checksum: 6d09cfea978262625842f4be5604e66a4a1ef1d4497d028a45b5ac75e867d85f56fdd378ec56afa713b7e05db2b7609765cf027fbd609192de7780506f810105
+  checksum: e3afa5c944f9cf39885768a65b4d3909acd51b753993d960e392cf90cfe9d6eac5196aad7454d15659ecec89997f249c122ce7827a306f7f8cfa08b9331945b3
   languageName: node
   linkType: hard
 
