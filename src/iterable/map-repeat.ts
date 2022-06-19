@@ -1,5 +1,5 @@
 /**
- * Returns an iterable that repeats a given value a given number of times.
+ * Returns an iterable that uses a function that generates values a given number of times.
  *
  * Time complexity: _O(n)_
  *
@@ -7,7 +7,7 @@
  *
  * @example
  * ```js
- * [...repeat('a', 3)]; // ['a', 'a', 'a']
+ * [...mapRepeat((increment) => increment ** 2, 5)]; // [0, 1, 4, 9, 16]
  * ```
  *
  * @param valueFn - A function that returns each value to fill the array with
