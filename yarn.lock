@@ -2353,7 +2353,7 @@ __metadata:
     semantic-release: 19.0.3
     size-limit: 7.0.8
     terser: 5.14.2
-    ts-jest: 28.0.6
+    ts-jest: 28.0.7
     tsd: 0.22.0
     typedoc: 0.23.7
     typescript: 4.7.4
@@ -11739,9 +11739,9 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:28.0.6":
-  version: 28.0.6
-  resolution: "ts-jest@npm:28.0.6"
+"ts-jest@npm:28.0.7":
+  version: 28.0.7
+  resolution: "ts-jest@npm:28.0.7"
   dependencies:
     bs-logger: 0.x
     fast-json-stable-stringify: 2.x
@@ -11760,13 +11760,15 @@ resolve@~1.17.0:
   peerDependenciesMeta:
     "@babel/core":
       optional: true
+    "@jest/types":
+      optional: true
     babel-jest:
       optional: true
     esbuild:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 76f3c7a5a81bc757eb38f4d3be7c255e4fc6107abd8da84134908c867b5a9505af1d8591c77115d719176a52856e4adf04278df384e0a113a7ce60fed8be1f41
+  checksum: be6ad6382e3b2e7b0c45d06616a4a02aeb6815bad2026fe8eeb4e0941205faa50ac3f5930adb7ba2fda5fea6a5739bfa507e2eac8764d2c729ddc8010681707a
   languageName: node
   linkType: hard
 
