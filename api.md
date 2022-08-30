@@ -403,7 +403,7 @@ export type _ObjectWithSize = {
 };
 
 // @public
-export function omit<T, K extends keyof T>(object: T, keys: readonly K[]): Omit<T, K>;
+export function omit<T extends object, K extends keyof T>(object: T, keys: readonly K[]): Omit<T, K>;
 
 // @public
 function or(a: number, b: number): number;
