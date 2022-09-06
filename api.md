@@ -281,14 +281,14 @@ export function jaccardIndex<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): number;
 // @public
 export function join(iterable: Iterable<unknown>, separator?: string): string;
 
-// Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "ObjectWithLength" which is marked as @internal
-// Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "ArrangedLargestToSmallest" which is marked as @internal
+// Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "_ObjectWithLength" which is marked as @internal
+// Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "_ArrangedLargestToSmallest" which is marked as @internal
 //
 // @public
 export function largeToSmall<A extends _ObjectWithLength, B extends _ObjectWithLength>(a: A, b: B): _ArrangedLargestToSmallest<A, B>;
 
-// Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "ObjectWithSize" which is marked as @internal
-// Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "ArrangedLargestToSmallest" which is marked as @internal
+// Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "_ObjectWithSize" which is marked as @internal
+// Warning: (ae-incompatible-release-tags) The symbol "largeToSmall" is marked as @public, but its signature references "_ArrangedLargestToSmallest" which is marked as @internal
 //
 // @public
 export function largeToSmall<A extends _ObjectWithSize, B extends _ObjectWithSize>(a: A, b: B): _ArrangedLargestToSmallest<A, B>;
@@ -385,7 +385,7 @@ export type Nullish = null | undefined;
 // @public
 export function nullish(value: unknown): value is Nullish;
 
-// Warning: (ae-incompatible-release-tags) The symbol "NumberLike" is marked as @public, but its signature references "Sign" which is marked as @internal
+// Warning: (ae-incompatible-release-tags) The symbol "NumberLike" is marked as @public, but its signature references "_Sign" which is marked as @internal
 //
 // @public
 export type NumberLike = {
@@ -508,7 +508,7 @@ export type RejectedResult<T> = [value: undefined, error: T];
 // @public
 export function relativeStddev(values: readonly number[], meanValue?: number): number;
 
-// Warning: (ae-incompatible-release-tags) The symbol "rename" is marked as @public, but its signature references "NonUnion" which is marked as @internal
+// Warning: (ae-incompatible-release-tags) The symbol "rename" is marked as @public, but its signature references "_NonUnion" which is marked as @internal
 //
 // @public
 export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(target: T, oldKey: _NonUnion<K1>, newKey: _NonUnion<K2>): Omit<T, K1 | K2> & Record<K2, T[K1]>;
@@ -705,8 +705,8 @@ export function trimStart<T>(array: readonly T[], start: T): T[];
 // @public
 export function truncate<T extends string>(text: T, maxLength: number, suffix?: string): T | `${string}${typeof suffix}`;
 
-// Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "BaseTypedEventEmitter" which is marked as @internal
-// Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "BuiltInEvents" which is marked as @internal
+// Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "_BaseTypedEventEmitter" which is marked as @internal
+// Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "_BuiltInEvents" which is marked as @internal
 //
 // @public
 export interface TypedEventEmitter<T extends EventListeners = Record<never, never>> extends _BaseTypedEventEmitter<T & _BuiltInEvents<T>> {
