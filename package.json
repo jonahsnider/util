@@ -56,8 +56,8 @@
 		"terser": "5.15.0"
 	},
 	"devDependencies": {
-		"@babel/core": "7.19.0",
-		"@babel/preset-env": "7.19.0",
+		"@babel/core": "7.19.1",
+		"@babel/preset-env": "7.19.1",
 		"@jonahsnider/prettier-config": "1.1.2",
 		"@jonahsnider/xo-config": "5.2.0",
 		"@microsoft/api-extractor": "7.31.0",
