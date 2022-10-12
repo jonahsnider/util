@@ -41,7 +41,7 @@
 	],
 	"scripts": {
 		"analyze": "size-limit --why",
-		"build": "tsc && rollup --config rollup.config.js",
+		"build": "tsc && rollup --config rollup.config.js --bundleConfigAsCjs",
 		"deploy": "semantic-release",
 		"docs": "typedoc --options ./typedoc.json",
 		"lint": "xo",
