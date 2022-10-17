@@ -60,7 +60,7 @@
 		"@babel/preset-env": "7.19.4",
 		"@jonahsnider/prettier-config": "1.1.2",
 		"@jonahsnider/xo-config": "5.2.0",
-		"@microsoft/api-extractor": "7.33.2",
+		"@microsoft/api-extractor": "7.33.3",
 		"@rollup/plugin-babel": "6.0.0",
 		"@rollup/plugin-replace": "5.0.0",
 		"@rollup/plugin-typescript": "9.0.1",
