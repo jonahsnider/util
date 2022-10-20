@@ -56,7 +56,7 @@
 		"terser": "5.15.1"
 	},
 	"devDependencies": {
-		"@babel/core": "7.19.3",
+		"@babel/core": "7.19.6",
 		"@babel/preset-env": "7.19.4",
 		"@jonahsnider/prettier-config": "1.1.2",
 		"@jonahsnider/xo-config": "5.2.0",
