@@ -68,7 +68,7 @@
 		"@tsconfig/node16": "1.0.3",
 		"@types/jest": "29.2.3",
 		"@types/node": "18.11.9",
-		"@types/xo": "0.39.4",
+		"@types/xo": "0.39.5",
 		"jest": "29.3.1",
 		"prettier": "2.7.1",
 		"rollup": "3.3.0",
