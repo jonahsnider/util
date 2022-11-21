@@ -12,6 +12,7 @@ it('replaces strings with differing search value & replacement value lengths', (
 it('handles empty strings', () => {
 	expect(multiReplace('', {})).toBe('');
 	expect(multiReplace('', {a: 'c', c: 'a'})).toBe('');
+	// eslint-disable-next-line @typescript-eslint/naming-convention
 	expect(multiReplace('', {'': 'a'})).toBe('');
 });
 

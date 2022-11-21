@@ -25,7 +25,7 @@
  * @category Iterable
  */
 export function allDuplicates<T>(iterable: Iterable<T>): T[] {
-	const seen: Set<T> = new Set();
+	const seen = new Set<T>();
 	const result: T[] = [];
 
 	for (const element of iterable) {

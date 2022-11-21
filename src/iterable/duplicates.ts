@@ -19,8 +19,8 @@
  * @category Iterable
  */
 export function duplicates<T>(iterable: Iterable<T>): Set<T> {
-	const seen: Set<T> = new Set();
-	const result: Set<T> = new Set();
+	const seen = new Set<T>();
+	const result = new Set<T>();
 
 	for (const element of iterable) {
 		if (seen.has(element)) {

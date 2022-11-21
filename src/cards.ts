@@ -39,10 +39,10 @@ export enum Suit {
  * @public
  * @category Cards
  */
-export interface Card {
+export type Card = {
 	rank: Rank;
 	suit: Suit;
-}
+};
 
 const deck = [
 	{rank: Rank.Ace, suit: Suit.Clubs},

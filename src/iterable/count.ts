@@ -35,7 +35,6 @@ export function count<T>(iterable: Iterable<T>, filterPredicate?: undefined | ((
 			}
 		}
 	} else {
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		for (const _ of iterable) {
 			count++;
 		}

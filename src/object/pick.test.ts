@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+
 import {pick} from './pick';
 
 it('picks keys from a plain object', () => {
