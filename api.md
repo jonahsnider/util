@@ -82,23 +82,19 @@ declare namespace Bitwise {
 export { Bitwise }
 
 // @internal
-export interface _BuiltInEvents<T extends EventListeners> {
-    // (undocumented)
+export type _BuiltInEvents<T extends EventListeners> = {
     newListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
-    // (undocumented)
     removeListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
-}
+};
 
 // @public
 export function capitalize<T extends string>(text: T): Capitalize<T>;
 
 // @public
-export interface Card {
-    // (undocumented)
+export type Card = {
     rank: Rank;
-    // (undocumented)
     suit: Suit;
-}
+};
 
 // @public
 export function chunk<T>(array: readonly T[], size: number): Table<T>;
@@ -328,7 +324,7 @@ export function maxColumnLength(table: Table<string>): number[];
 export function mean(array: readonly number[]): number;
 
 // @public
-export function mean(array: ReadonlyArray<bigint>): bigint;
+export function mean(array: readonly bigint[]): bigint;
 
 // @public
 export function median(array: ArrayLike<number>): number;
@@ -709,8 +705,7 @@ export function truncate<T extends string>(text: T, maxLength: number, suffix?: 
 // Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "_BuiltInEvents" which is marked as @internal
 //
 // @public
-export interface TypedEventEmitter<T extends EventListeners = Record<never, never>> extends _BaseTypedEventEmitter<T & _BuiltInEvents<T>> {
-}
+export type TypedEventEmitter<T extends EventListeners = Record<never, never>> = Record<string, unknown> & _BaseTypedEventEmitter<T & _BuiltInEvents<T>>;
 
 // @public
 export function uncapitalize<T extends string>(text: T): Uncapitalize<T>;
