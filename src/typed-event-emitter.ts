@@ -22,11 +22,11 @@ export type EventListeners = Record<Parameters<EventEmitter['on']>[0], Parameter
  * @internal
  * @category Typed EventEmitter
  */
-interface BuiltInEvents<T extends EventListeners> {
+type BuiltInEvents<T extends EventListeners> = {
 	newListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
 	removeListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
-}
-export {BuiltInEvents as _BuiltInEvents};
+};
+export type {BuiltInEvents as _BuiltInEvents};
 
 /**
  * Typed event emitter with no built in events.
@@ -34,6 +34,7 @@ export {BuiltInEvents as _BuiltInEvents};
  * @internal
  * @category Typed EventEmitter
  */
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
 	addListener<E extends keyof T>(eventName: E, listener: T[E]): this;
 	emit<E extends keyof T>(eventName: E, ...args: Parameters<T[E]>): ReturnType<EventEmitter['emit']>;
@@ -49,7 +50,7 @@ interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
 	removeListener<E extends keyof T>(eventName: E, listener: T[E]): this;
 	rawListeners<E extends keyof T>(eventName: E): Array<T[E]>;
 }
-export {BaseTypedEventEmitter as _BaseTypedEventEmitter};
+export type {BaseTypedEventEmitter as _BaseTypedEventEmitter};
 
 /**
  * A type-checked `EventEmitter`.
@@ -71,4 +72,4 @@ export {BaseTypedEventEmitter as _BaseTypedEventEmitter};
  * @public
  * @category Typed EventEmitter
  */
-export interface TypedEventEmitter<T extends EventListeners = Record<never, never>> extends BaseTypedEventEmitter<T & BuiltInEvents<T>> {}
+export type TypedEventEmitter<T extends EventListeners = Record<never, never>> = Record<string, unknown> & BaseTypedEventEmitter<T & BuiltInEvents<T>>;

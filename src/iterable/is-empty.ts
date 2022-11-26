@@ -201,7 +201,7 @@ export function isEmpty(array: unknown[]): array is [];
  */
 export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never>;
 export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never> {
-	// eslint-disable-next-line no-unreachable-loop, @typescript-eslint/no-unused-vars
+	// eslint-disable-next-line no-unreachable-loop
 	for (const _ of iterable) {
 		return false;
 	}

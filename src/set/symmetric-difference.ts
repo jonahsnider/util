@@ -19,7 +19,7 @@ export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A
 		return new Set();
 	}
 
-	const result: Set<A | B> = new Set(a);
+	const result = new Set<A | B>(a);
 
 	for (const element of b) {
 		if (result.has(element)) {

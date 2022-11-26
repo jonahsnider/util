@@ -34,6 +34,7 @@ export function join(iterable: Iterable<unknown>, separator = ','): string {
 		const previous = next;
 		next = iterator.next();
 
+		// eslint-disable-next-line @typescript-eslint/restrict-plus-operands
 		result += previous.value;
 
 		if (next.done) {

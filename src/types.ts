@@ -25,7 +25,7 @@ export type UnknownFunction = (...args: unknown[]) => unknown;
  * @internal
  */
 type Sign = '-' | '+';
-export {Sign as _Sign};
+export type {Sign as _Sign};
 
 /**
  * A value that can be converted to a Number.
@@ -45,6 +45,7 @@ export type NumberLike =
 	| `${number | bigint}`
 	| `${Sign | ''}${'Infinity'}`
 	// Strange
+	// eslint-disable-next-line @typescript-eslint/ban-types
 	| null;
 
 /**
@@ -53,6 +54,7 @@ export type NumberLike =
  * @public
  * @category Sort
  */
+// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 export type Comparable = string | NumberLike;
 
 /**

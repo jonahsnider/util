@@ -4,7 +4,7 @@
  * @category Array
  */
 type ObjectWithLength = {length: number};
-export {ObjectWithLength as _ObjectWithLength};
+export type {ObjectWithLength as _ObjectWithLength};
 
 /**
  * An object with a `size` property.
@@ -12,7 +12,7 @@ export {ObjectWithLength as _ObjectWithLength};
  * @category Array
  */
 type ObjectWithSize = {size: number};
-export {ObjectWithSize as _ObjectWithSize};
+export type {ObjectWithSize as _ObjectWithSize};
 
 /**
  * A tuple of two elements arranged so the largest element is first and the smallest is last.
@@ -21,7 +21,7 @@ export {ObjectWithSize as _ObjectWithSize};
  * @category Array
  */
 type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
-export {ArrangedLargestToSmallest as _ArrangedLargestToSmallest};
+export type {ArrangedLargestToSmallest as _ArrangedLargestToSmallest};
 
 /**
  * Arrange 2 objects in a tuple by their length.

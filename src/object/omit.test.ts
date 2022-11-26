@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+
 import {omit} from './omit';
 
 it('omits keys from a plain object', () => {

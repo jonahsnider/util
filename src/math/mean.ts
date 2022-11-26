@@ -51,7 +51,7 @@ export function mean(array: readonly number[]): number;
  * @public
  * @category Math
  */
-export function mean(array: ReadonlyArray<bigint>): bigint;
+export function mean(array: readonly bigint[]): bigint;
 export function mean<T extends number>(array: readonly T[]): T {
 	const summed = (array as readonly number[]).reduce(sum) as unknown as T;
 

@@ -21,7 +21,7 @@
  * @category Iterable
  */
 export function frequencyTable<T>(iterable: Iterable<T>): Map<T, number> {
-	const frequencies: Map<T, number> = new Map();
+	const frequencies = new Map<T, number>();
 
 	for (const element of iterable) {
 		// This is a perfect candidate for a DefaultMap but that means the return value wouldn't be a pure Map

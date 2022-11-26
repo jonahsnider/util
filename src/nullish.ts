@@ -3,6 +3,7 @@
  *
  * @public
  */
+// eslint-disable-next-line @typescript-eslint/ban-types
 export type Nullish = null | undefined;
 
 /**

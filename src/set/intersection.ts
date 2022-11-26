@@ -20,7 +20,7 @@ export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T> {
 		return new Set(a);
 	}
 
-	const result: Set<T> = new Set();
+	const result = new Set<T>();
 	const [largest, smallest] = largeToSmall(a, b);
 
 	for (const element of largest) {
