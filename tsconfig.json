@@ -6,7 +6,9 @@
 
 		"emitDeclarationOnly": true,
 		"declaration": true,
-		"declarationDir": "tsc_types"
+		"declarationDir": "tsc_types",
+
+		"types": ["vitest/globals"]
 	},
 	"include": ["src", "types"]
 }
