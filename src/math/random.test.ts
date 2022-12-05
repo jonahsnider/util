@@ -10,6 +10,6 @@ it('generates random numbers', () => {
 	expect(random(1, 1)).toBe(1);
 });
 
-it('throws in development when min is greater than max', () => {
+it('throws when min is greater than max', () => {
 	expect(() => random(1, 0)).toThrow(RangeError);
 });

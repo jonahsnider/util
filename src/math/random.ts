@@ -21,7 +21,7 @@
  * @category Math
  */
 export function random(min: number, max: number): number {
-	if (__DEV__ && min > max) {
+	if (min > max) {
 		throw new RangeError('min exceeded max');
 	}
 
