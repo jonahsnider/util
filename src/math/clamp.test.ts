@@ -6,6 +6,6 @@ it('clamps', () => {
 	expect(clamp(2, 1, 3)).toBe(2);
 });
 
-it('throws in development when min is greater than max', () => {
+it('throws when min is greater than max', () => {
 	expect(() => clamp(1, 1, 0)).toThrow(RangeError);
 });
