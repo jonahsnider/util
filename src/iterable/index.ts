@@ -1,5 +1,5 @@
 export * from './all-duplicates';
-export * from './combine-iterables';
+export * from './concat-iterables';
 export * from './count';
 export * from './cycle';
 export * from './duplicates';

@@ -1,4 +1,4 @@
-import {combineIterables} from '../iterable';
+import {concatIterables} from '../iterable';
 
 /**
  * Get the union of 2 iterables.
@@ -21,5 +21,5 @@ export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B> {
 		return new Set(a);
 	}
 
-	return new Set(combineIterables<A | B>(a, b));
+	return new Set(concatIterables<A | B>(a, b));
 }

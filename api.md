@@ -106,13 +106,13 @@ export function clamp<T extends number | bigint, M1 extends number | bigint, M2 
 const clientErrors: Readonly<Range>;
 
 // @public
-export function combineIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T>;
-
-// @public
 export type Comparable = string | NumberLike;
 
 // @public (undocumented)
 export type CompareFn<T = Comparable> = Exclude<Parameters<T[]['sort']>[0], undefined>;
+
+// @public
+export function concatIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T>;
 
 // @public
 export function count<T>(iterable: Iterable<T>, filterPredicate?: undefined | ((element: T) => boolean)): number;

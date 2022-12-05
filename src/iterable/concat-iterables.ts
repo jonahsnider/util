@@ -1,4 +1,3 @@
-// TODO: Rename to concatIterables
 /**
  * Combines multiple iterables into a single iterable.
  *
@@ -8,7 +7,7 @@
  *
  * @example
  * ```js
- * [...combineIterables([1, 2, 3], [4, 5, 6])]; // [1, 2, 3, 4, 5, 6]
+ * [...concatIterables([1, 2, 3], [4, 5, 6])]; // [1, 2, 3, 4, 5, 6]
  * ```
  *
  * @param iterables - The iterables to combine
@@ -18,7 +17,7 @@
  * @public
  * @category Iterable
  */
-export function* combineIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T> {
+export function* concatIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T> {
 	for (const iterable of iterables) {
 		yield* iterable;
 	}
