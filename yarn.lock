@@ -1923,7 +1923,7 @@ __metadata:
     tsd: 0.25.0
     typedoc: 0.23.21
     typescript: 4.9.3
-    vite: 3.2.4
+    vite: 3.2.5
     vitest: 0.25.3
     xo: 0.53.1
   languageName: unknown
@@ -11136,7 +11136,45 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"vite@npm:3.2.4, vite@npm:^3.0.0":
+"vite@npm:3.2.5":
+  version: 3.2.5
+  resolution: "vite@npm:3.2.5"
+  dependencies:
+    esbuild: ^0.15.9
+    fsevents: ~2.3.2
+    postcss: ^8.4.18
+    resolve: ^1.22.1
+    rollup: ^2.79.1
+  peerDependencies:
+    "@types/node": ">= 14"
+    less: "*"
+    sass: "*"
+    stylus: "*"
+    sugarss: "*"
+    terser: ^5.4.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+    less:
+      optional: true
+    sass:
+      optional: true
+    stylus:
+      optional: true
+    sugarss:
+      optional: true
+    terser:
+      optional: true
+  bin:
+    vite: bin/vite.js
+  checksum: ad35b7008c2b62a167d1d1a82f0a0c60fa457733f1969e9eedf0b0077f67a7ac74b4c9477e75a397895150f09b6551f0c17841c5b05c34d9fe302bb0b5dc28a8
+  languageName: node
+  linkType: hard
+
+"vite@npm:^3.0.0":
   version: 3.2.4
   resolution: "vite@npm:3.2.4"
   dependencies:
