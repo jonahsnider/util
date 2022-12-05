@@ -96,10 +96,10 @@ export class Stopwatch {
 	 * @returns The amount of time elapsed in milliseconds.
 	 */
 	end(): number {
-		if (__DEV__ && this.startTime === undefined) {
-			throw new Error('This timer was not started');
+		if (this.startTime === undefined) {
+			throw new Error('This Stopwatch was not started');
 		}
 
-		return Number(process.hrtime.bigint() - this.startTime!) / 1_000_000;
+		return Number(process.hrtime.bigint() - this.startTime) / 1_000_000;
 	}
 }

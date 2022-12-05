@@ -40,11 +40,6 @@ describe(name(Stopwatch, Stopwatch.prototype.end), () => {
 	it('ends the stopwatch', () => {
 		const stopwatch = new Stopwatch();
 
-		// @ts-expect-error Assigning to readonly global
-		global.__DEV__ = false;
-		expect(stopwatch.end).toThrow();
-		// @ts-expect-error Assigning to readonly global
-		global.__DEV__ = true;
 		expect(stopwatch.end).toThrow();
 
 		stopwatch.start();
