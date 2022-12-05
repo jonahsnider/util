@@ -21,15 +21,6 @@ it('arranges by size', () => {
 });
 
 it('throws on bad input', () => {
-	// @ts-expect-error Readonly global
-	global.__DEV__ = false;
-	expect(() =>
-		// @ts-expect-error Missing properties
-		largeToSmall({}, {}),
-	).toThrow();
-
-	// @ts-expect-error Readonly global
-	global.__DEV__ = true;
 	expect(() =>
 		// @ts-expect-error Missing properties
 		largeToSmall({}, {}),
