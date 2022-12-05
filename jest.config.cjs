@@ -4,8 +4,5 @@ const path = require('path');
 module.exports = {
 	preset: 'ts-jest',
 	testEnvironment: 'node',
-	globals: {
-		__DEV__: true,
-	},
 	roots: [path.join(__dirname, 'src')],
 };

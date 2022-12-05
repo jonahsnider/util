@@ -1,5 +1,4 @@
 import babel from '@rollup/plugin-babel';
-import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
 import {terser} from 'rollup-plugin-terser';
 
@@ -38,65 +37,24 @@ const config = [
 	{
 		input: './src/index.ts',
 		output: {
-			file: './dist/index.prod.js',
+			file: './dist/index.js',
 			format: 'umd',
 			name: 'jonahsniderUtil',
 			exports: 'named',
 			sourcemap: true,
 		},
-		plugins: [
-			typescript({incremental: true}),
-			replace({preventAssignment: true, __DEV__: false}),
-			babel({babelHelpers: 'bundled', extensions: ['.ts']}),
-			terser(terserConfig),
-		],
-	},
-	{
-		input: './src/index.ts',
-		output: {
-			file: './dist/index.dev.js',
-			format: 'umd',
-			name: 'jonahsniderUtil',
-			exports: 'named',
-			sourcemap: true,
-		},
-		plugins: [
-			typescript({incremental: true}),
-			replace({preventAssignment: true, __DEV__: true}),
-			babel({babelHelpers: 'bundled', extensions: ['.ts']}),
-			terser(terserConfig),
-		],
+		plugins: [typescript({incremental: true}), babel({babelHelpers: 'bundled', extensions: ['.ts']}), terser(terserConfig)],
 	},
 	// ES Modules
 	{
 		input: './src/index.ts',
 		output: {
-			file: './dist/index.prod.mjs',
+			file: './dist/index.mjs',
 			format: 'esm',
 			exports: 'named',
 			sourcemap: true,
 		},
-		plugins: [typescript({incremental: true}), replace({preventAssignment: true, __DEV__: false}), terser(esmTerserConfig)],
-	},
-	{
-		input: './src/index.ts',
-		output: {
-			file: './dist/index.dev.mjs',
-			format: 'esm',
-			exports: 'named',
-			sourcemap: true,
-		},
-		plugins: [typescript({incremental: true}), replace({preventAssignment: true, __DEV__: true}), terser(esmTerserConfig)],
-	},
-	// Entry
-	{
-		input: './src/entry.ts',
-		output: {
-			file: 'dist/index.js',
-			format: 'cjs',
-			sourcemap: true,
-		},
-		plugins: [typescript({incremental: true}), babel({babelHelpers: 'bundled', extensions: ['.ts']}), terser(terserConfig)],
+		plugins: [typescript({incremental: true}), terser(esmTerserConfig)],
 	},
 ];
 

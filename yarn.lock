@@ -2757,13 +2757,11 @@ __metadata:
     "@jonahsnider/xo-config": 5.3.0
     "@microsoft/api-extractor": 7.33.6
     "@rollup/plugin-babel": 6.0.3
-    "@rollup/plugin-replace": 5.0.1
     "@rollup/plugin-typescript": 10.0.1
     "@size-limit/preset-small-lib": 8.1.0
     "@tsconfig/node16": 1.0.3
     "@types/jest": 29.2.3
     "@types/node": 18.11.10
-    "@types/xo": 0.39.5
     jest: 29.3.1
     prettier: 2.8.0
     rollup: 3.5.1
@@ -3349,21 +3347,6 @@ __metadata:
     rollup:
       optional: true
   checksum: 412c1c3bb5dd029cbf0b37315ad54b51ef378b8d2fd91d1ec44d73cade723cec8718b5affa2ce8a8b06660710d11765056fac4068521f18737ce26142506a8b1
-  languageName: node
-  linkType: hard
-
-"@rollup/plugin-replace@npm:5.0.1":
-  version: 5.0.1
-  resolution: "@rollup/plugin-replace@npm:5.0.1"
-  dependencies:
-    "@rollup/pluginutils": ^5.0.1
-    magic-string: ^0.26.4
-  peerDependencies:
-    rollup: ^1.20.0||^2.0.0||^3.0.0
-  peerDependenciesMeta:
-    rollup:
-      optional: true
-  checksum: d5f98a93dd24086ed1bf70e9299230d1fddae9b132280e2daaca855dba2307eccd5490553e2a03b701b7411593d2921d2d675e5d906b4754c57152f8c50adb07
   languageName: node
   linkType: hard
 
@@ -9176,15 +9159,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.26.4":
-  version: 0.26.7
-  resolution: "magic-string@npm:0.26.7"
-  dependencies:
-    sourcemap-codec: ^1.4.8
-  checksum: 89b0d60cbb32bbf3d1e23c46ea93db082d18a8230b972027aecb10a40bba51be519ecce0674f995571e3affe917b76b09f59d8dbc9a1b2c9c4102a2b6e8a2b01
-  languageName: node
-  linkType: hard
-
 "make-dir@npm:^3.0.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
@@ -11729,13 +11703,6 @@ resolve@~1.17.0:
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 59ce8640cf3f3124f64ac289012c2b8bd377c238e316fb323ea22fbfe83da07d81e000071d7242cad7a23cd91c7de98e4df8830ec3f133cb6133a5f6e9f67bc2
-  languageName: node
-  linkType: hard
-
-"sourcemap-codec@npm:^1.4.8":
-  version: 1.4.8
-  resolution: "sourcemap-codec@npm:1.4.8"
-  checksum: b57981c05611afef31605732b598ccf65124a9fcb03b833532659ac4d29ac0f7bfacbc0d6c5a28a03e84c7510e7e556d758d0bb57786e214660016fb94279316
   languageName: node
   linkType: hard
 
