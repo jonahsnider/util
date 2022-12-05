@@ -9,6 +9,6 @@ it('generates random integers', () => {
 	expect(randomInt(1, 1)).toBe(1);
 });
 
-it('throws in development when min is greater than max', () => {
+it('throws when min is greater than max', () => {
 	expect(() => randomInt(1, 0)).toThrow(RangeError);
 });
