@@ -7,6 +7,7 @@ jobs:
     name: Build
 
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout git repository
@@ -15,16 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Get Yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: 'yarn'
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build package
@@ -38,6 +30,7 @@ jobs:
     name: Unit tests
 
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout git repository
@@ -46,16 +39,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Get Yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: 'yarn'
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Run tests
@@ -68,6 +52,7 @@ jobs:
     name: Calculate bundle size
 
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     env:
       CI_JOB_NUMBER: 1
@@ -79,16 +64,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Get Yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: 'yarn'
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build
@@ -99,6 +75,7 @@ jobs:
     name: Check style
 
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout git repository
@@ -107,16 +84,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: 'yarn'
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Check style with Prettier
@@ -125,7 +93,7 @@ jobs:
     name: Lint
 
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
 
     steps:
       - name: Checkout git repository
@@ -134,16 +102,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Get Yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: 'yarn'
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Lint
@@ -152,7 +111,7 @@ jobs:
     name: Validate API
 
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
 
     steps:
       - name: Checkout git repository
@@ -161,16 +120,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Get Yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: 'yarn'
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build package
@@ -181,6 +131,7 @@ jobs:
     name: Publish
 
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     needs: [unit-test, style, size, validate-api, lint]
 
@@ -194,16 +145,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: 'yarn'
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build
