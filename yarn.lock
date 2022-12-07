@@ -1914,7 +1914,7 @@ __metadata:
     "@types/node": 18.11.11
     "@vitest/coverage-c8": 0.25.4
     "@vitest/ui": 0.25.4
-    prettier: 2.8.0
+    prettier: 2.8.1
     rollup: 3.6.0
     rollup-plugin-terser: 7.0.2
     semantic-release: 19.0.5
@@ -9081,12 +9081,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.0":
-  version: 2.8.0
-  resolution: "prettier@npm:2.8.0"
+"prettier@npm:2.8.1":
+  version: 2.8.1
+  resolution: "prettier@npm:2.8.1"
   bin:
     prettier: bin-prettier.js
-  checksum: 72004ce0cc9bb097daf3e3833f62495768724392c1d5b178dd47372337616e9e50ecbb0804f236596223f7b5eb1bbe69cefc8957dca21112c5777e77ef73a564
+  checksum: 4f21a0f1269f76fb36f54e9a8a1ea4c11e27478958bf860661fb4b6d7ac69aac1581f8724fa98ea3585e56d42a2ea317a17ff6e3324f40cb11ff9e20b73785cc
   languageName: node
   linkType: hard
 
