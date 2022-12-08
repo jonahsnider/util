@@ -1912,8 +1912,8 @@ __metadata:
     "@size-limit/preset-small-lib": 8.1.0
     "@tsconfig/node16": 1.0.3
     "@types/node": 18.11.11
-    "@vitest/coverage-c8": 0.25.5
-    "@vitest/ui": 0.25.5
+    "@vitest/coverage-c8": 0.25.6
+    "@vitest/ui": 0.25.6
     prettier: 2.8.1
     rollup: 3.7.0
     rollup-plugin-terser: 7.0.2
@@ -1924,7 +1924,7 @@ __metadata:
     typedoc: 0.23.21
     typescript: 4.9.4
     vite: 3.2.5
-    vitest: 0.25.5
+    vitest: 0.25.6
     xo: 0.53.1
   languageName: unknown
   linkType: soft
@@ -3013,22 +3013,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/coverage-c8@npm:0.25.5":
-  version: 0.25.5
-  resolution: "@vitest/coverage-c8@npm:0.25.5"
+"@vitest/coverage-c8@npm:0.25.6":
+  version: 0.25.6
+  resolution: "@vitest/coverage-c8@npm:0.25.6"
   dependencies:
     c8: ^7.12.0
-    vitest: 0.25.5
-  checksum: a2c3d8172dbd742b88d3cf35bfb4e4c7d9b8221a7803f75a8009a482f3f017176d0c2938aa40c66cff63b60764e5305f792c3a5cc14af6e3d3e564950393f62b
+    vitest: 0.25.6
+  checksum: 570791e267c823298cbafe28a772d81cd18c8bcb1f1b3614636d2c225613c26f518f032df600d1aed860939ed7dcce591560184f9634d7c6df84c2b5d91e7bce
   languageName: node
   linkType: hard
 
-"@vitest/ui@npm:0.25.5":
-  version: 0.25.5
-  resolution: "@vitest/ui@npm:0.25.5"
+"@vitest/ui@npm:0.25.6":
+  version: 0.25.6
+  resolution: "@vitest/ui@npm:0.25.6"
   dependencies:
     sirv: ^2.0.2
-  checksum: d6847ecf0a734ca991eb61a427c15921904e8a2e9c1d5a9b69d7f7c13f1349f6a865aeacc3b47e06b52288ed2d850efd8dcbf4d9ad50ac1949e7047c7dc713de
+  checksum: b0dafe5dbb37638b3161dcc0f1bd4b9133bd811f2adf765aedff8e0eb8df074752fb623b38c5fc0ee7c98a852f3a8b58783107d3f45f83de4e92167fc9fdd315
   languageName: node
   linkType: hard
 
@@ -11241,9 +11241,9 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"vitest@npm:0.25.5":
-  version: 0.25.5
-  resolution: "vitest@npm:0.25.5"
+"vitest@npm:0.25.6":
+  version: 0.25.6
+  resolution: "vitest@npm:0.25.6"
   dependencies:
     "@types/chai": ^4.3.3
     "@types/chai-subset": ^1.3.3
@@ -11278,7 +11278,7 @@ resolve@~1.17.0:
       optional: true
   bin:
     vitest: vitest.mjs
-  checksum: f3e6cbe53f41ccdcf9d4a6dc71f22678007197388b4f1094c04ce28f778b99fce6cd7b2f35049aeffa8cd80cb25c0683f14dd008fdf0a54c6bc39fa3f2cb38a0
+  checksum: 0e42d162fab3298c39a7c40aac9bee3dc79d0b90f5fddfc698d68dfbfba7c4da2142f78168dc7998a213d8ec2aa4fbbfab3f0cc71a04b591ff5a62bd4dbb258c
   languageName: node
   linkType: hard
 
