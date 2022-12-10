@@ -59,8 +59,8 @@
 		"@size-limit/preset-small-lib": "8.1.0",
 		"@tsconfig/node16": "1.0.3",
 		"@types/node": "18.11.13",
-		"@vitest/coverage-c8": "0.25.6",
-		"@vitest/ui": "0.25.6",
+		"@vitest/coverage-c8": "0.25.7",
+		"@vitest/ui": "0.25.7",
 		"prettier": "2.8.1",
 		"rollup": "3.7.2",
 		"rollup-plugin-terser": "7.0.2",
@@ -71,7 +71,7 @@
 		"typedoc": "0.23.21",
 		"typescript": "4.9.4",
 		"vite": "3.2.5",
-		"vitest": "0.25.6",
+		"vitest": "0.25.7",
 		"xo": "0.53.1"
 	},
 	"engines": {
