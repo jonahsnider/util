@@ -2075,7 +2075,7 @@ __metadata:
     size-limit: 8.1.0
     terser: 5.16.1
     tsd: 0.25.0
-    typedoc: 0.23.21
+    typedoc: 0.23.22
     typescript: 4.9.4
     vite: 3.2.5
     vitest: 0.25.7
@@ -11095,9 +11095,9 @@ resolve@~1.17.0:
   languageName: node
   linkType: hard
 
-"typedoc@npm:0.23.21":
-  version: 0.23.21
-  resolution: "typedoc@npm:0.23.21"
+"typedoc@npm:0.23.22":
+  version: 0.23.22
+  resolution: "typedoc@npm:0.23.22"
   dependencies:
     lunr: ^2.3.9
     marked: ^4.0.19
@@ -11107,7 +11107,7 @@ resolve@~1.17.0:
     typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x
   bin:
     typedoc: bin/typedoc
-  checksum: 931520b21ae25ba8ea86111ea7c66f474468bb83cbe1d04c0ea19490f130ea44ba58b7ee4d12f7f02368cfe053ed1fa291c8843c466c8af383ef956de177360d
+  checksum: ac3a015e72d5e2dc6a3a2cca64572932a6d9d0ea26ee08e87c05e2244795087371a12b103f5f4c4f72d006f8893cd4dccd9addfbbce18577e2fb36c9c1d71be4
   languageName: node
   linkType: hard
 
