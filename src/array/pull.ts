@@ -24,7 +24,7 @@
  * @public
  * @category Array
  */
-export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice']> {
+export function pull<T>(array: T[], element: T): ReturnType<(typeof array)['splice']> {
 	const index = array.indexOf(element);
 
 	if (index === -1) {

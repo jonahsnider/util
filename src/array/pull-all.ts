@@ -27,7 +27,7 @@ import {indexOfAll} from './index-of-all';
  * @public
  * @category Array
  */
-export function pullAll<T>(array: T[], element: T): ReturnType<typeof array['splice']> {
+export function pullAll<T>(array: T[], element: T): ReturnType<(typeof array)['splice']> {
 	const indexes = indexOfAll(array, element);
 
 	// Reversing the indexes means we modify from end to start which has 2 benefits:
