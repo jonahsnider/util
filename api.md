@@ -408,7 +408,7 @@ function or(a: number, b: number): number;
 function or(a: bigint, b: bigint): bigint;
 
 // @public
-export function overwrite<T>(array: T[], startIndex: number, data: ArrayLike<T> & Iterable<T>): ReturnType<typeof array['splice']>;
+export function overwrite<T>(array: T[], startIndex: number, data: ArrayLike<T> & Iterable<T>): ReturnType<(typeof array)['splice']>;
 
 // @public
 export function padEnd<T>(array: T[], maxLength: number, fillValue: T): void;
@@ -435,10 +435,10 @@ export function product(a: number, b: number): number;
 export function product(a: bigint, b: bigint): bigint;
 
 // @public
-export function pull<T>(array: T[], element: T): ReturnType<typeof array['splice']>;
+export function pull<T>(array: T[], element: T): ReturnType<(typeof array)['splice']>;
 
 // @public
-export function pullAll<T>(array: T[], element: T): ReturnType<typeof array['splice']>;
+export function pullAll<T>(array: T[], element: T): ReturnType<(typeof array)['splice']>;
 
 // @public
 export function random(min: number, max: number): number;
