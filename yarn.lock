@@ -2444,6 +2444,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jest/schemas@npm:^29.4.3":
+  version: 29.4.3
+  resolution: "@jest/schemas@npm:29.4.3"
+  dependencies:
+    "@sinclair/typebox": ^0.25.16
+  checksum: ac754e245c19dc39e10ebd41dce09040214c96a4cd8efa143b82148e383e45128f24599195ab4f01433adae4ccfbe2db6574c90db2862ccd8551a86704b5bebd
+  languageName: node
+  linkType: hard
+
 "@jonahsnider/prettier-config@npm:1.1.2":
   version: 1.1.2
   resolution: "@jonahsnider/prettier-config@npm:1.1.2"
@@ -2476,7 +2485,7 @@ __metadata:
     semantic-release: 20.1.3
     size-limit: 8.2.4
     terser: 5.16.6
-    tsd: 0.27.0
+    tsd: 0.28.0
     typedoc: 0.23.27
     typescript: 4.9.5
     vite: 4.2.0
@@ -3236,6 +3245,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sinclair/typebox@npm:^0.25.16":
+  version: 0.25.24
+  resolution: "@sinclair/typebox@npm:0.25.24"
+  checksum: 10219c58f40b8414c50b483b0550445e9710d4fe7b2c4dccb9b66533dd90ba8e024acc776026cebe81e87f06fa24b07fdd7bc30dd277eb9cc386ec50151a3026
+  languageName: node
+  linkType: hard
+
 "@size-limit/esbuild@npm:8.2.4":
   version: 8.2.4
   resolution: "@size-limit/esbuild@npm:8.2.4"
@@ -3285,10 +3301,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsd/typescript@npm:~4.9.5":
-  version: 4.9.5
-  resolution: "@tsd/typescript@npm:4.9.5"
-  checksum: f9f01ecf2094e0ac83e56cc57430bdf81da82aa20424280002b44ea29cdc171388a9777262257f550800bf76567774521728e1ef6e191633ae6f723ee64d396a
+"@tsd/typescript@npm:~5.0.2":
+  version: 5.0.2
+  resolution: "@tsd/typescript@npm:5.0.2"
+  checksum: ab9274c5208ec882840d3cbddd897fb14699afe2a71a6039027f60a4d1f5b37746f41a0dbc385ebef363717c5490e45f15308c0cfb023393194afaca24d66850
   languageName: node
   linkType: hard
 
@@ -5093,6 +5109,13 @@ __metadata:
     asap: ^2.0.0
     wrappy: 1
   checksum: 8b26238db91423b2702a7a6d9629d0019c37c415e7b6e75d4b3e8d27e9464e21cac3618dd145f4d4ee96c70cc6ff034227b5b8a0e9c09015a8bdbe6dace3cfb9
+  languageName: node
+  linkType: hard
+
+"diff-sequences@npm:^29.4.3":
+  version: 29.4.3
+  resolution: "diff-sequences@npm:29.4.3"
+  checksum: 28b265e04fdddcf7f9f814effe102cc95a9dec0564a579b5aed140edb24fc345c611ca52d76d725a3cab55d3888b915b5e8a4702e0f6058968a90fa5f41fcde7
   languageName: node
   linkType: hard
 
@@ -7709,6 +7732,25 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"jest-diff@npm:^29.0.3":
+  version: 29.5.0
+  resolution: "jest-diff@npm:29.5.0"
+  dependencies:
+    chalk: ^4.0.0
+    diff-sequences: ^29.4.3
+    jest-get-type: ^29.4.3
+    pretty-format: ^29.5.0
+  checksum: dfd0f4a299b5d127779c76b40106c37854c89c3e0785098c717d52822d6620d227f6234c3a9291df204d619e799e3654159213bf93220f79c8e92a55475a3d39
+  languageName: node
+  linkType: hard
+
+"jest-get-type@npm:^29.4.3":
+  version: 29.4.3
+  resolution: "jest-get-type@npm:29.4.3"
+  checksum: 6ac7f2dde1c65e292e4355b6c63b3a4897d7e92cb4c8afcf6d397f2682f8080e094c8b0b68205a74d269882ec06bf696a9de6cd3e1b7333531e5ed7b112605ce
+  languageName: node
+  linkType: hard
+
 "jest-worker@npm:^26.2.1":
   version: 26.6.2
   resolution: "jest-worker@npm:26.6.2"
@@ -9836,6 +9878,17 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"pretty-format@npm:^29.5.0":
+  version: 29.5.0
+  resolution: "pretty-format@npm:29.5.0"
+  dependencies:
+    "@jest/schemas": ^29.4.3
+    ansi-styles: ^5.0.0
+    react-is: ^18.0.0
+  checksum: 4065356b558e6db25b4d41a01efb386935a6c06a0c9c104ef5ce59f2f476b8210edb8b3949b386e60ada0a6dc5ebcb2e6ccddc8c64dfd1a9943c3c3a9e7eaf89
+  languageName: node
+  linkType: hard
+
 "proc-log@npm:*":
   version: 2.0.0
   resolution: "proc-log@npm:2.0.0"
@@ -9982,6 +10035,13 @@ fsevents@~2.3.2:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
+"react-is@npm:^18.0.0":
+  version: 18.2.0
+  resolution: "react-is@npm:18.2.0"
+  checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
   languageName: node
   linkType: hard
 
@@ -11483,19 +11543,20 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
-"tsd@npm:0.27.0":
-  version: 0.27.0
-  resolution: "tsd@npm:0.27.0"
+"tsd@npm:0.28.0":
+  version: 0.28.0
+  resolution: "tsd@npm:0.28.0"
   dependencies:
-    "@tsd/typescript": ~4.9.5
+    "@tsd/typescript": ~5.0.2
     eslint-formatter-pretty: ^4.1.0
     globby: ^11.0.1
+    jest-diff: ^29.0.3
     meow: ^9.0.0
     path-exists: ^4.0.0
     read-pkg-up: ^7.0.0
   bin:
     tsd: dist/cli.js
-  checksum: 0387fb2b23ec67e6c45dfd29960f6b3c08d8c387b6ae8fe62f92cbb295427261f87af86012f243fb6b0226bd747b34d4840fab3db0ed2ceec5f41422604b02a0
+  checksum: 9dd5d58a1e568127b7e2ad6e91b2b791e81c807dfe063fa7547a756a0c3d5ca1366b19097cc6aa6d048d6b20d704469e511da5caf5db6d2b4283019187ad3130
   languageName: node
   linkType: hard
 
