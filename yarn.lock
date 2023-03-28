@@ -2485,7 +2485,7 @@ __metadata:
     semantic-release: 20.1.3
     size-limit: 8.2.4
     terser: 5.16.8
-    tsd: 0.28.0
+    tsd: 0.28.1
     typedoc: 0.23.28
     typescript: 5.0.2
     vite: 4.2.1
@@ -11557,9 +11557,9 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
-"tsd@npm:0.28.0":
-  version: 0.28.0
-  resolution: "tsd@npm:0.28.0"
+"tsd@npm:0.28.1":
+  version: 0.28.1
+  resolution: "tsd@npm:0.28.1"
   dependencies:
     "@tsd/typescript": ~5.0.2
     eslint-formatter-pretty: ^4.1.0
@@ -11570,7 +11570,7 @@ resolve@^1.17.0:
     read-pkg-up: ^7.0.0
   bin:
     tsd: dist/cli.js
-  checksum: 9dd5d58a1e568127b7e2ad6e91b2b791e81c807dfe063fa7547a756a0c3d5ca1366b19097cc6aa6d048d6b20d704469e511da5caf5db6d2b4283019187ad3130
+  checksum: ca0f0d2ba3063a252ac3ecf5799c6dc8c4c35726f0d0683e6577992a9916cfe3e476f9fdbb67bf57ce8e46ef9cd0189bb847d336d1c01679232f1b91828b0fa6
   languageName: node
   linkType: hard
 
