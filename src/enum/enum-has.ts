@@ -48,5 +48,6 @@ export function enumHas<T extends EnumValue>(Enum: Enum<T>, value: unknown): val
 
 	const values = lookup.get(Enum)!;
 
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 	return values.has(value as any);
 }

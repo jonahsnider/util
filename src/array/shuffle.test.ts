@@ -1,5 +1,4 @@
 import {relativeStddev} from '../math';
-
 import {shuffle} from './shuffle';
 
 const iterations = 1e5;

@@ -1,5 +1,4 @@
 import {expectType} from 'tsd';
-
 import {partition} from './partition';
 
 it('partitions an array', () => {

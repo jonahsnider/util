@@ -1,5 +1,4 @@
 import {nullish} from '../nullish';
-
 import {not} from './not';
 
 it('negates booleans', () => {

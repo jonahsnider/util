@@ -1,5 +1,4 @@
 import type {Table} from '../array';
-
 import {maxColumnLength} from './max-column-length';
 
 // prettier-ignore

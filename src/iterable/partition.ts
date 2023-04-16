@@ -56,7 +56,7 @@ export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increm
 	for (const element of iterable) {
 		const array = predicate(element, increment++) ? passed : failed;
 
-		array.push(element as any);
+		array.push(element);
 	}
 
 	return [passed, failed];
