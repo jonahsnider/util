@@ -68,7 +68,7 @@
 		"size-limit": "8.2.4",
 		"terser": "5.16.9",
 		"tsd": "0.28.1",
-		"typedoc": "0.24.2",
+		"typedoc": "0.24.4",
 		"typescript": "5.0.4",
 		"vite": "4.2.1",
 		"vitest": "0.30.1",
