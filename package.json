@@ -69,10 +69,10 @@
 		"terser": "5.16.9",
 		"tsd": "0.28.1",
 		"typedoc": "0.24.2",
-		"typescript": "5.0.3",
+		"typescript": "5.0.4",
 		"vite": "4.2.1",
 		"vitest": "0.30.1",
-		"xo": "0.53.1"
+		"xo": "0.54.1"
 	},
 	"engines": {
 		"node": ">=16"

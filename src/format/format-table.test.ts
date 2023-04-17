@@ -1,5 +1,4 @@
 import type {Table} from '../array';
-
 import {formatTable} from './format-table';
 
 // prettier-ignore

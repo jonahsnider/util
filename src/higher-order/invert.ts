@@ -26,5 +26,6 @@ import type {NumberLike} from '../types';
  * @category Higher order
  */
 export function invert<T extends (...parameters: any[]) => NumberLike>(fn: T): T {
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 	return ((...parameters) => -fn(...parameters)!) as T;
 }

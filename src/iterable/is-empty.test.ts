@@ -1,5 +1,4 @@
 import {expectType} from 'tsd';
-
 import {isEmpty} from './is-empty';
 
 it('returns true for empty iterables', () => {

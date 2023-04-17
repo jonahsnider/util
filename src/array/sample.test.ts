@@ -1,5 +1,4 @@
 import {expectNotType, expectType} from 'tsd';
-
 import {sample} from './sample';
 
 // Compilation tests

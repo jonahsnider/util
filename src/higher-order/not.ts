@@ -22,5 +22,6 @@
  * @category Higher order
  */
 export function not<T extends (...parameters: any[]) => boolean>(fn: T): (...parameters: Parameters<T>) => boolean {
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 	return ((...parameters) => !fn(...parameters)) as T;
 }
