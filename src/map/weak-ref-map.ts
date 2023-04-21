@@ -42,16 +42,64 @@ export class WeakRefMap<K, V extends object> implements Omit<Map<K, V>, 'size' |
 		}
 	}
 
+	/**
+	 * Clear all entries from the map.
+	 *
+	 * Time complexity: _O(n)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
+	 * @example
+	 * ```js
+	 * map.clear();
+	 * ```
+	 */
 	clear(): void {
 		this.map.clear();
 	}
 
+	/**
+	 * Delete a given key from the map.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
+	 * @example
+	 * ```js
+	 * map.delete('a');
+	 * ```
+	 *
+	 * @param key - The key to delete
+	 *
+	 * @returns Whether the key was deleted
+	 */
 	delete(key: K): boolean {
 		const didExist = this.map.has(key);
-		this.map.delete(key);
+
+		if (!didExist) {
+			this.map.delete(key);
+		}
+
 		return didExist;
 	}
 
+	/**
+	 * Check if the map has a given key.
+	 *
+	 * Time complexity: _O(1)_
+	 *
+	 * Space complexity: _O(1)_
+	 *
+	 * @example
+	 * ```js
+	 * map.has('a');
+	 * ```
+	 *
+	 * @param key - The key to check for
+	 *
+	 * @returns Whether the map has `key`
+	 */
 	has(key: K): boolean {
 		if (this.map.has(key)) {
 			if (this.map.get(key)!.deref() === undefined) {
