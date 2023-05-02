@@ -726,14 +726,11 @@ export class WeakRefMap<K, V extends object> implements Omit<Map<K, V>, 'size' |
     // (undocumented)
     get [Symbol.toStringTag](): 'WeakRefMap';
     constructor(entries?: ReadonlyArray<readonly [K, V]> | null);
-    // (undocumented)
     clear(): void;
-    // (undocumented)
     delete(key: K): boolean;
     entries(): IterableIterator<[K, V]>;
     forEach(callbackfn: (value: V, key: K, map: this) => void, thisArg?: any): void;
     get(key: K): V | undefined;
-    // (undocumented)
     has(key: K): boolean;
     keys(): IterableIterator<K>;
     set(key: K, value: V): this;
