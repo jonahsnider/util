@@ -58,7 +58,7 @@
 		"@rollup/plugin-typescript": "11.1.1",
 		"@size-limit/preset-small-lib": "8.2.4",
 		"@tsconfig/node16": "1.0.4",
-		"@types/node": "18.16.14",
+		"@types/node": "18.16.15",
 		"@vitest/coverage-c8": "0.31.1",
 		"@vitest/ui": "0.31.1",
 		"prettier": "2.8.8",
