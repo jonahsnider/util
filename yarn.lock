@@ -2316,7 +2316,7 @@ __metadata:
     tsd: 0.28.1
     typedoc: 0.24.8
     typescript: 5.1.6
-    vite: 4.4.7
+    vite: 4.4.8
     vitest: 0.31.4
     xo: 0.54.2
   languageName: unknown
@@ -12400,9 +12400,9 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
-"vite@npm:4.4.7":
-  version: 4.4.7
-  resolution: "vite@npm:4.4.7"
+"vite@npm:4.4.8":
+  version: 4.4.8
+  resolution: "vite@npm:4.4.8"
   dependencies:
     esbuild: ^0.18.10
     fsevents: ~2.3.2
@@ -12436,7 +12436,7 @@ resolve@^1.17.0:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 787c4d891da18d0a0545bee07dec73c3201979dcf2b1ea3dc13fdd2d3b9ad76d413bcc0e68502183e309007a612c1f4116adefe0093d95fbbb9cf1c1755f7e41
+  checksum: e8ffe688f8a7396b1357778f00cb06d1f3dadad200823c47a1955cf52774a0cbff5ac4d6a8f8d09e26c1d4e588e5815956f9eba02ae301e77a36c3d181a1bc86
   languageName: node
   linkType: hard
 
