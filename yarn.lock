@@ -2308,7 +2308,7 @@ __metadata:
     "@vitest/coverage-c8": 0.31.4
     "@vitest/ui": 0.31.4
     prettier: 2.8.8
-    rollup: 3.27.0
+    rollup: 3.27.1
     rollup-plugin-terser: 7.0.2
     semantic-release: 21.0.7
     size-limit: 8.2.6
@@ -10832,9 +10832,9 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
-"rollup@npm:3.27.0":
-  version: 3.27.0
-  resolution: "rollup@npm:3.27.0"
+"rollup@npm:3.27.1":
+  version: 3.27.1
+  resolution: "rollup@npm:3.27.1"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -10842,7 +10842,7 @@ resolve@^1.17.0:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: f60c2c288d039dc14e1f6e7fd673b7fcb11928b5a781675791b37a741f63b7af110fc5d040d60d603175b6e03ff978bed83db018dd2ac542ef809fe1a5b32dae
+  checksum: 1f82ef0fd15317ef35f7dea9712c50e83357ae21e3d7688ad22218968e0b2aaeebae4130afed2c3566e5abab8cbebf60b0b40f9544fedced4f1f7dd39b4f25b8
   languageName: node
   linkType: hard
 
