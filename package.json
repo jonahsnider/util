@@ -57,7 +57,7 @@
 		"@rollup/plugin-babel": "6.0.3",
 		"@rollup/plugin-typescript": "11.1.2",
 		"@size-limit/preset-small-lib": "8.2.6",
-		"@tsconfig/node16": "1.0.4",
+		"@tsconfig/node16": "16.1.0",
 		"@types/node": "18.17.3",
 		"@vitest/coverage-c8": "0.31.4",
 		"@vitest/ui": "0.31.4",
