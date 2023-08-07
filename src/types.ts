@@ -54,7 +54,6 @@ export type NumberLike =
  * @public
  * @category Sort
  */
-// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 export type Comparable = string | NumberLike;
 
 /**
