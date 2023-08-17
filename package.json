@@ -81,7 +81,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"packageManager": "yarn@3.6.1",
+	"packageManager": "yarn@3.6.2",
 	"size-limit": [
 		{
 			"brotli": true,
