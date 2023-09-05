@@ -270,6 +270,7 @@ export enum Status {
 	/**
 	 * 508 Loop Detected.
 	 * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/508 | MDN docs}
+	 * @deprecated This is a status code only used in the WebDAV protocol, which is not supported by the `Status` enum.
 	 */
 	LoopDetected,
 	/**
