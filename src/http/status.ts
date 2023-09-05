@@ -188,7 +188,12 @@ export enum Status {
 	// eslint-disable-next-line @typescript-eslint/naming-convention
 	ImATeapot,
 	/**
-	 * 422 Unprocessable Entity.
+	 * 421 Misdirected Request.
+	 * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421 | MDN docs}
+	 */
+	MisdirectedRequest = 421,
+	/**
+	 * 422 Unprocessable Content.
 	 * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422 | MDN docs}
 	 */
 	UnprocessableEntity = 422,
