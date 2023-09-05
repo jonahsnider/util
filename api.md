@@ -196,8 +196,9 @@ export function holes(array: ArrayLike<unknown>): number[];
 declare namespace Http {
     export {
         StatusRange,
+        Method,
         Status,
-        Method
+        StatusName
     }
 }
 export { Http }
@@ -584,8 +585,10 @@ enum Status {
     InsufficientStorage = 507,
     InternalServerError = 500,
     LengthRequired = 411,
+    // @deprecated
     LoopDetected = 508,
     MethodNotAllowed = 405,
+    MisdirectedRequest = 421,
     MovedPermanently = 301,
     MultipleChoices = 300,
     NetworkAuthenticationRequired = 511,
@@ -621,6 +624,120 @@ enum Status {
     UpgradeRequired = 426,
     UriTooLong = 414,
     VariantAlsoNegotiates = 506
+}
+
+// @public
+enum StatusName {
+    // (undocumented)
+    'Bad Gateway' = 502,
+    // (undocumented)
+    'Bad Request' = 400,
+    // (undocumented)
+    'Early Hints' = 103,
+    // (undocumented)
+    'Expectation Failed' = 417,
+    // (undocumented)
+    'Gateway Timeout' = 504,
+    // (undocumented)
+    'HTTP Version Not Supported' = 505,
+    // (undocumented)
+    "I'm a Teapot" = 418,
+    // (undocumented)
+    'Insufficient Storage' = 507,
+    // (undocumented)
+    'Internal Server Error' = 500,
+    // (undocumented)
+    'Length Required' = 411,
+    // @deprecated (undocumented)
+    'Loop Detected' = 508,
+    // (undocumented)
+    'Method Not Allowed' = 405,
+    // (undocumented)
+    'Misdirected Request' = 421,
+    // (undocumented)
+    'Moved Permanently' = 301,
+    // (undocumented)
+    'Multiple Choices' = 300,
+    // (undocumented)
+    'Network Authentication Required' = 511,
+    // (undocumented)
+    'No Content' = 204,
+    // (undocumented)
+    'Non-Authoritative Information' = 203,
+    // (undocumented)
+    'Not Acceptable' = 406,
+    // (undocumented)
+    'Not Extended' = 510,
+    // (undocumented)
+    'Not Found' = 404,
+    // (undocumented)
+    'Not Implemented' = 501,
+    // (undocumented)
+    'Not Modified' = 304,
+    // (undocumented)
+    'Partial Content' = 206,
+    // (undocumented)
+    'Payload Too Large' = 413,
+    // (undocumented)
+    'Payment Required' = 402,
+    // (undocumented)
+    'Permanent Redirect' = 308,
+    // (undocumented)
+    'Precondition Failed' = 412,
+    // (undocumented)
+    'Precondition Required' = 428,
+    // (undocumented)
+    'Proxy Authentication Required' = 407,
+    // (undocumented)
+    'Range Not Satisfiable' = 416,
+    // (undocumented)
+    'Request Header Fields Too Large' = 431,
+    // (undocumented)
+    'Request Timeout' = 408,
+    // (undocumented)
+    'Reset Content' = 205,
+    // (undocumented)
+    'See Other' = 303,
+    // (undocumented)
+    'Service Unavailable' = 503,
+    // (undocumented)
+    'Switching Protocols' = 101,
+    // (undocumented)
+    'Temporary Redirect' = 307,
+    // (undocumented)
+    'Too Early' = 425,
+    // (undocumented)
+    'Too Many Requests' = 429,
+    // (undocumented)
+    'Unavailable For Legal Reasons' = 451,
+    // (undocumented)
+    'Unprocessable Content' = 422,
+    // (undocumented)
+    'Unsupported Media Type' = 415,
+    // (undocumented)
+    'Upgrade Required' = 426,
+    // (undocumented)
+    'URI Too Long' = 414,
+    // (undocumented)
+    'Variant Also Negotiates' = 506,
+    // (undocumented)
+    'Accepted' = 202,
+    // (undocumented)
+    'Conflict' = 409,
+    // (undocumented)
+    'Continue' = 100,
+    // (undocumented)
+    'Created' = 201,
+    // (undocumented)
+    'Forbidden' = 403,
+    // (undocumented)
+    'Found' = 302,
+    // (undocumented)
+    'Gone' = 410,
+    // (undocumented)
+    'OK' = 200,
+    // (undocumented)
+    'Unauthorized' = 401
 }
 
 declare namespace StatusRange {
