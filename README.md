@@ -63,7 +63,7 @@ There's 3 main benefits this library offers:
 
    This library works perfectly with existing idiomatic JavaScript and doesn't force you to change the way you write code.
 
-   (also - fun fact: the first snippet doesn't work with `bigint`s, [the second snippet does](https://util.jonah.pw/modules#Comparable))
+   (also - fun fact: the first snippet doesn't work with `bigint`s, [the second snippet does](https://util.jonah.pw/types/comparable))
 
 2. **Safety**
 
@@ -75,11 +75,11 @@ There's 3 main benefits this library offers:
 
    This library isn't just 1-liners you could copy-paste yourself.
 
-   Want to do a binary search on an array? [We've got you covered](https://util.jonah.pw/modules#binarySearch).
+   Want to do a binary search on an array? [We've got you covered](https://util.jonah.pw/functions/binarysearch).
 
-   Combine a bunch of regular expressions into one? [No problem](https://util.jonah.pw/modules#regExpUnion).
+   Combine a bunch of regular expressions into one? [No problem](https://util.jonah.pw/functions/regexpunion).
 
-   Need a deck of cards? [Only one import away](https://util.jonah.pw/modules#newDeck).
+   Need a deck of cards? [Only one import away](https://util.jonah.pw/functions/newdeck).
 
 ### TypeScript
 
@@ -89,6 +89,6 @@ In addition to all the useful functions this library provides, a major effort ha
 - `Iterable`s and `ArrayLike`s are used instead of `Array`s whenever possible, broader types ensure compatibility with your projects and let you avoid ugly type assertions
 - When an array is needed, it's always `readonly T[]` unless mutation is required
 
-There's also a few types exported that can be handy in certain situations (ex. [`NonEmptyArray`](https://util.jonah.pw/modules#NonEmptyArray) or [`Nullish`](https://util.jonah.pw/modules#Nullish)).
+There's also a few types exported that can be handy in certain situations (ex. [`NonEmptyArray`](https://util.jonah.pw/types/nonemptyarray) or [`Nullish`](https://util.jonah.pw/types/nullish)).
 
-My personal favorite is the [`TypedEventEmitter`](https://util.jonah.pw/interfaces/typedeventemitter) which lets you ensure typesafety in event listeners.
+My personal favorite is the [`TypedEventEmitter`](https://util.jonah.pw/types/typedeventemitter) which lets you ensure typesafety in event listeners.
