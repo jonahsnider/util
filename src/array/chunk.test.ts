@@ -13,5 +13,5 @@ it('chunks', () => {
 
 	expect(chunk(array, 100)).toStrictEqual([array]);
 
-	expect(chunk([1, 2, 3], 3)).toStrictEqual([[1], [2], [3]]);
+	expect(chunk([1, 2, 3], 3)).toStrictEqual([[1, 2, 3]]);
 });

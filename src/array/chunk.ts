@@ -4,7 +4,6 @@ import type {Table} from '.';
 // TODO: Consider implementing an overload that chunks iterables
 /**
  * Divides an array into several chunks of `size`.
- * If `size` is equal to the length of the array each item will be in their own array.
  *
  * Time complexity: _O(n)_
  *
@@ -39,9 +38,5 @@ import type {Table} from '.';
  * @category Array
  */
 export function chunk<T>(array: readonly T[], size: number): Table<T> {
-	if (array.length === size) {
-		return array.map(element => [element]);
-	}
-
 	return mapFill(i => array.slice(i * size, i * size + size), Math.ceil(array.length / size));
 }
