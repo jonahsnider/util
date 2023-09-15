@@ -100,6 +100,9 @@ export type Card = {
 export function chunk<T>(array: readonly T[], size: number): Table<T>;
 
 // @public
+export function chunk<T>(iterable: Iterable<T>, size: number): IterableIterator<T[]>;
+
+// @public
 export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(value: T, min: M1, max: M2): T | M1 | M2;
 
 // @public

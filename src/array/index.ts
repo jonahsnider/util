@@ -15,7 +15,6 @@ export type Table<T> = T[][];
 export type NonEmptyArray<T> = [T, ...T[]];
 
 export * from './binary-search';
-export * from './chunk';
 export * from './fill';
 export * from './find-index-all';
 export * from './first-index-of-last-group';

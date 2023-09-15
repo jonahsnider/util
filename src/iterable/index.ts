@@ -1,4 +1,5 @@
 export * from './all-duplicates';
+export * from './chunk';
 export * from './concat-iterables';
 export * from './count';
 export * from './cycle';
@@ -10,8 +11,8 @@ export * from './frequency-table';
 export * from './includes';
 export * from './is-empty';
 export * from './iterator-to-iterable';
-export * from './last-index-of-first-group';
 export * from './join';
+export * from './last-index-of-first-group';
 export * from './map-repeat';
 export * from './partition';
 export * from './repeat';
