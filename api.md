@@ -109,6 +109,9 @@ export function clamp<T extends number | bigint, M1 extends number | bigint, M2 
 const clientErrors: Readonly<Range>;
 
 // @public
+function combine<T>(...compareFns: ReadonlyArray<CompareFn<T>>): CompareFn<T>;
+
+// @public
 export type Comparable = string | NumberLike;
 
 // @public (undocumented)
@@ -558,7 +561,8 @@ export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknow
 declare namespace Sort {
     export {
         ascending,
-        descending
+        descending,
+        combine
     }
 }
 export { Sort }
