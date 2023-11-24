@@ -552,7 +552,7 @@ __metadata:
     "@rollup/plugin-typescript": 11.1.5
     "@size-limit/preset-small-lib": 10.0.3
     "@tsconfig/node16": 16.1.1
-    "@types/node": 20.9.3
+    "@types/node": 20.9.5
     "@vitest/coverage-v8": 0.34.6
     "@vitest/ui": 0.34.6
     prettier: 3.1.0
@@ -1654,12 +1654,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.9.3":
-  version: 20.9.3
-  resolution: "@types/node@npm:20.9.3"
+"@types/node@npm:20.9.5":
+  version: 20.9.5
+  resolution: "@types/node@npm:20.9.5"
   dependencies:
     undici-types: ~5.26.4
-  checksum: 0cfbfd2a8bd18acc75aa4d7685c7dcf56344f48addd4041d306dc194f3132f8014d56fd49fcb26bcdf400b883f9527e5e2beaf52dfce029cef15c69b8ed2e72a
+  checksum: 050ebd958e31ad21143f93614a25b15a8de5d0004338359409f76a661f734c4549698d852f21176c62f5661dacb572a090669cffef93cf6361c959e4d27d8d95
   languageName: node
   linkType: hard
 
