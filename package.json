@@ -64,7 +64,7 @@
 		"rollup-plugin-terser": "7.0.2",
 		"semantic-release": "22.0.12",
 		"size-limit": "11.0.1",
-		"tsd": "0.29.0",
+		"tsd": "0.30.1",
 		"typedoc": "0.25.4",
 		"typescript": "5.3.3",
 		"vitest": "0.34.6",

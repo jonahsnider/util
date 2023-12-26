@@ -762,7 +762,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     semantic-release: 22.0.12
     size-limit: 11.0.1
-    tsd: 0.29.0
+    tsd: 0.30.1
     typedoc: 0.25.4
     typescript: 5.3.3
     vitest: 0.34.6
@@ -1752,10 +1752,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsd/typescript@npm:~5.2.2":
-  version: 5.2.2
-  resolution: "@tsd/typescript@npm:5.2.2"
-  checksum: b72d6311356a1fabcd78ffeb878a6ba3d51804d02fefdc6cf36ae8957d97b13823b9e396f550e37c2d1b405b6ad0fa190f4ec791bc6d730b02b22e39b33a4c76
+"@tsd/typescript@npm:~5.3.3":
+  version: 5.3.3
+  resolution: "@tsd/typescript@npm:5.3.3"
+  checksum: 0d7815cfe8038c3fcc172cf3f8f6fdcaded965466cf8b2cff31ada57db9d9788ecd9590bca4576afcb4785d8b3271bc978b1f3ff338f49b3fffdce33ec135afe
   languageName: node
   linkType: hard
 
@@ -9024,11 +9024,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsd@npm:0.29.0":
-  version: 0.29.0
-  resolution: "tsd@npm:0.29.0"
+"tsd@npm:0.30.1":
+  version: 0.30.1
+  resolution: "tsd@npm:0.30.1"
   dependencies:
-    "@tsd/typescript": ~5.2.2
+    "@tsd/typescript": ~5.3.3
     eslint-formatter-pretty: ^4.1.0
     globby: ^11.0.1
     jest-diff: ^29.0.3
@@ -9037,7 +9037,7 @@ __metadata:
     read-pkg-up: ^7.0.0
   bin:
     tsd: dist/cli.js
-  checksum: 66b5f5f04c46b4c5cea28faba54d7372cdf3126876d968958eb3fb8dab0247ef50a466f10d59c6aea60751c35a518a594a06eecdb5e274cb8d739f804fc62da1
+  checksum: a46dee2b497e185c6eb42615cf2b6357be2659ca940d7bb4e02af4534246d8e3e22f325c35b9267a55c2efff0affb6b3e612a954dd3445c6ae1ca2c2cfda3990
   languageName: node
   linkType: hard
 
