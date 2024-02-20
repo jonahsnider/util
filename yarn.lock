@@ -800,7 +800,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     semantic-release: 23.0.2
     size-limit: 11.0.2
-    tsd: 0.30.4
+    tsd: 0.30.5
     typedoc: 0.25.8
     typescript: 5.3.3
     vitest: 1.2.2
@@ -9197,9 +9197,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsd@npm:0.30.4":
-  version: 0.30.4
-  resolution: "tsd@npm:0.30.4"
+"tsd@npm:0.30.5":
+  version: 0.30.5
+  resolution: "tsd@npm:0.30.5"
   dependencies:
     "@tsd/typescript": ~5.3.3
     eslint-formatter-pretty: ^4.1.0
@@ -9210,7 +9210,7 @@ __metadata:
     read-pkg-up: ^7.0.0
   bin:
     tsd: dist/cli.js
-  checksum: bf6c060797a0f4a6ed77c5198c388a592b4c46f906804db61ed13e476aed58887e6627ea8e36c13fbb99fe09c996c72e860619a3c3a0147f0689751131b218dd
+  checksum: 4216cfcf4fbc3e024a187965e4f1f659280e1c3286396c0ee441410e326acf413cf3d244228226ad6a1c3d982b0c995ef0ce79e649e8e15b573dcfb00f85c43c
   languageName: node
   linkType: hard
 
