@@ -787,7 +787,7 @@ __metadata:
     "@babel/core": 7.23.9
     "@jonahsnider/prettier-config": 1.1.2
     "@jonahsnider/xo-config": 5.3.0
-    "@microsoft/api-extractor": 7.40.6
+    "@microsoft/api-extractor": 7.42.3
     "@rollup/plugin-babel": 6.0.4
     "@rollup/plugin-typescript": 11.1.6
     "@size-limit/preset-small-lib": 11.0.2
@@ -882,25 +882,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/api-extractor@npm:7.40.6":
-  version: 7.40.6
-  resolution: "@microsoft/api-extractor@npm:7.40.6"
+"@microsoft/api-extractor@npm:7.42.3":
+  version: 7.42.3
+  resolution: "@microsoft/api-extractor@npm:7.42.3"
   dependencies:
     "@microsoft/api-extractor-model": 7.28.13
     "@microsoft/tsdoc": 0.14.2
     "@microsoft/tsdoc-config": ~0.16.1
     "@rushstack/node-core-library": 4.0.2
     "@rushstack/rig-package": 0.5.2
-    "@rushstack/terminal": 0.9.0
-    "@rushstack/ts-command-line": 4.17.3
+    "@rushstack/terminal": 0.10.0
+    "@rushstack/ts-command-line": 4.19.1
     lodash: ~4.17.15
+    minimatch: ~3.0.3
     resolve: ~1.22.1
     semver: ~7.5.4
     source-map: ~0.6.1
     typescript: 5.3.3
   bin:
     api-extractor: bin/api-extractor
-  checksum: 5d4f83375b3334386eac5ab76b2d67e717d86b0b796698f860ec242f776617528ba4a25922bb096873b602d64653b01376feb4a15da2b0de9f3f8598da97965a
+  checksum: 06581dbd80db2520a431b13ae70c5812bc3c707ddd1736b92974593028ca662d776691bc31654d90706ef31a766a73b301bc5f25b14bf04e1642c3431f2f702e
   languageName: node
   linkType: hard
 
@@ -1601,30 +1602,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rushstack/terminal@npm:0.9.0":
-  version: 0.9.0
-  resolution: "@rushstack/terminal@npm:0.9.0"
+"@rushstack/terminal@npm:0.10.0":
+  version: 0.10.0
+  resolution: "@rushstack/terminal@npm:0.10.0"
   dependencies:
     "@rushstack/node-core-library": 4.0.2
-    colors: ~1.2.1
+    supports-color: ~8.1.1
   peerDependencies:
     "@types/node": "*"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: b186e142e50d52be6fc8298bb75e1efee18cd09cc668393f518ff5f32d6611671e3e657320b53a916c777dee2481f4cfdf2dee6b038b615743c01a7c97765b15
+  checksum: 1a62b2bd26f501608ae0c482b4597c4266752501e6ca61ffa7a00344b396382dbb5a8a6766dd93af9b5aecfbcf861c065f00b3c70461b48ec168feefc9515d9f
   languageName: node
   linkType: hard
 
-"@rushstack/ts-command-line@npm:4.17.3":
-  version: 4.17.3
-  resolution: "@rushstack/ts-command-line@npm:4.17.3"
+"@rushstack/ts-command-line@npm:4.19.1":
+  version: 4.19.1
+  resolution: "@rushstack/ts-command-line@npm:4.19.1"
   dependencies:
-    "@rushstack/terminal": 0.9.0
+    "@rushstack/terminal": 0.10.0
     "@types/argparse": 1.0.38
     argparse: ~1.0.9
     string-argv: ~0.3.1
-  checksum: 688fc89d51830876826392b255c9225f0b1c7b82c63a8006005655e1e47e414b407e2be2935dee5c8401430dfce4882ee18b7cda48df8d8aaf7bd2d07394d777
+  checksum: db9ee56563e6c628fe7203153213a7db92a9aeed509f36a0c87882d9ccc46bdd6474ef870b1fc1d68f7980676b30e327bd1b6ef5e529847bbe60f5de49e81b2a
   languageName: node
   linkType: hard
 
@@ -3020,13 +3021,6 @@ __metadata:
   bin:
     color-support: bin.js
   checksum: 9b7356817670b9a13a26ca5af1c21615463b500783b739b7634a0c2047c16cef4b2865d7576875c31c3cddf9dd621fa19285e628f20198b233a5cfdda6d0793b
-  languageName: node
-  linkType: hard
-
-"colors@npm:~1.2.1":
-  version: 1.2.5
-  resolution: "colors@npm:1.2.5"
-  checksum: b6e23de735f68b72d5cdf6fd854ca43d1b66d82dcf54bda0b788083b910164a040f2c4edf23c670d36a7a2d8f1b7d6e62e3292703e4642691e6ccaa1c62d8f74
   languageName: node
   linkType: hard
 
@@ -6592,6 +6586,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:~3.0.3":
+  version: 3.0.8
+  resolution: "minimatch@npm:3.0.8"
+  dependencies:
+    brace-expansion: ^1.1.7
+  checksum: 850cca179cad715133132693e6963b0db64ab0988c4d211415b087fc23a3e46321e2c5376a01bf5623d8782aba8bdf43c571e2e902e51fdce7175c7215c29f8b
+  languageName: node
+  linkType: hard
+
 "minimist-options@npm:4.1.0":
   version: 4.1.0
   resolution: "minimist-options@npm:4.1.0"
@@ -8954,6 +8957,15 @@ __metadata:
   version: 9.4.0
   resolution: "supports-color@npm:9.4.0"
   checksum: cb8ff8daeaf1db642156f69a9aa545b6c01dd9c4def4f90a49f46cbf24be0c245d392fcf37acd119cd1819b99dad2cc9b7e3260813f64bcfd7f5b18b5a1eefb8
+  languageName: node
+  linkType: hard
+
+"supports-color@npm:~8.1.1":
+  version: 8.1.1
+  resolution: "supports-color@npm:8.1.1"
+  dependencies:
+    has-flag: ^4.0.0
+  checksum: c052193a7e43c6cdc741eb7f378df605636e01ad434badf7324f17fb60c69a880d8d8fcdcb562cf94c2350e57b937d7425ab5b8326c67c2adc48f7c87c1db406
   languageName: node
   linkType: hard
 
