@@ -843,7 +843,7 @@ __metadata:
     "@microsoft/api-extractor": 7.43.0
     "@rollup/plugin-babel": 6.0.4
     "@rollup/plugin-typescript": 11.1.6
-    "@size-limit/preset-small-lib": 11.1.1
+    "@size-limit/preset-small-lib": 11.1.2
     "@tsconfig/node16": 16.1.3
     "@types/node": 20.11.30
     "@vitest/coverage-v8": 1.4.0
@@ -852,7 +852,7 @@ __metadata:
     rollup: 4.12.1
     rollup-plugin-terser: 7.0.2
     semantic-release: 23.0.6
-    size-limit: 11.1.1
+    size-limit: 11.1.2
     tsd: 0.30.7
     typedoc: 0.25.12
     typescript: 5.3.3
@@ -1958,37 +1958,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/esbuild@npm:11.1.1":
-  version: 11.1.1
-  resolution: "@size-limit/esbuild@npm:11.1.1"
+"@size-limit/esbuild@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@size-limit/esbuild@npm:11.1.2"
   dependencies:
     esbuild: ^0.20.2
     nanoid: ^5.0.6
   peerDependencies:
-    size-limit: 11.1.1
-  checksum: 6c723f46e66b8cf4813613596bbed9c3fa79e9a0a6a2be72fb603ba3370dc0113375d8f00b3a91a4b01dd83b68fa567be2818d7b2b7216849fbe803bbc99319b
+    size-limit: 11.1.2
+  checksum: 9b68c3e4c1831cbc4bee09577967c292942d386f8e2e7768fdb0cf5667ab2f6a0f14024ce7beb37b1e41021c1d144f8f982c27a2ac35dbf95ab04a411af7a430
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:11.1.1":
-  version: 11.1.1
-  resolution: "@size-limit/file@npm:11.1.1"
+"@size-limit/file@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@size-limit/file@npm:11.1.2"
   peerDependencies:
-    size-limit: 11.1.1
-  checksum: 0d126db7b22d6fea2c0b8d20e9aadcc57e6626417270aa4bcf8d26a6fc9a4bc6d2beb995f67444e6deb72856b4d320f2e8877b98c46e459efaf12a51a3a785a3
+    size-limit: 11.1.2
+  checksum: 37baba93a2af2ba0358e7c8772ceb866c860c8e95c90b0e0c537533be2519ea626636e635720213938844db9185e45532e991ff4dcccc0aac21fa644cbb45780
   languageName: node
   linkType: hard
 
-"@size-limit/preset-small-lib@npm:11.1.1":
-  version: 11.1.1
-  resolution: "@size-limit/preset-small-lib@npm:11.1.1"
+"@size-limit/preset-small-lib@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@size-limit/preset-small-lib@npm:11.1.2"
   dependencies:
-    "@size-limit/esbuild": 11.1.1
-    "@size-limit/file": 11.1.1
-    size-limit: 11.1.1
+    "@size-limit/esbuild": 11.1.2
+    "@size-limit/file": 11.1.2
+    size-limit: 11.1.2
   peerDependencies:
-    size-limit: 11.1.1
-  checksum: 214a603d26f204874ac2c9f1a7167ec12c0d5dafe1ac6a98d314af66c4e779cfe5e3f0fceaa27334f4b7ae4859d4efff700962d55875a452456e67a55ef1bdd3
+    size-limit: 11.1.2
+  checksum: 0240543fa146bcbd112ccc8a1e3c61de633bb58b6b7828ad47559b0f8be42e896a21108ce016d20751046de7bd33cdabf51e807f383f5a72a62484c7f961f62d
   languageName: node
   linkType: hard
 
@@ -8844,9 +8844,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"size-limit@npm:11.1.1":
-  version: 11.1.1
-  resolution: "size-limit@npm:11.1.1"
+"size-limit@npm:11.1.2":
+  version: 11.1.2
+  resolution: "size-limit@npm:11.1.2"
   dependencies:
     bytes-iec: ^3.1.1
     chokidar: ^3.6.0
@@ -8857,7 +8857,7 @@ __metadata:
     picocolors: ^1.0.0
   bin:
     size-limit: bin.js
-  checksum: 4f47263b959bf53bf299557e9e9895473e97f5fa2d5ef2a9e6daf09cad3d2dd6bc9201e6e0fbddfe0dfc5cfed5563d32d1adcd112040f59375fc3fbc8a39bfdd
+  checksum: 15f1387a9a6128d17f085c5ba55621a7f6d8b25efaaaba9f6d2b139f29007ead5060330ada6b860133853428ca80369dc89337a0d7f4035276eb440798f6cb1d
   languageName: node
   linkType: hard
 
