@@ -228,9 +228,6 @@ export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[];
 const informational: Readonly<Range>;
 
 // @public
-export function intersection<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): Set<T>;
-
-// @public
 export function invert<T extends (...parameters: any[]) => NumberLike>(fn: T): T;
 
 // @public
