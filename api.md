@@ -787,9 +787,6 @@ export function sum(a: number, b: number): number;
 export function sum(a: bigint, b: bigint): bigint;
 
 // @public
-export function symmetricDifference<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B>;
-
-// @public
 export type Table<T> = T[][];
 
 // @public
