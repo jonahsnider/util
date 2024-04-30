@@ -234,9 +234,6 @@ export function invert<T extends (...parameters: any[]) => NumberLike>(fn: T): T
 export function isAnagram<T>(a: ArrayLike<T> & Iterable<T>, b: ArrayLike<T> & Iterable<T>): boolean;
 
 // @public
-export function isDisjoint<T>(a: Iterable<T>, b: Iterable<T>): boolean;
-
-// @public
 export function isEmpty(map: ReadonlyMap<unknown, unknown>): map is ReadonlyMap<never, never>;
 
 // @public
