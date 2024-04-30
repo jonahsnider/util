@@ -261,9 +261,6 @@ export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never
 export function isSorted<T>(array: ArrayLike<T>, compareFn: CompareFn<T>): boolean;
 
 // @public
-export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean;
-
-// @public
 export function isWhitespace(string: string): boolean;
 
 // @public
