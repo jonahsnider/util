@@ -264,9 +264,6 @@ export function isSorted<T>(array: ArrayLike<T>, compareFn: CompareFn<T>): boole
 export function isSubset<T>(a: Iterable<T>, b: ReadonlySet<T>): boolean;
 
 // @public
-export function isSuperset<T>(a: ReadonlySet<T>, b: Iterable<T>): boolean;
-
-// @public
 export function isWhitespace(string: string): boolean;
 
 // @public
