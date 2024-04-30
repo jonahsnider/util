@@ -11,6 +11,8 @@
  *
  * @returns A new `Set` which is the difference of `a` and `b`
  *
+ * @deprecated Use `Set#difference()` instead.
+ *
  * @public
  * @category Set
  */

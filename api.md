@@ -139,7 +139,7 @@ function descending<T>(predicate: (element: T) => Comparable): CompareFn<T>;
 // @public
 function descending(a: Comparable, b: Comparable): number;
 
-// @public
+// @public @deprecated
 export function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T>;
 
 // @public
