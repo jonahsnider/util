@@ -829,9 +829,6 @@ export type TypedEventEmitter<T extends EventListeners = Record<never, never>> =
 export function uncapitalize<T extends string>(text: T): Uncapitalize<T>;
 
 // @public
-export function union<A, B>(a: Iterable<A>, b: Iterable<B>): Set<A | B>;
-
-// @public
 export type UnknownFunction = (...args: unknown[]) => unknown;
 
 // @public
