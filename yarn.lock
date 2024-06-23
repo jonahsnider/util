@@ -808,7 +808,7 @@ __metadata:
     semantic-release: "npm:23.1.1"
     size-limit: "npm:11.1.4"
     tsd: "npm:0.31.1"
-    typedoc: "npm:0.26.0"
+    typedoc: "npm:0.26.1"
     typescript: "npm:5.3.3"
     vitest: "npm:1.6.0"
     xo: "npm:0.56.0"
@@ -8876,7 +8876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:^1.6.5":
+"shiki@npm:^1.9.0":
   version: 1.9.0
   resolution: "shiki@npm:1.9.0"
   dependencies:
@@ -9805,20 +9805,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:0.26.0":
-  version: 0.26.0
-  resolution: "typedoc@npm:0.26.0"
+"typedoc@npm:0.26.1":
+  version: 0.26.1
+  resolution: "typedoc@npm:0.26.1"
   dependencies:
     lunr: "npm:^2.3.9"
     markdown-it: "npm:^14.1.0"
     minimatch: "npm:^9.0.4"
-    shiki: "npm:^1.6.5"
+    shiki: "npm:^1.9.0"
     yaml: "npm:^2.4.5"
   peerDependencies:
     typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x
   bin:
     typedoc: bin/typedoc
-  checksum: 10/8209c74ed45327dc0441f332a5a47bc3c9bb01a938970b4753199f76c1163955bf4b32ddf3c692698a6e9474166e7b15f1f6a85601d2f18ad952d524c11b85db
+  checksum: 10/fcc36bcc05aff51586a8672614be92d544ffeb0841699629dc172b0b622e80a6160b62cb1eddc0b06b7716117c84b6f04445a42f61f4c68b01694664c2178a20
   languageName: node
   linkType: hard
 
