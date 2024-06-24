@@ -808,7 +808,7 @@ __metadata:
     semantic-release: "npm:23.1.1"
     size-limit: "npm:11.1.4"
     tsd: "npm:0.31.1"
-    typedoc: "npm:0.26.1"
+    typedoc: "npm:0.26.2"
     typescript: "npm:5.3.3"
     vitest: "npm:1.6.0"
     xo: "npm:0.56.0"
@@ -9805,9 +9805,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:0.26.1":
-  version: 0.26.1
-  resolution: "typedoc@npm:0.26.1"
+"typedoc@npm:0.26.2":
+  version: 0.26.2
+  resolution: "typedoc@npm:0.26.2"
   dependencies:
     lunr: "npm:^2.3.9"
     markdown-it: "npm:^14.1.0"
@@ -9818,7 +9818,7 @@ __metadata:
     typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x
   bin:
     typedoc: bin/typedoc
-  checksum: 10/fcc36bcc05aff51586a8672614be92d544ffeb0841699629dc172b0b622e80a6160b62cb1eddc0b06b7716117c84b6f04445a42f61f4c68b01694664c2178a20
+  checksum: 10/f7cbe3e4a7635fe8fef9aacd62eedf72ff008548eebdcfc9a8b8ffea3cb6c06846230a022f436ba006bf11bf669b1e7fcf375349410e1f2d920b42531cd1f5b4
   languageName: node
   linkType: hard
 
