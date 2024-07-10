@@ -808,7 +808,7 @@ __metadata:
     semantic-release: "npm:23.1.1"
     size-limit: "npm:11.1.4"
     tsd: "npm:0.31.1"
-    typedoc: "npm:0.26.2"
+    typedoc: "npm:0.26.4"
     typescript: "npm:5.3.3"
     vitest: "npm:1.6.0"
     xo: "npm:0.56.0"
@@ -1798,10 +1798,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/core@npm:1.9.0":
-  version: 1.9.0
-  resolution: "@shikijs/core@npm:1.9.0"
-  checksum: 10/ec07699742f0561ab4d2fb07715397183cbed23ca42e082b14e9e5f85eb7f8647897f69698d003d8c6a1b8682da0af77861b3a2f78d366eef7581bae4415142c
+"@shikijs/core@npm:1.10.3":
+  version: 1.10.3
+  resolution: "@shikijs/core@npm:1.10.3"
+  dependencies:
+    "@types/hast": "npm:^3.0.4"
+  checksum: 10/4f8ef8d972f6ee5ff451d300c39db17aea673a8071b92cb3ae0546064412e75df754d24e5726fb681ed35e06438e8184963990878e54cb0582a4b6569ba70a43
   languageName: node
   linkType: hard
 
@@ -2032,6 +2034,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/hast@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@types/hast@npm:3.0.4"
+  dependencies:
+    "@types/unist": "npm:*"
+  checksum: 10/732920d81bb7605895776841b7658b4d8cc74a43a8fa176017cc0fb0ecc1a4c82a2b75a4fe6b71aa262b649d3fb62858c6789efa3793ea1d40269953af96ecb5
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:*, @types/json-schema@npm:^7.0.12":
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
@@ -2089,6 +2100,13 @@ __metadata:
   version: 7.5.5
   resolution: "@types/semver@npm:7.5.5"
   checksum: 10/1b0be2c4d830f5ef002a305308e06e3616fc38a41c9a2c5b4267df82a038d9bd0ba32ec1da82a52db84a720be7e4b69bac7593797d8dc1400a69069af8f19219
+  languageName: node
+  linkType: hard
+
+"@types/unist@npm:*":
+  version: 3.0.2
+  resolution: "@types/unist@npm:3.0.2"
+  checksum: 10/3d04d0be69316e5f14599a0d993a208606c12818cf631fd399243d1dc7a9bd8a3917d6066baa6abc290814afbd744621484756803c80cba892c39cd4b4a85616
   languageName: node
   linkType: hard
 
@@ -6847,12 +6865,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.4":
-  version: 9.0.4
-  resolution: "minimatch@npm:9.0.4"
+"minimatch@npm:^9.0.5":
+  version: 9.0.5
+  resolution: "minimatch@npm:9.0.5"
   dependencies:
     brace-expansion: "npm:^2.0.1"
-  checksum: 10/4cdc18d112b164084513e890d6323370db14c22249d536ad1854539577a895e690a27513dc346392f61a4a50afbbd8abc88f3f25558bfbbbb862cd56508b20f5
+  checksum: 10/dd6a8927b063aca6d910b119e1f2df6d2ce7d36eab91de83167dd136bb85e1ebff97b0d3de1cb08bd1f7e018ca170b4962479fefab5b2a69e2ae12cb2edc8348
   languageName: node
   linkType: hard
 
@@ -8876,12 +8894,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "shiki@npm:1.9.0"
+"shiki@npm:^1.9.1":
+  version: 1.10.3
+  resolution: "shiki@npm:1.10.3"
   dependencies:
-    "@shikijs/core": "npm:1.9.0"
-  checksum: 10/ce5648b4e1a5e5e81e54e01ec9dc94cf324530f460058f29f1e5e464dbf096fee2194fbef38b29128a747f783f9134531991316b01ed168f65d0617dabf84c33
+    "@shikijs/core": "npm:1.10.3"
+    "@types/hast": "npm:^3.0.4"
+  checksum: 10/3ea852e944f4eced8d1df395f9ca24cd686d4f2fe00043a2450d89b878dc86f3ad8cb5f7d71fd31213228f58b1d8c618df26741bfd19676542072d1e12c9d05e
   languageName: node
   linkType: hard
 
@@ -9805,20 +9824,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:0.26.2":
-  version: 0.26.2
-  resolution: "typedoc@npm:0.26.2"
+"typedoc@npm:0.26.4":
+  version: 0.26.4
+  resolution: "typedoc@npm:0.26.4"
   dependencies:
     lunr: "npm:^2.3.9"
     markdown-it: "npm:^14.1.0"
-    minimatch: "npm:^9.0.4"
-    shiki: "npm:^1.9.0"
+    minimatch: "npm:^9.0.5"
+    shiki: "npm:^1.9.1"
     yaml: "npm:^2.4.5"
   peerDependencies:
     typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x
   bin:
     typedoc: bin/typedoc
-  checksum: 10/f7cbe3e4a7635fe8fef9aacd62eedf72ff008548eebdcfc9a8b8ffea3cb6c06846230a022f436ba006bf11bf669b1e7fcf375349410e1f2d920b42531cd1f5b4
+  checksum: 10/c25cce210c0ac0ac5328c11cc036344a6495bb49ed2191e580d1287edca2269ffe5e69dca5a75198174830e2d3c3bb560d70a6d22a24c0df293a069dd7d26318
   languageName: node
   linkType: hard
 
