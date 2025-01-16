@@ -750,7 +750,7 @@ __metadata:
     "@rollup/plugin-typescript": "npm:11.1.6"
     "@size-limit/preset-small-lib": "npm:11.1.6"
     "@tsconfig/node16": "npm:16.1.3"
-    "@types/node": "npm:20.17.13"
+    "@types/node": "npm:22.10.7"
     "@vitest/coverage-v8": "npm:2.1.8"
     "@vitest/ui": "npm:2.1.8"
     prettier: "npm:3.2.5"
@@ -2042,12 +2042,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.17.13":
-  version: 20.17.13
-  resolution: "@types/node@npm:20.17.13"
+"@types/node@npm:22.10.7":
+  version: 22.10.7
+  resolution: "@types/node@npm:22.10.7"
   dependencies:
-    undici-types: "npm:~6.19.2"
-  checksum: 10/214b0984ad65dda93c0470d893756b7320edaec3050b5ac77cb02b1b67a88596d441356d48204700d44755d1318b3b296dad1599a2607b55f728fb6b0e458ffc
+    undici-types: "npm:~6.20.0"
+  checksum: 10/64cde1c2f5e5f7d597d3bd462f52c3c2d688a66623eb75d25e1d1d63d384ef553a27100635ad0dbb7d74da517048aa636947863eb624cf85f25d2f22370ce474
   languageName: node
   linkType: hard
 
@@ -9902,10 +9902,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.19.2":
-  version: 6.19.6
-  resolution: "undici-types@npm:6.19.6"
-  checksum: 10/0ea9bc25762a86597d095b3772f6cec0bcabb796c339f7dfa2bd601c745a480289eb2939848dc285a56d4f94f50c475868160d8d6d3f54e823f1faf7ea9e9468
+"undici-types@npm:~6.20.0":
+  version: 6.20.0
+  resolution: "undici-types@npm:6.20.0"
+  checksum: 10/583ac7bbf4ff69931d3985f4762cde2690bb607844c16a5e2fbb92ed312fe4fa1b365e953032d469fa28ba8b224e88a595f0b10a449332f83fa77c695e567dbe
   languageName: node
   linkType: hard
 
