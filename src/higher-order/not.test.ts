@@ -1,5 +1,5 @@
-import {nullish} from '../nullish';
-import {not} from './not';
+import {nullish} from '../nullish.js';
+import {not} from './not.js';
 
 it('negates booleans', () => {
 	expect(not(() => true)()).toBe(false);

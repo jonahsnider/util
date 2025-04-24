@@ -1,4 +1,4 @@
-import {Sort} from '..';
+import {Sort} from '../index.js';
 
 it('combines sorts', () => {
 	const array = [

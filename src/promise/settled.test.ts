@@ -1,6 +1,4 @@
-/* eslint-disable prefer-promise-reject-errors */
-
-import {settled} from './settled';
+import {settled} from './settled.js';
 
 it('returns the resolved value', async () => {
 	const promise = Promise.resolve(1);
@@ -9,7 +7,8 @@ it('returns the resolved value', async () => {
 });
 
 it('returns the rejected value', async () => {
-	const promise = Promise.reject(1);
+	const error = new Error('test');
+	const promise = Promise.reject(error);
 
-	return expect(settled(promise)).resolves.toStrictEqual([undefined, 1]);
+	return expect(settled(promise)).resolves.toStrictEqual([undefined, error]);
 });

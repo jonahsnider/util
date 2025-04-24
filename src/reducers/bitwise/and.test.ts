@@ -1,4 +1,4 @@
-import {and} from '.';
+import {and} from './index.js';
 
 it('returns bitwise AND', () => {
 	expect(and(3, 5)).toBe(1);

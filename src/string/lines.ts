@@ -21,5 +21,5 @@ const LINE_REG_EXP = /\r\n?|\n/gim;
  * @category String
  */
 export function lines(string: string): string[] {
-	return string.split(LINE_REG_EXP)!;
+	return string.split(LINE_REG_EXP);
 }

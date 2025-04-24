@@ -120,7 +120,7 @@
 		 * SUPPORTED TOKENS: <packageName>, <unscopedPackageName>
 		 * DEFAULT VALUE: "<unscopedPackageName>.api.md"
 		 */
-		"reportFileName": "api.md",
+		"reportFileName": "util.api.md",
 
 		/**
 		 * Specifies the folder where the API report file is written.  The file name portion is determined by

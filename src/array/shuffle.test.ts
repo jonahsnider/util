@@ -1,5 +1,5 @@
-import {relativeStddev} from '../math';
-import {shuffle} from './shuffle';
+import {relativeStddev} from '../math/index.js';
+import {shuffle} from './shuffle.js';
 
 const iterations = 1e5;
 

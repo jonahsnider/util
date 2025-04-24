@@ -1,4 +1,4 @@
-import {clientErrors, informational, redirects, serverErrors, success} from './status-range';
+import {clientErrors, informational, redirects, serverErrors, success} from './status-range.js';
 
 describe('Informational', () => {
 	it('has correct ranges', () => {

@@ -22,6 +22,6 @@
  * @category Array
  */
 // TODO: Swap the order of valueFn and length
-export function mapFill<T>(valueFn: (index: number) => T, length: number): T[] {
-	return Array.from({length}, (_, i) => valueFn(i));
+export function mapFill<T>(valueFunction: (index: number) => T, length: number): T[] {
+	return Array.from({length}, (_, i) => valueFunction(i));
 }

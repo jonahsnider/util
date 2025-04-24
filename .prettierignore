@@ -221,7 +221,7 @@ $RECYCLE.BIN/
 docs_out
 
 # API Extractor
-api.md
+util.api.md
 
 # TypeScript compiler output
 tsc_*

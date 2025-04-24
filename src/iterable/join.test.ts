@@ -1,4 +1,4 @@
-import {join} from './join';
+import {join} from './join.js';
 
 it('joins elements', () => {
 	expect(join(['a', 'b', 'c'])).toStrictEqual('a,b,c');

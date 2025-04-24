@@ -1,4 +1,4 @@
-import {name} from './name';
+import {name} from './name.js';
 
 class Test {
 	// eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -8,7 +8,7 @@ class Test {
 	method() {}
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
+// eslint-disable-next-line @typescript-eslint/no-empty-function unicorn/prevent-abbreviations
 function func() {}
 
 const test = new Test();

@@ -1,4 +1,4 @@
-import {holes} from './holes';
+import {holes} from './holes.js';
 
 it('finds holes', () => {
 	// eslint-disable-next-line no-sparse-arrays

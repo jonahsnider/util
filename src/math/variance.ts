@@ -1,5 +1,5 @@
-import {sum} from '../reducers/sum';
-import {mean} from './mean';
+import {sum} from '../reducers/sum.js';
+import {mean} from './mean.js';
 
 /**
  * Calculate the variance of a sequence of numbers.

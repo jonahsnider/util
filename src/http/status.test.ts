@@ -1,5 +1,5 @@
 import * as http from 'node:http';
-import {Status} from './status';
+import {Status} from './status.js';
 
 describe('Status', () => {
 	it('has no invalid status codes', () => {

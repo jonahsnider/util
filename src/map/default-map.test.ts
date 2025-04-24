@@ -1,4 +1,4 @@
-import {DefaultMap} from './default-map';
+import {DefaultMap} from './default-map.js';
 
 describe(`${DefaultMap.name}#${DefaultMap.prototype.get.name}`, () => {
 	it('gets values', () => {

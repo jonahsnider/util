@@ -1,4 +1,4 @@
-import {median} from './median';
+import {median} from './median.js';
 
 it('calculates the median', () => {
 	expect(median([1])).toBe(1);

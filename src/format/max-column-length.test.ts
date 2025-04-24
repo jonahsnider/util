@@ -1,5 +1,5 @@
-import type {Table} from '../array';
-import {maxColumnLength} from './max-column-length';
+import type {Table} from '../array/index.js';
+import {maxColumnLength} from './max-column-length.js';
 
 // prettier-ignore
 const table: Table<string> = [

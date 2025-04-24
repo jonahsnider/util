@@ -1,4 +1,4 @@
-import {difference} from '../set';
+import {difference} from '../set/index.js';
 
 /**
  * Create a copy of a provided object with the provided keys omitted.

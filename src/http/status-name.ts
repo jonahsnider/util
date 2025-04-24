@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention, @typescript-eslint/prefer-literal-enum-member */
-import {Status} from './status';
+import {Status} from './status.js';
 
 /**
  * An enum mapping HTTP status codes to their names.

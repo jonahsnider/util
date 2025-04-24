@@ -1,2 +1,2 @@
-export * from './difference';
-export * from './jaccard-index';
+export * from './difference.js';
+export * from './jaccard-index.js';

@@ -1,3 +1,3 @@
-export * from './invert';
-export * from './not';
-export * from './thunkify';
+export * from './invert.js';
+export * from './not.js';
+export * from './thunkify.js';

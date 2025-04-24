@@ -25,7 +25,8 @@
  * @public
  * @category Higher order
  */
-export function thunkify<T extends (...args: unknown[]) => unknown>(fn: T): (...parameters: Parameters<T>) => ReturnType<T> {
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export function thunkify<T extends (...args: unknown[]) => unknown>(func: T): (...parameters: Parameters<T>) => ReturnType<T> {
 	let wasCalled = false;
 	let result: ReturnType<T>;
 
@@ -33,7 +34,7 @@ export function thunkify<T extends (...args: unknown[]) => unknown>(fn: T): (...
 		if (!wasCalled) {
 			wasCalled = true;
 
-			result = fn(...parameters) as ReturnType<T>;
+			result = func(...parameters) as ReturnType<T>;
 		}
 
 		return result;

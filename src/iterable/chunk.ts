@@ -1,5 +1,5 @@
-import type {Table} from '../array';
-import {mapFill} from '../array/map-fill';
+import type {Table} from '../array/index.js';
+import {mapFill} from '../array/map-fill.js';
 
 function chunkArray<T>(array: readonly T[], size: number): Table<T> {
 	return mapFill(i => array.slice(i * size, i * size + size), Math.ceil(array.length / size));

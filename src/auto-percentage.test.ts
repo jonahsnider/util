@@ -1,4 +1,4 @@
-import {AutoPercentage} from './auto-percentage';
+import {AutoPercentage} from './auto-percentage.js';
 
 it('generates percentages', () => {
 	const percentage = new AutoPercentage();

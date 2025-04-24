@@ -1,3 +1,3 @@
-export * from './ascending';
-export * from './descending';
-export * from './combine';
+export * from './ascending.js';
+export * from './descending.js';
+export * from './combine.js';

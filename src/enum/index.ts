@@ -1,1 +1,1 @@
-export * from './enum-has';
+export * from './enum-has.js';

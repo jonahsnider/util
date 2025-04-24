@@ -1,4 +1,4 @@
-import type {Table} from '../array';
+import type {Table} from '../array/index.js';
 
 /**
  * Get the lengths of each column in a table.

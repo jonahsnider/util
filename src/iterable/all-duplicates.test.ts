@@ -1,4 +1,4 @@
-import {allDuplicates} from './all-duplicates';
+import {allDuplicates} from './all-duplicates.js';
 
 it('returns duplicate elements', () => {
 	expect(allDuplicates([1, 2, 2, 2, 3])).toStrictEqual([2, 2]);

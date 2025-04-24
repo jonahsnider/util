@@ -1,4 +1,4 @@
-import type {AnyFunction} from '../types';
+import type {AnyFunction} from '../types.js';
 
 /**
  * Get a string name for a class method.
@@ -33,6 +33,7 @@ import type {AnyFunction} from '../types';
  * @public
  * @category Object
  */
+// eslint-disable-next-line unicorn/prevent-abbreviations
 export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `${string}${'.' | '#'}${string}`;
 /**
  * Get the name of a function or class.
@@ -62,15 +63,17 @@ export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `$
  * @public
  * @category Object
  */
+// eslint-disable-next-line unicorn/prevent-abbreviations
 export function name(func: (new (...args: any[]) => any) | AnyFunction): string;
-export function name(ctorOrFunc: AnyFunction | (new (...args: any[]) => any), func?: AnyFunction): string {
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export function name(ctorOrFunction: AnyFunction | (new (...args: any[]) => any), func?: AnyFunction): string {
 	if (func) {
-		const className = name(ctorOrFunc);
+		const className = name(ctorOrFunction);
 
-		const separator = func.name in ctorOrFunc ? '.' : '#';
+		const separator = func.name in ctorOrFunction ? '.' : '#';
 
 		return `${className}${separator}${func.name}`;
 	}
 
-	return ctorOrFunc.name;
+	return ctorOrFunction.name;
 }

@@ -1,4 +1,4 @@
-import {trimStart} from './trim-start';
+import {trimStart} from './trim-start.js';
 
 const STRING = 'aabbaa';
 const ARRAY = ['a', 'a', 'b', 'b', 'a', 'a'] as const;

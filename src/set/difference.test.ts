@@ -1,4 +1,4 @@
-import {difference} from './difference';
+import {difference} from './difference.js';
 
 it('creates a Set of the difference', () => {
 	const set = new Set([1, 2, 3]);

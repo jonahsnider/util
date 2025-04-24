@@ -1,5 +1,5 @@
-import {isSorted} from './is-sorted';
-import {ascending} from './compare';
+import {isSorted} from './is-sorted.js';
+import {ascending} from './compare/index.js';
 
 it('works with empty arrays', () => {
 	expect(isSorted([], () => 1)).toBe(true);

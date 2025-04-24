@@ -1,5 +1,5 @@
-import {newDeck} from './cards';
-import {concatIterables} from './iterable';
+import {newDeck} from './cards.js';
+import {concatIterables} from './iterable/index.js';
 
 it('creates a new deck of cards', () => {
 	const deck = newDeck();

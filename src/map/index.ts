@@ -1,2 +1,2 @@
-export * from './default-map';
-export * from './math-map';
+export * from './default-map.js';
+export * from './math-map.js';

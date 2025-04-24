@@ -1,2 +1,2 @@
-export * from './format-table';
-export * from './max-column-length';
+export * from './format-table.js';
+export * from './max-column-length.js';

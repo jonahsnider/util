@@ -1,4 +1,4 @@
-import {mode} from './mode';
+import {mode} from './mode.js';
 
 it('calculates the mode', () => {
 	expect(mode([])).toStrictEqual([]);

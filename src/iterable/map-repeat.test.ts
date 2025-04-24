@@ -1,4 +1,4 @@
-import {mapRepeat} from './map-repeat';
+import {mapRepeat} from './map-repeat.js';
 
 it('repeats', () => {
 	expect([...mapRepeat(i => i, 3)]).toStrictEqual([0, 1, 2]);

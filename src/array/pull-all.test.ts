@@ -1,4 +1,4 @@
-import {pullAll} from './pull-all';
+import {pullAll} from './pull-all.js';
 
 it('pulls all elements from an array', () => {
 	const array = [1, 2, 1, 2, 2, 3, 2, 3];

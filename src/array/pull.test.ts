@@ -1,4 +1,4 @@
-import {pull} from './pull';
+import {pull} from './pull.js';
 
 it('pulls from an array', () => {
 	const array = [1, 2, 3];

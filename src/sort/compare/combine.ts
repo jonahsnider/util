@@ -1,4 +1,4 @@
-import {type CompareFn} from '../../types';
+import {type CompareFn} from '../../types.js';
 
 /**
  * Sort an array using multiple compare functions.
@@ -34,17 +34,17 @@ import {type CompareFn} from '../../types';
  * ]
  * ```
  *
- * @param compareFns - Compare functions to use
+ * @param compareFunctions - Compare functions to use
  *
  * @returns A compare function that combines the provided compare functions
  *
  * @public
  * @category Sort
  */
-export function combine<T>(...compareFns: ReadonlyArray<CompareFn<T>>): CompareFn<T> {
+export function combine<T>(...compareFunctions: ReadonlyArray<CompareFn<T>>): CompareFn<T> {
 	return (a, b) => {
-		for (const compareFn of compareFns) {
-			const result = compareFn(a, b);
+		for (const compareFunction of compareFunctions) {
+			const result = compareFunction(a, b);
 
 			if (result > 0 || result < 0) {
 				return result;

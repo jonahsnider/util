@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import {isEmpty} from './is-empty';
+import {isEmpty} from './is-empty.js';
 
 it('returns true for empty iterables', () => {
 	expect(isEmpty([])).toBe(true);

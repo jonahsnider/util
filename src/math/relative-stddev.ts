@@ -1,5 +1,5 @@
-import {mean} from './mean';
-import {stddev} from './stddev';
+import {mean} from './mean.js';
+import {stddev} from './stddev.js';
 
 /**
  * Calculate the relative standard deviation (coefficient of variation) of a sequence of numbers.

@@ -1,4 +1,4 @@
-import {product} from '../reducers/product';
+import {product} from '../reducers/product.js';
 
 /**
  * Get the geometric mean of an array of `number`s.
