@@ -1,8 +1,8 @@
 import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
-import {terser} from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 
-/** @type {import('rollup-plugin-terser').Options} */
+/** @type {import('@rollup/plugin-terser').Options} */
 const terserConfig = {
 	/* eslint-disable camelcase */
 	ecma: 5,
@@ -22,7 +22,7 @@ const terserConfig = {
 	/* eslint-enable camelcase */
 };
 
-/** @type {import('rollup-plugin-terser').Options} */
+/** @type {import('@rollup/plugin-terser').Options} */
 const esmTerserConfig = {
 	...terserConfig,
 	ecma: 2015,
