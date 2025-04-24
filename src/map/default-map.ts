@@ -86,8 +86,7 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 		// Compiler limitation
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 		return typeof this.defaultValueOrDefaultValueFunction === 'function'
-		?
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+			? // eslint-disable-next-line @typescript-eslint/no-unsafe-call
 				(this.defaultValueOrDefaultValueFunction as any)(key)
 			: this.defaultValueOrDefaultValueFunction;
 	}
