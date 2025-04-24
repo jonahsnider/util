@@ -826,6 +826,24 @@ export type UnknownFunction = (...args: unknown[]) => unknown;
 export function variance(values: readonly number[], meanValue?: number): number;
 
 // @public
+export class WeakRefMap<K, V extends object> implements Omit<Map<K, V>, 'size' | 'forEach' | 'set'> {
+    // (undocumented)
+    [Symbol.iterator]: () => IterableIterator<[K, V]>;
+    // (undocumented)
+    get [Symbol.toStringTag](): 'WeakRefMap';
+    constructor(entries?: ReadonlyArray<readonly [K, V]> | null);
+    clear(): void;
+    delete(key: K): boolean;
+    entries(): IterableIterator<[K, V]>;
+    forEach(callbackfn: (value: V, key: K, map: this) => void, thisArg?: any): void;
+    get(key: K): V | undefined;
+    has(key: K): boolean;
+    keys(): IterableIterator<K>;
+    set(key: K, value: V): this;
+    values(): IterableIterator<V>;
+}
+
+// @public
 function xor(a: number, b: number): number;
 
 // @public
