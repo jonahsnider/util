@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import {pick} from './pick';
+import {pick} from './pick.js';
 
 it('picks keys from a plain object', () => {
 	expect(pick({a: 1, b: 2, c: 3}, ['a', 'b'])).toStrictEqual({a: 1, b: 2});

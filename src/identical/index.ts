@@ -1,2 +1,2 @@
-export * from './identical';
-export * from './same';
+export * from './identical.js';
+export * from './same.js';

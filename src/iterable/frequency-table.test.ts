@@ -1,4 +1,4 @@
-import {frequencyTable} from './frequency-table';
+import {frequencyTable} from './frequency-table.js';
 
 it('constructs a frequency table', () => {
 	const array = [1, 2, 2, 3, 3, 3];

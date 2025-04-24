@@ -1,4 +1,4 @@
-import {sortObject} from './sort-object';
+import {sortObject} from './sort-object.js';
 
 it('sorts', () => {
 	const object = {a: 3, c: 1, b: 2};

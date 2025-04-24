@@ -1,3 +1,3 @@
-export * from './and';
-export * from './or';
-export * from './xor';
+export * from './and.js';
+export * from './or.js';
+export * from './xor.js';

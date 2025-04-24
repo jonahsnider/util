@@ -21,8 +21,8 @@
  * @public
  * @category Iterable
  */
-export function* mapRepeat<T>(valueFn: (increment: number) => T, times: number): Iterable<T> {
+export function* mapRepeat<T>(valueFunction: (increment: number) => T, times: number): Iterable<T> {
 	for (let index = 0; index < times; index++) {
-		yield valueFn(index);
+		yield valueFunction(index);
 	}
 }

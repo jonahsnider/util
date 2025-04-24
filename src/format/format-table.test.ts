@@ -1,5 +1,5 @@
-import type {Table} from '../array';
-import {formatTable} from './format-table';
+import type {Table} from '../array/index.js';
+import {formatTable} from './format-table.js';
 
 // prettier-ignore
 const table: Table<string> = [

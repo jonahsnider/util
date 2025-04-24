@@ -1,5 +1,5 @@
-import {iteratorToIterable} from './iterator-to-iterable';
-import {skip} from './skip';
+import {iteratorToIterable} from './iterator-to-iterable.js';
+import {skip} from './skip.js';
 
 it('skips the first elements of an iterable', () => {
 	expect([...iteratorToIterable(skip([1, 2, 3, 4, 5], 2))]).toStrictEqual([3, 4, 5]);

@@ -1,4 +1,4 @@
-import {regExpUnion} from './reg-exp';
+import {regExpUnion} from './reg-exp.js';
 
 it('creates a working regular expression', () => {
 	expect(regExpUnion()).toEqual(/(?:)/);

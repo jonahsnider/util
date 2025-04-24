@@ -1,4 +1,4 @@
-import {or} from '.';
+import {or} from './index.js';
 
 it('returns bitwise OR', () => {
 	expect(or(3, 5)).toBe(7);

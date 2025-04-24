@@ -1,4 +1,4 @@
-import {random} from './random';
+import {random} from './random.js';
 
 it('generates random numbers', () => {
 	const value = random(0, 1);

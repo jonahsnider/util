@@ -1,4 +1,4 @@
-import {mean} from './mean';
+import {mean} from './mean.js';
 
 const numbers = [1, 2, 3];
 

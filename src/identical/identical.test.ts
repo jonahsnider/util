@@ -1,4 +1,4 @@
-import {identical} from './identical';
+import {identical} from './identical.js';
 
 it('throws on bad input', () => {
 	expect(

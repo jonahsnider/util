@@ -1,4 +1,4 @@
-import {enumHas} from './enum-has';
+import {enumHas} from './enum-has.js';
 
 enum Enum {
 	A = 1,

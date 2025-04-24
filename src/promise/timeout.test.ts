@@ -1,6 +1,4 @@
-/* eslint-disable prefer-promise-reject-errors */
-
-import {timeout} from './timeout';
+import {timeout} from './timeout.js';
 
 it('returns the resolved value', async () => {
 	const promise = Promise.resolve(1);
@@ -9,9 +7,10 @@ it('returns the resolved value', async () => {
 });
 
 it('rejects if the given promise rejects', async () => {
-	const promise = Promise.reject(1);
+	const error = new Error('test');
+	const promise = Promise.reject(error);
 
-	return expect(timeout(promise, Number.POSITIVE_INFINITY)).rejects.toBe(1);
+	return expect(timeout(promise, Number.POSITIVE_INFINITY)).rejects.toBe(error);
 });
 
 it('times out if the given promise never resolves', async () => {

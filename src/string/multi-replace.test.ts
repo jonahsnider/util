@@ -1,4 +1,4 @@
-import {multiReplace} from './multi-replace';
+import {multiReplace} from './multi-replace.js';
 
 it('replaces strings', () => {
 	expect(multiReplace('a b c', {a: 'c', c: 'a'})).toBe('c b a');

@@ -1,4 +1,4 @@
-import {MathMap} from './math-map';
+import {MathMap} from './math-map.js';
 
 describe(`${MathMap.name}#${MathMap.prototype.add.name}`, () => {
 	it('adds values', () => {

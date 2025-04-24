@@ -1,4 +1,4 @@
-import {nullish} from './nullish';
+import {nullish} from './nullish.js';
 
 it('returns true for nullish values', () => {
 	expect(nullish(null)).toBe(true);

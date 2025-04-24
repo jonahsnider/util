@@ -1,4 +1,4 @@
-import {firstIndexOfLastGroup} from './first-index-of-last-group';
+import {firstIndexOfLastGroup} from './first-index-of-last-group.js';
 
 it("gets the first index of the last group of iterables that don't start with the value", () => {
 	expect(firstIndexOfLastGroup([1, 2, 3], 5)).toBe(-1);

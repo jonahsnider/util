@@ -1,2 +1,2 @@
-export * from './settled';
-export * from './timeout';
+export * from './settled.js';
+export * from './timeout.js';

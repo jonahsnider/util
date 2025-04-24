@@ -1,4 +1,4 @@
-import {sum} from '../reducers/sum';
+import {sum} from '../reducers/sum.js';
 
 /**
  * Get the arithmetic mean of an array of `number`s.

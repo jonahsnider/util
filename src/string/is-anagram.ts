@@ -1,5 +1,5 @@
-import {identical} from '../identical';
-import {frequencyTable} from '../iterable';
+import {identical} from '../identical/index.js';
+import {frequencyTable} from '../iterable/index.js';
 
 /**
  * Check if 2 strings are anagrams of each other.

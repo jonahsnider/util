@@ -43,7 +43,8 @@ const lookup = new WeakMap<Enum<EnumValue>, ReadonlySet<EnumValue>>();
  */
 export function enumHas<T extends EnumValue>(Enum: Enum<T>, value: unknown): value is T {
 	if (!lookup.has(Enum)) {
-		lookup.set(Enum, new Set(Object.values(Enum)));
+		// TODO: This is probably a real compiler error and not something to ignore
+		lookup.set(Enum, new Set<EnumValue>(Object.values(Enum) as EnumValue[]));
 	}
 
 	const values = lookup.get(Enum)!;

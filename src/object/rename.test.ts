@@ -1,4 +1,4 @@
-import {rename} from './rename';
+import {rename} from './rename.js';
 
 it('renames', () => {
 	expect(rename({a: 1, c: 2}, 'a', 'b')).toStrictEqual({b: 1, c: 2});

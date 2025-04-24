@@ -1,4 +1,4 @@
-import {largeToSmall} from './large-to-small';
+import {largeToSmall} from './large-to-small.js';
 
 it('arranges by length', () => {
 	expect(largeToSmall({id: 0, length: 0}, {id: 1, length: 0})).toStrictEqual([

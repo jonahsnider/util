@@ -1,4 +1,4 @@
-import type {Comparable} from '../types';
+import type {Comparable} from '../types.js';
 
 /**
  * Get the lowest value of the 2 parameters.

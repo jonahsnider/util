@@ -1,4 +1,4 @@
-import type {CompareFn} from '../types';
+import type {CompareFn} from '../types.js';
 
 /**
  * Check whether an array is sorted according to a given compare function.
@@ -24,12 +24,12 @@ import type {CompareFn} from '../types';
  * @public
  * @category Sort
  */
-export function isSorted<T>(array: ArrayLike<T>, compareFn: CompareFn<T>): boolean {
+export function isSorted<T>(array: ArrayLike<T>, compareFunction: CompareFn<T>): boolean {
 	for (let index = 0; index < array.length - 1; index++) {
 		const element = array[index];
 		const next = array[index + 1];
 
-		if (compareFn(element, next) > 0) {
+		if (compareFunction(element, next) > 0) {
 			return false;
 		}
 	}

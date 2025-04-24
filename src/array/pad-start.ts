@@ -1,4 +1,4 @@
-import {repeat} from '../iterable';
+import {repeat} from '../iterable/index.js';
 
 /**
  * Pads an array with a given value so that the array reaches a given length.

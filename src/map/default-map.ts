@@ -1,4 +1,4 @@
-import type {AnyFunction} from '../types';
+import type {AnyFunction} from '../types.js';
 
 /**
  * A `Map` that has a default value for missing keys.
@@ -22,11 +22,6 @@ import type {AnyFunction} from '../types';
  * @category Map
  */
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
-	/**
-	 * If the default value is a function.
-	 */
-	private readonly defaultValueIsFunction: boolean;
-
 	/**
 	 * Create a new `DefaultMap` with a specified default value.
 	 *
@@ -58,15 +53,13 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	 * ```
 	 */
 	// eslint-disable-next-line @typescript-eslint/ban-types
-	constructor(defaultValueFn: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
+	constructor(defaultValueFunction: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
 	constructor(
-		private readonly defaultValueOrDefaultValueFn: Exclude<D, AnyFunction> | ((key: K) => D),
+		private readonly defaultValueOrDefaultValueFunction: Exclude<D, AnyFunction> | ((key: K) => D),
 		entries?: ConstructorParameters<MapConstructor>[0] | undefined,
 	) {
 		// @ts-expect-error The types to allow constructing via an Iterable don't work for some reason
 		super(entries);
-
-		this.defaultValueIsFunction = typeof defaultValueOrDefaultValueFn === 'function';
 	}
 
 	/**
@@ -91,7 +84,10 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 		}
 
 		// Compiler limitation
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call
-		return this.defaultValueIsFunction ? (this.defaultValueOrDefaultValueFn as any)(key) : this.defaultValueOrDefaultValueFn;
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
+		return typeof this.defaultValueOrDefaultValueFunction === 'function'
+			? // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+				(this.defaultValueOrDefaultValueFunction as any)(key)
+			: this.defaultValueOrDefaultValueFunction;
 	}
 }

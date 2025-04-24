@@ -1,4 +1,4 @@
-import type {DirectionFn} from '../types';
+import type {DirectionFn} from '../types.js';
 
 /**
  * Perform a binary search to find an element in a sorted array.
@@ -32,13 +32,13 @@ import type {DirectionFn} from '../types';
  * @public
  * @category Array
  */
-export function binarySearch<T>(array: ArrayLike<T>, directionFn: DirectionFn<T>): ReturnType<T[]['find']> {
+export function binarySearch<T>(array: ArrayLike<T>, directionFunction: DirectionFn<T>): ReturnType<T[]['find']> {
 	let left = 0;
 	let right = array.length - 1;
 
 	while (left <= right) {
 		const index = Math.trunc((left + right) / 2);
-		const direction = directionFn(array[index]);
+		const direction = directionFunction(array[index]);
 
 		if (direction < 0) {
 			// Desired element appears before the current one

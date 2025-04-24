@@ -1,4 +1,4 @@
-import {firstIndexOfLastGroup} from './first-index-of-last-group';
+import {firstIndexOfLastGroup} from './first-index-of-last-group.js';
 
 /**
  * Removes the trailing `end` characters from a string.

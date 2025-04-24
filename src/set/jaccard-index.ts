@@ -1,5 +1,5 @@
-import {clamp} from '../math/clamp';
-import {largeToSmall} from '../array/large-to-small';
+import {clamp} from '../math/clamp.js';
+import {largeToSmall} from '../array/large-to-small.js';
 
 /**
  * Get the Jaccard index of 2 `Set`s.

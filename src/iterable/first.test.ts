@@ -1,4 +1,4 @@
-import {first} from './first';
+import {first} from './first.js';
 
 it('returns first element if take is undefined', () => {
 	expect(first([1, 2, 3])).toBe(1);

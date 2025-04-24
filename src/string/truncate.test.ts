@@ -1,4 +1,4 @@
-import {truncate} from './truncate';
+import {truncate} from './truncate.js';
 
 it('truncates long strings', () => {
 	expect(truncate('hello', 3)).toBe('hel');

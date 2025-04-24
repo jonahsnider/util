@@ -1,4 +1,4 @@
-import {xor} from './xor';
+import {xor} from './xor.js';
 
 it('returns bitwise XOR', () => {
 	expect(xor(3, 5)).toBe(6);

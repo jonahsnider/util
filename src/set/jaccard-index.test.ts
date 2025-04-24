@@ -1,4 +1,4 @@
-import {jaccardIndex} from './jaccard-index';
+import {jaccardIndex} from './jaccard-index.js';
 
 it('returns 1 for empty sets', () => {
 	expect(jaccardIndex(new Set(), new Set())).toBe(1);

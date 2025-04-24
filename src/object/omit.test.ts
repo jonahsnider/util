@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import {omit} from './omit';
+import {omit} from './omit.js';
 
 it('omits keys from a plain object', () => {
 	expect(omit({a: 1, b: 2, c: 3}, ['c'])).toStrictEqual({a: 1, b: 2});

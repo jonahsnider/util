@@ -1,4 +1,4 @@
-import {normaldist} from './normaldist';
+import {normaldist} from './normaldist.js';
 
 /**
  * Calculate the standard normal distribution.

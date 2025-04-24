@@ -1,4 +1,4 @@
-import {count} from './count';
+import {count} from './count.js';
 
 it('counts elements without a predicate', () => {
 	expect(count([1, 2, 3])).toBe(3);

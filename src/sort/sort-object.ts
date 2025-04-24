@@ -1,4 +1,4 @@
-import type {CompareFn} from '../types';
+import type {CompareFn} from '../types.js';
 
 /**
  * Sort an object's keys by comparing their respective values.
@@ -24,6 +24,6 @@ import type {CompareFn} from '../types';
  * @public
  * @category Sort
  */
-export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, V>>, compareFn: CompareFn<V>): Array<[K, V]> {
-	return Object.entries<V>(object).sort(([, aValue], [, bValue]) => compareFn(aValue, bValue)) as Array<[K, V]>;
+export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, V>>, compareFunction: CompareFn<V>): Array<[K, V]> {
+	return Object.entries<V>(object).sort(([, aValue], [, bValue]) => compareFunction(aValue, bValue)) as Array<[K, V]>;
 }

@@ -1,4 +1,4 @@
-import {every} from './every';
+import {every} from './every.js';
 
 it('returns true if every element passes the predicate', () => {
 	expect(every([1, 2, 3] as unknown[], (x): x is number => typeof x === 'number')).toBe(true);

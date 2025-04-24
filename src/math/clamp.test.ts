@@ -1,4 +1,4 @@
-import {clamp} from './clamp';
+import {clamp} from './clamp.js';
 
 it('clamps', () => {
 	expect(clamp(0, 1, 2)).toBe(1);

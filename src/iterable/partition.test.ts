@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import {partition} from './partition';
+import {partition} from './partition.js';
 
 it('partitions an array', () => {
 	expect(partition([1, 2, 3, 4, 5, 6], number => number % 2)).toStrictEqual([

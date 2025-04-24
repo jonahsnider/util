@@ -1,4 +1,4 @@
-import {replaceAll} from './replace-all';
+import {replaceAll} from './replace-all.js';
 
 it('replaces all elements from an array', () => {
 	const array = [1, 2, 1, 3];

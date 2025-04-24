@@ -1,4 +1,4 @@
-import {indexOfAll} from './index-of-all';
+import {indexOfAll} from './index-of-all.js';
 
 it('finds all indexes', () => {
 	expect(indexOfAll([1, 2, 1, 3, 1], 1)).toStrictEqual([0, 2, 4]);

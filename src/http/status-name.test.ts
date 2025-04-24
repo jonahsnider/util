@@ -1,5 +1,5 @@
-import {Status} from './status';
-import {StatusName} from './status-name';
+import {Status} from './status.js';
+import {StatusName} from './status-name.js';
 
 describe('StatusName', () => {
 	it('has entries for all status codes', () => {

@@ -1,5 +1,5 @@
-import {some} from './some';
-import {includes} from './includes';
+import {some} from './some.js';
+import {includes} from './includes.js';
 
 it('returns true if any element passes the predicate', () => {
 	expect(some([1, 2, 3], x => x === 2)).toBe(true);

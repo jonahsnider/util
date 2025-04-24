@@ -4,8 +4,6 @@
 
 ```ts
 
-/// <reference types="node" />
-
 import type { EventEmitter } from 'events';
 
 // @public
@@ -70,7 +68,7 @@ export interface _BaseTypedEventEmitter<T extends EventListeners> extends EventE
 }
 
 // @public
-export function binarySearch<T>(array: ArrayLike<T>, directionFn: DirectionFn<T>): ReturnType<T[]['find']>;
+export function binarySearch<T>(array: ArrayLike<T>, directionFunction: DirectionFn<T>): ReturnType<T[]['find']>;
 
 declare namespace Bitwise {
     export {
@@ -109,7 +107,7 @@ export function clamp<T extends number | bigint, M1 extends number | bigint, M2 
 const clientErrors: Readonly<Range>;
 
 // @public
-function combine<T>(...compareFns: ReadonlyArray<CompareFn<T>>): CompareFn<T>;
+function combine<T>(...compareFunctions: ReadonlyArray<CompareFn<T>>): CompareFn<T>;
 
 // @public
 export type Comparable = string | NumberLike;
@@ -129,7 +127,7 @@ export function cycle<T>(iterable: Iterable<T>, times: number): Iterable<T>;
 // @public
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
     constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ConstructorParameters<MapConstructor>[0] | null);
-    constructor(defaultValueFn: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
+    constructor(defaultValueFunction: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
     get(key: K): V | D;
 }
 
@@ -228,7 +226,7 @@ export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[];
 const informational: Readonly<Range>;
 
 // @public
-export function invert<T extends (...parameters: any[]) => NumberLike>(fn: T): T;
+export function invert<T extends (...parameters: any[]) => NumberLike>(func: T): T;
 
 // @public
 export function isAnagram<T>(a: ArrayLike<T> & Iterable<T>, b: ArrayLike<T> & Iterable<T>): boolean;
@@ -258,7 +256,7 @@ export function isEmpty(array: unknown[]): array is [];
 export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never>;
 
 // @public
-export function isSorted<T>(array: ArrayLike<T>, compareFn: CompareFn<T>): boolean;
+export function isSorted<T>(array: ArrayLike<T>, compareFunction: CompareFn<T>): boolean;
 
 // @public
 export function isWhitespace(string: string): boolean;
@@ -291,10 +289,10 @@ export function lastIndexOfFirstGroup<T>(iterable: Iterable<T>, value: T): numbe
 export function lines(string: string): string[];
 
 // @public
-export function mapFill<T>(valueFn: (index: number) => T, length: number): T[];
+export function mapFill<T>(valueFunction: (index: number) => T, length: number): T[];
 
 // @public
-export function mapRepeat<T>(valueFn: (increment: number) => T, times: number): Iterable<T>;
+export function mapRepeat<T>(valueFunction: (increment: number) => T, times: number): Iterable<T>;
 
 // Warning: (ae-forgotten-export) The symbol "V" needs to be exported by the entry point index.d.ts
 //
@@ -368,7 +366,7 @@ export type _NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false 
 export function normaldist(x: number, standardDeviation: number, mean: number): number;
 
 // @public
-export function not<T extends (...parameters: any[]) => boolean>(fn: T): (...parameters: Parameters<T>) => boolean;
+export function not<T extends (...parameters: any[]) => boolean>(func: T): (...parameters: Parameters<T>) => boolean;
 
 // @public
 export type Nullish = null | undefined;
@@ -556,7 +554,7 @@ declare namespace Sort {
 export { Sort }
 
 // @public
-export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, V>>, compareFn: CompareFn<V>): Array<[K, V]>;
+export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, V>>, compareFunction: CompareFn<V>): Array<[K, V]>;
 
 // @public
 export function standardNormaldist(x: number): number;
@@ -781,7 +779,7 @@ export function sum(a: bigint, b: bigint): bigint;
 export type Table<T> = T[][];
 
 // @public
-export function thunkify<T extends (...args: unknown[]) => unknown>(fn: T): (...parameters: Parameters<T>) => ReturnType<T>;
+export function thunkify<T extends (...args: unknown[]) => unknown>(func: T): (...parameters: Parameters<T>) => ReturnType<T>;
 
 // @public
 export function timeout<T>(promise: PromiseLike<T>, timeoutMs: number): Promise<T>;

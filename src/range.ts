@@ -1,4 +1,4 @@
-import type {Comparable} from './types';
+import type {Comparable} from './types.js';
 
 /**
  * A range between 2 values.

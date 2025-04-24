@@ -1,5 +1,5 @@
 import {expectNotType, expectType} from 'tsd';
-import {sample} from './sample';
+import {sample} from './sample.js';
 
 // Compilation tests
 // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
