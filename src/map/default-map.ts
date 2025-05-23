@@ -37,7 +37,7 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	 * ```
 	 */
 	// eslint-disable-next-line @typescript-eslint/ban-types
-	constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ConstructorParameters<MapConstructor>[0] | null);
+	constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ConstructorParameters<MapConstructor>[0]);
 	/**
 	 * Create a new `DefaultMap` with a specified function to generate default values.
 	 *
@@ -53,10 +53,10 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	 * ```
 	 */
 	// eslint-disable-next-line @typescript-eslint/ban-types
-	constructor(defaultValueFunction: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
+	constructor(defaultValueFunction: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0]);
 	constructor(
 		private readonly defaultValueOrDefaultValueFunction: Exclude<D, AnyFunction> | ((key: K) => D),
-		entries?: ConstructorParameters<MapConstructor>[0] | undefined,
+		entries?: ConstructorParameters<MapConstructor>[0],
 	) {
 		// @ts-expect-error The types to allow constructing via an Iterable don't work for some reason
 		super(entries);

@@ -8,7 +8,7 @@ class Test {
 	method() {}
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function, unicorn/prevent-abbreviations
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 function func() {}
 
 const test = new Test();

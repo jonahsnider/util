@@ -21,7 +21,7 @@
  * @public
  * @category Higher order
  */
-// eslint-disable-next-line unicorn/prevent-abbreviations
+
 export function not<T extends (...parameters: any[]) => boolean>(func: T): (...parameters: Parameters<T>) => boolean {
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 	return ((...parameters) => !func(...parameters)) as T;

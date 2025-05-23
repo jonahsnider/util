@@ -24,7 +24,7 @@ import {difference} from '../set/index.js';
  * @category Object
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
-export function omit<T extends object, K extends keyof T>(object: T, keys: readonly K[]): Omit<T, K> {
+export function omit<T extends Record<string, unknown>, K extends keyof T>(object: T, keys: readonly K[]): Omit<T, K> {
 	const keptKeys = difference(
 		Object.keys(object),
 		// Replicates the behavior of Object.keys() casting numeric keys to strings and removing symbols

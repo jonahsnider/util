@@ -8,7 +8,7 @@
  *
  * @public
  */
-// eslint-disable-next-line unicorn/prevent-abbreviations
+
 export type AnyFunction<P extends any[] = any[], R = any> = (...args: P) => R;
 
 /**
@@ -18,7 +18,7 @@ export type AnyFunction<P extends any[] = any[], R = any> = (...args: P) => R;
  *
  * @public
  */
-// eslint-disable-next-line unicorn/prevent-abbreviations
+
 export type UnknownFunction = (...args: unknown[]) => unknown;
 
 /**
@@ -41,14 +41,14 @@ export type NumberLike =
 	| number
 	| bigint
 	// eslint-disable-next-line @typescript-eslint/ban-types
-	| Number
+
 	// Reasonable
 	| boolean
 	| `${number | bigint}`
 	| `${Sign | ''}${'Infinity'}`
 	// Strange
 	// eslint-disable-next-line @typescript-eslint/ban-types
-	| null;
+	| undefined;
 
 /**
  * A value that can be compared numerically using `<`, `>`, `<=`, or `>=`.
@@ -75,7 +75,7 @@ export type Comparable = string | NumberLike;
  *
  * @public
  */
-// eslint-disable-next-line unicorn/prevent-abbreviations
+
 export type DirectionFn<T> = (element: T) => number;
 
 /**
@@ -84,7 +84,7 @@ export type DirectionFn<T> = (element: T) => number;
  * @public
  * @category Sort
  */
-// eslint-disable-next-line unicorn/prevent-abbreviations
+
 export type CompareFn<T = Comparable> = Exclude<Parameters<T[]['sort']>[0], undefined>;
 
 /**

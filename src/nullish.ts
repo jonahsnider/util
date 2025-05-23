@@ -4,7 +4,7 @@
  * @public
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
-export type Nullish = null | undefined;
+export type Nullish = undefined;
 
 /**
  * Check if something is `null` or `undefined`.

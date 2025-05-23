@@ -21,6 +21,6 @@ export * from './sort/index.js';
 export * from './stopwatch.js';
 export * from './string/index.js';
 export * from './to-digits.js';
-export * from './typed-event-emitter.js';
-export * from './types.js';
+export type * from './typed-event-emitter.js';
+export type * from './types.js';
 export {Http};
