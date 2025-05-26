@@ -37,7 +37,7 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	 * ```
 	 */
 	// eslint-disable-next-line @typescript-eslint/no-restricted-types
-	constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ConstructorParameters<MapConstructor>[0]  );
+	constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ConstructorParameters<MapConstructor>[0]);
 	/**
 	 * Create a new `DefaultMap` with a specified function to generate default values.
 	 *

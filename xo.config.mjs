@@ -2,7 +2,7 @@
 import base from '@jonahsnider/xo-config';
 
 /** @type {import('xo').FlatXoConfig} */
-const config= [
+const config = [
 	...(Array.isArray(base) ? base : [base]),
 	{
 		rules: {
