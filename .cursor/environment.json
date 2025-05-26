@@ -1,6 +1,6 @@
 {
-  "snapshot": "snapshot-20250523-aa126cab-e4b5-4b94-a400-fd9da82b4b86",
-  "install": "yarn install",
-  "start": "yarn start",
-  "terminals": []
+	"snapshot": "snapshot-20250523-aa126cab-e4b5-4b94-a400-fd9da82b4b86",
+	"install": "yarn install",
+	"start": "yarn start",
+	"terminals": []
 }

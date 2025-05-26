@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-deprecated */
+
 import {difference} from './difference.js';
 
 it('creates a Set of the difference', () => {

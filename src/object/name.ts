@@ -33,7 +33,6 @@ import type {AnyFunction} from '../types.js';
  * @public
  * @category Object
  */
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `${string}${'.' | '#'}${string}`;
 /**
  * Get the name of a function or class.
@@ -63,9 +62,7 @@ export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `$
  * @public
  * @category Object
  */
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export function name(func: (new (...args: any[]) => any) | AnyFunction): string;
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export function name(ctorOrFunction: AnyFunction | (new (...args: any[]) => any), func?: AnyFunction): string {
 	if (func) {
 		const className = name(ctorOrFunction);
