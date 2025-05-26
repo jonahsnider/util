@@ -37,7 +37,6 @@ export type {BuiltInEvents as _BuiltInEvents};
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 interface BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
 	addListener<E extends keyof T>(eventName: E, listener: T[E]): this;
-	// eslint-disable-next-line unicorn/prevent-abbreviations
 	emit<E extends keyof T>(eventName: E, ...args: Parameters<T[E]>): ReturnType<EventEmitter['emit']>;
 	eventNames(): Array<Exclude<keyof T, number>>;
 	listenerCount(eventName: keyof T): ReturnType<EventEmitter['listenerCount']>;

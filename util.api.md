@@ -119,15 +119,15 @@ export type CompareFn<T = Comparable> = Exclude<Parameters<T[]['sort']>[0], unde
 export function concatIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T>;
 
 // @public
-export function count<T>(iterable: Iterable<T>, filterPredicate?: undefined | ((element: T) => boolean)): number;
+export function count<T>(iterable: Iterable<T>, filterPredicate?: ((element: T) => boolean)): number;
 
 // @public
 export function cycle<T>(iterable: Iterable<T>, times: number): Iterable<T>;
 
 // @public
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
-    constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ConstructorParameters<MapConstructor>[0] | null);
-    constructor(defaultValueFunction: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
+    constructor(defaultValue: Exclude<D, AnyFunction>, entries?: ConstructorParameters<MapConstructor>[0]);
+    constructor(defaultValueFunction: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0]);
     get(key: K): V | D;
 }
 

@@ -147,7 +147,7 @@ export function isEmpty(string: string): string is '';
  * @public
  * @category Array
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-restricted-types
 export function isEmpty(array: readonly unknown[]): array is readonly [];
 /**
  * Check if an array is empty.
@@ -173,7 +173,7 @@ export function isEmpty(array: readonly unknown[]): array is readonly [];
  * @public
  * @category Array
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-restricted-types
 export function isEmpty(array: unknown[]): array is [];
 /**
  * Check if an iterable is empty.

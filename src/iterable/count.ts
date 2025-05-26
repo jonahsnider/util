@@ -25,7 +25,7 @@
  * @public
  * @category Iterable
  */
-export function count<T>(iterable: Iterable<T>, filterPredicate?: undefined | ((element: T) => boolean)): number {
+export function count<T>(iterable: Iterable<T>, filterPredicate?:   ((element: T) => boolean)): number {
 	let count = 0;
 
 	if (filterPredicate) {

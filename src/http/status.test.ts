@@ -64,6 +64,7 @@ describe('Status', () => {
 		expect(Status.HttpVersionNotSupported).toBe(505);
 		expect(Status.VariantAlsoNegotiates).toBe(506);
 		expect(Status.InsufficientStorage).toBe(507);
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
 		expect(Status.LoopDetected).toBe(508);
 		expect(Status.NotExtended).toBe(510);
 		expect(Status.NetworkAuthenticationRequired).toBe(511);

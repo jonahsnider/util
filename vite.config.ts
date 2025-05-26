@@ -3,7 +3,7 @@
 
 // Configure Vitest (https://vitest.dev/config/)
 
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import-x/no-extraneous-dependencies, n/no-extraneous-import
 import {defineConfig} from 'vite';
 
 export default defineConfig({
