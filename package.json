@@ -65,7 +65,7 @@
 		"semantic-release": "24.2.5",
 		"size-limit": "11.2.0",
 		"tsd": "0.32.0",
-		"typedoc": "0.28.4",
+		"typedoc": "0.28.5",
 		"typescript": "5.8.3",
 		"vitest": "3.1.4",
 		"xo": "1.0.0"
