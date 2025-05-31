@@ -867,7 +867,7 @@ __metadata:
     typedoc: "npm:0.28.5"
     typescript: "npm:5.8.3"
     vitest: "npm:3.1.4"
-    xo: "npm:1.0.1"
+    xo: "npm:1.0.4"
   languageName: unknown
   linkType: soft
 
@@ -11861,9 +11861,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xo@npm:1.0.1":
-  version: 1.0.1
-  resolution: "xo@npm:1.0.1"
+"xo@npm:1.0.4":
+  version: 1.0.4
+  resolution: "xo@npm:1.0.4"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:^4.5.0"
     "@sindresorhus/tsconfig": "npm:^7.0.0"
@@ -11898,7 +11898,7 @@ __metadata:
     typescript-eslint: "npm:^8.32.1"
   bin:
     xo: dist/cli.js
-  checksum: 10/53a69d90bc78a478219d0dd990ac9f47cbba826d02b4d4992d32e4945cb1208b52171c678726ea1b977c002e7e6a762a601004fe577a55c58bc0e11d64d763fd
+  checksum: 10/3c873030688517a1a5e312edec4eb03cf2becb714bb7504ffa6eeb8a814d91d9315733884a276b60a57e07666196fbd0d9a7237e9f26fb4cf11aad9a63de44e4
   languageName: node
   linkType: hard
 
