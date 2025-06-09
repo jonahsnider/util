@@ -6,6 +6,7 @@
 // eslint-disable-next-line import-x/no-extraneous-dependencies, n/no-extraneous-import
 import {defineConfig} from 'vite';
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 export default defineConfig({
 	test: {
 		/* For example, use global to avoid globals imports (describe, test, expect): */
