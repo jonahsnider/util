@@ -68,7 +68,7 @@
 		"typedoc": "0.28.5",
 		"typescript": "5.8.3",
 		"vitest": "3.2.3",
-		"xo": "1.0.5"
+		"xo": "1.1.0"
 	},
 	"packageManager": "yarn@4.9.2",
 	"engines": {
