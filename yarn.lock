@@ -859,7 +859,7 @@ __metadata:
     "@types/node": "npm:22.15.32"
     "@vitest/coverage-v8": "npm:3.2.4"
     "@vitest/ui": "npm:3.2.4"
-    prettier: "npm:3.5.3"
+    prettier: "npm:3.6.0"
     rollup: "npm:4.44.0"
     semantic-release: "npm:24.2.5"
     size-limit: "npm:11.2.0"
@@ -9244,7 +9244,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.5.3, prettier@npm:^3.5.3":
+"prettier@npm:3.6.0":
+  version: 3.6.0
+  resolution: "prettier@npm:3.6.0"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10/5c0db5a8e32d2ac9824d8bc652990dfd534bc7a7c6f26d99d50c9146a2d9befb3cd1cc86c4aee71caf6b264d421a4b4b5961e31a62dda3790b8fec2521a76eef
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.5.3":
   version: 3.5.3
   resolution: "prettier@npm:3.5.3"
   bin:
