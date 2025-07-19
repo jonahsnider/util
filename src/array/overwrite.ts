@@ -23,6 +23,10 @@
  * @public
  * @category Array
  */
-export function overwrite<T>(array: T[], startIndex: number, data: ArrayLike<T> & Iterable<T>): ReturnType<(typeof array)['splice']> {
+export function overwrite<T>(
+	array: T[],
+	startIndex: number,
+	data: ArrayLike<T> & Iterable<T>,
+): ReturnType<(typeof array)['splice']> {
 	return array.splice(startIndex, startIndex + data.length - 1, ...data);
 }

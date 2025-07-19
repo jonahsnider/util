@@ -1,11 +1,13 @@
-import type {Comparable, CompareFn} from '../../types.js';
+import type { Comparable, CompareFn } from '../../types.js';
 
 function ascendingRaw(a: Comparable, b: Comparable): number {
 	// `null` is converted to 0 in comparisons
+	// biome-ignore lint/style/noNonNullAssertion: Comparing nullish values is fine
 	if (a! < b!) {
 		return -1;
 	}
 
+	// biome-ignore lint/style/noNonNullAssertion: Comparing nullish values is fine
 	if (a! > b!) {
 		return 1;
 	}
@@ -58,7 +60,11 @@ export function ascending<T>(predicate: (element: T) => Comparable): CompareFn<T
  * @category Sort
  */
 export function ascending(a: Comparable, b: Comparable): number;
-export function ascending<T>(aOrPredicate: Comparable | ((element: T) => Comparable), b: Comparable | void): number | CompareFn<T> {
+export function ascending<T>(
+	aOrPredicate: Comparable | ((element: T) => Comparable),
+	// biome-ignore lint/suspicious/noConfusingVoidType: Can't compile without using void
+	b: Comparable | void,
+): number | CompareFn<T> {
 	if (b === undefined && typeof aOrPredicate === 'function') {
 		return (a2: T, b2: T) => ascendingRaw(aOrPredicate(a2), aOrPredicate(b2));
 	}

@@ -26,7 +26,10 @@
  * @public
  * @category Iterable
  */
-export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element: T) => element is S): iterable is Iterable<S>;
+export function every<T, S extends T>(
+	iterable: Iterable<T>,
+	predicate: (element: T) => element is S,
+): iterable is Iterable<S>;
 /**
  * Determines whether all the elements of an iterable pass a given predicate.
  *

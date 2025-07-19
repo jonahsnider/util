@@ -1,4 +1,4 @@
-import {DefaultMap} from './default-map.js';
+import { DefaultMap } from './default-map.js';
 
 describe(`${DefaultMap.name}#${DefaultMap.prototype.get.name}`, () => {
 	it('gets values', () => {
@@ -20,7 +20,7 @@ describe(`${DefaultMap.name}#${DefaultMap.prototype.get.name}`, () => {
 
 	it('gets default values with a function', () => {
 		const map = new DefaultMap<string, unknown, number>(
-			key => {
+			(key) => {
 				expect(key).toBe('c');
 
 				return 1;

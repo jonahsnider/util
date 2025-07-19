@@ -1,4 +1,4 @@
-import {trimEnd} from './trim-end.js';
+import { trimEnd } from './trim-end.js';
 
 const STRING = 'aabbaa';
 const ARRAY = ['a', 'a', 'b', 'b', 'a', 'a'] as const;

@@ -22,5 +22,5 @@
  * @category Array
  */
 export function mapFill<T>(length: number, valueFunction: (index: number) => T): T[] {
-	return Array.from({length}, (_, i) => valueFunction(i));
+	return Array.from({ length }, (_, i) => valueFunction(i));
 }

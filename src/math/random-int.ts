@@ -1,4 +1,4 @@
-import {random} from './random.js';
+import { random } from './random.js';
 
 /**
  * Generate a random integer within the given bounds.

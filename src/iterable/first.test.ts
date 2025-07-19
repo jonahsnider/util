@@ -1,4 +1,4 @@
-import {first} from './first.js';
+import { first } from './first.js';
 
 it('returns first element if take is undefined', () => {
 	expect(first([1, 2, 3])).toBe(1);
@@ -23,6 +23,5 @@ it('allows handles small arrays and big takes', () => {
 });
 
 it('works with empty iterables', () => {
-	// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 	expect(first([])).toBe(undefined);
 });

@@ -1,16 +1,13 @@
-// @ts-check
-
 import process from 'node:process';
+import { codecovRollupPlugin } from '@codecov/rollup-plugin';
 import babel from '@rollup/plugin-babel';
+import terser, { type Options as TerserOptions } from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-import terser from '@rollup/plugin-terser';
-import {codecovRollupPlugin} from '@codecov/rollup-plugin';
+import type { RollupOptions } from 'rollup';
 
-const {CODECOV_TOKEN} = process.env;
+const { CODECOV_TOKEN } = process.env;
 
-/** @type {import('@rollup/plugin-terser').Options} */
 const terserConfig = {
-	/* eslint-disable camelcase */
 	ecma: 5,
 	compress: {
 		arrows: false,
@@ -22,13 +19,11 @@ const terserConfig = {
 		passes: 10,
 		unsafe: true,
 	},
-	mangle: {toplevel: true},
+	mangle: { toplevel: true },
 	module: false,
 	ie8: true,
-	/* eslint-enable camelcase */
-};
+} satisfies TerserOptions;
 
-/** @type {import('@rollup/plugin-terser').Options} */
 const esmTerserConfig = {
 	...terserConfig,
 	ecma: 2015,
@@ -36,9 +31,9 @@ const esmTerserConfig = {
 		...terserConfig.compress,
 		ecma: 2015,
 	},
-};
+} satisfies TerserOptions;
 
-const config = [
+const config: RollupOptions[] = [
 	// UMD
 	{
 		input: './src/index.ts',
@@ -50,8 +45,8 @@ const config = [
 			sourcemap: true,
 		},
 		plugins: [
-			typescript({incremental: true}),
-			babel({babelHelpers: 'bundled', extensions: ['.ts']}),
+			typescript({ incremental: true }),
+			babel({ babelHelpers: 'bundled', extensions: ['.ts'] }),
 			terser(terserConfig),
 			codecovRollupPlugin({
 				enableBundleAnalysis: Boolean(CODECOV_TOKEN),
@@ -70,7 +65,7 @@ const config = [
 			sourcemap: true,
 		},
 		plugins: [
-			typescript({incremental: true}),
+			typescript({ incremental: true }),
 			terser(esmTerserConfig),
 			codecovRollupPlugin({
 				enableBundleAnalysis: Boolean(CODECOV_TOKEN),

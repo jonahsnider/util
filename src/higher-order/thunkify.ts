@@ -26,7 +26,9 @@
  * @category Higher order
  */
 
-export function thunkify<T extends (...args: unknown[]) => unknown>(func: T): (...parameters: Parameters<T>) => ReturnType<T> {
+export function thunkify<T extends (...args: unknown[]) => unknown>(
+	func: T,
+): (...parameters: Parameters<T>) => ReturnType<T> {
 	let wasCalled = false;
 	let result: ReturnType<T>;
 

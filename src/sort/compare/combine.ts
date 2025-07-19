@@ -1,4 +1,4 @@
-import {type CompareFn} from '../../types.js';
+import type { CompareFn } from '../../types.js';
 
 /**
  * Sort an array using multiple compare functions.

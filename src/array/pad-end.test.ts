@@ -1,4 +1,4 @@
-import {padEnd} from './pad-end.js';
+import { padEnd } from './pad-end.js';
 
 it('pads an array', () => {
 	const array = [1, 2, 3];

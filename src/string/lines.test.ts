@@ -1,4 +1,4 @@
-import {lines} from './lines.js';
+import { lines } from './lines.js';
 
 it('splits strings into lines', () => {
 	expect(lines('')).toStrictEqual(['']);

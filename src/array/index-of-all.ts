@@ -24,7 +24,6 @@
 export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
 	const indexes: number[] = [];
 
-	// eslint-disable-next-line unicorn/no-for-loop
 	for (let index = 0; index < array.length; index++) {
 		const element = array[index];
 

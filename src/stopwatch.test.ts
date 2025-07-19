@@ -1,7 +1,7 @@
-import {Stopwatch} from './stopwatch.js';
-import {name} from './object/index.js';
+import { name } from './object/index.js';
+import { Stopwatch } from './stopwatch.js';
 
-describe(name(Stopwatch) + '.started', () => {
+describe(`${name(Stopwatch)}.started`, () => {
 	it('reports when a stopwatch is started', () => {
 		const stopwatch = new Stopwatch();
 

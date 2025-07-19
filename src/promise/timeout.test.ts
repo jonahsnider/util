@@ -1,4 +1,4 @@
-import {timeout} from './timeout.js';
+import { timeout } from './timeout.js';
 
 it('returns the resolved value', async () => {
 	const promise = Promise.resolve(1);
@@ -14,7 +14,6 @@ it('rejects if the given promise rejects', async () => {
 });
 
 it('times out if the given promise never resolves', async () => {
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	const promise = new Promise(() => {});
 
 	return expect(timeout(promise, 1)).rejects.toThrow(new Error('Timed out'));

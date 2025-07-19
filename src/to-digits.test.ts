@@ -1,4 +1,4 @@
-import {toDigits} from './to-digits.js';
+import { toDigits } from './to-digits.js';
 
 it('formats numbers', () => {
 	expect(toDigits(1, 1)).toBe(1);

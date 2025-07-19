@@ -1,4 +1,4 @@
-import {DefaultMap} from './default-map.js';
+import { DefaultMap } from './default-map.js';
 
 // TODO: Allow bigints as well
 type V = number;

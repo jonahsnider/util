@@ -1,4 +1,4 @@
-import {triangularNumber} from './triangular-number.js';
+import { triangularNumber } from './triangular-number.js';
 
 it('throws if value is less than 0', () => {
 	expect(() => triangularNumber(-1)).toThrow(RangeError);

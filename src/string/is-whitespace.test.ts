@@ -1,4 +1,4 @@
-import {isWhitespace} from './is-whitespace.js';
+import { isWhitespace } from './is-whitespace.js';
 
 it('returns true for empty strings', () => {
 	expect(isWhitespace('')).toBe(true);

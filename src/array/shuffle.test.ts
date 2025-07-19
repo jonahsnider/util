@@ -1,5 +1,5 @@
-import {relativeStddev} from '../math/index.js';
-import {shuffle} from './shuffle.js';
+import { relativeStddev } from '../math/index.js';
+import { shuffle } from './shuffle.js';
 
 const iterations = 1e5;
 
@@ -47,7 +47,6 @@ it('shuffles arrays', () => {
 	const values = Object.values(frequencies);
 	expect(relativeStddev(values)).toBeCloseTo(0, 1);
 
-	// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 	expect(shuffle([])).toBe(undefined);
 });
 

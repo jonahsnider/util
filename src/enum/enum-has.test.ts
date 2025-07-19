@@ -1,11 +1,9 @@
-import {enumHas} from './enum-has.js';
+import { enumHas } from './enum-has.js';
 
 enum Enum {
 	A = 1,
 	B = 'str',
-	// eslint-disable-next-line @typescript-eslint/no-duplicate-enum-values
 	C = 'str',
-	// eslint-disable-next-line @typescript-eslint/no-duplicate-enum-values
 	D = 1,
 	E = 2,
 }

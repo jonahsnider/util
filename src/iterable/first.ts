@@ -56,7 +56,6 @@ export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined
 export function first<T>(iterable: Iterable<T>, take: number): Iterable<T>;
 export function first<T>(iterable: Iterable<T>, take?: number): (T | undefined) | Iterable<T> {
 	if (take === undefined) {
-		// eslint-disable-next-line no-unreachable-loop
 		for (const element of iterable) {
 			return element;
 		}

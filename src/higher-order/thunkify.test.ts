@@ -1,4 +1,4 @@
-import {thunkify} from './thunkify.js';
+import { thunkify } from './thunkify.js';
 
 it('thunks', () => {
 	const f = vitest.fn(() => 123);

@@ -46,7 +46,7 @@ export function shuffle<T>(array: T[], mutate?: true): void;
  * @category Array
  */
 export function shuffle<T>(array: ArrayLike<T> & Iterable<T>, mutate: false): T[];
-export function shuffle<T>(array: T[] | (ArrayLike<T> & Iterable<T>), mutate = true): void | T[] {
+export function shuffle<T>(array: T[] | (ArrayLike<T> & Iterable<T>), mutate = true): undefined | T[] {
 	const target: typeof array = mutate ? array : [...array];
 
 	for (let index1 = target.length - 1; index1 > 0; index1--) {

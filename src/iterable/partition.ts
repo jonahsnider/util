@@ -22,7 +22,10 @@
  * @public
  * @category Iterable
  */
-export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (element: T) => element is S): [passed: S[], failed: Array<Exclude<T, S>>];
+export function partition<S extends T, T>(
+	iterable: Iterable<T>,
+	typeGuard: (element: T) => element is S,
+): [passed: S[], failed: Array<Exclude<T, S>>];
 /**
  * Split an iterable into 2 arrays of elements that passed or failed a provided predicate.
  *
@@ -47,8 +50,14 @@ export function partition<S extends T, T>(iterable: Iterable<T>, typeGuard: (ele
  * @public
  * @category Iterable
  */
-export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increment: number) => unknown): [passed: T[], failed: T[]];
-export function partition<T>(iterable: Iterable<T>, predicate: (value: T, increment: number) => unknown): [passed: T[], failed: T[]] {
+export function partition<T>(
+	iterable: Iterable<T>,
+	predicate: (value: T, increment: number) => unknown,
+): [passed: T[], failed: T[]];
+export function partition<T>(
+	iterable: Iterable<T>,
+	predicate: (value: T, increment: number) => unknown,
+): [passed: T[], failed: T[]] {
 	const passed: T[] = [];
 	const failed: T[] = [];
 	let increment = 0;

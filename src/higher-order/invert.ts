@@ -1,4 +1,4 @@
-import type {NumberLike} from '../types.js';
+import type { NumberLike } from '../types.js';
 
 /**
  * Create a new function taht calls the provided `fn` and then inverts the sign of the result.
@@ -25,7 +25,8 @@ import type {NumberLike} from '../types.js';
  * @public
  * @category Higher order
  */
+
+// biome-ignore lint/suspicious/noExplicitAny: This is safe
 export function invert<T extends (...parameters: any[]) => NumberLike>(func: T): T {
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 	return ((...parameters) => -func(...parameters)!) as T;
 }

@@ -1,4 +1,4 @@
-import {invert} from './invert.js';
+import { invert } from './invert.js';
 
 function sort(a: number, b: number) {
 	return a - b;

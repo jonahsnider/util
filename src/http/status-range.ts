@@ -1,4 +1,4 @@
-import {Range} from '../range.js';
+import { Range } from '../range.js';
 
 /**
  * A {@link Range} of 1xx HTTP response status codes.

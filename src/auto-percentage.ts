@@ -53,9 +53,9 @@ export class AutoPercentage {
 	 *
 	 * @returns The percentage
 	 */
-	percentage(): {[Symbol.toPrimitive](): number} {
+	percentage(): { [Symbol.toPrimitive](): number } {
 		this._count++;
-		return {[Symbol.toPrimitive]: () => 1 / this._count};
+		return { [Symbol.toPrimitive]: () => 1 / this._count };
 	}
 
 	/**
@@ -81,8 +81,8 @@ export class AutoPercentage {
 	 *
 	 * @returns The number of times this percentage has been incremented
 	 */
-	count(): {[Symbol.toPrimitive](): number} {
+	count(): { [Symbol.toPrimitive](): number } {
 		this._count++;
-		return {[Symbol.toPrimitive]: () => this._count};
+		return { [Symbol.toPrimitive]: () => this._count };
 	}
 }

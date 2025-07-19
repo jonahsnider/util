@@ -118,7 +118,10 @@ export function identical<V>(a: ReadonlySet<V>, b: ReadonlySet<V>): boolean;
  * @public
  */
 export function identical<K, V>(a: ReadonlyMap<K, V>, b: ReadonlyMap<K, V>): boolean;
-export function identical<V, K = never>(a: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>, b: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>): boolean {
+export function identical<V, K = never>(
+	a: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>,
+	b: readonly V[] | ReadonlySet<V> | ReadonlyMap<K, V>,
+): boolean {
 	if (Array.isArray(a) && Array.isArray(b)) {
 		return identicalArray(a, b);
 	}

@@ -1,4 +1,4 @@
-import {difference} from '../set/index.js';
+import { difference } from '../set/index.js';
 
 /**
  * Create a copy of a provided object with the provided keys omitted.
@@ -23,14 +23,14 @@ import {difference} from '../set/index.js';
  * @public
  * @category Object
  */
-// eslint-disable-next-line @typescript-eslint/no-restricted-types
 export function omit<T extends object, K extends keyof T>(object: T, keys: readonly K[]): Omit<T, K> {
-	// eslint-disable-next-line @typescript-eslint/no-deprecated
 	const keptKeys = difference(
 		Object.keys(object),
 		// Replicates the behavior of Object.keys() casting numeric keys to strings and removing symbols
-		keys.filter(key => typeof key !== 'symbol').map(String),
+		keys
+			.filter((key) => typeof key !== 'symbol')
+			.map(String),
 	) as Set<keyof T>;
 
-	return Object.fromEntries([...keptKeys].map(key => [key, object[key]])) as Omit<T, K>;
+	return Object.fromEntries([...keptKeys].map((key) => [key, object[key]])) as Omit<T, K>;
 }
