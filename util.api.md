@@ -124,7 +124,7 @@ export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element
 export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean;
 
 // @public
-export function fill<T>(value: T, length: number): T[];
+export function fill<T>(length: number, value: T): T[];
 
 // @public
 export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolean): T | undefined;
