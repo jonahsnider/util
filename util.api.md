@@ -4,8 +4,6 @@
 
 ```ts
 
-import type { EventEmitter } from 'events';
-
 // @public
 export function allDuplicates<T>(iterable: Iterable<T>): T[];
 
@@ -37,36 +35,6 @@ export class AutoPercentage {
     };
 }
 
-// @internal
-export interface _BaseTypedEventEmitter<T extends EventListeners> extends EventEmitter {
-    // (undocumented)
-    addListener<E extends keyof T>(eventName: E, listener: T[E]): this;
-    // (undocumented)
-    emit<E extends keyof T>(eventName: E, ...args: Parameters<T[E]>): ReturnType<EventEmitter['emit']>;
-    // (undocumented)
-    eventNames(): Array<Exclude<keyof T, number>>;
-    // (undocumented)
-    listenerCount(eventName: keyof T): ReturnType<EventEmitter['listenerCount']>;
-    // (undocumented)
-    listeners<E extends keyof T>(eventName: E): Array<T[E]>;
-    // (undocumented)
-    off<E extends keyof T>(eventName: E, listener: T[E]): this;
-    // (undocumented)
-    on<E extends keyof T>(eventName: E, listener: T[E]): this;
-    // (undocumented)
-    once<E extends keyof T>(eventName: E, listener: T[E]): this;
-    // (undocumented)
-    prependListener<E extends keyof T>(eventName: E, listener: T[E]): this;
-    // (undocumented)
-    prependOnceListener<E extends keyof T>(eventName: E, listener: T[E]): this;
-    // (undocumented)
-    rawListeners<E extends keyof T>(eventName: E): Array<T[E]>;
-    // (undocumented)
-    removeAllListeners(eventName?: keyof T): this;
-    // (undocumented)
-    removeListener<E extends keyof T>(eventName: E, listener: T[E]): this;
-}
-
 // @public
 export function binarySearch<T>(array: ArrayLike<T>, directionFunction: DirectionFn<T>): ReturnType<T[]['find']>;
 
@@ -78,12 +46,6 @@ declare namespace Bitwise {
     }
 }
 export { Bitwise }
-
-// @internal
-export type _BuiltInEvents<T extends EventListeners> = {
-    newListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
-    removeListener: <E extends keyof T>(eventName: E, listener: T[E]) => ReturnType<Parameters<EventEmitter['on']>[1]>;
-};
 
 // @public
 export function capitalize<T extends string>(text: T): Capitalize<T>;
@@ -154,9 +116,6 @@ export function enumHas<T extends EnumValue>(Enum: Enum<T>, value: unknown): val
 
 // @public
 export type EnumValue = number | string;
-
-// @public
-export type EventListeners = Record<Parameters<EventEmitter['on']>[0], Parameters<EventEmitter['on']>[1]>;
 
 // @public
 export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element: T) => element is S): iterable is Iterable<S>;
@@ -807,12 +766,6 @@ export function trimStart<T>(array: readonly T[], start: T): T[];
 
 // @public
 export function truncate<T extends string>(text: T, maxLength: number, suffix?: string): T | `${string}${typeof suffix}`;
-
-// Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "_BaseTypedEventEmitter" which is marked as @internal
-// Warning: (ae-incompatible-release-tags) The symbol "TypedEventEmitter" is marked as @public, but its signature references "_BuiltInEvents" which is marked as @internal
-//
-// @public
-export type TypedEventEmitter<T extends EventListeners = Record<never, never>> = Record<string, unknown> & _BaseTypedEventEmitter<T & _BuiltInEvents<T>>;
 
 // @public
 export function uncapitalize<T extends string>(text: T): Uncapitalize<T>;
