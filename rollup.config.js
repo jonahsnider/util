@@ -1,7 +1,11 @@
+// @ts-check
+
 import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import {codecovRollupPlugin} from '@codecov/rollup-plugin';
+
+const CODECOV_TOKEN = process.env.CODECOV_TOKEN;
 
 /** @type {import('@rollup/plugin-terser').Options} */
 const terserConfig = {
@@ -49,8 +53,9 @@ const config = [
 			babel({babelHelpers: 'bundled', extensions: ['.ts']}),
 			terser(terserConfig),
 			codecovRollupPlugin({
-				enableBundleAnalysis: true,
+				enableBundleAnalysis: Boolean(CODECOV_TOKEN),
 				bundleName: '@jonahsnider/util-umd',
+				uploadToken: CODECOV_TOKEN,
 			}),
 		],
 	},
@@ -67,8 +72,9 @@ const config = [
 			typescript({incremental: true}),
 			terser(esmTerserConfig),
 			codecovRollupPlugin({
-				enableBundleAnalysis: true,
+				enableBundleAnalysis: Boolean(CODECOV_TOKEN),
 				bundleName: '@jonahsnider/util-esm',
+				uploadToken: CODECOV_TOKEN,
 			}),
 		],
 	},

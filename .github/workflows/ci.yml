@@ -21,6 +21,8 @@ jobs:
         run: yarn install --immutable
       - name: Build package
         run: yarn run build
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Upload compiled package
         uses: actions/upload-artifact@v4
         with:
