@@ -55,7 +55,7 @@ const config = [
 			terser(terserConfig),
 			codecovRollupPlugin({
 				enableBundleAnalysis: Boolean(CODECOV_TOKEN),
-				bundleName: '@jonahsnider/util-umd',
+				bundleName: '@jonahsnider/util',
 				uploadToken: CODECOV_TOKEN,
 			}),
 		],
@@ -74,7 +74,7 @@ const config = [
 			terser(esmTerserConfig),
 			codecovRollupPlugin({
 				enableBundleAnalysis: Boolean(CODECOV_TOKEN),
-				bundleName: '@jonahsnider/util-esm',
+				bundleName: '@jonahsnider/util',
 				uploadToken: CODECOV_TOKEN,
 			}),
 		],
