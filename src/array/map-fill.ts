@@ -7,11 +7,11 @@
  *
  * @example
  * ```js
- * mapFill(i => i + 1, 3); // [1, 2, 3]
+ * mapFill(3, i => i + 1); // [1, 2, 3]
  * ```
  *
- * @param valueFn - A function that returns each value to fill the array with
  * @param length - The length of the array
+ * @param valueFn - A function that returns each value to fill the array with
  *
  * @returns The filled array
  *
@@ -21,7 +21,6 @@
  * @public
  * @category Array
  */
-// TODO: Swap the order of valueFn and length
-export function mapFill<T>(valueFunction: (index: number) => T, length: number): T[] {
+export function mapFill<T>(length: number, valueFunction: (index: number) => T): T[] {
 	return Array.from({length}, (_, i) => valueFunction(i));
 }

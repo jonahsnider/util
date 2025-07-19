@@ -248,7 +248,7 @@ export function lastIndexOfFirstGroup<T>(iterable: Iterable<T>, value: T): numbe
 export function lines(string: string): string[];
 
 // @public
-export function mapFill<T>(valueFunction: (index: number) => T, length: number): T[];
+export function mapFill<T>(length: number, valueFunction: (index: number) => T): T[];
 
 // @public
 export function mapRepeat<T>(valueFunction: (increment: number) => T, times: number): Iterable<T>;
