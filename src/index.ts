@@ -22,4 +22,4 @@ export * from './stopwatch.js';
 export * from './string/index.js';
 export * from './to-digits.js';
 export type * from './types.js';
-export {Http};
+export { Http };

@@ -1,4 +1,4 @@
-import {randomInt} from './random-int.js';
+import { randomInt } from './random-int.js';
 
 it('generates random integers', () => {
 	const value = randomInt(0, 1);

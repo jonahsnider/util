@@ -3,16 +3,16 @@
  * @internal
  * @category Array
  */
-type ObjectWithLength = {length: number};
-export type {ObjectWithLength as _ObjectWithLength};
+type ObjectWithLength = { length: number };
+export type { ObjectWithLength as _ObjectWithLength };
 
 /**
  * An object with a `size` property.
  * @internal
  * @category Array
  */
-type ObjectWithSize = {size: number};
-export type {ObjectWithSize as _ObjectWithSize};
+type ObjectWithSize = { size: number };
+export type { ObjectWithSize as _ObjectWithSize };
 
 /**
  * A tuple of two elements arranged so the largest element is first and the smallest is last.
@@ -21,7 +21,7 @@ export type {ObjectWithSize as _ObjectWithSize};
  * @category Array
  */
 type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
-export type {ArrangedLargestToSmallest as _ArrangedLargestToSmallest};
+export type { ArrangedLargestToSmallest as _ArrangedLargestToSmallest };
 
 /**
  * Arrange 2 objects in a tuple by their length.
@@ -50,7 +50,10 @@ export type {ArrangedLargestToSmallest as _ArrangedLargestToSmallest};
  * @public
  * @category Array
  */
-export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLength>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
+export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLength>(
+	a: A,
+	b: B,
+): ArrangedLargestToSmallest<A, B>;
 /**
  * Arrange 2 objects in a tuple by their size.
  * Useful for situations where you are iterating `a` or `b` depending on which is larger.
@@ -78,7 +81,10 @@ export function largeToSmall<A extends ObjectWithLength, B extends ObjectWithLen
  * @public
  * @category Array
  */
-export function largeToSmall<A extends ObjectWithSize, B extends ObjectWithSize>(a: A, b: B): ArrangedLargestToSmallest<A, B>;
+export function largeToSmall<A extends ObjectWithSize, B extends ObjectWithSize>(
+	a: A,
+	b: B,
+): ArrangedLargestToSmallest<A, B>;
 export function largeToSmall<A extends ObjectWithSize | ObjectWithLength, B extends ObjectWithSize | ObjectWithLength>(
 	a: A,
 	b: B,

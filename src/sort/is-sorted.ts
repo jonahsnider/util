@@ -1,4 +1,4 @@
-import type {CompareFn} from '../types.js';
+import type { CompareFn } from '../types.js';
 
 /**
  * Check whether an array is sorted according to a given compare function.

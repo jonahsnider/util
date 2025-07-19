@@ -1,4 +1,4 @@
-import {lastIndexOfFirstGroup} from '../iterable/last-index-of-first-group.js';
+import { lastIndexOfFirstGroup } from '../iterable/last-index-of-first-group.js';
 
 /**
  * Removes the leading `start` characters from a string.

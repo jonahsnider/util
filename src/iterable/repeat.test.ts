@@ -1,4 +1,4 @@
-import {repeat} from './repeat.js';
+import { repeat } from './repeat.js';
 
 it('repeats', () => {
 	expect([...repeat('a', 3)]).toStrictEqual(['a', 'a', 'a']);

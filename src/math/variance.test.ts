@@ -1,4 +1,4 @@
-import {variance} from './variance.js';
+import { variance } from './variance.js';
 
 it('calculates variance', () => {
 	expect(variance([1, 1, 1])).toBe(0);

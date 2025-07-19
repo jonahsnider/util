@@ -1,4 +1,4 @@
-import {same} from './same.js';
+import { same } from './same.js';
 
 it('reports identical arrays', () => {
 	const original = [1, 2, 3];

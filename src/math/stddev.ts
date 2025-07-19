@@ -1,5 +1,5 @@
-import {variance} from './variance.js';
-import {mean} from './mean.js';
+import { mean } from './mean.js';
+import { variance } from './variance.js';
 
 /**
  * Calculate the standard deviation of a sequence of numbers.

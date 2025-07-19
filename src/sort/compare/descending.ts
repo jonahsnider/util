@@ -1,11 +1,13 @@
-import type {Comparable, CompareFn} from '../../types.js';
+import type { Comparable, CompareFn } from '../../types.js';
 
 function descendingRaw(a: Comparable, b: Comparable): number {
 	// `null` is converted to 0 in comparisons
+	// biome-ignore lint/style/noNonNullAssertion: Comparing nullish values is fine
 	if (a! < b!) {
 		return 1;
 	}
 
+	// biome-ignore lint/style/noNonNullAssertion: Comparing nullish values is fine
 	if (a! > b!) {
 		return -1;
 	}
@@ -58,7 +60,11 @@ export function descending<T>(predicate: (element: T) => Comparable): CompareFn<
  * @category Sort
  */
 export function descending(a: Comparable, b: Comparable): number;
-export function descending<T>(aOrPredicate: Comparable | ((element: T) => Comparable), b: Comparable | void): number | CompareFn<T> {
+export function descending<T>(
+	aOrPredicate: Comparable | ((element: T) => Comparable),
+	// biome-ignore lint/suspicious/noConfusingVoidType: Can't compile without using void
+	b: Comparable | void,
+): number | CompareFn<T> {
 	if (b === undefined && typeof aOrPredicate === 'function') {
 		return (a2: T, b2: T) => descendingRaw(aOrPredicate(a2), aOrPredicate(b2));
 	}

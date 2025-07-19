@@ -1,4 +1,4 @@
-import {settled} from './settled.js';
+import { settled } from './settled.js';
 
 it('returns the resolved value', async () => {
 	const promise = Promise.resolve(1);

@@ -1,4 +1,4 @@
-import type {DirectionFn} from '../types.js';
+import type { DirectionFn } from '../types.js';
 
 /**
  * Perform a binary search to find an element in a sorted array.

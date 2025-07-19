@@ -1,4 +1,4 @@
-import {replace} from './replace.js';
+import { replace } from './replace.js';
 
 it('replaces elements from an array', () => {
 	const array = [1, 2, 3];

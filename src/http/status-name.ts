@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/naming-convention, @typescript-eslint/prefer-literal-enum-member */
-import {Status} from './status.js';
+/** biome-ignore-all lint/style/useLiteralEnumMembers: This is intentional */
+import { Status } from './status.js';
 
 /**
  * An enum mapping HTTP status codes to their names.
@@ -9,34 +9,34 @@ import {Status} from './status.js';
  * @category HTTP
  */
 export enum StatusName {
-	'Continue' = Status.Continue,
+	Continue = Status.Continue,
 	'Switching Protocols' = Status.SwitchingProtocols,
 	'Early Hints' = Status.EarlyHints,
-	'OK' = Status.Ok,
-	'Created' = Status.Created,
-	'Accepted' = Status.Accepted,
+	OK = Status.Ok,
+	Created = Status.Created,
+	Accepted = Status.Accepted,
 	'Non-Authoritative Information' = Status.NonAuthoritativeInformation,
 	'No Content' = Status.NoContent,
 	'Reset Content' = Status.ResetContent,
 	'Partial Content' = Status.PartialContent,
 	'Multiple Choices' = Status.MultipleChoices,
 	'Moved Permanently' = Status.MovedPermanently,
-	'Found' = Status.Found,
+	Found = Status.Found,
 	'See Other' = Status.SeeOther,
 	'Not Modified' = Status.NotModified,
 	'Temporary Redirect' = Status.TemporaryRedirect,
 	'Permanent Redirect' = Status.PermanentRedirect,
 	'Bad Request' = Status.BadRequest,
-	'Unauthorized' = Status.Unauthorized,
+	Unauthorized = Status.Unauthorized,
 	'Payment Required' = Status.PaymentRequired,
-	'Forbidden' = Status.Forbidden,
+	Forbidden = Status.Forbidden,
 	'Not Found' = Status.NotFound,
 	'Method Not Allowed' = Status.MethodNotAllowed,
 	'Not Acceptable' = Status.NotAcceptable,
 	'Proxy Authentication Required' = Status.ProxyAuthenticationRequired,
 	'Request Timeout' = Status.RequestTimeout,
-	'Conflict' = Status.Conflict,
-	'Gone' = Status.Gone,
+	Conflict = Status.Conflict,
+	Gone = Status.Gone,
 	'Length Required' = Status.LengthRequired,
 	'Precondition Failed' = Status.PreconditionFailed,
 	'Payload Too Large' = Status.PayloadTooLarge,

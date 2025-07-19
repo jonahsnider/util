@@ -1,4 +1,4 @@
-import {indexOfAll} from './index-of-all.js';
+import { indexOfAll } from './index-of-all.js';
 
 /**
  * Remove all elements equal to a given element from an array.

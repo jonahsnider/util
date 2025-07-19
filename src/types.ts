@@ -8,6 +8,8 @@
  *
  * @public
  */
+
+// biome-ignore lint/suspicious/noExplicitAny: This is safe
 export type AnyFunction<P extends any[] = any[], R = any> = (...args: P) => R;
 
 /**
@@ -25,7 +27,7 @@ export type UnknownFunction = (...args: unknown[]) => unknown;
  * @internal
  */
 type Sign = '-' | '+';
-export type {Sign as _Sign};
+export type { Sign as _Sign };
 
 /**
  * A value that can be converted to a Number.
@@ -34,18 +36,14 @@ export type {Sign as _Sign};
  * @public
  */
 export type NumberLike =
-	// Totally normal
-	| {[Symbol.toPrimitive](hint: 'number'): number}
+	| { [Symbol.toPrimitive](hint: 'number'): number }
 	| number
 	| bigint
-	// eslint-disable-next-line @typescript-eslint/no-wrapper-object-types
+	// biome-ignore lint/complexity/noBannedTypes: This is intentional
 	| Number
-	// Reasonable
 	| boolean
 	| `${number | bigint}`
 	| `${Sign | ''}${'Infinity'}`
-	// Strange
-	// eslint-disable-next-line @typescript-eslint/no-restricted-types
 	| null;
 
 /**

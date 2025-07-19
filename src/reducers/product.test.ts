@@ -1,4 +1,4 @@
-import {product} from './product.js';
+import { product } from './product.js';
 
 it('multiplies numbers', () => {
 	expect([2, 3].reduce(product)).toBe(6);

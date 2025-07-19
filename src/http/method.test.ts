@@ -1,5 +1,5 @@
 import * as http from 'node:http';
-import {Method} from './method.js';
+import { Method } from './method.js';
 
 describe('Method', () => {
 	it('has no invalid methods', () => {

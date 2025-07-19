@@ -10,5 +10,5 @@
 
 		"types": ["vitest/globals"]
 	},
-	"include": ["src", "types"]
+	"include": ["src", "rollup.config.ts", "types"]
 }

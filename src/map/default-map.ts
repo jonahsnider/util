@@ -1,4 +1,4 @@
-import type {AnyFunction} from '../types.js';
+import type { AnyFunction } from '../types.js';
 
 /**
  * A `Map` that has a default value for missing keys.
@@ -51,7 +51,6 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	 * const map = new DefaultMap(key => key.toUpperCase());
 	 * ```
 	 */
-	// eslint-disable-next-line @typescript-eslint/no-restricted-types
 	constructor(defaultValueFunction: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
 	constructor(
 		private readonly defaultValueOrDefaultValueFunction: Exclude<D, AnyFunction> | ((key: K) => D),
@@ -79,13 +78,13 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	 */
 	get(key: K): V | D {
 		if (this.has(key)) {
+			// biome-ignore lint/style/noNonNullAssertion: We already checked that the map has the key
 			return super.get(key)!;
 		}
 
 		// Compiler limitation
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 		return typeof this.defaultValueOrDefaultValueFunction === 'function'
-			? // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+			? // biome-ignore lint/suspicious/noExplicitAny: Compiler limitation
 				(this.defaultValueOrDefaultValueFunction as any)(key)
 			: this.defaultValueOrDefaultValueFunction;
 	}

@@ -1,9 +1,9 @@
-import {holes} from './holes.js';
+import { holes } from './holes.js';
 
 it('finds holes', () => {
-	// eslint-disable-next-line no-sparse-arrays
-	expect(holes([, ,])).toStrictEqual([0, 1]);
-	// eslint-disable-next-line no-sparse-arrays
+	// biome-ignore lint/suspicious/noSparseArray: This is intentional
+	expect(holes([,])).toStrictEqual([0, 1]);
+	// biome-ignore lint/suspicious/noSparseArray: This is intentional
 	expect(holes([0, , 2])).toStrictEqual([1]);
 });
 

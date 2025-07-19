@@ -1,14 +1,11 @@
-import {name} from './name.js';
+import { name } from './name.js';
 
 class Test {
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	static staticMethod() {}
 
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	method() {}
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
 function func() {}
 
 const test = new Test();

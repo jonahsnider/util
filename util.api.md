@@ -506,8 +506,8 @@ export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknow
 declare namespace Sort {
     export {
         ascending,
-        descending,
-        combine
+        combine,
+        descending
     }
 }
 export { Sort }
@@ -673,23 +673,23 @@ enum StatusName {
     // (undocumented)
     'Variant Also Negotiates' = 506,
     // (undocumented)
-    'Accepted' = 202,
+    Accepted = 202,
     // (undocumented)
-    'Conflict' = 409,
+    Conflict = 409,
     // (undocumented)
-    'Continue' = 100,
+    Continue = 100,
     // (undocumented)
-    'Created' = 201,
+    Created = 201,
     // (undocumented)
-    'Forbidden' = 403,
+    Forbidden = 403,
     // (undocumented)
-    'Found' = 302,
+    Found = 302,
     // (undocumented)
-    'Gone' = 410,
+    Gone = 410,
     // (undocumented)
-    'OK' = 200,
+    OK = 200,
     // (undocumented)
-    'Unauthorized' = 401
+    Unauthorized = 401
 }
 
 declare namespace StatusRange {

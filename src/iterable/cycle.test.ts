@@ -1,4 +1,4 @@
-import {cycle} from './cycle.js';
+import { cycle } from './cycle.js';
 
 it('cycles an array', () => {
 	expect([...cycle(['a', 'b'], 2)]).toStrictEqual(['a', 'b', 'a', 'b']);

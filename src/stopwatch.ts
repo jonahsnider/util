@@ -1,5 +1,3 @@
-/* eslint-disable n/prefer-global/process */
-
 /**
  * Helper to record the amount of time elapsed between 2 points during execution.
  *
@@ -35,7 +33,7 @@ export class Stopwatch {
 	 * ```
 	 */
 	static start(): Stopwatch {
-		const stopwatch = new this();
+		const stopwatch = new Stopwatch();
 
 		stopwatch.start();
 

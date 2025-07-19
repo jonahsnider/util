@@ -22,5 +22,5 @@
  * @category Array
  */
 export function fill<T>(length: number, value: T): T[] {
-	return Array.from({length}, () => value);
+	return Array.from({ length }, () => value);
 }

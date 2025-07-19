@@ -18,5 +18,5 @@
  * @category Regular expressions
  */
 export function regExpUnion(...regExps: RegExp[]): RegExp {
-	return new RegExp(regExps.map(regExp => `(${regExp.source})`).join('|'));
+	return new RegExp(regExps.map((regExp) => `(${regExp.source})`).join('|'));
 }

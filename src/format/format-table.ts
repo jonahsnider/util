@@ -1,5 +1,5 @@
-import type {Table} from '../array/index.js';
-import {maxColumnLength} from './max-column-length.js';
+import type { Table } from '../array/index.js';
+import { maxColumnLength } from './max-column-length.js';
 
 /**
  * Format a table into a string of equally sized columns.
@@ -19,5 +19,5 @@ import {maxColumnLength} from './max-column-length.js';
 export function formatTable(table: Table<string>, delimiter = ' '): string {
 	const maxLengths = maxColumnLength(table);
 
-	return table.map(row => row.map((column, index) => column.padEnd(maxLengths[index])).join(delimiter)).join('\n');
+	return table.map((row) => row.map((column, index) => column.padEnd(maxLengths[index])).join(delimiter)).join('\n');
 }

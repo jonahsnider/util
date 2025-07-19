@@ -1,4 +1,4 @@
-import {min} from './min.js';
+import { min } from './min.js';
 
 it('selects the smallest number', () => {
 	expect([3, 1, 2].reduce(min)).toBe(1);

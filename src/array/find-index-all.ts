@@ -23,7 +23,6 @@
 export function findIndexAll<T>(array: ArrayLike<T>, predicate: (element: T, index: number) => boolean): number[] {
 	const indexes: number[] = [];
 
-	// eslint-disable-next-line unicorn/no-for-loop
 	for (let index = 0; index < array.length; index++) {
 		const element = array[index];
 

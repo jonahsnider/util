@@ -1,4 +1,4 @@
-import {Sort} from '../index.js';
+import { Sort } from '../index.js';
 
 it('sorts', () => {
 	const array = [2, 3, 1, 3];
@@ -21,9 +21,9 @@ it('sorts Dates', () => {
 });
 
 it('sorts with predicate', () => {
-	const array = [{value: 2}, {value: 3}, {value: 1}, {value: 3}];
+	const array = [{ value: 2 }, { value: 3 }, { value: 1 }, { value: 3 }];
 
-	array.sort(Sort.descending(x => x.value));
+	array.sort(Sort.descending((x) => x.value));
 
-	expect(array).toStrictEqual([{value: 3}, {value: 3}, {value: 2}, {value: 1}]);
+	expect(array).toStrictEqual([{ value: 3 }, { value: 3 }, { value: 2 }, { value: 1 }]);
 });

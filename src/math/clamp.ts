@@ -21,7 +21,11 @@
  * @public
  * @category Math
  */
-export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(value: T, min: M1, max: M2): T | M1 | M2 {
+export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(
+	value: T,
+	min: M1,
+	max: M2,
+): T | M1 | M2 {
 	if (min > max) {
 		throw new RangeError('min exceeded max');
 	}

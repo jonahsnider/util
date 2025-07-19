@@ -1,4 +1,4 @@
-import {stddev} from './stddev.js';
+import { stddev } from './stddev.js';
 
 it('calculates standard deviation', () => {
 	expect(stddev([1, 1, 1])).toBe(0);

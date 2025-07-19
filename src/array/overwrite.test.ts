@@ -1,4 +1,4 @@
-import {overwrite} from './overwrite.js';
+import { overwrite } from './overwrite.js';
 
 it('overwrites ranges in arrays', () => {
 	const array = [1, 2, 3, 4, 5];

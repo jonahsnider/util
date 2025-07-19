@@ -1,4 +1,4 @@
-import {concatIterables} from './concat-iterables.js';
+import { concatIterables } from './concat-iterables.js';
 
 it('concatenates iterables', () => {
 	expect([...concatIterables([])]).toStrictEqual([]);

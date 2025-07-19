@@ -1,5 +1,5 @@
-import {Range} from './range.js';
-import {name} from './object/index.js';
+import { name } from './object/index.js';
+import { Range } from './range.js';
 
 it('throws on bad input', () => {
 	expect(() => new Range(2, 1)).toThrow(RangeError);

@@ -1,11 +1,11 @@
 import * as http from 'node:http';
-import {Status} from './status.js';
+import { Status } from './status.js';
 
 describe('Status', () => {
 	it('has no invalid status codes', () => {
 		const expected = new Set(Object.keys(http.STATUS_CODES));
 
-		const names = Object.values(Status).filter(element => typeof element === 'number');
+		const names = Object.values(Status).filter((element) => typeof element === 'number');
 
 		for (const received of names) {
 			expect(expected).toContain(received.toString());
@@ -64,7 +64,6 @@ describe('Status', () => {
 		expect(Status.HttpVersionNotSupported).toBe(505);
 		expect(Status.VariantAlsoNegotiates).toBe(506);
 		expect(Status.InsufficientStorage).toBe(507);
-		// eslint-disable-next-line @typescript-eslint/no-deprecated
 		expect(Status.LoopDetected).toBe(508);
 		expect(Status.NotExtended).toBe(510);
 		expect(Status.NetworkAuthenticationRequired).toBe(511);

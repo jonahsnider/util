@@ -1,5 +1,5 @@
-import {sum} from '../reducers/sum.js';
-import {mean} from './mean.js';
+import { sum } from '../reducers/sum.js';
+import { mean } from './mean.js';
 
 /**
  * Calculate the variance of a sequence of numbers.
@@ -22,5 +22,5 @@ import {mean} from './mean.js';
  * @category Math
  */
 export function variance(values: readonly number[], meanValue = mean(values)): number {
-	return values.map(value => (value - meanValue) ** 2).reduce(sum) / (values.length - 1);
+	return values.map((value) => (value - meanValue) ** 2).reduce(sum) / (values.length - 1);
 }

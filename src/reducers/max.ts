@@ -1,4 +1,4 @@
-import type {Comparable} from '../types.js';
+import type { Comparable } from '../types.js';
 
 /**
  * Get the largest value of the 2 parameters.
@@ -24,5 +24,6 @@ import type {Comparable} from '../types.js';
  * @category Reducers
  */
 export function max<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B {
+	// biome-ignore lint/style/noNonNullAssertion: Comparing nullish values is fine
 	return (currentValue as unknown as A)! > accumulator! ? currentValue : accumulator;
 }

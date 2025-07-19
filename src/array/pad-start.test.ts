@@ -1,4 +1,4 @@
-import {padStart} from './pad-start.js';
+import { padStart } from './pad-start.js';
 
 it('pads an array', () => {
 	const array = [1, 2, 3];
