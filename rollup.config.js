@@ -1,6 +1,7 @@
 import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
+import { codecovRollupPlugin } from '@codecov/rollup-plugin';
 
 /** @type {import('@rollup/plugin-terser').Options} */
 const terserConfig = {
@@ -43,7 +44,15 @@ const config = [
 			exports: 'named',
 			sourcemap: true,
 		},
-		plugins: [typescript({incremental: true}), babel({babelHelpers: 'bundled', extensions: ['.ts']}), terser(terserConfig)],
+		plugins: [
+			typescript({incremental: true}),
+			babel({babelHelpers: 'bundled', extensions: ['.ts']}),
+			terser(terserConfig),
+			codecovRollupPlugin({
+				enableBundleAnalysis: true,
+				bundleName: '@jonahsnider/util-umd',
+			}),
+		],
 	},
 	// ES Modules
 	{
@@ -54,7 +63,14 @@ const config = [
 			exports: 'named',
 			sourcemap: true,
 		},
-		plugins: [typescript({incremental: true}), terser(esmTerserConfig)],
+		plugins: [
+			typescript({incremental: true}),
+			terser(esmTerserConfig),
+			codecovRollupPlugin({
+				enableBundleAnalysis: true,
+				bundleName: '@jonahsnider/util-esm',
+			}),
+		],
 	},
 ];
 
