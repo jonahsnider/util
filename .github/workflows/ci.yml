@@ -21,6 +21,8 @@ jobs:
         run: yarn install --immutable
       - name: Build package
         run: yarn run build
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Upload compiled package
         uses: actions/upload-artifact@v4
         with:
@@ -49,29 +51,6 @@ jobs:
         with:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
-  size:
-    name: Calculate bundle size
-
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-
-    env:
-      CI_JOB_NUMBER: 1
-
-    steps:
-      - name: Checkout git repository
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 'lts/*'
-          cache: 'yarn'
-      - name: Install dependencies with Yarn
-        run: yarn install --immutable
-      - name: Build
-        run: yarn run build
-      - name: Calculate bundle size
-        run: yarn run size
   style:
     name: Check style
 
@@ -134,7 +113,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
-    needs: [unit-test, style, size, validate-api, lint]
+    needs: [unit-test, style, validate-api, lint]
 
     # Only run on main branch
     if: ${{ github.ref  == 'refs/heads/main' }}
