@@ -23,11 +23,6 @@ jobs:
         run: yarn run build
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      - name: Upload compiled package
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist
   unit-test:
     name: Unit tests
 
