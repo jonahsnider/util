@@ -50,5 +50,6 @@ export function enumHas<T extends EnumValue>(Enum: Enum<T>, value: unknown): val
 	// biome-ignore lint/style/noNonNullAssertion: We already checked that the lookup has the key
 	const values = lookup.get(Enum)!;
 
+	// biome-ignore lint/suspicious/noExplicitAny: This is safe
 	return values.has(value as any);
 }
