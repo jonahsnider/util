@@ -922,6 +922,7 @@ __metadata:
     semantic-release: "npm:24.2.7"
     size-limit: "npm:11.2.0"
     tsd: "npm:0.32.0"
+    tslib: "npm:2.8.1"
     typedoc: "npm:0.28.7"
     typescript: "npm:5.8.3"
     vitest: "npm:3.2.4"
@@ -11310,7 +11311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0":
+"tslib@npm:2.8.1, tslib@npm:^2.4.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10/3e2e043d5c2316461cb54e5c7fe02c30ef6dccb3384717ca22ae5c6b5bc95232a6241df19c622d9c73b809bea33b187f6dbc73030963e29950c2141bc32a79f7
