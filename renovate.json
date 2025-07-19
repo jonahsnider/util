@@ -1,10 +1,3 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["@jonahsnider"],
-	"packageRules": [
-		{
-			"groupName": "size-limit",
-			"packagePatterns": ["^size-limit$", "^@size-limit/"]
-		}
-	]
+	"extends": ["github>jonahsnider/renovate-config"]
 }
