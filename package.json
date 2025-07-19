@@ -37,6 +37,7 @@
 		"deploy": "semantic-release",
 		"docs": "typedoc --options ./typedoc.json",
 		"lint": "xo",
+		"lint:fix": "xo --fix",
 		"style": "prettier --check .",
 		"test": "vitest --run --no-isolate",
 		"test:coverage": "vitest --run --no-isolate --coverage",
