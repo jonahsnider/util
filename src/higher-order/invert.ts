@@ -1,7 +1,7 @@
 import type { NumberLike } from '../types.js';
 
 /**
- * Create a new function taht calls the provided `fn` and then inverts the sign of the result.
+ * Create a new function that calls the provided `fn` and then inverts the sign of the result.
  *
  * Time complexity: _O(1)_
  *
