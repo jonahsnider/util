@@ -45,7 +45,7 @@
 		"validate-api:local": "api-extractor run --local --verbose"
 	},
 	"devDependencies": {
-		"@babel/core": "7.28.0",
+		"@babel/core": "7.28.3",
 		"@biomejs/biome": "2.1.4",
 		"@codecov/rollup-plugin": "1.9.1",
 		"@microsoft/api-extractor": "7.52.10",
