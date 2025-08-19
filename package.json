@@ -48,7 +48,7 @@
 		"@babel/core": "7.28.3",
 		"@biomejs/biome": "2.2.0",
 		"@codecov/rollup-plugin": "1.9.1",
-		"@microsoft/api-extractor": "7.52.10",
+		"@microsoft/api-extractor": "7.52.11",
 		"@rollup/plugin-babel": "6.0.4",
 		"@rollup/plugin-terser": "0.4.4",
 		"@rollup/plugin-typescript": "12.1.4",
