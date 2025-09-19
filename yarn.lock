@@ -847,7 +847,7 @@ __metadata:
     "@rollup/plugin-babel": "npm:6.0.4"
     "@rollup/plugin-terser": "npm:0.4.4"
     "@rollup/plugin-typescript": "npm:12.1.4"
-    "@tsconfig/node16": "npm:16.1.4"
+    "@tsconfig/node16": "npm:16.1.5"
     "@types/node": "npm:22.18.6"
     "@vitest/coverage-v8": "npm:3.2.4"
     "@vitest/ui": "npm:3.2.4"
@@ -2224,10 +2224,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node16@npm:16.1.4":
-  version: 16.1.4
-  resolution: "@tsconfig/node16@npm:16.1.4"
-  checksum: 10/99ed9232899f6e92b2c05cd7c7d16bae7dd9250d14d1af5d8f280023a47960c14c1ba4184e600231a21d70f02c2b2dba3ceb92e643b57aede1eaee2232a732c4
+"@tsconfig/node16@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@tsconfig/node16@npm:16.1.5"
+  checksum: 10/29b10a44ce15e0a9e0987b95e9fb73b671a77dfff91b8d2e041e106006cf14f2276ac73d40c19b0a90a85acf2381e868a905215e8216b1244f95ad7903b87f6e
   languageName: node
   linkType: hard
 
