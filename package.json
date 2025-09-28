@@ -56,7 +56,7 @@
 		"@types/node": "22.18.6",
 		"@vitest/coverage-v8": "3.2.4",
 		"@vitest/ui": "3.2.4",
-		"rollup": "4.52.2",
+		"rollup": "4.52.3",
 		"semantic-release": "24.2.9",
 		"tsd": "0.33.0",
 		"tslib": "2.8.1",
