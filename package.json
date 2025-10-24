@@ -46,7 +46,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "7.28.4",
-		"@biomejs/biome": "2.2.6",
+		"@biomejs/biome": "2.2.7",
 		"@codecov/rollup-plugin": "1.9.1",
 		"@microsoft/api-extractor": "7.53.1",
 		"@rollup/plugin-babel": "6.1.0",
