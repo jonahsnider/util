@@ -876,7 +876,7 @@ __metadata:
     "@microsoft/api-extractor": "npm:7.53.3"
     "@rollup/plugin-babel": "npm:6.1.0"
     "@rollup/plugin-terser": "npm:0.4.4"
-    "@rollup/plugin-typescript": "npm:12.1.4"
+    "@rollup/plugin-typescript": "npm:12.3.0"
     "@tsconfig/node16": "npm:16.1.6"
     "@types/node": "npm:22.18.12"
     "@vitest/coverage-v8": "npm:3.2.4"
@@ -1626,9 +1626,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-typescript@npm:12.1.4":
-  version: 12.1.4
-  resolution: "@rollup/plugin-typescript@npm:12.1.4"
+"@rollup/plugin-typescript@npm:12.3.0":
+  version: 12.3.0
+  resolution: "@rollup/plugin-typescript@npm:12.3.0"
   dependencies:
     "@rollup/pluginutils": "npm:^5.1.0"
     resolve: "npm:^1.22.1"
@@ -1641,7 +1641,7 @@ __metadata:
       optional: true
     tslib:
       optional: true
-  checksum: 10/c2082e225fb445ee75ca4195fa6794bbcdfe8d2a88ad105121939072c9dc049d0d429a44e32ceb96d060200d507c217209b10c4e2b76a45da11c4181a0c6cf62
+  checksum: 10/b9c14df24d1c5f09408e498bbc8a7b2394f0e3030abcd796f364a2c18135207f2002b3975f86ce57affb7270a26f91fba66268f11a7b5fc149872072d9c3e432
   languageName: node
   linkType: hard
 
