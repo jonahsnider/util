@@ -78,12 +78,12 @@ describe(`${MathMap.name}#${MathMap.prototype.root.name}`, () => {
 
 	it('roots values', () => {
 		const map = new MathMap<string>(27 ** 3);
-		const FLOATING_POINT_PRECISION_LOSS_1 = -7.105_427_357_601_002e-15;
-		const FLOATING_POINT_PRECISION_LOSS_2 = -4.440_892_098_500_626e-16;
+		const expectedValue1 = (27 ** 3) ** (1 / 3);
+		const expectedValue2 = expectedValue1 ** (1 / 3);
 
-		expect(map.root('a', 3)).toBe(27 + FLOATING_POINT_PRECISION_LOSS_1);
-		expect(map).toStrictEqual(new MathMap(27 ** 3, [['a', 27 + FLOATING_POINT_PRECISION_LOSS_1]]));
-		expect(map.root('a', 3)).toBe(3 + FLOATING_POINT_PRECISION_LOSS_2);
-		expect(map).toStrictEqual(new MathMap(27 ** 3, [['a', 3 + FLOATING_POINT_PRECISION_LOSS_2]]));
+		expect(map.root('a', 3)).toBe(expectedValue1);
+		expect(map).toStrictEqual(new MathMap(27 ** 3, [['a', expectedValue1]]));
+		expect(map.root('a', 3)).toBe(expectedValue2);
+		expect(map).toStrictEqual(new MathMap(27 ** 3, [['a', expectedValue2]]));
 	});
 });
