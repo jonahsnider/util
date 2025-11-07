@@ -45,7 +45,6 @@ declare namespace Bitwise {
         xor
     }
 }
-export { Bitwise }
 
 // @public
 export function capitalize<T extends string>(text: T): Capitalize<T>;
@@ -158,13 +157,16 @@ export function holes(array: ArrayLike<unknown>): number[];
 
 declare namespace Http {
     export {
-        StatusRange,
         Method,
         Status,
-        StatusName
+        StatusName,
+        informational,
+        success,
+        redirects,
+        clientErrors,
+        serverErrors
     }
 }
-export { Http }
 
 // @public
 export function identical<V>(a: readonly V[], b: readonly V[]): boolean;
@@ -510,7 +512,6 @@ declare namespace Sort {
         descending
     }
 }
-export { Sort }
 
 // @public
 export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, V>>, compareFunction: CompareFn<V>): Array<[K, V]>;
@@ -690,16 +691,6 @@ enum StatusName {
     OK = 200,
     // (undocumented)
     Unauthorized = 401
-}
-
-declare namespace StatusRange {
-    export {
-        informational,
-        success,
-        redirects,
-        clientErrors,
-        serverErrors
-    }
 }
 
 // @public

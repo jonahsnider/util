@@ -1,11 +1,10 @@
-import * as Http from './http/index.js';
-
 export * from './array/index.js';
 export * from './auto-percentage.js';
 export * from './cards.js';
 export * from './enum/index.js';
 export * from './format/index.js';
 export * from './higher-order/index.js';
+export * as Http from './http/index.js';
 export * from './identical/index.js';
 export * from './iterable/index.js';
 export * from './map/index.js';
@@ -22,4 +21,3 @@ export * from './stopwatch.js';
 export * from './string/index.js';
 export * from './to-digits.js';
 export type * from './types.js';
-export { Http };
