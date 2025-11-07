@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { and } from './index.js';
 
 it('returns bitwise AND', () => {

@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { xor } from './xor.js';
 
 it('returns bitwise XOR', () => {

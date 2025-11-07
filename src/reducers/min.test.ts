@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { min } from './min.js';
 
 it('selects the smallest number', () => {

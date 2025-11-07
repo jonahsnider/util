@@ -1,4 +1,5 @@
 import { expectNotType, expectType } from 'tsd';
+import { expect, it } from 'vitest';
 import { sample } from './sample.js';
 
 // Compilation tests

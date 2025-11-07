@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { first } from './first.js';
 
 it('returns first element if take is undefined', () => {

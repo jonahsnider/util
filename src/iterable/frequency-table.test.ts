@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { frequencyTable } from './frequency-table.js';
 
 it('constructs a frequency table', () => {

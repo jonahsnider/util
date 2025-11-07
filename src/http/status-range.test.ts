@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { clientErrors, informational, redirects, serverErrors, success } from './status-range.js';
 
 describe('Informational', () => {

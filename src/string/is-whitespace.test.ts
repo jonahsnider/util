@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { isWhitespace } from './is-whitespace.js';
 
 it('returns true for empty strings', () => {

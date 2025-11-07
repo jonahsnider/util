@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { fill } from './fill.js';
 
 it('fills arrays', () => {

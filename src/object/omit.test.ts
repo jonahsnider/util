@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { omit } from './omit.js';
 
 it('omits keys from a plain object', () => {

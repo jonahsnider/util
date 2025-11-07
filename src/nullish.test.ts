@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { nullish } from './nullish.js';
 
 it('returns true for nullish values', () => {

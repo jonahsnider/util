@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { trimEnd } from './trim-end.js';
 
 const STRING = 'aabbaa';

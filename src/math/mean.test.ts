@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { mean } from './mean.js';
 
 const numbers = [1, 2, 3];

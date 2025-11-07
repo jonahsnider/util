@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { cycle } from './cycle.js';
 
 it('cycles an array', () => {

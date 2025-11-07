@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { lines } from './lines.js';
 
 it('splits strings into lines', () => {

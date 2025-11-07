@@ -1,4 +1,5 @@
 import * as http from 'node:http';
+import { describe, expect, it } from 'vitest';
 import { Method } from './method.js';
 
 describe('Method', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { MathMap } from './math-map.js';
 
 describe(`${MathMap.name}#${MathMap.prototype.add.name}`, () => {

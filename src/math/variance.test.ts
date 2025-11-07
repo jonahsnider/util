@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { variance } from './variance.js';
 
 it('calculates variance', () => {

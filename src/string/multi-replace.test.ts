@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { multiReplace } from './multi-replace.js';
 
 it('replaces strings', () => {

@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { normaldist } from './normaldist.js';
 
 it('calculates normal distribution', () => {

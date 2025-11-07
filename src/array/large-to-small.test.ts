@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { largeToSmall } from './large-to-small.js';
 
 it('arranges by length', () => {

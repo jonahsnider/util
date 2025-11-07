@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { product } from './product.js';
 
 it('multiplies numbers', () => {

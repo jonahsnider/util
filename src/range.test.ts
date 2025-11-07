@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { name } from './object/index.js';
 import { Range } from './range.js';
 

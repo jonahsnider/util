@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { iteratorToIterable } from './iterator-to-iterable.js';
 import { skip } from './skip.js';
 

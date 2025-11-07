@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { jaccardIndex } from './jaccard-index.js';
 
 it('returns 1 for empty sets', () => {

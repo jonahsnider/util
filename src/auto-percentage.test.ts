@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { AutoPercentage } from './auto-percentage.js';
 
 it('generates percentages', () => {

@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { invert } from './invert.js';
 
 function sort(a: number, b: number) {

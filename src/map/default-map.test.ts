@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { DefaultMap } from './default-map.js';
 
 describe(`${DefaultMap.name}#${DefaultMap.prototype.get.name}`, () => {

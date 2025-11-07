@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { randomInt } from './random-int.js';
 
 it('generates random integers', () => {

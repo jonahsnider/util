@@ -1,4 +1,5 @@
 import { expectType } from 'tsd';
+import { expect, it } from 'vitest';
 import { partition } from './partition.js';
 
 it('partitions an array', () => {

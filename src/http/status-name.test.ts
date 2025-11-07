@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { Status } from './status.js';
 import { StatusName } from './status-name.js';
 

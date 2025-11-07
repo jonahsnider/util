@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { ascending } from './compare/index.js';
 import { isSorted } from './is-sorted.js';
 

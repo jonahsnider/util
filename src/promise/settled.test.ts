@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { settled } from './settled.js';
 
 it('returns the resolved value', async () => {

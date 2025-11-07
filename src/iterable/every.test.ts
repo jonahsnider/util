@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { every } from './every.js';
 
 it('returns true if every element passes the predicate', () => {

@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { sortObject } from './sort-object.js';
 
 it('sorts', () => {

@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { iteratorToIterable } from './iterator-to-iterable.js';
 
 it('creates an iterable that returns the iterator', () => {

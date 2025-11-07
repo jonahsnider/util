@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { name } from './name.js';
 
 class Test {

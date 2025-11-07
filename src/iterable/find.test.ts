@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { find } from './find.js';
 
 it('finds elements', () => {

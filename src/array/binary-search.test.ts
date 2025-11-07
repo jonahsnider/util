@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { binarySearch } from './binary-search.js';
 
 it('searches', () => {

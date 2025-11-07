@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { mapRepeat } from './map-repeat.js';
 
 it('repeats', () => {

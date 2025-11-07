@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { repeat } from './repeat.js';
 
 it('repeats', () => {

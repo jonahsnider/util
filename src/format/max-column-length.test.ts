@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import type { Table } from '../array/index.js';
 import { maxColumnLength } from './max-column-length.js';
 

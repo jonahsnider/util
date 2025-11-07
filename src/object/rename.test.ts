@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { rename } from './rename.js';
 
 it('renames', () => {

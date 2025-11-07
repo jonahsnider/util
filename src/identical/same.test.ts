@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { same } from './same.js';
 
 it('reports identical arrays', () => {

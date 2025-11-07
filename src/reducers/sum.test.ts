@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { sum } from './sum.js';
 
 // Compilation tests

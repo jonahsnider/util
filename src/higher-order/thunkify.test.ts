@@ -1,3 +1,4 @@
+import { expect, it, vitest } from 'vitest';
 import { thunkify } from './thunkify.js';
 
 it('thunks', () => {

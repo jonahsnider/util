@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { mapFill } from './map-fill.js';
 
 it('fills arrays', () => {

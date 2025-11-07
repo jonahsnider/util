@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { or } from './index.js';
 
 it('returns bitwise OR', () => {

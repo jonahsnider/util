@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { isAnagram } from './is-anagram.js';
 
 it('returns true for anagrams', () => {

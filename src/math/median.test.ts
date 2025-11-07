@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { median } from './median.js';
 
 it('calculates the median', () => {

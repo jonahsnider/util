@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { lastIndexOfFirstGroup } from './last-index-of-first-group.js';
 
 it("gets the last index of starts with of iterables that don't start with the value", () => {

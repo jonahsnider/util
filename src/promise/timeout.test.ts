@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { timeout } from './timeout.js';
 
 it('returns the resolved value', async () => {

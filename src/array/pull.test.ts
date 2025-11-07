@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { pull } from './pull.js';
 
 it('pulls from an array', () => {

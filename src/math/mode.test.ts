@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { mode } from './mode.js';
 
 it('calculates the mode', () => {

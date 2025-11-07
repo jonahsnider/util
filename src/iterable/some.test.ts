@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { includes } from './includes.js';
 import { some } from './some.js';
 

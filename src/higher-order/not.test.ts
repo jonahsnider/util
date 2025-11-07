@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { nullish } from '../nullish.js';
 import { not } from './not.js';
 

@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { toDigits } from './to-digits.js';
 
 it('formats numbers', () => {

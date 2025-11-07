@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { overwrite } from './overwrite.js';
 
 it('overwrites ranges in arrays', () => {

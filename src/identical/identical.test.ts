@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { identical } from './identical.js';
 
 it('throws on bad input', () => {

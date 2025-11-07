@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { indexOfAll } from './index-of-all.js';
 
 it('finds all indexes', () => {

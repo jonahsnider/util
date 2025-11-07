@@ -5,9 +5,7 @@
 		"moduleResolution": "node",
 
 		"outDir": "dist",
-		"declaration": true,
-
-		"types": ["vitest/globals", "node"]
+		"declaration": true
 	},
 	"include": ["src", "types"]
 }

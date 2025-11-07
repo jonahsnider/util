@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { enumHas } from './enum-has.js';
 
 enum Enum {

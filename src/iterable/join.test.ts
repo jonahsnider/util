@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { join } from './join.js';
 
 it('joins elements', () => {

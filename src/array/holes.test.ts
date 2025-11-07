@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { holes } from './holes.js';
 
 it('finds holes', () => {

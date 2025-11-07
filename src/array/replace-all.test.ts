@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { replaceAll } from './replace-all.js';
 
 it('replaces all elements from an array', () => {

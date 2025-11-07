@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { pick } from './pick.js';
 
 it('picks keys from a plain object', () => {

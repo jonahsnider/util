@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { relativeStddev } from '../math/index.js';
 import { shuffle } from './shuffle.js';
 

@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { chunk } from './chunk.js';
 
 it('chunks arrays', () => {

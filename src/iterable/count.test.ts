@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { count } from './count.js';
 
 it('counts elements without a predicate', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { trimStart } from './trim-start.js';
 
 const STRING = 'aabbaa';

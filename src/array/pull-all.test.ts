@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { pullAll } from './pull-all.js';
 
 it('pulls all elements from an array', () => {
