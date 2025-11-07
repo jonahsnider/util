@@ -4,11 +4,10 @@
 		"module": "ESNext",
 		"moduleResolution": "node",
 
-		"emitDeclarationOnly": true,
+		"outDir": "dist",
 		"declaration": true,
-		"declarationDir": "dist/tsc_types",
 
 		"types": ["vitest/globals"]
 	},
-	"include": ["src", "rollup.config.ts", "types"]
+	"include": ["src", "types"]
 }
