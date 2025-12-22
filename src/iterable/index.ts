@@ -8,7 +8,6 @@ export * from './find.js';
 export * from './frequency-table.js';
 export * from './includes.js';
 export * from './is-empty.js';
-export * from './iterator-to-iterable.js';
 export * from './join.js';
 export * from './last-index-of-first-group.js';
 export * from './map-repeat.js';

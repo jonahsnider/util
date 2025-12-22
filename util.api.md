@@ -211,9 +211,6 @@ export function isSorted<T>(array: ArrayLike<T>, compareFunction: CompareFn<T>):
 export function isWhitespace(string: string): boolean;
 
 // @public
-export function iteratorToIterable<T>(iterator: Iterator<T>): Iterable<T>;
-
-// @public
 export function jaccardIndex<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): number;
 
 // @public
