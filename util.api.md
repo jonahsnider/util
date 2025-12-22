@@ -498,9 +498,6 @@ export type _Sign = '-' | '+';
 // @public
 export function skip<T>(iterable: Iterable<T>, count: number): Iterator<T>;
 
-// @public
-export function some<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean;
-
 declare namespace Sort {
     export {
         ascending,

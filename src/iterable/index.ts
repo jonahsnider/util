@@ -16,4 +16,3 @@ export * from './map-repeat.js';
 export * from './partition.js';
 export * from './repeat.js';
 export * from './skip.js';
-export * from './some.js';
