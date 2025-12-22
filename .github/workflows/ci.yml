@@ -15,8 +15,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 'lts/*'
-          cache: 'yarn'
+          node-version: "lts/*"
+          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build package
@@ -35,8 +35,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 'lts/*'
-          cache: 'yarn'
+          node-version: "lts/*"
+          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Run tests
@@ -58,8 +58,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 'lts/*'
-          cache: 'yarn'
+          node-version: "lts/*"
+          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Lint
@@ -76,8 +76,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 'lts/*'
-          cache: 'yarn'
+          node-version: "lts/*"
+          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build package
@@ -95,14 +95,20 @@ jobs:
     # Only run on main branch
     if: ${{ github.ref  == 'refs/heads/main' }}
 
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for trusted publishing and npm provenance
+
     steps:
       - name: Checkout git repository
         uses: actions/checkout@v6
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 'lts/*'
-          cache: 'yarn'
+          node-version: "lts/*"
+          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build
@@ -113,4 +119,3 @@ jobs:
         run: yarn run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
