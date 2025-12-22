@@ -120,9 +120,6 @@ export type EnumValue = number | string;
 export function fill<T>(length: number, value: T): T[];
 
 // @public
-export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolean): T | undefined;
-
-// @public
 export function findIndexAll<T>(array: ArrayLike<T>, predicate: (element: T, index: number) => boolean): number[];
 
 // @public

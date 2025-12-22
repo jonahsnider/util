@@ -4,7 +4,6 @@ export * from './concat-iterables.js';
 export * from './count.js';
 export * from './cycle.js';
 export * from './duplicates.js';
-export * from './find.js';
 export * from './frequency-table.js';
 export * from './includes.js';
 export * from './is-empty.js';
