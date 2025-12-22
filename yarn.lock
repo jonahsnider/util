@@ -476,7 +476,6 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:2.3.10"
     "@microsoft/api-extractor": "npm:7.55.2"
-    "@tsconfig/node16": "npm:16.1.8"
     "@types/node": "npm:24.10.4"
     "@vitest/coverage-v8": "npm:4.0.16"
     "@vitest/ui": "npm:4.0.16"
@@ -1495,13 +1494,6 @@ __metadata:
   version: 1.0.0
   resolution: "@standard-schema/spec@npm:1.0.0"
   checksum: 10/aee780cc1431888ca4b9aba9b24ffc8f3073fc083acc105e3951481478a2f4dc957796931b2da9e2d8329584cf211e4542275f188296c1cdff3ed44fd93a8bc8
-  languageName: node
-  linkType: hard
-
-"@tsconfig/node16@npm:16.1.8":
-  version: 16.1.8
-  resolution: "@tsconfig/node16@npm:16.1.8"
-  checksum: 10/094676ab09f94724435f878de8372ecf940272e221ba76e4e0168197123ef73243994dbd46ae6a2fcd39f3924f2dea8e7f6f2abc12ac9903ddfec492ccd33130
   languageName: node
   linkType: hard
 
