@@ -25,7 +25,6 @@ import type { NumberLike } from '../types.js';
  * @public
  * @category Higher order
  */
-
 // biome-ignore lint/suspicious/noExplicitAny: This is safe
 export function invert<T extends (...parameters: any[]) => NumberLike>(func: T): T {
 	// biome-ignore lint/style/noNonNullAssertion: This is safe

@@ -8,7 +8,6 @@
  *
  * @public
  */
-
 // biome-ignore lint/suspicious/noExplicitAny: This is safe
 export type AnyFunction<P extends any[] = any[], R = any> = (...args: P) => R;
 
@@ -71,7 +70,6 @@ export type Comparable = string | NumberLike;
  *
  * @public
  */
-
 export type DirectionFn<T> = (element: T) => number;
 
 /**
@@ -80,7 +78,6 @@ export type DirectionFn<T> = (element: T) => number;
  * @public
  * @category Sort
  */
-
 export type CompareFn<T = Comparable> = Exclude<Parameters<T[]['sort']>[0], undefined>;
 
 /**
