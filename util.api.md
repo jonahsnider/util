@@ -126,12 +126,6 @@ export function find<T>(iterable: Iterable<T>, predicate: (element: T) => boolea
 export function findIndexAll<T>(array: ArrayLike<T>, predicate: (element: T, index: number) => boolean): number[];
 
 // @public
-export function first<T>(iterable: Iterable<T>, take?: undefined): T | undefined;
-
-// @public
-export function first<T>(iterable: Iterable<T>, take: number): Iterable<T>;
-
-// @public
 export function firstIndexOfLastGroup<T>(array: ArrayLike<T>, value: T): number;
 
 // @public
