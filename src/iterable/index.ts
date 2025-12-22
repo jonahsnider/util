@@ -15,4 +15,3 @@ export * from './last-index-of-first-group.js';
 export * from './map-repeat.js';
 export * from './partition.js';
 export * from './repeat.js';
-export * from './skip.js';

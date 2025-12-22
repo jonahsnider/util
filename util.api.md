@@ -495,9 +495,6 @@ export function shuffle<T>(array: ArrayLike<T> & Iterable<T>, mutate: false): T[
 // @internal
 export type _Sign = '-' | '+';
 
-// @public
-export function skip<T>(iterable: Iterable<T>, count: number): Iterator<T>;
-
 declare namespace Sort {
     export {
         ascending,
