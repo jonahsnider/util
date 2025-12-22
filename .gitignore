@@ -224,11 +224,5 @@ $RECYCLE.BIN/
 # Generated documentation
 docs_out
 
-# TypeScript compiler output
-tsc_*
-
-# Rollup cache
-.rollup.cache
-
 # API Extractor
 temp

@@ -10,7 +10,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!.rollup.cache", "!dist"]
+		"includes": ["**", "!temp", "!dist"]
 	},
 	"formatter": {
 		"enabled": true,
