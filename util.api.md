@@ -117,12 +117,6 @@ export function enumHas<T extends EnumValue>(Enum: Enum<T>, value: unknown): val
 export type EnumValue = number | string;
 
 // @public
-export function every<T, S extends T>(iterable: Iterable<T>, predicate: (element: T) => element is S): iterable is Iterable<S>;
-
-// @public
-export function every<T>(iterable: Iterable<T>, predicate: (element: T) => unknown): boolean;
-
-// @public
 export function fill<T>(length: number, value: T): T[];
 
 // @public
