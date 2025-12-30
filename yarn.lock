@@ -485,7 +485,7 @@ __metadata:
     typedoc: "npm:0.28.15"
     typescript: "npm:5.9.3"
     vitest: "npm:4.0.16"
-    zshy: "npm:^0.6.0"
+    zshy: "npm:^0.7.0"
   languageName: unknown
   linkType: soft
 
@@ -7372,9 +7372,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zshy@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "zshy@npm:0.6.0"
+"zshy@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "zshy@npm:0.7.0"
   dependencies:
     arg: "npm:^5.0.2"
     fast-glob: "npm:^3.3.2"
@@ -7383,6 +7383,6 @@ __metadata:
     typescript: ">5.5.0"
   bin:
     zshy: dist/index.cjs
-  checksum: 10/c8a150683f5d55783cc5ca1780ddaafbad25061a2cd11d4263973051cde96bd2a72bfd074016ac06c49609b4bfa1f8e3d9383ddc031d53841a869eb9a1114a6f
+  checksum: 10/228035b9239512df6cd9ad1b397304ae03e914b34feb4e9ac648e1f8c18d4a10ffb9f3bdade4f2dc8e2b788db91ba497beab428578468efcd4f975a1eb2ad482
   languageName: node
   linkType: hard
