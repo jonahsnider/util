@@ -13,12 +13,11 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v6
       - name: Setup Yarn
-        uses: yarnpkg/setup-action@main
+        uses: jonahsnider/setup-action@cache
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
-          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build package
@@ -35,12 +34,11 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v6
       - name: Setup Yarn
-        uses: yarnpkg/setup-action@main
+        uses: jonahsnider/setup-action@cache
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
-          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Run tests
@@ -60,12 +58,11 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v6
       - name: Setup Yarn
-        uses: yarnpkg/setup-action@main
+        uses: jonahsnider/setup-action@cache
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
-          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Lint
@@ -80,12 +77,11 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v6
       - name: Setup Yarn
-        uses: yarnpkg/setup-action@main
+        uses: jonahsnider/setup-action@cache
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
-          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build package
@@ -113,12 +109,11 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v6
       - name: Setup Yarn
-        uses: yarnpkg/setup-action@main
+        uses: jonahsnider/setup-action@cache
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
-          cache: "yarn"
       - name: Install dependencies with Yarn
         run: yarn install --immutable
       - name: Build
