@@ -431,6 +431,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@isaacs/brace-expansion@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "@isaacs/brace-expansion@npm:5.0.1"
+  dependencies:
+    "@isaacs/balanced-match": "npm:^4.0.1"
+  checksum: 10/aec226065bc4285436a27379e08cc35bf94ef59f5098ac1c026495c9ba4ab33d851964082d3648d56d63eb90f2642867bd15a3e1b810b98beb1a8c14efce6a94
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -475,7 +484,7 @@ __metadata:
   resolution: "@jonahsnider/util@workspace:."
   dependencies:
     "@biomejs/biome": "npm:2.3.13"
-    "@microsoft/api-extractor": "npm:7.56.0"
+    "@microsoft/api-extractor": "npm:7.56.2"
     "@types/node": "npm:24.10.10"
     "@vitest/coverage-v8": "npm:4.0.18"
     "@vitest/ui": "npm:4.0.18"
@@ -531,9 +540,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/api-extractor@npm:7.56.0":
-  version: 7.56.0
-  resolution: "@microsoft/api-extractor@npm:7.56.0"
+"@microsoft/api-extractor@npm:7.56.2":
+  version: 7.56.2
+  resolution: "@microsoft/api-extractor@npm:7.56.2"
   dependencies:
     "@microsoft/api-extractor-model": "npm:7.32.2"
     "@microsoft/tsdoc": "npm:~0.16.0"
@@ -541,17 +550,17 @@ __metadata:
     "@rushstack/node-core-library": "npm:5.19.1"
     "@rushstack/rig-package": "npm:0.6.0"
     "@rushstack/terminal": "npm:0.21.0"
-    "@rushstack/ts-command-line": "npm:5.1.7"
+    "@rushstack/ts-command-line": "npm:5.2.0"
     diff: "npm:~8.0.2"
     lodash: "npm:~4.17.15"
-    minimatch: "npm:10.0.3"
+    minimatch: "npm:10.1.2"
     resolve: "npm:~1.22.1"
     semver: "npm:~7.5.4"
     source-map: "npm:~0.6.1"
     typescript: "npm:5.8.2"
   bin:
     api-extractor: bin/api-extractor
-  checksum: 10/1d17344f2e4586f138a2cc04d0525efe6c63b1a519401036385f2e73d06c91e7692249233896fe654c70ce50fcbbf2a3aaccd7c340f6c22f8d487fc0d96f272a
+  checksum: 10/a71f1ec2851ab93cd5e24ac660aeb541f31a14c8c0376818c613ecbadaab9b697292702a29c016bd7d2c746034206dd0a40a981197d74d04f7d2fd5f57f376f2
   languageName: node
   linkType: hard
 
@@ -1241,15 +1250,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rushstack/ts-command-line@npm:5.1.7":
-  version: 5.1.7
-  resolution: "@rushstack/ts-command-line@npm:5.1.7"
+"@rushstack/ts-command-line@npm:5.2.0":
+  version: 5.2.0
+  resolution: "@rushstack/ts-command-line@npm:5.2.0"
   dependencies:
     "@rushstack/terminal": "npm:0.21.0"
     "@types/argparse": "npm:1.0.38"
     argparse: "npm:~1.0.9"
     string-argv: "npm:~0.3.1"
-  checksum: 10/fee27c1a3717bdc7b5ce33d9e5ae12ee918359ffee10434bf0a5d7fcecfd709f8b083e1a6dc0f5af455779fca7d85ca499c4837d643d4724797a019e23dbdb51
+  checksum: 10/96b754b605fbc25b71416e2731c0f8dc2284c15c13b54463c64c1a7e99b0ec48c965ff5d9bd49cf31e0aadbe644f527df017dbc423d933dca989b614eba21171
   languageName: node
   linkType: hard
 
@@ -4449,12 +4458,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:10.0.3":
-  version: 10.0.3
-  resolution: "minimatch@npm:10.0.3"
+"minimatch@npm:10.1.2":
+  version: 10.1.2
+  resolution: "minimatch@npm:10.1.2"
   dependencies:
-    "@isaacs/brace-expansion": "npm:^5.0.0"
-  checksum: 10/d5b8b2538b367f2cfd4aeef27539fddeee58d1efb692102b848e4a968a09780a302c530eb5aacfa8c57f7299155fb4b4e85219ad82664dcef5c66f657111d9b8
+    "@isaacs/brace-expansion": "npm:^5.0.1"
+  checksum: 10/6f0ef975463739207144e411bdd54f7205ce38770b162fa3bc4c9be4987a16cb20d0962a82f26c2372598cfba90faa97b327239d303b529b774f17681c163b46
   languageName: node
   linkType: hard
 
