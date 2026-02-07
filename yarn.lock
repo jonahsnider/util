@@ -484,7 +484,7 @@ __metadata:
   resolution: "@jonahsnider/util@workspace:."
   dependencies:
     "@biomejs/biome": "npm:2.3.13"
-    "@microsoft/api-extractor": "npm:7.56.2"
+    "@microsoft/api-extractor": "npm:7.56.3"
     "@types/node": "npm:24.10.11"
     "@vitest/coverage-v8": "npm:4.0.18"
     "@vitest/ui": "npm:4.0.18"
@@ -540,9 +540,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/api-extractor@npm:7.56.2":
-  version: 7.56.2
-  resolution: "@microsoft/api-extractor@npm:7.56.2"
+"@microsoft/api-extractor@npm:7.56.3":
+  version: 7.56.3
+  resolution: "@microsoft/api-extractor@npm:7.56.3"
   dependencies:
     "@microsoft/api-extractor-model": "npm:7.32.2"
     "@microsoft/tsdoc": "npm:~0.16.0"
@@ -552,7 +552,7 @@ __metadata:
     "@rushstack/terminal": "npm:0.21.0"
     "@rushstack/ts-command-line": "npm:5.2.0"
     diff: "npm:~8.0.2"
-    lodash: "npm:~4.17.15"
+    lodash: "npm:~4.17.23"
     minimatch: "npm:10.1.2"
     resolve: "npm:~1.22.1"
     semver: "npm:~7.5.4"
@@ -560,7 +560,7 @@ __metadata:
     typescript: "npm:5.8.2"
   bin:
     api-extractor: bin/api-extractor
-  checksum: 10/a71f1ec2851ab93cd5e24ac660aeb541f31a14c8c0376818c613ecbadaab9b697292702a29c016bd7d2c746034206dd0a40a981197d74d04f7d2fd5f57f376f2
+  checksum: 10/bb6deae976063eb4c242f8809908bf6d5da04097668f0476ec16107fa6f463bc30c9d3c2145b937920b452f359ca16a444b3e60651e589e14c9391df2c212038
   languageName: node
   linkType: hard
 
@@ -4186,10 +4186,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:~4.17.15":
-  version: 4.17.21
-  resolution: "lodash@npm:4.17.21"
-  checksum: 10/c08619c038846ea6ac754abd6dd29d2568aa705feb69339e836dfa8d8b09abbb2f859371e86863eda41848221f9af43714491467b5b0299122431e202bb0c532
+"lodash@npm:~4.17.23":
+  version: 4.17.23
+  resolution: "lodash@npm:4.17.23"
+  checksum: 10/82504c88250f58da7a5a4289f57a4f759c44946c005dd232821c7688b5fcfbf4a6268f6a6cdde4b792c91edd2f3b5398c1d2a0998274432cff76def48735e233
   languageName: node
   linkType: hard
 
