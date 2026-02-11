@@ -6,7 +6,7 @@ jobs:
   build:
     name: Build
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 5
 
     steps:
@@ -27,7 +27,7 @@ jobs:
   unit-test:
     name: Unit tests
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 5
 
     steps:
@@ -51,7 +51,7 @@ jobs:
   lint:
     name: Lint
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 5
 
     steps:
@@ -70,7 +70,7 @@ jobs:
   validate-api:
     name: Validate API
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 5
 
     steps:
@@ -91,7 +91,7 @@ jobs:
   publish:
     name: Publish
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 15
 
     needs: [unit-test, validate-api, lint]
