@@ -705,16 +705,6 @@
         }
       }
     },
-    "@isaacs/brace-expansion@npm:^5.0.1": {
-      "checksum": "b446c5a1d1372f68da8dfdef03bbd2306fa885e6bd74cf713c2f2161495c5b91702e6a2963d76e29ccc414bdf425c9ae7af6514d7f4245176f447208519354b5",
-      "resolution": {
-        "resolution": "@isaacs/brace-expansion@npm:5.0.1",
-        "version": "5.0.1",
-        "dependencies": {
-          "@isaacs/balanced-match": "^4.0.1"
-        }
-      }
-    },
     "@isaacs/cliui@npm:^8.0.2": {
       "checksum": "e4349efe8765aeb860bebe0b4722e9dd5001137282c85f9d4a8f3049ac51029a533c0730b15d15fa7d0fdab2d828d609fe817a160b3407ff62772133ac8e8f84",
       "resolution": {
@@ -789,22 +779,22 @@
         }
       }
     },
-    "@microsoft/api-extractor@npm:7.56.3": {
-      "checksum": "8f8cdcdd853c864f288750a96ce0b1f2a5ba7e46dac4486f601793458390251a2a7bced2707dde4379b7eb879ba02a5ad0dae875b4fc7155196992c6050a902f",
+    "@microsoft/api-extractor@npm:7.57.4": {
+      "checksum": "8e3833cae7ed90bd004ca1e7246993177c82414b4a0d288d8b103214c9e7a55fb437bd21c76173b334c6ad05e2e2a9f65aaaa2dbd8b8cbdae2c29e62a91917b3",
       "resolution": {
-        "resolution": "@microsoft/api-extractor@npm:7.56.3",
-        "version": "7.56.3",
+        "resolution": "@microsoft/api-extractor@npm:7.57.4",
+        "version": "7.57.4",
         "dependencies": {
-          "@microsoft/api-extractor-model": "7.32.2",
+          "@microsoft/api-extractor-model": "7.33.2",
           "@microsoft/tsdoc": "~0.16.0",
           "@microsoft/tsdoc-config": "~0.18.0",
-          "@rushstack/node-core-library": "5.19.1",
-          "@rushstack/rig-package": "0.6.0",
-          "@rushstack/terminal": "0.21.0",
-          "@rushstack/ts-command-line": "5.2.0",
+          "@rushstack/node-core-library": "5.20.2",
+          "@rushstack/rig-package": "0.7.1",
+          "@rushstack/terminal": "0.22.2",
+          "@rushstack/ts-command-line": "5.3.2",
           "diff": "~8.0.2",
           "lodash": "~4.17.23",
-          "minimatch": "10.1.2",
+          "minimatch": "10.2.1",
           "resolve": "~1.22.1",
           "semver": "~7.5.4",
           "source-map": "~0.6.1",
@@ -812,15 +802,15 @@
         }
       }
     },
-    "@microsoft/api-extractor-model@npm:7.32.2": {
-      "checksum": "b6c5b4b4cf5379fcde7af1bb6cd3c1924ca1d4b59dca3afb125d2e3beb113f7340a749ebb5c678c29678ba116d63cb09f3ef96fb139d88c4cc00ba6912024878",
+    "@microsoft/api-extractor-model@npm:7.33.2": {
+      "checksum": "eb001686e6850f4424cbb3c0a1414acd270b30de7403f537cfffe53373ee7ffb8be843a7975b9960d6e4726ab4a39879f36582e4fbdd35514712596d89c5bd08",
       "resolution": {
-        "resolution": "@microsoft/api-extractor-model@npm:7.32.2",
-        "version": "7.32.2",
+        "resolution": "@microsoft/api-extractor-model@npm:7.33.2",
+        "version": "7.33.2",
         "dependencies": {
           "@microsoft/tsdoc": "~0.16.0",
           "@microsoft/tsdoc-config": "~0.18.0",
-          "@rushstack/node-core-library": "5.19.1"
+          "@rushstack/node-core-library": "5.20.2"
         }
       }
     },
@@ -1666,11 +1656,11 @@
         }
       }
     },
-    "@rushstack/node-core-library@npm:5.19.1": {
-      "checksum": "dea3ff8f3b95962645931ff7887387b94932157d720349c4f8cdd60bf63f71f7f82ef0e65de9d97bd3a6364194e4643386d7d76b78f4b6701286cf62ddacb858",
+    "@rushstack/node-core-library@npm:5.20.2": {
+      "checksum": "b163fa4fb7a0bbe59e8937b1222c242644a510fadac1ccf38e866f0eb05059d55ba74d1fe2607bdca2b1202f6c49820e17a2d78c52d41c52b31980e0cf4fc83c",
       "resolution": {
-        "resolution": "@rushstack/node-core-library@npm:5.19.1",
-        "version": "5.19.1",
+        "resolution": "@rushstack/node-core-library@npm:5.20.2",
+        "version": "5.20.2",
         "dependencies": {
           "ajv": "~8.13.0",
           "ajv-draft-04": "~1.0.0",
@@ -1689,11 +1679,11 @@
         ]
       }
     },
-    "@rushstack/problem-matcher@npm:0.1.1": {
-      "checksum": "527adc8e32d912453e42582e9590d74e5ac1328be9529df9d6e5e3136c322d5829c4be39f42b7e8b2cb5749beb097bf94e27c744bd2c2ddfb6252390c9f05690",
+    "@rushstack/problem-matcher@npm:0.2.1": {
+      "checksum": "d6f37af3b2b2be7aa7638322da9999c7feb286e0163d673ca8addd82963a85f61771ddbba4591975cc7e417001c321088202d7c227261b98939f05893423c902",
       "resolution": {
-        "resolution": "@rushstack/problem-matcher@npm:0.1.1",
-        "version": "0.1.1",
+        "resolution": "@rushstack/problem-matcher@npm:0.2.1",
+        "version": "0.2.1",
         "peerDependencies": {
           "@types/node": "*"
         },
@@ -1702,25 +1692,25 @@
         ]
       }
     },
-    "@rushstack/rig-package@npm:0.6.0": {
-      "checksum": "4fc3377d491c3e3c41ab1c23762fa7ab5a2aa0adceb8dcc5785877f6ac592035308a7e41147369036e110f3e9e3551b880e142d5fc2d9118143c7637207127a2",
+    "@rushstack/rig-package@npm:0.7.1": {
+      "checksum": "ec91a522c788b34552d157692afc324883e0acc9b7879f2f42024014404dc6a0b99581ed439b8d78d73dc16458dcbe0a3f3ac97d626604b2bb50c6f8c3e40305",
       "resolution": {
-        "resolution": "@rushstack/rig-package@npm:0.6.0",
-        "version": "0.6.0",
+        "resolution": "@rushstack/rig-package@npm:0.7.1",
+        "version": "0.7.1",
         "dependencies": {
           "resolve": "~1.22.1",
           "strip-json-comments": "~3.1.1"
         }
       }
     },
-    "@rushstack/terminal@npm:0.21.0": {
-      "checksum": "9d68f489c7428c49a845be2477cbb3272f700aed3c7f9a2051b367293c6f4405aaff66a2a23e7a7aa70964226c83aa69b06ab70fd17201f7287cf4612fb2463b",
+    "@rushstack/terminal@npm:0.22.2": {
+      "checksum": "e45ec0cc28ee30c3a47cdcc5e4d188fdb289fdd1d5e68d78cbdf15de3621e0a90497659aa51df6faeeb34386f45e567833bfb95c725c34d03f558b00e7702e61",
       "resolution": {
-        "resolution": "@rushstack/terminal@npm:0.21.0",
-        "version": "0.21.0",
+        "resolution": "@rushstack/terminal@npm:0.22.2",
+        "version": "0.22.2",
         "dependencies": {
-          "@rushstack/node-core-library": "5.19.1",
-          "@rushstack/problem-matcher": "0.1.1",
+          "@rushstack/node-core-library": "5.20.2",
+          "@rushstack/problem-matcher": "0.2.1",
           "supports-color": "~8.1.1"
         },
         "peerDependencies": {
@@ -1731,13 +1721,13 @@
         ]
       }
     },
-    "@rushstack/ts-command-line@npm:5.2.0": {
-      "checksum": "80f7d025bbe06b4039150cfc04b5d46f70dd45717609799afcda2451dcb0f925a540ded2ac7d788e9f005c7370197d8eb9a47165ead485d4a9b1d360dc81513e",
+    "@rushstack/ts-command-line@npm:5.3.2": {
+      "checksum": "ef2f20f091dc67414975b67b449237f83db45cfa9523b8f63fa8b96880f380eb6e7d7d2392a2c3d857bf15b4df520f75fcb77c169d53edddf6b8c92e2a071dd1",
       "resolution": {
-        "resolution": "@rushstack/ts-command-line@npm:5.2.0",
-        "version": "5.2.0",
+        "resolution": "@rushstack/ts-command-line@npm:5.3.2",
+        "version": "5.3.2",
         "dependencies": {
-          "@rushstack/terminal": "0.21.0",
+          "@rushstack/terminal": "0.22.2",
           "@types/argparse": "1.0.38",
           "argparse": "~1.0.9",
           "string-argv": "~0.3.1"
@@ -2538,6 +2528,13 @@
         "version": "1.0.2"
       }
     },
+    "balanced-match@npm:^4.0.2": {
+      "checksum": "0937dcd47aba5993c19496185e506f26d534542c04c66d4851a1a3f4a39b64c63d56f02e6336cd2b96a21e9a98aa603d38d6a89b4473effbcf9fb0e357dcdcb8",
+      "resolution": {
+        "resolution": "balanced-match@npm:4.0.4",
+        "version": "4.0.4"
+      }
+    },
     "before-after-hook@npm:^4.0.0": {
       "checksum": "57c102f8514aaa4f510daace12380e69b030a3adb6af47fb9d75e46c7d3e6fb5cc50a50443033c31afbfbc1c140fcf68d71f1f90c8a74f668e7b5a023bc2569a",
       "resolution": {
@@ -2580,6 +2577,16 @@
         "version": "2.0.1",
         "dependencies": {
           "balanced-match": "^1.0.0"
+        }
+      }
+    },
+    "brace-expansion@npm:^5.0.2": {
+      "checksum": "20d6f157af9968fe14f2569eaab403b6ffc9cc206555f2fddc22074ee5eac355e8f17f9b02ee9c571a1c40ba88916ec96fe5265e75ae3e76ba8e303e563febc6",
+      "resolution": {
+        "resolution": "brace-expansion@npm:5.0.3",
+        "version": "5.0.3",
+        "dependencies": {
+          "balanced-match": "^4.0.2"
         }
       }
     },
@@ -4979,13 +4986,13 @@
         "version": "1.0.1"
       }
     },
-    "minimatch@npm:10.1.2": {
-      "checksum": "104359209159f1623f31d97c33623ec54411909db7a1d05fd8ef77587084962b9fa2ac83dda4df78706304459bac84ef4732c61ed699d3e00f7e7e24446315f1",
+    "minimatch@npm:10.2.1": {
+      "checksum": "64a73877737430d73d3a7cb490c0740520836fc26e7547f6861a32c0d3be673aee924c0a297600c4def0c4c54991a19bc727951a1aecd733f4491819978f9b0c",
       "resolution": {
-        "resolution": "minimatch@npm:10.1.2",
-        "version": "10.1.2",
+        "resolution": "minimatch@npm:10.2.1",
+        "version": "10.2.1",
         "dependencies": {
-          "@isaacs/brace-expansion": "^5.0.1"
+          "brace-expansion": "^5.0.2"
         }
       }
     },
