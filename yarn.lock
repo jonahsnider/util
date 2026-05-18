@@ -2,6 +2,9 @@
   "__metadata": {
     "version": 9
   },
+  "workspaces": {
+    "@jonahsnider/util": "f7c1e5d0a0a85a0334a3e8a899fc4b015d9d1d1234c2547bcf5b9dd4a9356ffa9df87047304b0d2cf52d31b8f500678d52363eb8c2f5de2950fa35d10dee5f47"
+  },
   "entries": {
     "@actions/core@npm:^1.11.1": {
       "checksum": "c9a17cae4c7fe74f179e7e479cd080577cb151db9e4a841ca85b0494e37e9a9af71e86244c84f7f28dc2fb449c2a0d01edc98a602b9922b0eb875ba107f6c333",
@@ -2244,13 +2247,6 @@
         "version": "3.0.1"
       }
     },
-    "abbrev@npm:^4.0.0": {
-      "checksum": "0ad02eb101301762d144fde084e3e9d6426ee0297be95d00745ee9d7ad1697eb512bc0b5969e9334560b77f855574360823dec11d006d9ce65e9a85165aef85a",
-      "resolution": {
-        "resolution": "abbrev@npm:4.0.0",
-        "version": "4.0.0"
-      }
-    },
     "agent-base@npm:^7.0.2, agent-base@npm:^7.1.0": {
       "checksum": "95b4a42662ce69c4ac396825dfd126de01325d2a1f041a9d84763bdb07c70564eacee8c7c221030bc67bf8b3b3de1cb526bee14994386d1cac5967573b3ae638",
       "resolution": {
@@ -4260,13 +4256,6 @@
         "version": "3.1.1"
       }
     },
-    "isexe@npm:^4.0.0": {
-      "checksum": "86147d8f37f283c3537f3990bc09e9442bfe3d26f3fe7923e6419ad7d32f0675e5e696272b3fbe470e307e25bc7a8a032707faf39720d162805727d76611ec56",
-      "resolution": {
-        "resolution": "isexe@npm:4.0.0",
-        "version": "4.0.0"
-      }
-    },
     "issue-parser@npm:^7.0.0": {
       "checksum": "b361675bb24c10ba604fdf7413429b2f8c73ead46366f54e469efa95aba4686b4a41c1d6e16f84cd9c30ffff7904a02d45848994b4253cb1da02a179899e7ce7",
       "resolution": {
@@ -5233,25 +5222,6 @@
         }
       }
     },
-    "node-gyp@npm:*": {
-      "checksum": "fbcaaa905f0fe512012d2d6cfed8bacb07044b4e2a78a1145ef6ad4da121bbaf175a654f058108bea4386d8f425bdb482a4624f4da73bfd9625fe85e6bf20da2",
-      "resolution": {
-        "resolution": "node-gyp@npm:12.2.0",
-        "version": "12.2.0",
-        "dependencies": {
-          "env-paths": "^2.2.0",
-          "exponential-backoff": "^3.1.1",
-          "graceful-fs": "^4.2.6",
-          "make-fetch-happen": "^15.0.0",
-          "nopt": "^9.0.0",
-          "proc-log": "^6.0.0",
-          "semver": "^7.3.5",
-          "tar": "^7.5.4",
-          "tinyglobby": "^0.2.12",
-          "which": "^6.0.0"
-        }
-      }
-    },
     "node-gyp@npm:^11.0.0": {
       "checksum": "84a353a0a259ddf869137d313f63fe45e5f158e5a862f722867fccc657ccd916bdaa9981d1122c235d78795cda72fb2312b18130a64989ee8fea59c59b27d706",
       "resolution": {
@@ -5297,16 +5267,6 @@
         "version": "8.1.0",
         "dependencies": {
           "abbrev": "^3.0.0"
-        }
-      }
-    },
-    "nopt@npm:^9.0.0": {
-      "checksum": "497ba6eec832eae637f48d1b26644c3cf23a34468e00846d15bc751aff7bc247f4c602cf4c300a3eb656b5ea392d0cd858fc7376b2ad9579207e205ac63e7381",
-      "resolution": {
-        "resolution": "nopt@npm:9.0.0",
-        "version": "9.0.0",
-        "dependencies": {
-          "abbrev": "^4.0.0"
         }
       }
     },
@@ -7014,20 +6974,6 @@
         }
       }
     },
-    "tar@npm:^7.5.4": {
-      "checksum": "9a35976292ae0214224cc78c80f6d64eccb1251c799e52f1cde7c11f2dc29c94bc73c97a2ebf40cb52d3c75412315069c5f214b6d2119a6fd0265a5d8b491df5",
-      "resolution": {
-        "resolution": "tar@npm:7.5.7",
-        "version": "7.5.7",
-        "dependencies": {
-          "@isaacs/fs-minipass": "^4.0.0",
-          "chownr": "^3.0.0",
-          "minipass": "^7.1.2",
-          "minizlib": "^3.1.0",
-          "yallist": "^5.0.0"
-        }
-      }
-    },
     "temp-dir@npm:^3.0.0": {
       "checksum": "291c1a0541b8e7a4d71538283fecc67fbf1c59e439b0d93f2c9f29dab953ed55cb6489bbca780579faedefdf6af74e6d5780498a4e680fc051ebabc9763cf835",
       "resolution": {
@@ -7581,16 +7527,6 @@
         "version": "5.0.0",
         "dependencies": {
           "isexe": "^3.1.1"
-        }
-      }
-    },
-    "which@npm:^6.0.0": {
-      "checksum": "23f1a34e0baa175fc9a99ef338ef1f4eebd94e44e7f45a988816cff595b0c2825b356774b334ca022c91583a9da0a8a08681286cb0539816b356527269a7ba04",
-      "resolution": {
-        "resolution": "which@npm:6.0.1",
-        "version": "6.0.1",
-        "dependencies": {
-          "isexe": "^4.0.0"
         }
       }
     },
