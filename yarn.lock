@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "f7c1e5d0a0a85a0334a3e8a899fc4b015d9d1d1234c2547bcf5b9dd4a9356ffa9df87047304b0d2cf52d31b8f500678d52363eb8c2f5de2950fa35d10dee5f47"
+    "@jonahsnider/util": "44e129eac3a6692663d30e59c8dc8fcc4ef5c95429d50f330fcb3cc484ba98dacc49852c2dfbef6a46dcf47e5bcce65527575578af7f529410aa3961649cd3e4"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -7262,11 +7262,11 @@
         "version": "5.8.2"
       }
     },
-    "typescript@npm:5.9.3": {
-      "checksum": "55317d5ebb926ec9d67187e74fa5cfc50ce226f042671138514e20af6597932d3991211f3190131a62adfa43a73a79ac0445e59f35242b44f0384b2f9aca9db4",
+    "typescript@npm:6.0.3": {
+      "checksum": "4c4b3eed4bdd784df1cb0ef0996b7d18e17aa02797728256170087cf063fd39dd5df72f7c62d53f52126ec94d2f48fe03df0028e22bff8657039dfd802f20f95",
       "resolution": {
-        "resolution": "typescript@npm:5.9.3",
-        "version": "5.9.3"
+        "resolution": "typescript@npm:6.0.3",
+        "version": "6.0.3"
       }
     },
     "uc.micro@npm:^2.0.0, uc.micro@npm:^2.1.0": {
