@@ -65,7 +65,7 @@ export function chunk<T>(iterable: Iterable<T>, size: number): IterableIterator<
 export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(value: T, min: M1, max: M2): T | M1 | M2;
 
 // @public
-const clientErrors: Readonly<Range_2>;
+const clientErrors: Readonly<Range>;
 
 // @public
 function combine<T>(...compareFunctions: ReadonlyArray<CompareFn<T>>): CompareFn<T>;
@@ -169,7 +169,7 @@ export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean;
 export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[];
 
 // @public
-const informational: Readonly<Range_2>;
+const informational: Readonly<Range>;
 
 // @public
 export function invert<T extends (...parameters: any[]) => NumberLike>(func: T): T;
@@ -291,11 +291,10 @@ export function mode<T>(iterable: Iterable<T>): T[];
 export function multiReplace(string: string, replacements: Record<string, string>): string;
 
 // @public
-function name_2(ctor: new (...args: any[]) => any, method: AnyFunction): `${string}${'.' | '#'}${string}`;
+export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `${string}${'.' | '#'}${string}`;
 
 // @public
-function name_2(func: (new (...args: any[]) => any) | AnyFunction): string;
-export { name_2 as name }
+export function name(func: (new (...args: any[]) => any) | AnyFunction): string;
 
 // @public
 export function newDeck(): Card[];
@@ -384,21 +383,20 @@ export function random(min: number, max: number): number;
 export function randomInt(min: number, max: number): number;
 
 // @public
-class Range_2 {
+export class Range {
     [Symbol.iterator](): IterableIterator<Comparable>;
     constructor(
     lower: Comparable,
     upper: Comparable);
-    equals(range: Range_2): boolean;
-    static from(iterable: Iterable<Comparable>): Range_2;
+    equals(range: Range): boolean;
+    static from(iterable: Iterable<Comparable>): Range;
     has(value: Comparable): boolean;
-    intersects(range: Range_2): boolean;
-    isSubrange(range: Range_2): boolean;
-    isSuperrange(range: Range_2): boolean;
+    intersects(range: Range): boolean;
+    isSubrange(range: Range): boolean;
+    isSuperrange(range: Range): boolean;
     lower: Comparable;
     upper: Comparable;
 }
-export { Range_2 as Range }
 
 // @public
 export enum Rank {
@@ -431,7 +429,7 @@ export enum Rank {
 }
 
 // @public
-const redirects: Readonly<Range_2>;
+const redirects: Readonly<Range>;
 
 // @public
 export function regExpUnion(...regExps: RegExp[]): RegExp;
@@ -469,7 +467,7 @@ export function same<T>(...iterables: readonly [Iterable<T>, Iterable<T>, ...Arr
 export function sample<T>(array: ArrayLike<T>): T | undefined;
 
 // @public
-const serverErrors: Readonly<Range_2>;
+const serverErrors: Readonly<Range>;
 
 // @public
 export function settled<E, T>(promise: PromiseLike<T>): Promise<Result<T, E>>;
@@ -683,7 +681,7 @@ export class Stopwatch {
 }
 
 // @public
-const success: Readonly<Range_2>;
+const success: Readonly<Range>;
 
 // @public
 export enum Suit {
