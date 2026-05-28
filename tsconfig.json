@@ -1,20 +1,24 @@
 {
-	"include": ["src/**/*.ts"],
 	// Visit https://aka.ms/tsconfig to read more about this file
 	"compilerOptions": {
 		// File Layout
-		"rootDir": "./src",
+		"rootDir": ".",
 		"outDir": "./dist",
 
 		// Environment Settings
 		// See also https://aka.ms/tsconfig/module
 		"module": "nodenext",
 		"target": "esnext",
+		// For nodejs:
+		"lib": ["esnext"],
+		"types": ["node"],
 
 		// Other Outputs
 		"sourceMap": true,
 		"declaration": true,
 		"declarationMap": true,
+		// For zshy
+		"ignoreDeprecations": "6.0",
 
 		// Stricter Typechecking Options
 		"noUncheckedIndexedAccess": false,
