@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { nullish } from './nullish.js';
 
 it('returns true for nullish values', () => {

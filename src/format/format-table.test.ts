@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import type { Table } from '../array/index.js';
 import { formatTable } from './format-table.js';
 

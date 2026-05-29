@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { or } from './index.js';
 
 it('returns bitwise OR', () => {

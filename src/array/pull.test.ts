@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { pull } from './pull.js';
 
 it('pulls from an array', () => {

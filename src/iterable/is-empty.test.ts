@@ -1,5 +1,5 @@
 import { expectType } from 'tsd';
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { isEmpty } from './is-empty.js';
 
 it('returns true for empty iterables', () => {

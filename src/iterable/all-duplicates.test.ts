@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { allDuplicates } from './all-duplicates.js';
 
 it('returns duplicate elements', () => {

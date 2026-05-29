@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { holes } from './holes.js';
 
 it('finds holes', () => {
