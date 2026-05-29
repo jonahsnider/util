@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { min } from './min.js';
 
 it('selects the smallest number', () => {

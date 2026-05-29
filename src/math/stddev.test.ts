@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { stddev } from './stddev.js';
 
 it('calculates standard deviation', () => {

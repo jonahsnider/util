@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { cycle } from './cycle.js';
 
 it('cycles an array', () => {

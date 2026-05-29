@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { median } from './median.js';
 
 it('calculates the median', () => {

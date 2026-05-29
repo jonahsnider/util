@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { largeToSmall } from './large-to-small.js';
 
 it('arranges by length', () => {

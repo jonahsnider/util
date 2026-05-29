@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { triangularNumber } from './triangular-number.js';
 
 it('throws if value is less than 0', () => {

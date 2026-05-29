@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { padEnd } from './pad-end.js';
 
 it('pads an array', () => {
