@@ -5,7 +5,6 @@ import { sample } from './sample.js';
 // Compilation tests
 expectType<undefined>(sample([]));
 expectType<undefined>(sample([] as const));
-// biome-ignore lint/suspicious/noExplicitAny: Testing that function doesn't return any
 expectNotType<any>(sample([]));
 expectType<1 | undefined>(sample([1]));
 

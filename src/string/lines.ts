@@ -17,7 +17,6 @@ const LINE_REG_EXP = /\r\n?|\n/gim;
  *
  * @returns An array of lines
  *
- * @public
  * @category String
  */
 export function lines(string: string): string[] {

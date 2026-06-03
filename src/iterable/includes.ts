@@ -21,7 +21,6 @@
  *
  * @returns `true` if any element is truthy, `false` otherwise
  *
- * @public
  * @category Iterable
  */
 export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean {

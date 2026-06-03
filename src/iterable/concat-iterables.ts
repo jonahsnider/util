@@ -14,7 +14,6 @@
  *
  * @returns A single iterable containing all the elements of all the iterables
  *
- * @public
  * @category Iterable
  */
 export function* concatIterables<T>(...iterables: ReadonlyArray<Iterable<T>>): Iterable<T> {

@@ -19,7 +19,6 @@ import { firstIndexOfLastGroup } from './first-index-of-last-group.js';
  *
  * @see {@link (trimStart:1)} to do the same thing but trim from the start of a string
  *
- * @public
  * @category String
  */
 export function trimEnd(string: string, end: string): string;
@@ -42,7 +41,6 @@ export function trimEnd(string: string, end: string): string;
  *
  * @see {@link (trimStart:2)} to do the same thing but trim from the start of an array
  *
- * @public
  * @category Array
  */
 export function trimEnd<T>(array: readonly T[], end: T): T[];

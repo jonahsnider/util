@@ -16,7 +16,6 @@
  *
  * @returns Truncated text
  *
- * @public
  * @category String
  */
 export function truncate<T extends string>(text: T, maxLength: number, suffix = ''): T | `${string}${typeof suffix}` {

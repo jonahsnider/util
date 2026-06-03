@@ -18,7 +18,6 @@
  *
  * @returns A new object containing the picked entries
  *
- * @public
  * @category Object
  */
 export function pick<T, K extends keyof T>(object: T, keys: readonly K[]): Pick<T, K> {

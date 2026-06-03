@@ -30,10 +30,8 @@ import type { AnyFunction } from '../types.js';
  *
  * @returns A string name for the method
  *
- * @public
  * @category Object
  */
-// biome-ignore lint/suspicious/noExplicitAny: Constructor signature requires any for generic parameters and return type
 export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `${string}${'.' | '#'}${string}`;
 /**
  * Get the name of a function or class.
@@ -60,12 +58,9 @@ export function name(ctor: new (...args: any[]) => any, method: AnyFunction): `$
  *
  * @returns The name of `func`
  *
- * @public
  * @category Object
  */
-// biome-ignore lint/suspicious/noExplicitAny: Constructor signature requires any for generic parameters and return type
 export function name(func: (new (...args: any[]) => any) | AnyFunction): string;
-// biome-ignore lint/suspicious/noExplicitAny: Constructor signature requires any for generic parameters and return type
 export function name(ctorOrFunction: AnyFunction | (new (...args: any[]) => any), func?: AnyFunction): string {
 	if (func) {
 		const className = name(ctorOrFunction);

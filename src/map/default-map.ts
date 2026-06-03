@@ -18,7 +18,6 @@ import type { AnyFunction } from '../types.js';
  * map.get('a'); // 'A'
  * ```
  *
- * @public
  * @category Map
  */
 export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
@@ -78,14 +77,12 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
 	 */
 	get(key: K): V | D {
 		if (this.has(key)) {
-			// biome-ignore lint/style/noNonNullAssertion: We already checked that the map has the key
 			return super.get(key)!;
 		}
 
 		// Compiler limitation
 		return typeof this.defaultValueOrDefaultValueFunction === 'function'
-			? // biome-ignore lint/suspicious/noExplicitAny: Compiler limitation
-				(this.defaultValueOrDefaultValueFunction as any)(key)
+			? (this.defaultValueOrDefaultValueFunction as any)(key)
 			: this.defaultValueOrDefaultValueFunction;
 	}
 }

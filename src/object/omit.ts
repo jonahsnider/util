@@ -20,7 +20,6 @@ import { difference } from '../set/index.js';
  *
  * @returns A new object containing the entries that were not omitted
  *
- * @public
  * @category Object
  */
 export function omit<T extends object, K extends keyof T>(object: T, keys: readonly K[]): Omit<T, K> {

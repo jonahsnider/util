@@ -22,11 +22,8 @@ import type { NumberLike } from '../types.js';
  *
  * @returns The inverted return value of `fn`
  *
- * @public
  * @category Higher order
  */
-// biome-ignore lint/suspicious/noExplicitAny: This is safe
 export function invert<T extends (...parameters: any[]) => NumberLike>(func: T): T {
-	// biome-ignore lint/style/noNonNullAssertion: This is safe
 	return ((...parameters) => -func(...parameters)!) as T;
 }

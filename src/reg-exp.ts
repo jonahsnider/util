@@ -14,7 +14,6 @@
  *
  * @returns A new regular expression
  *
- * @public
  * @category Regular expressions
  */
 export function regExpUnion(...regExps: RegExp[]): RegExp {

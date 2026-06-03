@@ -18,7 +18,6 @@
  *
  * @returns The bitwise XOR of `a` and `b`
  *
- * @public
  * @category Reducers
  */
 export function xor(a: number, b: number): number;
@@ -42,7 +41,6 @@ export function xor(a: number, b: number): number;
  *
  * @returns The bitwise XOR of `a` and `b`
  *
- * @public
  * @category Reducers
  */
 export function xor(a: bigint, b: bigint): bigint;

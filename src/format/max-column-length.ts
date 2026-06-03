@@ -12,7 +12,6 @@ import type { Table } from '../array/index.js';
  *
  * @returns An array of lengths
  *
- * @public
  * @category Format
  */
 export function maxColumnLength(table: Table<string>): number[] {

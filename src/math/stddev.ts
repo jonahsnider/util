@@ -18,7 +18,6 @@ import { variance } from './variance.js';
  *
  * @returns The standard deviation of `values`
  *
- * @public
  * @category Math
  */
 export function stddev(values: readonly number[], meanValue = mean(values)): number {

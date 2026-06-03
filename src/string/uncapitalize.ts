@@ -16,7 +16,6 @@
  *
  * @returns Uncapitalized string
  *
- * @public
  * @category String
  */
 export function uncapitalize<T extends string>(text: T): Uncapitalize<T> {

@@ -20,10 +20,8 @@ import type { Comparable } from '../types.js';
  *
  * @returns `previousValue` or `currentValue`, whichever is lower
  *
- * @public
  * @category Reducers
  */
 export function min<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B {
-	// biome-ignore lint/style/noNonNullAssertion: Comparing nullish values is fine
 	return (currentValue as unknown as A)! < accumulator! ? currentValue : accumulator;
 }

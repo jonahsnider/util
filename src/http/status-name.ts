@@ -1,11 +1,9 @@
-/** biome-ignore-all lint/style/useLiteralEnumMembers: This is intentional */
 import { Status } from './status.js';
 
 /**
  * An enum mapping HTTP status codes to their names.
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status | MDN docs}
  *
- * @public
  * @category HTTP
  */
 export enum StatusName {

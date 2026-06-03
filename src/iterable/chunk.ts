@@ -54,7 +54,6 @@ function* chunkIterable<T>(iterable: Iterable<T>, size: number): IterableIterato
  *
  * @returns The new array containing chunks of the original `array`
  *
- * @public
  * @category Array
  */
 export function chunk<T>(array: readonly T[], size: number): Table<T>;
@@ -90,7 +89,6 @@ export function chunk<T>(array: readonly T[], size: number): Table<T>;
  *
  * @returns An iterator yieliding new arrays containing chunks of the original `iterable`
  *
- * @public
  * @category Iterable
  */
 export function chunk<T>(iterable: Iterable<T>, size: number): IterableIterator<T[]>;

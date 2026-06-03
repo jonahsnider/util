@@ -2,9 +2,7 @@ import { expect, it } from 'vite-plus/test';
 import { holes } from './holes.js';
 
 it('finds holes', () => {
-	// biome-ignore lint/suspicious/noSparseArray: This is intentional
 	expect(holes([, ,])).toStrictEqual([0, 1]);
-	// biome-ignore lint/suspicious/noSparseArray: This is intentional
 	expect(holes([0, , 2])).toStrictEqual([1]);
 });
 

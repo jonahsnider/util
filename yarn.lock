@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "b321ffb2e6eb2742fb87b2c176756182f1bc901fae8ac5cb65f5c05aa9fa15e6ee3c37f79e893b86cc5a172b12cd03a50fa9d1557c1ffe86b339faad98c43b7e"
+    "@jonahsnider/util": "ebe4943d30d8addcaa78a0e7a4e93773bf0a99ca187c6aac043445e5c3bf31ea45b7e81496f32acb132801ec5408c07f83c017687a739045e3c037a32122f1bc"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -134,165 +134,6 @@
       "resolution": {
         "resolution": "@bcoe/v8-coverage@npm:1.0.2",
         "version": "1.0.2"
-      }
-    },
-    "@biomejs/biome@npm:2.3.14": {
-      "checksum": "d32798488de1b4e1cc490f3a2d499484633a7ec29c1e638ccf2e038485ba787b9e9f73ce6f9037b3b0f8d43e18e5ce938933138774844dee3cc6b4001e3861a2",
-      "resolution": {
-        "resolution": "@biomejs/biome@npm:2.3.14",
-        "version": "2.3.14",
-        "dependencies": {
-          "@biomejs/cli-darwin-arm64": "2.3.14",
-          "@biomejs/cli-darwin-x64": "2.3.14",
-          "@biomejs/cli-linux-arm64": "2.3.14",
-          "@biomejs/cli-linux-arm64-musl": "2.3.14",
-          "@biomejs/cli-linux-x64": "2.3.14",
-          "@biomejs/cli-linux-x64-musl": "2.3.14",
-          "@biomejs/cli-win32-arm64": "2.3.14",
-          "@biomejs/cli-win32-x64": "2.3.14"
-        },
-        "optionalDependencies": [
-          "@biomejs/cli-darwin-arm64",
-          "@biomejs/cli-darwin-x64",
-          "@biomejs/cli-linux-arm64",
-          "@biomejs/cli-linux-arm64-musl",
-          "@biomejs/cli-linux-x64",
-          "@biomejs/cli-linux-x64-musl",
-          "@biomejs/cli-win32-arm64",
-          "@biomejs/cli-win32-x64"
-        ]
-      }
-    },
-    "@biomejs/cli-darwin-arm64@npm:2.3.14": {
-      "checksum": null,
-      "resolution": {
-        "resolution": "@biomejs/cli-darwin-arm64@npm:2.3.14",
-        "version": "2.3.14",
-        "requirements": {
-          "cpu": [
-            "arm64"
-          ],
-          "os": [
-            "darwin"
-          ]
-        }
-      }
-    },
-    "@biomejs/cli-darwin-x64@npm:2.3.14": {
-      "checksum": null,
-      "resolution": {
-        "resolution": "@biomejs/cli-darwin-x64@npm:2.3.14",
-        "version": "2.3.14",
-        "requirements": {
-          "cpu": [
-            "x64"
-          ],
-          "os": [
-            "darwin"
-          ]
-        }
-      }
-    },
-    "@biomejs/cli-linux-arm64@npm:2.3.14": {
-      "checksum": null,
-      "resolution": {
-        "resolution": "@biomejs/cli-linux-arm64@npm:2.3.14",
-        "version": "2.3.14",
-        "requirements": {
-          "cpu": [
-            "arm64"
-          ],
-          "os": [
-            "linux"
-          ],
-          "libc": [
-            "glibc"
-          ]
-        }
-      }
-    },
-    "@biomejs/cli-linux-arm64-musl@npm:2.3.14": {
-      "checksum": null,
-      "resolution": {
-        "resolution": "@biomejs/cli-linux-arm64-musl@npm:2.3.14",
-        "version": "2.3.14",
-        "requirements": {
-          "cpu": [
-            "arm64"
-          ],
-          "os": [
-            "linux"
-          ],
-          "libc": [
-            "musl"
-          ]
-        }
-      }
-    },
-    "@biomejs/cli-linux-x64@npm:2.3.14": {
-      "checksum": null,
-      "resolution": {
-        "resolution": "@biomejs/cli-linux-x64@npm:2.3.14",
-        "version": "2.3.14",
-        "requirements": {
-          "cpu": [
-            "x64"
-          ],
-          "os": [
-            "linux"
-          ],
-          "libc": [
-            "glibc"
-          ]
-        }
-      }
-    },
-    "@biomejs/cli-linux-x64-musl@npm:2.3.14": {
-      "checksum": null,
-      "resolution": {
-        "resolution": "@biomejs/cli-linux-x64-musl@npm:2.3.14",
-        "version": "2.3.14",
-        "requirements": {
-          "cpu": [
-            "x64"
-          ],
-          "os": [
-            "linux"
-          ],
-          "libc": [
-            "musl"
-          ]
-        }
-      }
-    },
-    "@biomejs/cli-win32-arm64@npm:2.3.14": {
-      "checksum": null,
-      "resolution": {
-        "resolution": "@biomejs/cli-win32-arm64@npm:2.3.14",
-        "version": "2.3.14",
-        "requirements": {
-          "cpu": [
-            "arm64"
-          ],
-          "os": [
-            "win32"
-          ]
-        }
-      }
-    },
-    "@biomejs/cli-win32-x64@npm:2.3.14": {
-      "checksum": null,
-      "resolution": {
-        "resolution": "@biomejs/cli-win32-x64@npm:2.3.14",
-        "version": "2.3.14",
-        "requirements": {
-          "cpu": [
-            "x64"
-          ],
-          "os": [
-            "win32"
-          ]
-        }
       }
     },
     "@colors/colors@npm:1.5.0": {
@@ -2815,7 +2656,7 @@
         }
       }
     },
-    "ajv@npm:^8.0.0, ajv@npm:^8.0.1": {
+    "ajv@npm:^8.0.0": {
       "checksum": "c3f63b65d1ab23d34d1b8876cc73f13ae88cd709a4b627eeb501dd2f067f1ba6f508144dca06a17831abf3d38bcc40e92b990e260ccf71aaa550176719b540c8",
       "resolution": {
         "resolution": "ajv@npm:8.17.1",
@@ -2973,13 +2814,6 @@
         "version": "1.0.0"
       }
     },
-    "arg@npm:^5.0.2": {
-      "checksum": "c1545055c66db3d96d700f379c96c66ed8a4c1d1a0ba0b5a0a182f7125ebc6ef74f7883f14cd358fc56427fa277cbaa69a2cae38228f6223caf0396ce804dae8",
-      "resolution": {
-        "resolution": "arg@npm:5.0.2",
-        "version": "5.0.2"
-      }
-    },
     "argparse@npm:^2.0.1": {
       "checksum": "7c9123aac6bb986b3e2676469ef5eec072faf96fe34a42138a0ad8a4909c17aa6cb73450d8dd271b4ddc15bf40899147eb4e37694cf079a60d57121f22cf6eb3",
       "resolution": {
@@ -3035,13 +2869,6 @@
           "estree-walker": "^3.0.3",
           "js-tokens": "^10.0.0"
         }
-      }
-    },
-    "astral-regex@npm:^2.0.0": {
-      "checksum": "c56c3acaad72edc4dc113f820f004c9a2e0f5a2c80980eecd21fc1718f910aac2b86c0f0056f72082a7c1e170174967423f06de06f00818324654cb4033d7d0d",
-      "resolution": {
-        "resolution": "astral-regex@npm:2.0.0",
-        "version": "2.0.0"
       }
     },
     "balanced-match@npm:^1.0.0": {
@@ -3896,7 +3723,7 @@
         "version": "3.1.3"
       }
     },
-    "fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.2": {
+    "fast-glob@npm:^3.2.9": {
       "checksum": "275126c7b69678bf5413bf1e609c5c787e9201430e94c1fa227f0ffcb0e4f2b21abe41c74b7a497f9dc8a4c824c85d4b1ed373fe1699e878de5048fba76b9f51",
       "resolution": {
         "resolution": "fast-glob@npm:3.3.2",
@@ -5407,13 +5234,6 @@
       "resolution": {
         "resolution": "lodash.isstring@npm:4.0.1",
         "version": "4.0.1"
-      }
-    },
-    "lodash.truncate@npm:^4.4.2": {
-      "checksum": "e51cf60c87f2fa74270fe0b4811a87d0970b07e8397945133b3dd04bba6788b78df974627dc1df289071c2d2bf3e9e963dd239f253bc57b1ac015f67b9634265",
-      "resolution": {
-        "resolution": "lodash.truncate@npm:4.4.2",
-        "version": "4.4.2"
       }
     },
     "lodash.uniqby@npm:^4.7.0": {
@@ -7398,18 +7218,6 @@
         "version": "3.0.0"
       }
     },
-    "slice-ansi@npm:^4.0.0": {
-      "checksum": "3f29fa0f2e9dad61234f4695ef3654ee6b20ff1932108b580d4d49034f06df53b4aadb473b48937869c6bc676e8a2608fe2b133f936d2735cfacd7a8b22fce4b",
-      "resolution": {
-        "resolution": "slice-ansi@npm:4.0.0",
-        "version": "4.0.0",
-        "dependencies": {
-          "ansi-styles": "^4.0.0",
-          "astral-regex": "^2.0.0",
-          "is-fullwidth-code-point": "^3.0.0"
-        }
-      }
-    },
     "smart-buffer@npm:^4.2.0": {
       "checksum": "a2b4059327131abd348539493d590c215c2dbaa80024f052b6529e18b17b8530ba466045193cd558096e642647e9bca886220349efb0079a90ee971d5221c161",
       "resolution": {
@@ -7763,20 +7571,6 @@
       "resolution": {
         "resolution": "supports-preserve-symlinks-flag@npm:1.0.0",
         "version": "1.0.0"
-      }
-    },
-    "table@npm:^6.9.0": {
-      "checksum": "9b933c43fe503fe6b5e1856fe37a18cdb4d243fe43145623727f21db58a81ac4ef8e89ee1b62fa878cb002a09507eb9c816b1727076793bc90658e40e4cf3eae",
-      "resolution": {
-        "resolution": "table@npm:6.9.0",
-        "version": "6.9.0",
-        "dependencies": {
-          "ajv": "^8.0.1",
-          "lodash.truncate": "^4.4.2",
-          "slice-ansi": "^4.0.0",
-          "string-width": "^4.2.3",
-          "strip-ansi": "^6.0.1"
-        }
       }
     },
     "tagged-tag@npm:^1.0.0": {
@@ -8584,21 +8378,6 @@
       "resolution": {
         "resolution": "yoctocolors@npm:2.0.0",
         "version": "2.0.0"
-      }
-    },
-    "zshy@npm:^0.7.0": {
-      "checksum": "6321c7f6835e67af9e2e03f6d44af7ddd357d1aa3718c5ca38c3a5c5f5590316a99b2dc37ec609b4cebd2e9e5f612f195e84a7895a3e835542791ea589b29411",
-      "resolution": {
-        "resolution": "zshy@npm:0.7.0",
-        "version": "0.7.0",
-        "dependencies": {
-          "arg": "^5.0.2",
-          "fast-glob": "^3.3.2",
-          "table": "^6.9.0"
-        },
-        "peerDependencies": {
-          "typescript": ">5.5.0"
-        }
       }
     }
   }

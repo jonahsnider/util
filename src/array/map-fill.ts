@@ -18,7 +18,6 @@
  * @see {@link mapRepeat} to do the same thing but return an iterable
  * @see {@link fill} to do the same thing but with a given value
  *
- * @public
  * @category Array
  */
 export function mapFill<T>(length: number, valueFunction: (index: number) => T): T[] {

@@ -18,7 +18,6 @@
  *
  * @returns The value nearest to `value` which is within the provided range
  *
- * @public
  * @category Math
  */
 export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(

@@ -18,10 +18,8 @@
  *
  * @returns The inverted return value of `fn`
  *
- * @public
  * @category Higher order
  */
-// biome-ignore lint/suspicious/noExplicitAny: This is safe
 export function not<T extends (...parameters: any[]) => boolean>(func: T): (...parameters: Parameters<T>) => boolean {
 	return ((...parameters) => !func(...parameters)) as T;
 }

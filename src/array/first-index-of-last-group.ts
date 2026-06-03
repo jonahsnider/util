@@ -20,7 +20,6 @@
  *
  * @see {@link lastIndexOfFirstGroup} to do the same thing but find the last index of the first group
  *
- * @public
  * @category Array
  */
 export function firstIndexOfLastGroup<T>(array: ArrayLike<T>, value: T): number {

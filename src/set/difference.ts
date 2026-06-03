@@ -13,7 +13,6 @@
  *
  * @deprecated Use `Set#difference()` instead.
  *
- * @public
  * @category Set
  */
 export function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T> {

@@ -21,7 +21,6 @@ import type { CompareFn } from '../types.js';
  *
  * @returns Whether the array is sorted according to the given compare function
  *
- * @public
  * @category Sort
  */
 export function isSorted<T>(array: ArrayLike<T>, compareFunction: CompareFn<T>): boolean {

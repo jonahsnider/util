@@ -21,7 +21,6 @@ import { product } from '../reducers/product.js';
  *
  * @returns The geometric mean of the array
  *
- * @public
  * @category Math
  */
 export function geometricMean(array: readonly number[]): number {

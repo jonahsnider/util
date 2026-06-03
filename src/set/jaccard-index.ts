@@ -13,7 +13,6 @@ import { clamp } from '../math/clamp.js';
  *
  * @returns The Jaccard index of `a` and `b`
  *
- * @public
  * @category Set
  */
 export function jaccardIndex<T>(a: ReadonlySet<T>, b: ReadonlySet<T>): number {

@@ -1,7 +1,5 @@
 /**
  * `null` or `undefined`.
- *
- * @public
  */
 export type Nullish = null | undefined;
 
@@ -22,8 +20,6 @@ export type Nullish = null | undefined;
  * @param value - Value to check
  *
  * @returns `true` if `value` is nullish, `false` if otherwise
- *
- * @public
  */
 export function nullish(value: unknown): value is Nullish {
 	return value === null || value === undefined;

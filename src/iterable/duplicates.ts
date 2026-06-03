@@ -15,7 +15,6 @@
  * @param iterable - The iterable to find duplicates in
  * @returns A `Set` of the duplicated elements
  *
- * @public
  * @category Iterable
  */
 export function duplicates<T>(iterable: Iterable<T>): Set<T> {

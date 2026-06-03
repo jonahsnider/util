@@ -23,7 +23,6 @@ import { repeat } from '../iterable/index.js';
  *
  * @see {@link padEnd} to pad the end of an array
  *
- * @public
  * @category Array
  */
 export function padStart<T>(array: T[], maxLength: number, fillValue: T): void {

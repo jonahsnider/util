@@ -18,7 +18,6 @@ import { mean } from './mean.js';
  *
  * @returns The variance of `values`
  *
- * @public
  * @category Math
  */
 export function variance(values: readonly number[], meanValue = mean(values)): number {

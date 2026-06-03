@@ -18,7 +18,6 @@
  *
  * @returns An iterable that repeats `value` `times` number of times
  *
- * @public
  * @category Iterable
  */
 export function* repeat<T>(value: T, times: number): Iterable<T> {

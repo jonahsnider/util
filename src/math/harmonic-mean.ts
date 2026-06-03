@@ -19,7 +19,6 @@
  *
  * @returns The geometric mean of the array
  *
- * @public
  * @category Math
  */
 export function harmonicMean(array: readonly number[]): number {

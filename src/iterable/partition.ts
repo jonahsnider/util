@@ -19,7 +19,6 @@
  *
  * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
  *
- * @public
  * @category Iterable
  */
 export function partition<S extends T, T>(
@@ -47,7 +46,6 @@ export function partition<S extends T, T>(
  *
  * @returns A tuple where the 1st element is an array of elements that passed the predicate (`passed`) and the 2nd element are the elements that failed the predicate (`failed`)
  *
- * @public
  * @category Iterable
  */
 export function partition<T>(
