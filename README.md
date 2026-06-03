@@ -24,7 +24,7 @@ npm install @jonahsnider/util
 then
 
 ```js
-import {shuffle} from '@jonahsnider/util';
+import { shuffle } from '@jonahsnider/util';
 // or
 import * as util from '@jonahsnider/util';
 ```

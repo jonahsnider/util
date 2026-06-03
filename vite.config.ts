@@ -14,9 +14,7 @@ export default defineConfig({
 		useTabs: true,
 		singleQuote: true,
 		printWidth: 120,
-		// Match the prior Biome scope: format code only. Leaves Markdown/YAML
-		// (incl. the api-extractor-generated util.api.md) untouched.
-		ignorePatterns: ['**/*.md', '**/*.yml', '**/*.yaml'],
+		ignorePatterns: ['util.api.md'],
 	},
 	pack: {
 		entry: ['src/index.ts'],
