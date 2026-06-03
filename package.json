@@ -37,9 +37,9 @@
 		"docs": "typedoc --options ./typedoc.json",
 		"lint": "vp check",
 		"lint:fix": "vp check --fix",
-		"test": "vp test run --no-isolate",
-		"test:coverage": "vp test run --no-isolate --coverage",
-		"test:dev": "vp test watch --no-isolate --ui",
+		"test": "vp test run",
+		"test:coverage": "vp test run --coverage",
+		"test:dev": "vp test watch --ui",
 		"validate-api": "api-extractor run",
 		"validate-api:local": "api-extractor run --local --verbose"
 	},

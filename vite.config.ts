@@ -1,14 +1,14 @@
-import { defineConfig } from "vite-plus";
+import { defineConfig } from 'vite-plus';
 
 export default defineConfig({
 	staged: {
-		"*": "vp check --fix",
+		'*': 'vp check --fix',
 	},
 	pack: {
 		dts: {
 			tsgo: true,
 		},
-		format: ["esm", "cjs"],
+		format: ['esm', 'cjs'],
 		exports: true,
 		sourcemap: true,
 	},
@@ -22,6 +22,9 @@ export default defineConfig({
 		useTabs: true,
 		singleQuote: true,
 		printWidth: 120,
-		ignorePatterns: ["util.api.md"],
+		ignorePatterns: ['util.api.md'],
+	},
+	test: {
+		isolate: false,
 	},
 });
