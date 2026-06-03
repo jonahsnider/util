@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "ebe4943d30d8addcaa78a0e7a4e93773bf0a99ca187c6aac043445e5c3bf31ea45b7e81496f32acb132801ec5408c07f83c017687a739045e3c037a32122f1bc"
+    "@jonahsnider/util": "b2edfcdef6e5d6c7c76081e5b569fd2ea6471753d39ac996244e83843632121f00b850a83c94f0932e7d83d6e41f1981f03244cc8a28b1f5311bba180ed58c99"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -2252,6 +2252,136 @@
       "resolution": {
         "resolution": "@types/unist@npm:3.0.2",
         "version": "3.0.2"
+      }
+    },
+    "@typescript/native-preview@npm:^7.0.0-dev.20260603.1": {
+      "checksum": "0ba010e31039c3797876cf26d59c8385458aa21bd10e3dee1bb2c5171ecbc94f0c95154cc9810530731a1245bc9033b9e28d9c02ed1bb4a88209bb47a30f6aba",
+      "resolution": {
+        "resolution": "@typescript/native-preview@npm:7.0.0-dev.20260603.1",
+        "version": "7.0.0-dev.20260603.1",
+        "dependencies": {
+          "@typescript/native-preview-darwin-arm64": "7.0.0-dev.20260603.1",
+          "@typescript/native-preview-darwin-x64": "7.0.0-dev.20260603.1",
+          "@typescript/native-preview-linux-arm": "7.0.0-dev.20260603.1",
+          "@typescript/native-preview-linux-arm64": "7.0.0-dev.20260603.1",
+          "@typescript/native-preview-linux-x64": "7.0.0-dev.20260603.1",
+          "@typescript/native-preview-win32-arm64": "7.0.0-dev.20260603.1",
+          "@typescript/native-preview-win32-x64": "7.0.0-dev.20260603.1"
+        },
+        "optionalDependencies": [
+          "@typescript/native-preview-darwin-arm64",
+          "@typescript/native-preview-darwin-x64",
+          "@typescript/native-preview-linux-arm",
+          "@typescript/native-preview-linux-arm64",
+          "@typescript/native-preview-linux-x64",
+          "@typescript/native-preview-win32-arm64",
+          "@typescript/native-preview-win32-x64"
+        ]
+      }
+    },
+    "@typescript/native-preview-darwin-arm64@npm:7.0.0-dev.20260603.1": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/native-preview-darwin-arm64@npm:7.0.0-dev.20260603.1",
+        "version": "7.0.0-dev.20260603.1",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "darwin"
+          ]
+        }
+      }
+    },
+    "@typescript/native-preview-darwin-x64@npm:7.0.0-dev.20260603.1": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/native-preview-darwin-x64@npm:7.0.0-dev.20260603.1",
+        "version": "7.0.0-dev.20260603.1",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "darwin"
+          ]
+        }
+      }
+    },
+    "@typescript/native-preview-linux-arm@npm:7.0.0-dev.20260603.1": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/native-preview-linux-arm@npm:7.0.0-dev.20260603.1",
+        "version": "7.0.0-dev.20260603.1",
+        "requirements": {
+          "cpu": [
+            "arm"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/native-preview-linux-arm64@npm:7.0.0-dev.20260603.1": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/native-preview-linux-arm64@npm:7.0.0-dev.20260603.1",
+        "version": "7.0.0-dev.20260603.1",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/native-preview-linux-x64@npm:7.0.0-dev.20260603.1": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/native-preview-linux-x64@npm:7.0.0-dev.20260603.1",
+        "version": "7.0.0-dev.20260603.1",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/native-preview-win32-arm64@npm:7.0.0-dev.20260603.1": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/native-preview-win32-arm64@npm:7.0.0-dev.20260603.1",
+        "version": "7.0.0-dev.20260603.1",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "win32"
+          ]
+        }
+      }
+    },
+    "@typescript/native-preview-win32-x64@npm:7.0.0-dev.20260603.1": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/native-preview-win32-x64@npm:7.0.0-dev.20260603.1",
+        "version": "7.0.0-dev.20260603.1",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "win32"
+          ]
+        }
       }
     },
     "@vitest/coverage-v8@npm:4.1.7": {

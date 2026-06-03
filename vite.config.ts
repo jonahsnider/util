@@ -1,25 +1,27 @@
-import { defineConfig } from 'vite-plus';
+import { defineConfig } from "vite-plus";
 
 export default defineConfig({
-	test: {
-		globals: false,
-		include: ['./src/**/*.test.ts'],
-		coverage: {
-			reporter: ['lcov', 'text-summary'],
-			include: ['src/**/*.ts'],
-			exclude: ['src/types/**/*.ts', 'src/**/*.test.ts'],
+	staged: {
+		"*": "vp check --fix",
+	},
+	pack: {
+		dts: {
+			tsgo: true,
+		},
+		format: ["esm", "cjs"],
+		exports: true,
+		sourcemap: true,
+	},
+	lint: {
+		options: {
+			typeAware: true,
+			typeCheck: true,
 		},
 	},
 	fmt: {
 		useTabs: true,
 		singleQuote: true,
 		printWidth: 120,
-		ignorePatterns: ['util.api.md'],
-	},
-	pack: {
-		entry: ['src/index.ts'],
-		format: ['esm', 'cjs'],
-		dts: true,
-		sourcemap: true,
+		ignorePatterns: ["util.api.md"],
 	},
 });
