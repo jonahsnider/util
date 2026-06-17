@@ -21,7 +21,6 @@
  *
  * @returns The index of the replaced element, or `-1` if it is not present.
  *
- * @public
  * @category Array
  */
 export function replace<T>(array: T[], searchElement: T, replacement: T): number {

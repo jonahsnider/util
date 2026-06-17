@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it } from 'vite-plus/test';
 import { DefaultMap } from './default-map.js';
 
 describe(`${DefaultMap.name}#${DefaultMap.prototype.get.name}`, () => {

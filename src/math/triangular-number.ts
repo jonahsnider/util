@@ -14,7 +14,6 @@
  *
  * @returns The *n*th triangular number for the provided `value`
  *
- * @public
  * @category Math
  */
 export function triangularNumber(value: number): number;
@@ -34,7 +33,6 @@ export function triangularNumber(value: number): number;
  *
  * @returns The *n*th triangular number for the provided `value`
  *
- * @public
  * @category Math
  */
 export function triangularNumber(value: bigint): bigint;

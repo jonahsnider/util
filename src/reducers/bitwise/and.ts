@@ -18,7 +18,6 @@
  *
  * @returns The bitwise AND of `a` and `b`
  *
- * @public
  * @category Reducers
  */
 export function and(a: number, b: number): number;
@@ -42,7 +41,6 @@ export function and(a: number, b: number): number;
  *
  * @returns The bitwise AND of `a` and `b`
  *
- * @public
  * @category Reducers
  */
 export function and(a: bigint, b: bigint): bigint;

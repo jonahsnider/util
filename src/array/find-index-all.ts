@@ -17,7 +17,6 @@
  *
  * @see {@link indexOfAll} if you want to find all elements equal to a given value
  *
- * @public
  * @category Array
  */
 export function findIndexAll<T>(array: ArrayLike<T>, predicate: (element: T, index: number) => boolean): number[] {

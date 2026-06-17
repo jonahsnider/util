@@ -19,7 +19,6 @@
  *
  * @returns The median of `values`
  *
- * @public
  * @category Math
  */
 export function median(array: ArrayLike<number>): number;
@@ -44,7 +43,6 @@ export function median(array: ArrayLike<number>): number;
  *
  * @returns The median of `values`
  *
- * @public
  * @category Math
  */
 export function median(array: ArrayLike<bigint>): bigint;

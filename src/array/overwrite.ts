@@ -20,7 +20,6 @@
  *
  * @returns The return value of `Array.prototype.splice`
  *
- * @public
  * @category Array
  */
 export function overwrite<T>(

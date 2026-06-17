@@ -1,7 +1,6 @@
 /**
  * @returns `T` if `T` is not a union type, `never` otherwise.
  *
- * @internal
  * @category Object
  */
 type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) : never) extends false ? T : never;
@@ -27,7 +26,6 @@ export type { NonUnion as _NonUnion };
  *
  * @returns A shallow-copied object with the key name updated
  *
- * @public
  * @category Object
  */
 export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(
@@ -41,13 +39,11 @@ export function rename<T, K1 extends keyof T, K2 extends PropertyKey>(
 	newKey: K1 | K2,
 ): Omit<T, K1 | K2> & Record<string, T[K1]> {
 	if (oldKey === newKey) {
-		// biome-ignore lint/suspicious/noExplicitAny: This is safe
 		return { ...object } as any;
 	}
 
 	const { [oldKey]: _, ...result } = { ...object, [newKey]: object[oldKey] };
 
 	// This logic can be rewritten to remove the need for a type assertion, but would require 2 iterations over result instead of 1
-	// biome-ignore lint/suspicious/noExplicitAny: This is safe
 	return result as any;
 }

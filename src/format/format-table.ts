@@ -13,7 +13,6 @@ import { maxColumnLength } from './max-column-length.js';
  *
  * @returns A formatted string representation of the table
  *
- * @public
  * @category Format
  */
 export function formatTable(table: Table<string>, delimiter = ' '): string {

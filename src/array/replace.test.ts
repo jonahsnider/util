@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { replace } from './replace.js';
 
 it('replaces elements from an array', () => {

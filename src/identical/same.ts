@@ -20,8 +20,6 @@
  * @param iterables - Elements to compare
  *
  * @returns `true` if all elements are strictly equal, `false` otherwise
- *
- * @public
  */
 export function same<T>(...iterables: readonly [Iterable<T>, Iterable<T>, ...Array<Iterable<T>>]): boolean {
 	const iterators = iterables.map((item) => item[Symbol.iterator]());

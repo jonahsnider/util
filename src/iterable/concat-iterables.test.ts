@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { concatIterables } from './concat-iterables.js';
 
 it('concatenates iterables', () => {

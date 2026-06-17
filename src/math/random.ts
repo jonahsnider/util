@@ -17,7 +17,6 @@
  *
  * @returns A random number within the given bounds
  *
- * @public
  * @category Math
  */
 export function random(min: number, max: number): number {

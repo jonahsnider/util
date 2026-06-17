@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it } from 'vite-plus/test';
 import { Status } from './status.js';
 import { StatusName } from './status-name.js';
 

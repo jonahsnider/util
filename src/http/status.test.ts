@@ -1,5 +1,5 @@
 import * as http from 'node:http';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it } from 'vite-plus/test';
 import { Status } from './status.js';
 
 describe('Status', () => {

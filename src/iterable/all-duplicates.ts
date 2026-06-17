@@ -21,7 +21,6 @@
  * @param iterable - The iterable to find duplicates in
  * @returns An array of the duplicated elements
  *
- * @public
  * @category Iterable
  */
 export function allDuplicates<T>(iterable: Iterable<T>): T[] {

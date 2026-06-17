@@ -17,7 +17,6 @@ import { random } from './random.js';
  *
  * @returns A random integer within the given bounds
  *
- * @public
  * @category Math
  */
 export function randomInt(min: number, max: number): number {

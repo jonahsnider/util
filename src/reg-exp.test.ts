@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { regExpUnion } from './reg-exp.js';
 
 it('creates a working regular expression', () => {

@@ -1,14 +1,12 @@
 /**
  * A type for an enum value.
  *
- * @public
  * @category Enum
  */
 export type EnumValue = number | string;
 /**
  * A type for an enum.
  *
- * @public
  * @category Enum
  */
 export type Enum<T extends EnumValue> = Readonly<Record<string | number, T>>;
@@ -38,7 +36,6 @@ const lookup = new WeakMap<Enum<EnumValue>, ReadonlySet<EnumValue>>();
  *
  * @returns Whether `value` is a member value of `Enum`
  *
- * @public
  * @category Enum
  */
 export function enumHas<T extends EnumValue>(Enum: Enum<T>, value: unknown): value is T {
@@ -47,9 +44,7 @@ export function enumHas<T extends EnumValue>(Enum: Enum<T>, value: unknown): val
 		lookup.set(Enum, new Set<EnumValue>(Object.values(Enum) as EnumValue[]));
 	}
 
-	// biome-ignore lint/style/noNonNullAssertion: We already checked that the lookup has the key
 	const values = lookup.get(Enum)!;
 
-	// biome-ignore lint/suspicious/noExplicitAny: This is safe
 	return values.has(value as any);
 }

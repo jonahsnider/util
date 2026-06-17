@@ -18,7 +18,6 @@
  *
  * @returns The product of `a` and `b`
  *
- * @public
  * @category Reducers
  */
 export function product(a: number, b: number): number;
@@ -42,7 +41,6 @@ export function product(a: number, b: number): number;
  *
  * @returns The product of `a` and `b`
  *
- * @public
  * @category Reducers
  */
 export function product(a: bigint, b: bigint): bigint;

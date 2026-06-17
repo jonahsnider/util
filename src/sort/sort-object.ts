@@ -21,7 +21,6 @@ import type { CompareFn } from '../types.js';
  *
  * @returns A new object with the keys in order
  *
- * @public
  * @category Sort
  */
 export function sortObject<K extends PropertyKey, V>(

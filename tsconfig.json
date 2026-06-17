@@ -17,7 +17,7 @@
 		"sourceMap": true,
 		"declaration": true,
 		"declarationMap": true,
-		// For zshy
+		// Suppress TS 6.0 deprecation errors for tsc-based tooling (typedoc, IDE)
 		"ignoreDeprecations": "6.0",
 
 		// Stricter Typechecking Options

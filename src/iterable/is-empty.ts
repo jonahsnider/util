@@ -19,7 +19,6 @@
  *
  * @returns `true` if `map` is empty, `false` otherwise
  *
- * @public
  * @category Map
  */
 export function isEmpty(map: ReadonlyMap<unknown, unknown>): map is ReadonlyMap<never, never>;
@@ -44,7 +43,6 @@ export function isEmpty(map: ReadonlyMap<unknown, unknown>): map is ReadonlyMap<
  *
  * @returns `true` if `map` is empty, `false` otherwise
  *
- * @public
  * @category Map
  */
 export function isEmpty(map: Map<unknown, unknown>): map is Map<never, never>;
@@ -69,7 +67,6 @@ export function isEmpty(map: Map<unknown, unknown>): map is Map<never, never>;
  *
  * @returns `true` if `set` is empty, `false` otherwise
  *
- * @public
  * @category Set
  */
 export function isEmpty(set: ReadonlySet<unknown>): set is ReadonlySet<never>;
@@ -94,7 +91,6 @@ export function isEmpty(set: ReadonlySet<unknown>): set is ReadonlySet<never>;
  *
  * @returns `true` if `set` is empty, `false` otherwise
  *
- * @public
  * @category Set
  */
 export function isEmpty(set: Set<unknown>): set is Set<never>;
@@ -119,7 +115,6 @@ export function isEmpty(set: Set<unknown>): set is Set<never>;
  *
  * @returns `true` if `string` is empty, `false` otherwise
  *
- * @public
  * @category String
  */
 export function isEmpty(string: string): string is '';
@@ -144,7 +139,6 @@ export function isEmpty(string: string): string is '';
  *
  * @returns `true` if `array` is empty, `false` otherwise
  *
- * @public
  * @category Array
  */
 export function isEmpty(array: readonly unknown[]): array is readonly [];
@@ -169,7 +163,6 @@ export function isEmpty(array: readonly unknown[]): array is readonly [];
  *
  * @returns `true` if `array` is empty, `false` otherwise
  *
- * @public
  * @category Array
  */
 export function isEmpty(array: unknown[]): array is [];
@@ -194,7 +187,6 @@ export function isEmpty(array: unknown[]): array is [];
  *
  * @returns `true` if `iterable` is empty, `false` otherwise
  *
- * @public
  * @category Iterable
  */
 export function isEmpty(iterable: Iterable<unknown>): iterable is Iterable<never>;

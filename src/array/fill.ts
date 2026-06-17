@@ -18,7 +18,6 @@
  * @see {@link mapFill} to do the same thing but with a function that generates values
  * @see {@link repeat} to do the same thing but return an iterable
  *
- * @public
  * @category Array
  */
 export function fill<T>(length: number, value: T): T[] {

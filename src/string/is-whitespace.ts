@@ -21,7 +21,6 @@ const notWhitespaceRegExp = /\S/;
  *
  * @returns Whether the string is whitespace
  *
- * @public
  * @category String
  */
 export function isWhitespace(string: string): boolean {

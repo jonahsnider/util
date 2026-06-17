@@ -20,7 +20,6 @@
  *
  * @returns A string containing the elements in iterable joined by separator
  *
- * @public
  * @category Iterable
  */
 export function join(iterable: Iterable<unknown>, separator = ','): string {

@@ -18,7 +18,6 @@
  *
  * @returns The normal distribution
  *
- * @public
  * @category Math
  */
 export function normaldist(x: number, standardDeviation: number, mean: number): number {

@@ -17,7 +17,6 @@
  *
  * @returns A new string with the replacements applied
  *
- * @public
  * @category String
  */
 export function multiReplace(string: string, replacements: Record<string, string>): string {
@@ -26,7 +25,6 @@ export function multiReplace(string: string, replacements: Record<string, string
 	let index = 0;
 
 	while (index < string.length) {
-		// biome-ignore lint/suspicious/noConfusingLabels: This is fine
 		foundReplace: {
 			for (const [searchValue, replaceValue] of replacementsIterable) {
 				if (string.slice(index).startsWith(searchValue)) {

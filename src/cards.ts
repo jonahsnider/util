@@ -1,7 +1,6 @@
 /**
  * The rank of a card going from ace to king, where aces are `1`.
  *
- * @public
  * @category Cards
  */
 export enum Rank {
@@ -23,7 +22,6 @@ export enum Rank {
 /**
  * A suit of cards, sorted in alphabetical order.
  *
- * @public
  * @category Cards
  */
 export enum Suit {
@@ -36,7 +34,6 @@ export enum Suit {
 /**
  * A playing card.
  *
- * @public
  * @category Cards
  */
 export type Card = {
@@ -60,7 +57,6 @@ export type Card = {
  *
  * @returns A sorted deck of cards
  *
- * @public
  * @category Cards
  */
 export function newDeck(): Card[] {

@@ -2,8 +2,6 @@ import type { Comparable } from './types.js';
 
 /**
  * A range between 2 values.
- *
- * @public
  */
 export class Range {
 	/**
@@ -55,7 +53,6 @@ export class Range {
 		 */
 		public upper: Comparable,
 	) {
-		// biome-ignore lint/style/noNonNullAssertion: This is okay even if the lower and upper bounds are not set
 		if (lower! > upper!) {
 			throw new RangeError('lower must be less than upper');
 		}
@@ -78,7 +75,6 @@ export class Range {
 	 * ```
 	 */
 	has(value: Comparable): boolean {
-		// biome-ignore lint/style/noNonNullAssertion: This is okay even if the lower and upper bounds are not set
 		return value! >= this.lower! && value! <= this.upper!;
 	}
 
@@ -120,7 +116,6 @@ export class Range {
 	 * @returns Whether this range is contained within the other one
 	 */
 	isSuperrange(range: Range): boolean {
-		// biome-ignore lint/style/noNonNullAssertion: This is okay even if the lower and upper bounds are not set
 		return range === this || (this.lower! >= range.lower! && this.upper! <= range.upper!);
 	}
 
@@ -145,7 +140,6 @@ export class Range {
 	 * @returns Whether this range contains the given range
 	 */
 	isSubrange(range: Range): boolean {
-		// biome-ignore lint/style/noNonNullAssertion: This is okay even if the lower and upper bounds are not set
 		return range === this || (this.lower! <= range.lower! && this.upper! >= range.upper!);
 	}
 
@@ -209,7 +203,6 @@ export class Range {
 	 * @returns Whether the ranges intersect
 	 */
 	intersects(range: Range): boolean {
-		// biome-ignore lint/style/noNonNullAssertion: This is okay even if the lower and upper bounds are not set
 		return range === this || (this.lower! <= range.upper! && this.upper! >= range.lower!);
 	}
 }

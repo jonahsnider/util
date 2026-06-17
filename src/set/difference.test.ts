@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { difference } from './difference.js';
 
 it('creates a Set of the difference', () => {

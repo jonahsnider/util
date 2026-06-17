@@ -5,8 +5,6 @@ type V = number;
 
 /**
  * A {@link DefaultMap} with methods for performing basic math operations that mutate the data.
- *
- * @alpha
  */
 export class MathMap<K> extends DefaultMap<K, V> {
 	/**

@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { findIndexAll } from './find-index-all.js';
 
 it('finds all indexes', () => {

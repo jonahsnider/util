@@ -16,7 +16,6 @@
  *
  * @returns Capitalized string
  *
- * @public
  * @category String
  */
 export function capitalize<T extends string>(text: T): Capitalize<T> {

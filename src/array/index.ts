@@ -1,7 +1,6 @@
 /**
  * A 2-dimensional table of type `T`.
  *
- * @public
  * @category Array
  */
 export type Table<T> = T[][];
@@ -9,7 +8,6 @@ export type Table<T> = T[][];
 /**
  * An array with at least 1 element.
  *
- * @public
  * @category Array
  */
 export type NonEmptyArray<T> = [T, ...T[]];

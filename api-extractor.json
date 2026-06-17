@@ -45,7 +45,7 @@
 	 *
 	 * SUPPORTED TOKENS: <projectFolder>, <packageName>, <unscopedPackageName>
 	 */
-	"mainEntryPointFilePath": "<projectFolder>/dist/src/index.d.ts",
+	"mainEntryPointFilePath": "<projectFolder>/dist/index.d.cts",
 
 	/**
 	 * A list of NPM package names whose exports should be treated as part of this package.
@@ -420,14 +420,13 @@
 			"default": {
 				"logLevel": "warning"
 				// "addToApiReportFile": false
-			}
+			},
 
-			// "ae-extra-release-tag": {
-			//   "logLevel": "warning",
-			//   "addToApiReportFile": true
-			// },
-			//
-			// . . .
+			// This package does not use release tags (@public/@beta/@alpha/@internal),
+			// so don't require them. The API report still tracks the public surface.
+			"ae-missing-release-tag": {
+				"logLevel": "none"
+			}
 		},
 
 		/**

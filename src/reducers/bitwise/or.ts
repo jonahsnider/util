@@ -18,7 +18,6 @@
  *
  * @returns The bitwise OR of `a` and `b`
  *
- * @public
  * @category Reducers
  */
 export function or(a: number, b: number): number;
@@ -42,7 +41,6 @@ export function or(a: number, b: number): number;
  *
  * @returns The bitwise OR of `a` and `b`
  *
- * @public
  * @category Reducers
  */
 export function or(a: bigint, b: bigint): bigint;

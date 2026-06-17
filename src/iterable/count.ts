@@ -22,7 +22,6 @@
  *
  * @see {@link frequencyTable} to count the occurrences of all elements in an iterable
  *
- * @public
  * @category Iterable
  */
 export function count<T>(iterable: Iterable<T>, filterPredicate?: (element: T) => boolean): number {

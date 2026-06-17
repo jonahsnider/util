@@ -18,7 +18,6 @@
  *
  * @see {@link findIndexAll} if you want to use a predicate instead of strict equality
  *
- * @public
  * @category Array
  */
 export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[] {
