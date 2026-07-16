@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "540db65f0b903023e6d578f78770bbf6a9bc57e4f04171819879171247a7484a3f19552b00fe6f42ade67e9d3505677f78851359a08ff44583c71f6bbfd72011"
+    "@jonahsnider/util": "7c7e96552861f756013b0a2cff76528d2d269c1d91afc4ea0c93ebebe9913ebf56927824493fb5a9e637c5522b69054016f1c3506ee9e6de8a340bd0e5f36f30"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -1660,13 +1660,13 @@
         "version": "1.2.5"
       }
     },
-    "@types/node@npm:24.12.4": {
-      "checksum": "c547b7a3402529f1c5439d486c49ece22b685ae52fb799cd99ca7997afe7ed5716c9963fa4d5f82992a32a41cd4b08a16c850780f5e6b742e90ae5467d11bd49",
+    "@types/node@npm:24.13.3": {
+      "checksum": "c0d9d20f93ab74e28ba042f72482fab90418166d82459f963fa539b0feb2cb58b3e0605c912ba20b70336fe26b64b7b7a9803b40aa60d778e6541a0e13bb6d47",
       "resolution": {
-        "resolution": "@types/node@npm:24.12.4",
-        "version": "24.12.4",
+        "resolution": "@types/node@npm:24.13.3",
+        "version": "24.13.3",
         "dependencies": {
-          "undici-types": "~7.16.0"
+          "undici-types": "~7.18.0"
         }
       }
     },
@@ -7030,11 +7030,11 @@
         }
       }
     },
-    "undici-types@npm:~7.16.0": {
-      "checksum": "0ff0d59944296c35b40b1ef401f5ecae3846e53523f5965425e50e7ef8e7ec30e4b63826fd3f32e2dc272605c33bd30866f4de2aee6cca6ff2bcd74f6758106b",
+    "undici-types@npm:~7.18.0": {
+      "checksum": "f4f5379fa65e9e9cf48961a51c5cf8a3f0c3db08f2d3592a1355dac1c7cb6187dfe5aa12e397a059b5564d8693578449921b669aa183eb844a41ed7bbd477ab3",
       "resolution": {
-        "resolution": "undici-types@npm:7.16.0",
-        "version": "7.16.0"
+        "resolution": "undici-types@npm:7.18.2",
+        "version": "7.18.2"
       }
     },
     "unicode-emoji-modifier-base@npm:^1.0.0": {
