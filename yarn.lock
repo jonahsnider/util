@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "c90eb81f5516e7352b8dad75ad6b3163c5c17910f972e148a37829ba035e1693f6f858a637e29bac955e91223c632fa71ab6d6f36c7d785a6d1836d1338d1adf"
+    "@jonahsnider/util": "c712cde1bb668e0108d3442c5bda29ea4feff5e1fa54a728548d771d39668756b6e3da892a181240395e6530835844fbb8c77485bef4df03bd0b365d6e9d63a2"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -445,11 +445,11 @@
         }
       }
     },
-    "@microsoft/api-extractor@npm:7.58.7": {
-      "checksum": "445499e31876fd827b6e57cb4084c8662cf80ba8d3cc183a7180c59eece32c777e1b9a65edd18048fa702c8792e20dacd69a26bb0a8e5906a247fac54e73714c",
+    "@microsoft/api-extractor@npm:7.58.9": {
+      "checksum": "d79905b7ebbe19510b9ae5e38589c384188f0718e0d7377c0843e8647ed38cd9feb2bd7ecb50a9aa572052f07ae942c02a7399e56dacad5025a37deae112ecaa",
       "resolution": {
-        "resolution": "@microsoft/api-extractor@npm:7.58.7",
-        "version": "7.58.7",
+        "resolution": "@microsoft/api-extractor@npm:7.58.9",
+        "version": "7.58.9",
         "dependencies": {
           "@microsoft/api-extractor-model": "7.33.8",
           "@microsoft/tsdoc": "~0.16.0",
@@ -457,7 +457,7 @@
           "@rushstack/node-core-library": "5.23.1",
           "@rushstack/rig-package": "0.7.3",
           "@rushstack/terminal": "0.24.0",
-          "@rushstack/ts-command-line": "5.3.9",
+          "@rushstack/ts-command-line": "5.3.10",
           "diff": "~8.0.2",
           "minimatch": "10.2.3",
           "resolve": "~1.22.1",
@@ -1296,11 +1296,11 @@
         ]
       }
     },
-    "@rushstack/ts-command-line@npm:5.3.9": {
-      "checksum": "bec95cbba328c432a381d1e9f9dc78977bf0ce1d5ea87ad8beda771db20cb73842fc4e948c3fd6127bb1470f71ff43c5ae9ff040fb7c36b3d3cde38f8a2a78b3",
+    "@rushstack/ts-command-line@npm:5.3.10": {
+      "checksum": "b8f2047d65f7d3e6fdb9bf420f45b29fd1ffa8ac8428a2cec2bba0520dc41c6053e0542169ae64ea75693b5fc93a4bbd019fb4d3f29018edb7a8b8e88afee004",
       "resolution": {
-        "resolution": "@rushstack/ts-command-line@npm:5.3.9",
-        "version": "5.3.9",
+        "resolution": "@rushstack/ts-command-line@npm:5.3.10",
+        "version": "5.3.10",
         "dependencies": {
           "@rushstack/terminal": "0.24.0",
           "@types/argparse": "1.0.38",
