@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "1e0e48d0e4b32df8e3c7e48e6552fb7a6601062a541ed33faf37978a6741959c5eaec4e365f6d0df65ba5bdad929997ce3044832d700d0594a1240d554618752"
+    "@jonahsnider/util": "cb0bc67ddd01dc806fdda8bf5bfa0acf0ab82866d89f6a5b13da9ae93f5091757a1537a429cadb265afe28dea2ec3c49def87bfcef12c1d3c18005b181bd7603"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -445,19 +445,19 @@
         }
       }
     },
-    "@microsoft/api-extractor@npm:7.58.10": {
-      "checksum": "acbfb203b9e486b496844b78f234952c158bf173a1ed2980aea7834a8e6f51eb05a5f9972a0ff4a7a94cde84f1992e6a85ead8174abf84ac7ae016fc678896c5",
+    "@microsoft/api-extractor@npm:7.58.11": {
+      "checksum": "f372a176ba161db971d9a34e9311c977209327094647b2f8bc6ec912a9f06000b25d8d341fcf8e5b2768c66cc9ed45fd5addf2a2ddbfafb3ee253bf618033742",
       "resolution": {
-        "resolution": "@microsoft/api-extractor@npm:7.58.10",
-        "version": "7.58.10",
+        "resolution": "@microsoft/api-extractor@npm:7.58.11",
+        "version": "7.58.11",
         "dependencies": {
-          "@microsoft/api-extractor-model": "7.33.9",
+          "@microsoft/api-extractor-model": "7.33.10",
           "@microsoft/tsdoc": "~0.16.0",
           "@microsoft/tsdoc-config": "~0.18.1",
-          "@rushstack/node-core-library": "5.23.2",
+          "@rushstack/node-core-library": "5.23.3",
           "@rushstack/rig-package": "0.7.3",
-          "@rushstack/terminal": "0.24.1",
-          "@rushstack/ts-command-line": "5.3.11",
+          "@rushstack/terminal": "0.24.2",
+          "@rushstack/ts-command-line": "5.3.12",
           "diff": "~8.0.2",
           "minimatch": "10.2.3",
           "resolve": "~1.22.1",
@@ -467,15 +467,15 @@
         }
       }
     },
-    "@microsoft/api-extractor-model@npm:7.33.9": {
-      "checksum": "921daae5457a25722873ae6afb734b80de26527d1fd1afa3754dc395a3313db1762502424ec421134a98489343fe9f504c9cd0a319c4aeb22e8e14c9af765b38",
+    "@microsoft/api-extractor-model@npm:7.33.10": {
+      "checksum": "75a0996761cb46d89d16a7b568ff3d385579e3a8f83195e02bb462f0b15a3780f1f208a26a8e992ac9d5e33dae96c2b591cb7e76cabf21afb28910669c392468",
       "resolution": {
-        "resolution": "@microsoft/api-extractor-model@npm:7.33.9",
-        "version": "7.33.9",
+        "resolution": "@microsoft/api-extractor-model@npm:7.33.10",
+        "version": "7.33.10",
         "dependencies": {
           "@microsoft/tsdoc": "~0.16.0",
           "@microsoft/tsdoc-config": "~0.18.1",
-          "@rushstack/node-core-library": "5.23.2"
+          "@rushstack/node-core-library": "5.23.3"
         }
       }
     },
@@ -1231,11 +1231,11 @@
         "version": "1.0.1"
       }
     },
-    "@rushstack/node-core-library@npm:5.23.2": {
-      "checksum": "345452de71245eaea787571d441a6d5d21f3e5ca7fe8c7da879ace9da65b4c92878f94f636d35bd3c846ceccd33339a898e0601316d96c1703da03e4f22cfa3e",
+    "@rushstack/node-core-library@npm:5.23.3": {
+      "checksum": "0d32538383076726f6999f4e5766f42afacbb9e34f8ee97ba11198c0806a83ad416ed64a3a365d5a07409568ea027d87639c008f57dcbe2cdefde52592b2535d",
       "resolution": {
-        "resolution": "@rushstack/node-core-library@npm:5.23.2",
-        "version": "5.23.2",
+        "resolution": "@rushstack/node-core-library@npm:5.23.3",
+        "version": "5.23.3",
         "dependencies": {
           "ajv": "~8.20.0",
           "ajv-draft-04": "~1.0.0",
@@ -1278,13 +1278,13 @@
         }
       }
     },
-    "@rushstack/terminal@npm:0.24.1": {
-      "checksum": "d149c8d0aa79905edd1d6343256df72900b8f0bed94951ca2bdf604d38b42ae9b36f113c88b3a230ce8fdd2e33fdd7238fc1a450ffeb9c1e9ccf8b975c5ded6f",
+    "@rushstack/terminal@npm:0.24.2": {
+      "checksum": "dae2d2ecbb5ed0dacef93ce0519eb10e76ea873ad34e6071d071657e8ba2741c128aabbddd96e3f42f220ba5875de12b1cd22f83e581368c5223c42a6a281044",
       "resolution": {
-        "resolution": "@rushstack/terminal@npm:0.24.1",
-        "version": "0.24.1",
+        "resolution": "@rushstack/terminal@npm:0.24.2",
+        "version": "0.24.2",
         "dependencies": {
-          "@rushstack/node-core-library": "5.23.2",
+          "@rushstack/node-core-library": "5.23.3",
           "@rushstack/problem-matcher": "0.2.1",
           "supports-color": "~8.1.1"
         },
@@ -1296,13 +1296,13 @@
         ]
       }
     },
-    "@rushstack/ts-command-line@npm:5.3.11": {
-      "checksum": "0d23ee392d33516590a0410afce45bacb5d1a58bd5ac722d781585c77878ad22f8fc9bc0a22e1c0753645c43b87171e158d6d624c411348f58da9df7f43c7f10",
+    "@rushstack/ts-command-line@npm:5.3.12": {
+      "checksum": "3f44f453feff8f103705df61854291d1c1c22c671851fc587b9a861eadccb960a2c2a1dfad86bbb512f75585764cdce3ec3ade8fe8ffddfe94f5e02106329d9c",
       "resolution": {
-        "resolution": "@rushstack/ts-command-line@npm:5.3.11",
-        "version": "5.3.11",
+        "resolution": "@rushstack/ts-command-line@npm:5.3.12",
+        "version": "5.3.12",
         "dependencies": {
-          "@rushstack/terminal": "0.24.1",
+          "@rushstack/terminal": "0.24.2",
           "@types/argparse": "1.0.38",
           "argparse": "~1.0.9",
           "string-argv": "~0.3.1"
