@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "cb0bc67ddd01dc806fdda8bf5bfa0acf0ab82866d89f6a5b13da9ae93f5091757a1537a429cadb265afe28dea2ec3c49def87bfcef12c1d3c18005b181bd7603"
+    "@jonahsnider/util": "fbda0bf419771e49a1af360f8dba25ca8d9a098b0305a64a3f353cc681753aa7b629f6d931fe4f51a8a0d6e3f04b29585a454e348dd23b877b210fc047f9473f"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -6127,11 +6127,11 @@
         "version": "2.1.2"
       }
     },
-    "semantic-release@npm:25.0.7": {
-      "checksum": "58d58af191c29917b86c70ba4bb5ce34bc55e1d38fd08ae15b986d76690dadf62c202168f1feb91376bbca0fcd9d58c950a0fea8ef6102591f0fe86d81866e64",
+    "semantic-release@npm:25.0.8": {
+      "checksum": "a72df11ff855f54c278a4bcfe954c95c34d860910150c2f7e128836766a927635e493af3a697555b8f16de31fb70f4b4f2be6d50f3e27ebf2c19290aa608315d",
       "resolution": {
-        "resolution": "semantic-release@npm:25.0.7",
-        "version": "25.0.7",
+        "resolution": "semantic-release@npm:25.0.8",
+        "version": "25.0.8",
         "dependencies": {
           "@semantic-release/commit-analyzer": "^13.0.1",
           "@semantic-release/error": "^4.0.0",
