@@ -26,6 +26,7 @@ export type UnknownFunction = (...args: unknown[]) => unknown;
  * @internal
  */
 type Sign = '-' | '+';
+
 export type { Sign as _Sign };
 
 /**

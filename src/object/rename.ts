@@ -5,6 +5,7 @@
  * @category Object
  */
 type NonUnion<T, U extends T = T> = (T extends T ? (U extends T ? false : true) : never) extends false ? T : never;
+
 export type { NonUnion as _NonUnion };
 
 /**
