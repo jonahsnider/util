@@ -1,0 +1,32 @@
+name: autofix.ci # needed to securely identify the workflow
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  autofix:
+    name: Autofix
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v7
+      - name: Setup Yarn
+        uses: jonahsnider/setup-action@cache
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "lts/*"
+      - name: Install dependencies
+        run: |
+          yarn install --immutable
+          chmod -R +x node_modules/.bin node_modules/@biomejs/cli-linux-x64 2>/dev/null || true
+      - name: Migrate Biome schema
+        run: yarn biome migrate --write
+      - name: Apply lint and formatting fixes
+        run: yarn lint:fix
+      - name: Run autofix.ci
+        uses: autofix-ci/action@v1
+        with:
+          commit-message: "refactor: apply automatic fixes"
