@@ -4,6 +4,7 @@ import { enumHas } from './enum-has.js';
 enum Enum {
 	A = 1,
 	B = 'str',
+	// biome-ignore lint/suspicious/noDuplicateEnumValues: This is intentionally confusing
 	C = 'str',
 	D = 1,
 	E = 2,
