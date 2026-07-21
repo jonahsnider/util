@@ -4,6 +4,7 @@
  * @category Array
  */
 type ObjectWithLength = { length: number };
+
 export type { ObjectWithLength as _ObjectWithLength };
 
 /**
@@ -12,6 +13,7 @@ export type { ObjectWithLength as _ObjectWithLength };
  * @category Array
  */
 type ObjectWithSize = { size: number };
+
 export type { ObjectWithSize as _ObjectWithSize };
 
 /**
@@ -21,6 +23,7 @@ export type { ObjectWithSize as _ObjectWithSize };
  * @category Array
  */
 type ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
+
 export type { ArrangedLargestToSmallest as _ArrangedLargestToSmallest };
 
 /**
