@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "2f30b9e90c06c26662122c64616223131ae568a9e99ea9f80f2d64777c6459ddc50116ffb118c2086c624f4a0c58b147e1a12e8436ead3ea75dac9162c7edd44"
+    "@jonahsnider/util": "b9af5c45fb2c7e7745e08c9a6f5d6566bc7089566bde20e1e52d6e33a40d4df36be440650095ae2db4222d48d89d5f4f36847175a919711c7d0d93fb78865f0b"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -445,11 +445,11 @@
         }
       }
     },
-    "@microsoft/api-extractor@npm:7.58.11": {
-      "checksum": "f372a176ba161db971d9a34e9311c977209327094647b2f8bc6ec912a9f06000b25d8d341fcf8e5b2768c66cc9ed45fd5addf2a2ddbfafb3ee253bf618033742",
+    "@microsoft/api-extractor@npm:7.58.12": {
+      "checksum": "bfb540074923b5a798c8bf258d092e59d32e7bafaa82d4da0435601331a3a3f18c5fd64db62ab6a28fa8d114eb89373947257cb4d6377c5855373a7deec12d79",
       "resolution": {
-        "resolution": "@microsoft/api-extractor@npm:7.58.11",
-        "version": "7.58.11",
+        "resolution": "@microsoft/api-extractor@npm:7.58.12",
+        "version": "7.58.12",
         "dependencies": {
           "@microsoft/api-extractor-model": "7.33.10",
           "@microsoft/tsdoc": "~0.16.0",
