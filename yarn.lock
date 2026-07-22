@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "2723bf4d098290c8c5e0bf4b6867280596d10cc120cf5da93c4ca8894945160b3b405bdd3b56afc7372a9c9ceb2de92146bf3c3f31f49c993d4c29c27dbd2b9d"
+    "@jonahsnider/util": "61e1754ba1fafee21f3140724a90e97f95cbfe559443f53c9b2856d9f1cb76f18b7a28b42f4054b53192d0b90e2c723e93292221eef98eb66c0232fcf6cb5fb9"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -1682,6 +1682,306 @@
       "resolution": {
         "resolution": "@types/unist@npm:3.0.2",
         "version": "3.0.2"
+      }
+    },
+    "@typescript/typescript-aix-ppc64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-aix-ppc64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "ppc64"
+          ],
+          "os": [
+            "aix"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-darwin-arm64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-darwin-arm64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "darwin"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-darwin-x64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-darwin-x64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "darwin"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-freebsd-arm64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-freebsd-arm64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "freebsd"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-freebsd-x64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-freebsd-x64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "freebsd"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-linux-arm@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-linux-arm@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "arm"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-linux-arm64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-linux-arm64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-linux-loong64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-linux-loong64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "loong64"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-linux-mips64el@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-linux-mips64el@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "mips64el"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-linux-ppc64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-linux-ppc64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "ppc64"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-linux-riscv64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-linux-riscv64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "riscv64"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-linux-s390x@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-linux-s390x@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "s390x"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-linux-x64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-linux-x64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "linux"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-netbsd-arm64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-netbsd-arm64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "netbsd"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-netbsd-x64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-netbsd-x64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "netbsd"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-openbsd-arm64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-openbsd-arm64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "openbsd"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-openbsd-x64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-openbsd-x64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "openbsd"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-sunos-x64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-sunos-x64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "sunos"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-win32-arm64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-win32-arm64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "arm64"
+          ],
+          "os": [
+            "win32"
+          ]
+        }
+      }
+    },
+    "@typescript/typescript-win32-x64@npm:7.0.2": {
+      "checksum": null,
+      "resolution": {
+        "resolution": "@typescript/typescript-win32-x64@npm:7.0.2",
+        "version": "7.0.2",
+        "requirements": {
+          "cpu": [
+            "x64"
+          ],
+          "os": [
+            "win32"
+          ]
+        }
       }
     },
     "@vitest/coverage-v8@npm:4.1.10": {
@@ -7012,11 +7312,55 @@
         "version": "5.9.3"
       }
     },
-    "typescript@npm:6.0.3": {
-      "checksum": "4c4b3eed4bdd784df1cb0ef0996b7d18e17aa02797728256170087cf063fd39dd5df72f7c62d53f52126ec94d2f48fe03df0028e22bff8657039dfd802f20f95",
+    "typescript@npm:7.0.2": {
+      "checksum": "8a1c75c6a683adde78106ebe132a40cad476d9292e7dcfe82eeeccf3d99d88e5274117ebb92223d202bd43167cb9582ea1a504a25cce7733f86efb8c699a8f26",
       "resolution": {
-        "resolution": "typescript@npm:6.0.3",
-        "version": "6.0.3"
+        "resolution": "typescript@npm:7.0.2",
+        "version": "7.0.2",
+        "dependencies": {
+          "@typescript/typescript-aix-ppc64": "7.0.2",
+          "@typescript/typescript-darwin-arm64": "7.0.2",
+          "@typescript/typescript-darwin-x64": "7.0.2",
+          "@typescript/typescript-freebsd-arm64": "7.0.2",
+          "@typescript/typescript-freebsd-x64": "7.0.2",
+          "@typescript/typescript-linux-arm": "7.0.2",
+          "@typescript/typescript-linux-arm64": "7.0.2",
+          "@typescript/typescript-linux-loong64": "7.0.2",
+          "@typescript/typescript-linux-mips64el": "7.0.2",
+          "@typescript/typescript-linux-ppc64": "7.0.2",
+          "@typescript/typescript-linux-riscv64": "7.0.2",
+          "@typescript/typescript-linux-s390x": "7.0.2",
+          "@typescript/typescript-linux-x64": "7.0.2",
+          "@typescript/typescript-netbsd-arm64": "7.0.2",
+          "@typescript/typescript-netbsd-x64": "7.0.2",
+          "@typescript/typescript-openbsd-arm64": "7.0.2",
+          "@typescript/typescript-openbsd-x64": "7.0.2",
+          "@typescript/typescript-sunos-x64": "7.0.2",
+          "@typescript/typescript-win32-arm64": "7.0.2",
+          "@typescript/typescript-win32-x64": "7.0.2"
+        },
+        "optionalDependencies": [
+          "@typescript/typescript-aix-ppc64",
+          "@typescript/typescript-darwin-arm64",
+          "@typescript/typescript-darwin-x64",
+          "@typescript/typescript-freebsd-arm64",
+          "@typescript/typescript-freebsd-x64",
+          "@typescript/typescript-linux-arm",
+          "@typescript/typescript-linux-arm64",
+          "@typescript/typescript-linux-loong64",
+          "@typescript/typescript-linux-mips64el",
+          "@typescript/typescript-linux-ppc64",
+          "@typescript/typescript-linux-riscv64",
+          "@typescript/typescript-linux-s390x",
+          "@typescript/typescript-linux-x64",
+          "@typescript/typescript-netbsd-arm64",
+          "@typescript/typescript-netbsd-x64",
+          "@typescript/typescript-openbsd-arm64",
+          "@typescript/typescript-openbsd-x64",
+          "@typescript/typescript-sunos-x64",
+          "@typescript/typescript-win32-arm64",
+          "@typescript/typescript-win32-x64"
+        ]
       }
     },
     "uc.micro@npm:^2.0.0, uc.micro@npm:^2.1.0": {
