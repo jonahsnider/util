@@ -3,7 +3,7 @@
     "version": 9
   },
   "workspaces": {
-    "@jonahsnider/util": "b5512177cb542364cb9221e39ec27e241f9030678ed72fc91c44202ad5c90fb48b4407a87c9ee44f373b83989c2bc8d954b297bcf7dca65969de0fe4d0318fcb"
+    "@jonahsnider/util": "a2979bcec3dd048642bff439596b99da940f3ddeeb7afae3f5ecb6d04824fd24f96786baa0daca70475ad98c0067b26dbd46ed83d3f2982d5d21e476657661b3"
   },
   "entries": {
     "@actions/core@npm:^1.11.1": {
@@ -136,20 +136,20 @@
         "version": "1.0.2"
       }
     },
-    "@biomejs/biome@npm:2.5.10": {
-      "checksum": "f4db861f440488a10ac96d914e55040e25a1305e822e6e36ff6cb2b0d2605365d8d13eca0cdcda4bc7da4afc76f1fe0cae307ff06a78db267a0a38dbeb5e9bb4",
+    "@biomejs/biome@npm:2.5.11": {
+      "checksum": "0dc82221d860e8c3435b76195f5b6b5d594dbd5052db27d905952fcab519123b4b4ebd91ae28d778dcc6a7eaadcd41f982643fe0c01a4100ce7137d2f650df19",
       "resolution": {
-        "resolution": "@biomejs/biome@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/biome@npm:2.5.11",
+        "version": "2.5.11",
         "dependencies": {
-          "@biomejs/cli-darwin-arm64": "2.5.10",
-          "@biomejs/cli-darwin-x64": "2.5.10",
-          "@biomejs/cli-linux-arm64": "2.5.10",
-          "@biomejs/cli-linux-arm64-musl": "2.5.10",
-          "@biomejs/cli-linux-x64": "2.5.10",
-          "@biomejs/cli-linux-x64-musl": "2.5.10",
-          "@biomejs/cli-win32-arm64": "2.5.10",
-          "@biomejs/cli-win32-x64": "2.5.10"
+          "@biomejs/cli-darwin-arm64": "2.5.11",
+          "@biomejs/cli-darwin-x64": "2.5.11",
+          "@biomejs/cli-linux-arm64": "2.5.11",
+          "@biomejs/cli-linux-arm64-musl": "2.5.11",
+          "@biomejs/cli-linux-x64": "2.5.11",
+          "@biomejs/cli-linux-x64-musl": "2.5.11",
+          "@biomejs/cli-win32-arm64": "2.5.11",
+          "@biomejs/cli-win32-x64": "2.5.11"
         },
         "optionalDependencies": [
           "@biomejs/cli-darwin-arm64",
@@ -163,11 +163,11 @@
         ]
       }
     },
-    "@biomejs/cli-darwin-arm64@npm:2.5.10": {
+    "@biomejs/cli-darwin-arm64@npm:2.5.11": {
       "checksum": null,
       "resolution": {
-        "resolution": "@biomejs/cli-darwin-arm64@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/cli-darwin-arm64@npm:2.5.11",
+        "version": "2.5.11",
         "requirements": {
           "cpu": [
             "arm64"
@@ -178,11 +178,11 @@
         }
       }
     },
-    "@biomejs/cli-darwin-x64@npm:2.5.10": {
+    "@biomejs/cli-darwin-x64@npm:2.5.11": {
       "checksum": null,
       "resolution": {
-        "resolution": "@biomejs/cli-darwin-x64@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/cli-darwin-x64@npm:2.5.11",
+        "version": "2.5.11",
         "requirements": {
           "cpu": [
             "x64"
@@ -193,11 +193,11 @@
         }
       }
     },
-    "@biomejs/cli-linux-arm64@npm:2.5.10": {
+    "@biomejs/cli-linux-arm64@npm:2.5.11": {
       "checksum": null,
       "resolution": {
-        "resolution": "@biomejs/cli-linux-arm64@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/cli-linux-arm64@npm:2.5.11",
+        "version": "2.5.11",
         "requirements": {
           "cpu": [
             "arm64"
@@ -211,11 +211,11 @@
         }
       }
     },
-    "@biomejs/cli-linux-arm64-musl@npm:2.5.10": {
+    "@biomejs/cli-linux-arm64-musl@npm:2.5.11": {
       "checksum": null,
       "resolution": {
-        "resolution": "@biomejs/cli-linux-arm64-musl@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/cli-linux-arm64-musl@npm:2.5.11",
+        "version": "2.5.11",
         "requirements": {
           "cpu": [
             "arm64"
@@ -229,11 +229,11 @@
         }
       }
     },
-    "@biomejs/cli-linux-x64@npm:2.5.10": {
+    "@biomejs/cli-linux-x64@npm:2.5.11": {
       "checksum": null,
       "resolution": {
-        "resolution": "@biomejs/cli-linux-x64@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/cli-linux-x64@npm:2.5.11",
+        "version": "2.5.11",
         "requirements": {
           "cpu": [
             "x64"
@@ -247,11 +247,11 @@
         }
       }
     },
-    "@biomejs/cli-linux-x64-musl@npm:2.5.10": {
+    "@biomejs/cli-linux-x64-musl@npm:2.5.11": {
       "checksum": null,
       "resolution": {
-        "resolution": "@biomejs/cli-linux-x64-musl@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/cli-linux-x64-musl@npm:2.5.11",
+        "version": "2.5.11",
         "requirements": {
           "cpu": [
             "x64"
@@ -265,11 +265,11 @@
         }
       }
     },
-    "@biomejs/cli-win32-arm64@npm:2.5.10": {
+    "@biomejs/cli-win32-arm64@npm:2.5.11": {
       "checksum": null,
       "resolution": {
-        "resolution": "@biomejs/cli-win32-arm64@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/cli-win32-arm64@npm:2.5.11",
+        "version": "2.5.11",
         "requirements": {
           "cpu": [
             "arm64"
@@ -280,11 +280,11 @@
         }
       }
     },
-    "@biomejs/cli-win32-x64@npm:2.5.10": {
+    "@biomejs/cli-win32-x64@npm:2.5.11": {
       "checksum": null,
       "resolution": {
-        "resolution": "@biomejs/cli-win32-x64@npm:2.5.10",
-        "version": "2.5.10",
+        "resolution": "@biomejs/cli-win32-x64@npm:2.5.11",
+        "version": "2.5.11",
         "requirements": {
           "cpu": [
             "x64"
