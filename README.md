@@ -16,7 +16,7 @@ If you're considering using the library I recommend taking a glance at the docs 
 ## Get started
 
 ```sh
-yarn add @jonahsnider/util
+pnpm add @jonahsnider/util
 # or
 npm install @jonahsnider/util
 ```

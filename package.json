@@ -54,9 +54,16 @@
 		"vitest": "4.1.11",
 		"zshy": "^0.7.0"
 	},
-	"packageManager": "yarn@6.0.0-rc.18",
+	"packageManager": "pnpm@12.0.0",
 	"engines": {
 		"node": ">=16"
+	},
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": "24.x",
+			"onFail": "download"
+		}
 	},
 	"publishConfig": {
 		"access": "public"
