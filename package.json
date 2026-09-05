@@ -54,7 +54,7 @@
 		"vitest": "4.1.11",
 		"zshy": "^0.7.0"
 	},
-	"packageManager": "pnpm@12.3.2",
+	"packageManager": "pnpm@12.3.3",
 	"engines": {
 		"node": ">=16"
 	},
