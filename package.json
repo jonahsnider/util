@@ -43,7 +43,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.5.12",
 		"@microsoft/api-extractor": "7.59.1",
-		"@types/node": "24.13.3",
+		"@types/node": "24.13.4",
 		"@vitest/coverage-v8": "4.1.11",
 		"@vitest/ui": "4.1.11",
 		"semantic-release": "25.0.9",
