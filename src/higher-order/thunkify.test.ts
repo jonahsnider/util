@@ -10,22 +10,22 @@ it('thunks', () => {
 	expect(f).toHaveBeenCalledTimes(1);
 });
 
-it('works with promises that resolve', () => {
+it('works with promises that resolve', async () => {
 	const f = vitest.fn(async () => 123);
 	const g = thunkify(f);
 
-	void expect(g()).resolves.toBe(123);
-	void expect(g()).resolves.toBe(123);
+	await expect(g()).resolves.toBe(123);
+	await expect(g()).resolves.toBe(123);
 	expect(f).toHaveBeenCalledTimes(1);
 });
 
-it('works with promises that reject', () => {
+it('works with promises that reject', async () => {
 	const f = vitest.fn(async () => {
 		throw new Error('abc');
 	});
 	const g = thunkify(f);
 
-	void expect(g()).rejects.toThrow('abc');
-	void expect(g()).rejects.toThrow('abc');
+	await expect(g()).rejects.toThrow('abc');
+	await expect(g()).rejects.toThrow('abc');
 	expect(f).toHaveBeenCalledTimes(1);
 });
