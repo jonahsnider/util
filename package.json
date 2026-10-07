@@ -42,7 +42,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15",
-		"@microsoft/api-extractor": "7.59.3",
+		"@microsoft/api-extractor": "7.59.4",
 		"@types/node": "24.19.1",
 		"@vitest/coverage-v8": "5.0.3",
 		"@vitest/ui": "5.0.3",
