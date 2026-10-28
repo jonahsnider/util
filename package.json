@@ -39,7 +39,7 @@
 	},
 	"devDependencies": {
 		"@microsoft/api-extractor": "7.60.0",
-		"@types/node": "24.19.2",
+		"@types/node": "26.6.5",
 		"@vitest/coverage-v8": "catalog:",
 		"@vitest/ui": "catalog:",
 		"knip": "6.43.0",
@@ -52,7 +52,7 @@
 	"devEngines": {
 		"runtime": {
 			"name": "node",
-			"version": "24.x",
+			"version": "26.x",
 			"onFail": "warn"
 		}
 	},
