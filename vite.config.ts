@@ -22,7 +22,7 @@ export default defineConfig({
 		},
 	},
 	fmt: {
-		ignorePatterns: ['util.api.md'],
+		ignorePatterns: ['util.api.md', 'CHANGELOG.md'],
 		printWidth: 120,
 		singleQuote: true,
 		useTabs: true,
