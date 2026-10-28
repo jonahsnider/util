@@ -1,15 +1,11 @@
 {
-	"[javascript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[javascriptreact]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "biomejs.biome"
+	"npm.scriptRunner": "vp",
+	"editor.defaultFormatter": "oxc.oxc-vscode",
+	"oxc.fmt.configPath": "./vite.config.ts",
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.oxc": "explicit"
 	},
 	"typescript.tsdk": "node_modules/typescript/lib"
 }

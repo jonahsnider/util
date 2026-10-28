@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { frequencyTable } from './frequency-table.js';
 
 it('constructs a frequency table', () => {

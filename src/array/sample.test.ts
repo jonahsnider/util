@@ -1,5 +1,5 @@
 import { expectNotType, expectType } from 'tsd';
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { sample } from './sample.js';
 
 // Compilation tests

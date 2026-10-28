@@ -1,67 +1,26 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 
 jobs:
   build-and-test:
     name: Build and test
-
-    runs-on: ubuntu-latest
     timeout-minutes: 5
-
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout git repository
-        uses: actions/checkout@v7
-      - name: Setup pnpm
-        uses: pnpm/setup@v3
+      - uses: actions/checkout@v7
+      - uses: voidzero-dev/setup-vp@v1.22.0
         with:
           cache: true
       - parallel:
-          - name: Build package
-            run: pnpm run build
-            env:
-              CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-          - name: Run tests
-            run: pnpm test:coverage
-          - name: Lint
-            run: pnpm run lint
-      - name: Validate API
-        run: pnpm run validate-api
-      - name: Upload coverage
-        uses: codecov/codecov-action@v7
+          - run: vp check
+          - run: vp test --run --coverage
+          - run: vp exec knip
+          - run: vp pack
+      - run: vp exec api-extractor run
+      - uses: codecov/codecov-action@v7
         with:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
-
-  publish:
-    name: Publish
-
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-
-    needs: [build-and-test]
-
-    # Only run on main branch
-    if: ${{ github.ref  == 'refs/heads/main' }}
-
-    permissions:
-      contents: write # to be able to publish a GitHub release
-      issues: write # to be able to comment on released issues
-      pull-requests: write # to be able to comment on released pull requests
-      id-token: write # to enable use of OIDC for trusted publishing and npm provenance
-
-    steps:
-      - name: Checkout git repository
-        uses: actions/checkout@v7
-      - name: Setup pnpm
-        uses: pnpm/setup@v3
-        with:
-          cache: true
-      - name: Build
-        run: pnpm run build
-      - name: Bundle typings
-        run: pnpm run validate-api
-      - name: Publish
-        run: pnpm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

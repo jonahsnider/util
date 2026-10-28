@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { harmonicMean } from './harmonic-mean.js';
 
 it('calculates the harmonic mean', () => {

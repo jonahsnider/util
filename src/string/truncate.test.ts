@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { truncate } from './truncate.js';
 
 it('truncates long strings', () => {

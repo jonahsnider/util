@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { jaccardIndex } from './jaccard-index.js';
 
 it('returns 1 for empty sets', () => {

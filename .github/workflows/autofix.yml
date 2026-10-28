@@ -1,4 +1,4 @@
-name: autofix.ci # needed to securely identify the workflow
+name: autofix.ci
 
 on: [push, pull_request]
 
@@ -10,17 +10,15 @@ jobs:
     name: Autofix
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Git repository
-        uses: actions/checkout@v7
-      - name: Setup pnpm
-        uses: pnpm/setup@v3
+      - uses: actions/checkout@v7
+      - uses: voidzero-dev/setup-vp@v1.22.0
         with:
           cache: true
-      - name: Migrate Biome schema
-        run: pnpm exec biome migrate --write
-      - name: Apply lint and formatting fixes
-        run: pnpm lint:fix
-      - name: Run autofix.ci
-        uses: autofix-ci/action@v1
+      - run: vp check --fix
+        continue-on-error: true
+      - run: vp exec knip --fix
+        continue-on-error: true
+      - run: vp config
+      - uses: autofix-ci/action@v1
         with:
-          commit-message: "refactor: apply automatic fixes"
+          commit-message: 'refactor: apply automatic fixes'

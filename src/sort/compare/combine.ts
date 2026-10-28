@@ -46,6 +46,7 @@ export function combine<T>(...compareFunctions: ReadonlyArray<CompareFn<T>>): Co
 		for (const compareFunction of compareFunctions) {
 			const result = compareFunction(a, b);
 
+			// oxlint-disable-next-line oxc/double-comparisons -- Preserve the existing NaN behavior
 			if (result > 0 || result < 0) {
 				return result;
 			}

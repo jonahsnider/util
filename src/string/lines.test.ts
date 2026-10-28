@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { lines } from './lines.js';
 
 it('splits strings into lines', () => {

@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { multiReplace } from './multi-replace.js';
 
 it('replaces strings', () => {

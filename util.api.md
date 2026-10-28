@@ -8,22 +8,10 @@
 export function allDuplicates<T>(iterable: Iterable<T>): T[];
 
 // @public
-function and(a: number, b: number): number;
-
-// @public
-function and(a: bigint, b: bigint): bigint;
-
-// @public
 export type AnyFunction<P extends any[] = any[], R = any> = (...args: P) => R;
 
 // @internal
 export type _ArrangedLargestToSmallest<A, B> = [largest: A, smallest: B] | [largest: B, smallest: A];
-
-// @public
-function ascending<T>(predicate: (element: T) => Comparable): CompareFn<T>;
-
-// @public
-function ascending(a: Comparable, b: Comparable): number;
 
 // @public
 export class AutoPercentage {
@@ -38,12 +26,9 @@ export class AutoPercentage {
 // @public
 export function binarySearch<T>(array: ArrayLike<T>, directionFunction: DirectionFn<T>): ReturnType<T[]['find']>;
 
-declare namespace Bitwise {
-    export {
-        and,
-        or,
-        xor
-    }
+// @public (undocumented)
+export namespace Bitwise {
+    export { and, or, xor };
 }
 
 // @public
@@ -63,12 +48,6 @@ export function chunk<T>(iterable: Iterable<T>, size: number): IterableIterator<
 
 // @public
 export function clamp<T extends number | bigint, M1 extends number | bigint, M2 extends number | bigint>(value: T, min: M1, max: M2): T | M1 | M2;
-
-// @public
-const clientErrors: Readonly<Range>;
-
-// @public
-function combine<T>(...compareFunctions: ReadonlyArray<CompareFn<T>>): CompareFn<T>;
 
 // @public
 export type Comparable = string | NumberLike;
@@ -91,12 +70,6 @@ export class DefaultMap<K, V, D extends V = V> extends Map<K, V> {
     constructor(defaultValueFunction: (key: K) => D, entries?: ConstructorParameters<MapConstructor>[0] | null);
     get(key: K): V | D;
 }
-
-// @public
-function descending<T>(predicate: (element: T) => Comparable): CompareFn<T>;
-
-// @public
-function descending(a: Comparable, b: Comparable): number;
 
 // @public @deprecated
 export function difference<T>(a: Iterable<T>, b: Iterable<T>): Set<T>;
@@ -140,17 +113,9 @@ export function harmonicMean(array: readonly number[]): number;
 // @public
 export function holes(array: ArrayLike<unknown>): number[];
 
-declare namespace Http {
-    export {
-        Method,
-        Status,
-        StatusName,
-        informational,
-        success,
-        redirects,
-        clientErrors,
-        serverErrors
-    }
+// @public (undocumented)
+export namespace Http {
+    export { Method, Status, StatusName, clientErrors, informational, redirects, serverErrors, success };
 }
 
 // @public
@@ -167,9 +132,6 @@ export function includes<T>(iterable: Iterable<T>, searchElement: T): boolean;
 
 // @public
 export function indexOfAll<T>(array: ArrayLike<T>, searchElement: T): number[];
-
-// @public
-const informational: Readonly<Range>;
 
 // @public
 export function invert<T extends (...parameters: any[]) => NumberLike>(func: T): T;
@@ -237,7 +199,7 @@ export function mapFill<T>(length: number, valueFunction: (index: number) => T):
 // @public
 export function mapRepeat<T>(valueFunction: (increment: number) => T, times: number): Iterable<T>;
 
-// Warning: (ae-forgotten-export) The symbol "V" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "V" needs to be exported by the entry point index.d.mts
 //
 // @alpha
 export class MathMap<K> extends DefaultMap<K, V> {
@@ -267,19 +229,6 @@ export function median(array: ArrayLike<number>): number;
 
 // @public
 export function median(array: ArrayLike<bigint>): bigint;
-
-// @public
-enum Method {
-    Connect = "CONNECT",
-    Delete = "DELETE",
-    Get = "GET",
-    Head = "HEAD",
-    Options = "OPTIONS",
-    Patch = "PATCH",
-    Post = "POST",
-    Put = "PUT",
-    Trace = "TRACE"
-}
 
 // @public
 export function min<A extends Comparable, B extends Comparable>(accumulator: A, currentValue: B): A | B;
@@ -336,12 +285,6 @@ export type _ObjectWithSize = {
 
 // @public
 export function omit<T extends object, K extends keyof T>(object: T, keys: readonly K[]): Omit<T, K>;
-
-// @public
-function or(a: number, b: number): number;
-
-// @public
-function or(a: bigint, b: bigint): bigint;
 
 // @public
 export function overwrite<T>(array: T[], startIndex: number, data: ArrayLike<T> & Iterable<T>): ReturnType<(typeof array)['splice']>;
@@ -429,9 +372,6 @@ export enum Rank {
 }
 
 // @public
-const redirects: Readonly<Range>;
-
-// @public
 export function regExpUnion(...regExps: RegExp[]): RegExp;
 
 // @public
@@ -467,9 +407,6 @@ export function same<T>(...iterables: readonly [Iterable<T>, Iterable<T>, ...Arr
 export function sample<T>(array: ArrayLike<T>): T | undefined;
 
 // @public
-const serverErrors: Readonly<Range>;
-
-// @public
 export function settled<E, T>(promise: PromiseLike<T>): Promise<Result<T, E>>;
 
 // @public
@@ -481,12 +418,9 @@ export function shuffle<T>(array: ArrayLike<T> & Iterable<T>, mutate: false): T[
 // @internal
 export type _Sign = '-' | '+';
 
-declare namespace Sort {
-    export {
-        ascending,
-        combine,
-        descending
-    }
+// @public (undocumented)
+export namespace Sort {
+    export { ascending, combine, descending };
 }
 
 // @public
@@ -494,180 +428,6 @@ export function sortObject<K extends PropertyKey, V>(object: Readonly<Record<K, 
 
 // @public
 export function standardNormaldist(x: number): number;
-
-// @public
-enum Status {
-    Accepted = 202,
-    BadGateway = 502,
-    BadRequest = 400,
-    Conflict = 409,
-    Continue = 100,
-    Created = 201,
-    EarlyHints = 103,
-    ExpectationFailed = 417,
-    Forbidden = 403,
-    Found = 302,
-    GatewayTimeout = 504,
-    Gone = 410,
-    HttpVersionNotSupported = 505,
-    ImATeapot = 418,
-    InsufficientStorage = 507,
-    InternalServerError = 500,
-    LengthRequired = 411,
-    // @deprecated
-    LoopDetected = 508,
-    MethodNotAllowed = 405,
-    MisdirectedRequest = 421,
-    MovedPermanently = 301,
-    MultipleChoices = 300,
-    NetworkAuthenticationRequired = 511,
-    NoContent = 204,
-    NonAuthoritativeInformation = 203,
-    NotAcceptable = 406,
-    NotExtended = 510,
-    NotFound = 404,
-    NotImplemented = 501,
-    NotModified = 304,
-    Ok = 200,
-    PartialContent = 206,
-    PayloadTooLarge = 413,
-    PaymentRequired = 402,
-    PermanentRedirect = 308,
-    PreconditionFailed = 412,
-    PreconditionRequired = 428,
-    ProxyAuthenticationRequired = 407,
-    RangeNotSatisfiable = 416,
-    RequestHeaderFieldsTooLarge = 431,
-    RequestTimeout = 408,
-    ResetContent = 205,
-    SeeOther = 303,
-    ServiceUnavailable = 503,
-    SwitchingProtocols = 101,
-    TemporaryRedirect = 307,
-    TooEarly = 425,
-    TooManyRequests = 429,
-    Unauthorized = 401,
-    UnavailableForLegalReasons = 451,
-    UnprocessableEntity = 422,
-    UnsupportedMediaType = 415,
-    UpgradeRequired = 426,
-    UriTooLong = 414,
-    VariantAlsoNegotiates = 506
-}
-
-// @public
-enum StatusName {
-    // (undocumented)
-    'Bad Gateway' = 502,
-    // (undocumented)
-    'Bad Request' = 400,
-    // (undocumented)
-    'Early Hints' = 103,
-    // (undocumented)
-    'Expectation Failed' = 417,
-    // (undocumented)
-    'Gateway Timeout' = 504,
-    // (undocumented)
-    'HTTP Version Not Supported' = 505,
-    // (undocumented)
-    "I'm a Teapot" = 418,
-    // (undocumented)
-    'Insufficient Storage' = 507,
-    // (undocumented)
-    'Internal Server Error' = 500,
-    // (undocumented)
-    'Length Required' = 411,
-    // @deprecated (undocumented)
-    'Loop Detected' = 508,
-    // (undocumented)
-    'Method Not Allowed' = 405,
-    // (undocumented)
-    'Misdirected Request' = 421,
-    // (undocumented)
-    'Moved Permanently' = 301,
-    // (undocumented)
-    'Multiple Choices' = 300,
-    // (undocumented)
-    'Network Authentication Required' = 511,
-    // (undocumented)
-    'No Content' = 204,
-    // (undocumented)
-    'Non-Authoritative Information' = 203,
-    // (undocumented)
-    'Not Acceptable' = 406,
-    // (undocumented)
-    'Not Extended' = 510,
-    // (undocumented)
-    'Not Found' = 404,
-    // (undocumented)
-    'Not Implemented' = 501,
-    // (undocumented)
-    'Not Modified' = 304,
-    // (undocumented)
-    'Partial Content' = 206,
-    // (undocumented)
-    'Payload Too Large' = 413,
-    // (undocumented)
-    'Payment Required' = 402,
-    // (undocumented)
-    'Permanent Redirect' = 308,
-    // (undocumented)
-    'Precondition Failed' = 412,
-    // (undocumented)
-    'Precondition Required' = 428,
-    // (undocumented)
-    'Proxy Authentication Required' = 407,
-    // (undocumented)
-    'Range Not Satisfiable' = 416,
-    // (undocumented)
-    'Request Header Fields Too Large' = 431,
-    // (undocumented)
-    'Request Timeout' = 408,
-    // (undocumented)
-    'Reset Content' = 205,
-    // (undocumented)
-    'See Other' = 303,
-    // (undocumented)
-    'Service Unavailable' = 503,
-    // (undocumented)
-    'Switching Protocols' = 101,
-    // (undocumented)
-    'Temporary Redirect' = 307,
-    // (undocumented)
-    'Too Early' = 425,
-    // (undocumented)
-    'Too Many Requests' = 429,
-    // (undocumented)
-    'Unavailable For Legal Reasons' = 451,
-    // (undocumented)
-    'Unprocessable Content' = 422,
-    // (undocumented)
-    'Unsupported Media Type' = 415,
-    // (undocumented)
-    'Upgrade Required' = 426,
-    // (undocumented)
-    'URI Too Long' = 414,
-    // (undocumented)
-    'Variant Also Negotiates' = 506,
-    // (undocumented)
-    Accepted = 202,
-    // (undocumented)
-    Conflict = 409,
-    // (undocumented)
-    Continue = 100,
-    // (undocumented)
-    Created = 201,
-    // (undocumented)
-    Forbidden = 403,
-    // (undocumented)
-    Found = 302,
-    // (undocumented)
-    Gone = 410,
-    // (undocumented)
-    OK = 200,
-    // (undocumented)
-    Unauthorized = 401
-}
 
 // @public
 export function stddev(values: readonly number[], meanValue?: number): number;
@@ -679,9 +439,6 @@ export class Stopwatch {
     start(): void;
     get started(): boolean;
 }
-
-// @public
-const success: Readonly<Range>;
 
 // @public
 export enum Suit {
@@ -742,12 +499,6 @@ export type UnknownFunction = (...args: unknown[]) => unknown;
 
 // @public
 export function variance(values: readonly number[], meanValue?: number): number;
-
-// @public
-function xor(a: number, b: number): number;
-
-// @public
-function xor(a: bigint, b: bigint): bigint;
 
 // (No @packageDocumentation comment for this package)
 

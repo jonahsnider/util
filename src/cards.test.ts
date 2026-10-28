@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { newDeck } from './cards.js';
 import { concatIterables } from './iterable/index.js';
 

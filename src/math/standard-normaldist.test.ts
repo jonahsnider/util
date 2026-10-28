@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { normaldist } from './normaldist.js';
 import { standardNormaldist } from './standard-normaldist.js';
 

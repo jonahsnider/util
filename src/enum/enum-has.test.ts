@@ -1,14 +1,15 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { enumHas } from './enum-has.js';
 
+// oxlint-disable typescript/no-duplicate-enum-values -- Duplicate values are the behavior under test
 enum Enum {
 	A = 1,
 	B = 'str',
-	// biome-ignore lint/suspicious/noDuplicateEnumValues: This is intentionally confusing
 	C = 'str',
 	D = 1,
 	E = 2,
 }
+// oxlint-enable typescript/no-duplicate-enum-values
 
 it('returns true', () => {
 	expect(enumHas(Enum, 1)).toBe(true);

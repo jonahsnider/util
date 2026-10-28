@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { geometricMean } from './geometric-mean.js';
 
 it('calculates the geometric mean', () => {

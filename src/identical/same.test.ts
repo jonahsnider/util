@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { same } from './same.js';
 
 it('reports identical arrays', () => {

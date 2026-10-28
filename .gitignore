@@ -226,3 +226,4 @@ docs_out
 
 # API Extractor
 temp
+.vitest/

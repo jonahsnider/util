@@ -39,7 +39,7 @@ export type NumberLike =
 	| { [Symbol.toPrimitive](hint: 'number'): number }
 	| number
 	| bigint
-	// biome-ignore lint/complexity/noBannedTypes: This is intentional
+	// oxlint-disable-next-line typescript/no-wrapper-object-types -- This is intentional
 	| Number
 	| boolean
 	| `${number | bigint}`
@@ -52,6 +52,7 @@ export type NumberLike =
  * @public
  * @category Sort
  */
+// oxlint-disable-next-line typescript/no-redundant-type-constituents -- The NumberLike alias is semantically useful
 export type Comparable = string | NumberLike;
 
 /**

@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { omit } from './omit.js';
 
 it('omits keys from a plain object', () => {
@@ -29,5 +29,7 @@ it('omits from an empty object', () => {
 it('omits with non-string keys', () => {
 	const three = Symbol('3');
 
-	expect(omit({ '1': 'a', 2: 'b', [three]: 'c', 4: 'd' }, ['1', 2, three])).toStrictEqual({ 4: 'd' });
+	expect(omit({ '1': 'a', 2: 'b', [three]: 'c', 4: 'd' }, ['1', 2, three])).toStrictEqual({
+		4: 'd',
+	});
 });

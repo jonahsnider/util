@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest';
+import { expect, it } from 'vite-plus/test';
 import { max } from './max.js';
 
 it('selects the largest number', () => {
