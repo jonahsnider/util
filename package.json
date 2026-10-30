@@ -42,7 +42,7 @@
 		"@types/node": "26.6.6",
 		"@vitest/coverage-v8": "catalog:",
 		"@vitest/ui": "catalog:",
-		"knip": "6.43.0",
+		"knip": "6.44.0",
 		"tsd": "0.33.0",
 		"typedoc": "0.28.20",
 		"typescript": "7.0.2",
