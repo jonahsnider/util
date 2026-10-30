@@ -1,6 +1,6 @@
 {
 	"name": "@jonahsnider/util",
-	"version": "13.0.0",
+	"version": "14.0.0",
 	"description": "A useful collection of optimized utility functions",
 	"homepage": "https://util.jonah.pw/",
 	"license": "MIT",
