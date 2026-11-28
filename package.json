@@ -38,7 +38,7 @@
 		"prepare": "vp config"
 	},
 	"devDependencies": {
-		"@microsoft/api-extractor": "7.60.1",
+		"@microsoft/api-extractor": "7.60.2",
 		"@types/node": "26.6.11",
 		"@vitest/coverage-v8": "catalog:",
 		"@vitest/ui": "catalog:",
